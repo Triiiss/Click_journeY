@@ -1,1 +1,6 @@
-
+.bandeau{
+    list-style: none;
+    text-decoration: none;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.671);
+}
