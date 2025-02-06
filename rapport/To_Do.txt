@@ -1,0 +1,33 @@
+To Do
+Faire les pages html en vif
+Ajouter du css coordonné
+finir le planning
+finir la conception du site
+
+Pages
+Accueil 
+  titre + présentation + liens vers autre
+Présentation
+  Présentation + description + theme + équipe(noms)
+  Champs de recherche intégré
+Recherche
+  filtre
+  affichage de voyage
+Connexion
+  Se connecter
+  formulaire
+  Option inscription
+Inscription
+  + d'info que connexion
+Profil 
+  modification du profil
+  paramètres (mode nuit/langue)
+Admin
+  liste utilisateurs
+  modifier une propriété d'utilisateur
+
+
+
+Optionnel:
+Activités
+Page photo
