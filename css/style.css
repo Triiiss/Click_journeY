@@ -1,24 +1,57 @@
+h1{
+    text-align: center;
+}
 ul.bandeau{
     list-style: none;
 }
 nav.bandeau{
-    display: flex;
-    border: solid black;
     width: 90%;
     margin: 0% 5% 0% 5%;
+    display: flex;
+    border: solid black;
+    border-radius: 10px;
 }
 a.bandeau{
-    text-align: center;
-    font-size: 1.5vw;
-    text-decoration: none;
     color:white;
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    padding:4% 30% 4.5% 25% ;
 }
-li{
-    padding: 1% 7% 1% 6%;
+a.bandeau[href="presentation.html"]{
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+a.bandeau[href="inscription.html"]{
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+li.bandeau{
+    padding: 1% 0% 1% 0%;
     width: 25%;
     background-color: rgba(0, 0, 0, 0.65);
 }
-h1{
-    text-align: center;
-
+a.bandeau:hover{
+    color: red;
+    -webkit-text-stroke: white 0.5px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+span.etoile{
+    color: red;
+}
+fieldset.inscription{
+    margin: 0% 20% 0% 20%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+label.inscription{
+    font-size: 1.5vw;
+    columns: 1;
+    margin: 3% 0% 3% 0%;
+}
+input.inscription,p.inscription,button.inscription{
+    font-size: 1.5vw;
+    columns: 2;
+    margin: 3% 0% 3% 0%;
 }
