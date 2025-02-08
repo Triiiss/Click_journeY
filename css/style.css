@@ -7,7 +7,7 @@ body{
     background-color: rgb(174, 189, 147); 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-body:not(.accueil)::before {
+body:not(.accueilpage)::before {
     content: "";
     position: absolute;
     top: 100px; left: 0; width: 100%; height: 89.4%;
@@ -15,9 +15,10 @@ body:not(.accueil)::before {
     z-index: -1;
 }
 
-h1.titre{
+h1{
     text-align: center;
     color:rgb(42, 77, 42);
+    -webkit-text-stroke: 1px rgb(27, 51, 27);
 }
 
 ul.bandeau{
@@ -52,7 +53,8 @@ li.bandeau{
 }
 a.bandeau:hover{
     transition-duration: 0.5s;
-    color:rgb(255, 106, 19);
+    /*background-color:rgba(255, 106, 19,0.5);*/
+    color:rgb(247, 148, 91);
     background-color: rgba(42, 77, 42, 0.8);
 }
 
@@ -70,12 +72,50 @@ label.inscription{
     columns: 1;
     margin: 3% 0% 3% 0%;
 }
-input.inscription,p.inscription,button.inscription{
+input.inscription,div.inscription,button.inscription{
     font-size: 1.5vw;
     columns: 2;
     margin: 3% 0% 3% 0%;
 }
+div.inscription{
+    display: flex;
+}
 
 .afterimage{
-    margin-top: 27vw;
+    font-size: 2vw;
+    text-align: center;
+    color:rgb(42, 77, 42);
+    -webkit-text-stroke: 1px rgb(27, 51, 27);
+    background-color: rgb(174, 189, 147,0.65);
+    margin-top: 5vw;
+}
+
+a.accueil{
+    font-size: 1.5vw;
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    left: 25px;
+    top: 20px;
+    border-radius: 10px;
+    background-color: rgb(42, 77, 42);
+    padding: 1% 2% 1% 2%;
+    border: solid rgb(27, 51, 27) 2px;
+}
+a.accueilwrong{
+    font-size: 1.5vw;
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    left: 25px;
+    top: 20px;
+    border-radius: 10px;
+    background-color: rgb(166, 182, 137);
+    padding: 1% 2% 1% 2%;
+    border: solid rgb(149, 165, 119) 2px;
+}
+a.accueil:hover{
+    background-color: rgb(255, 106, 19);
+    border-color: rgb(153, 60, 6);
+    transition-duration: 0.5s;
 }
