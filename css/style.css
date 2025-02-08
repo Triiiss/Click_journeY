@@ -1,24 +1,21 @@
 body{
-    background-image: url("fond_2.webp");
-    background-size: cover;
-    background-position: center 100px;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-color: rgb(174, 189, 147); 
+    height: 60vw;
+    background: url("fond_2.webp") no-repeat center 100px / contain;
+
+    background-color: rgb(202, 212, 183); 
+
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-body:not(.accueilpage)::before {
-    content: "";
-    position: absolute;
-    top: 100px; left: 0; width: 100%; height: 89.4%;
-    background: rgba(255, 255, 255, 0.5); /* Noir semi-transparent */
-    z-index: -1;
-}
 
-h1{
+h1.titre{
     text-align: center;
     color:rgb(42, 77, 42);
     -webkit-text-stroke: 1px rgb(27, 51, 27);
+}
+h1:not(.titre){
+    text-align: center;
+    color: white;
+    background-color: rgba(42, 77, 42, 0.65);
 }
 
 ul.bandeau{
@@ -62,17 +59,20 @@ span.etoile{
     color: red;
 }
 
-fieldset.inscription{
+fieldset{
+    background-color: rgba(174, 189, 147,0.6);
     margin: 0% 20% 0% 20%;
     display: grid;
     grid-template-columns: 50% 50%;
 }
-label.inscription{
+label{
+    color:rgb(42, 77, 42);
     font-size: 1.5vw;
     columns: 1;
     margin: 3% 0% 3% 0%;
 }
-input.inscription,div.inscription,button.inscription{
+input,div.inscription,button{
+    color:rgb(42, 77, 42);
     font-size: 1.5vw;
     columns: 2;
     margin: 3% 0% 3% 0%;
@@ -82,12 +82,8 @@ div.inscription{
 }
 
 .afterimage{
-    font-size: 2vw;
-    text-align: center;
+    margin-top: 50vw;
     color:rgb(42, 77, 42);
-    -webkit-text-stroke: 1px rgb(27, 51, 27);
-    background-color: rgb(174, 189, 147,0.65);
-    margin-top: 5vw;
 }
 
 a.accueil{
@@ -98,21 +94,9 @@ a.accueil{
     left: 25px;
     top: 20px;
     border-radius: 10px;
-    background-color: rgb(42, 77, 42);
-    padding: 1% 2% 1% 2%;
-    border: solid rgb(27, 51, 27) 2px;
-}
-a.accueilwrong{
-    font-size: 1.5vw;
-    color: white;
-    text-decoration: none;
-    position: fixed;
-    left: 25px;
-    top: 20px;
-    border-radius: 10px;
     background-color: rgb(166, 182, 137);
     padding: 1% 2% 1% 2%;
-    border: solid rgb(149, 165, 119) 2px;
+    border: solid rgb(111, 129, 76) 2px;
 }
 a.accueil:hover{
     background-color: rgb(255, 106, 19);
