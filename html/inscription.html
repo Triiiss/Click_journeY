@@ -7,6 +7,8 @@
     </head>
     <body>
         <form>
+            <h1 class="titre">Camping de l'Extreme + logo</h1>
+            <a class="accueil" href="accueil.html">Accueil</a><br/>
 			<h1>Formulaire d'inscription</h1><br/>
             
 			<p>Les champs obligatoire sont suivis par <span class="etoile">*</span><br>
@@ -14,7 +16,11 @@
             <fieldset class="inscription">
                 <legend>Inscription</legend>
                 <label for="genre" class="inscription">Genre :</label>
-                <p class="inscription">Monsieur<input type="radio" name="genre" value="mr"/> Madame<input type="radio" name="genre" value="mme"/> <!--Autre<input type="radio" name="genre" value="autre"/>--></p>
+                <div class="inscription">
+                    Monsieur<input type="radio" name="genre" value="mr"/>
+                    Madame<input type="radio" name="genre" value="mme"/>
+                    Autre<input type="radio" name="genre" value="autre"/>
+                </div>
 
                 <label for="prenom" class="inscription">Prénom : <span class="etoile">*</span> </label>
                 <input type="text" name="prenom" class="inscription">
