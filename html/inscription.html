@@ -6,43 +6,46 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css"/>
     </head>
     <body>
-        <form>
             <h1 class="titre">Camping de l'Extreme + logo</h1>
             <a class="accueil" href="accueil.html">Accueil</a><br/>
 			<h1>Formulaire d'inscription</h1><br/>
             
 			<p>Les champs obligatoire sont suivis par <span class="etoile">*</span><br>
 			
-            <fieldset class="inscription">
-                <legend>Inscription</legend>
-                <label for="genre" class="inscription">Genre :</label>
-                <div class="inscription">
-                    Monsieur<input type="radio" name="genre" value="mr"/>
-                    Madame<input type="radio" name="genre" value="mme"/>
-                    Autre<input type="radio" name="genre" value="autre"/>
-                </div>
+            <form>
+                <fieldset >
+                    <legend>Inscription</legend>
+                    <label for="genre" >Genre :</label>
+                    <div class="inscription">
+                        Monsieur<input type="radio" name="genre" value="mr"/>
+                        Madame<input type="radio" name="genre" value="mme"/>
+                        Autre<input type="radio" name="genre" value="autre"/>
+                    </div>
 
-                <label for="prenom" class="inscription">Prénom : <span class="etoile">*</span> </label>
-                <input type="text" name="prenom" class="inscription">
+                    <label for="prenom" >Prénom : <span class="etoile">*</span> </label>
+                    <input type="text" name="prenom" >
 
-                <label for="nom" class="inscription">Nom : <span class="etoile">*</span> </label>
-                <input type="text" name="nom" class="inscription">
+                    <label for="nom" >Nom : <span class="etoile">*</span> </label>
+                    <input type="text" name="nom" >
 
-                <label for="email" class="inscription">Email : <span class="etoile">*</span> </label>
-                <input type="email" name="mail" class="inscription">
+                    <label for="email" >Email : <span class="etoile">*</span> </label>
+                    <input type="email" name="mail" >
 
-                <label for="mdp" class="inscription">Mot de passe : <span class="etoile">*</span> </label>
-                <input type="password" name="mdp" class="inscription">
+                    <label for="login" >Identifiant : <span class="etoile">*</span> </label>
+                    <input type="text" name="login" >
 
-                <label for="mdpcfrm" class="inscription">Confirmation mot de passe : <span class="etoile">*</span> </label>
-                <input type="password" name="mdpcfrm" class="inscription">
+                    <label for="mdp" >Mot de passe : <span class="etoile">*</span> </label>
+                    <input type="password" name="mdp" >
 
-                <label for="tel" class="inscription">Numéro de téléphone</label>
-                <input type="tel" name="tel" class="inscription">
+                    <label for="mdpcfrm" >Confirmation mot de passe : <span class="etoile">*</span> </label>
+                    <input type="password" name="mdpcfrm" >
 
-                <label for="submit" class="inscription"></label>
-                <button name="submit" type="submit" class="inscription">S'inscrire</button>
-            </fieldset>
+                    <label for="tel" >Numéro de téléphone</label>
+                    <input type="tel" name="tel" >
+
+                    <label for="submit" ></label>
+                    <button name="submit" type="submit" >S'inscrire</button>
+                </fieldset>
         </form>
     </body>
 </html>
