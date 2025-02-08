@@ -8,13 +8,10 @@
     <body>
             <h1 class="titre">Camping de l'Extreme + logo</h1>
             <a class="accueil" href="accueil.html">Accueil</a><br/>
-			<h1>Formulaire d'inscription</h1><br/>
-            
-			<p>Les champs obligatoire sont suivis par <span class="etoile">*</span><br>
 			
             <form>
                 <fieldset >
-                    <legend>Inscription</legend>
+                    <legend>Formulaire d'inscription</legend>
                     <label for="genre" >Genre :</label>
                     <div class="inscription">
                         Monsieur<input type="radio" name="genre" value="mr"/>
@@ -43,8 +40,10 @@
                     <label for="tel" >Numéro de téléphone</label>
                     <input type="tel" name="tel" >
 
-                    <label for="submit" ></label>
+                    <label for="submit"><span class="champs">Les champs obligatoire sont suivis par une étoile rouge <span class="etoile">*</span></span></label>
                     <button name="submit" type="submit" >S'inscrire</button>
+
+                    <p>Déjà inscrit ? <a href="connexion.html">Connectez vous</a></p>
                 </fieldset>
         </form>
     </body>
