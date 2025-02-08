@@ -6,7 +6,9 @@ finir la conception du site
 
 Pages
 Accueil 
-  titre + présentation + liens vers autre
+  titre
+  présentation                          Check
+  liens vers autre                      Check
 Présentation
   Présentation + description + theme + équipe(noms)
   Champs de recherche intégré
@@ -15,10 +17,11 @@ Recherche
   affichage de voyage
 Connexion
   Se connecter
-  formulaire
-  Option inscription
+  formulaire                            Check
+  Option inscription                    Check
 Inscription
-  + d'info que connexion
+  + d'info que connexion                Check
+  option connexion                      Check
 Profil 
   modification du profil
   paramètres (mode nuit/langue)
@@ -31,3 +34,4 @@ Admin
 Optionnel:
 Activités
 Page photo
+conditions d'utilisations qui vendent l'ame
