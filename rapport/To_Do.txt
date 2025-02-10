@@ -11,18 +11,19 @@ Présentation
 Recherche
   filtres
   affichage de voyage
-Profil 
-  modification du profil
-  paramètres (mode nuit/langue)
 Admin
   liste utilisateurs
   modifier une propriété d'utilisateur
+Profil                                   Check
+  modification du profil                Check
+  paramètres (mode nuit/langue)         Check
 Accueil                                 Check
   titre
   présentation                          Check
   liens vers autre                      Check
 Inscription                             Check
-  Ajout age + autres info
+  conditions d'utilisations qui vendent l'ame Check
+  Ajout age + autres info              Check
   + d'info que connexion                Check
   option connexion                      Check
 Connexion                               Check
@@ -35,4 +36,3 @@ Connexion                               Check
 Optionnel:
 Activités
 Page photo
-conditions d'utilisations qui vendent l'ame
