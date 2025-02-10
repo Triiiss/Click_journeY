@@ -46,6 +46,7 @@ span.etoile{
     color: rgb(195, 4, 4);
 }
 .first-afterimage{
+    font-size: 1.5vw;
     border-bottom: rgb(28, 49, 28) solid 1px;
 }
 .afterimageaccueil{
@@ -203,6 +204,7 @@ p.presentation, span.recherche_rapide{
     border-radius: 10px;
 }
 ul.presentation > li{
+    font-size: 0.9vw;
     color: rgb(27, 51, 27);
 }
 span.recherche_rapide{
