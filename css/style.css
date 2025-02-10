@@ -20,7 +20,7 @@ p{
 }
 p:not(div > p):not(fieldset > p){
     padding: 10px 10px 10px 10px;
-    background-color: rgb(28, 49, 28);
+    background-color: rgba(28, 49, 28,0.5);
     color: white;
 }
 a{
