@@ -1,105 +1,184 @@
-body{
-    height: 60vw;
-    background: url("fond_2.webp") no-repeat center 100px / contain;
-
+body{/*Fond et police des pages*/
+    height: 65vw;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgb(202, 212, 183) 90%), url("../images/fond_2.webp") no-repeat center 65% / contain;
     background-color: rgb(202, 212, 183); 
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+body.presentation{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, rgb(202, 212, 183) 90%), url("../images/fond_2.webp") no-repeat center 65% / contain;
+    background-color: rgb(202, 212, 183); 
+}
 
-h1.titre{
+/*Typographies texte*/
+*{
+    color:rgb(28, 49, 28);
+}
+p{
+    font-size: 1vw;
     text-align: center;
+}
+p:not(div > p):not(fieldset > p){
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(28, 49, 28);
+    color: white;
+}
+a{
+    color: rgb(195, 85, 21);
+    text-decoration: none;
+}
+h2{
+    font-size: 3vw;
+}
+h1.titre{/*Le titre sur la bande au dessus*/
+    margin-top: 1vw;
+    font-size: 3vw;
     color:rgb(42, 77, 42);
+    text-align: center;
     -webkit-text-stroke: 1px rgb(27, 51, 27);
 }
-h1:not(.titre){
+h1.titre-accueil{/*Le titre de la page d'accueil en gros*/
     text-align: center;
-    color: white;
-    background-color: rgba(42, 77, 42, 0.65);
+    font-size: 7vw;
+    margin-top: 10vw;
+}
+div.titre{
+    text-align: center;
+}
+span.titre{/*Les sous-titre de page (connexion/Inscription ect)*/
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: rgba(202, 212, 183,0.5);
+    font-size: 3vw;
+    padding: 0.5% 1% 0.5% 1%;
+}
+span.etoile{
+    color: rgb(195, 4, 4);
+}
+.first-afterimage{
+    border-bottom: rgb(28, 49, 28) solid 1px;
+}
+.afterimageaccueil{
+    top: 63vw;
+    position: absolute;
+    text-align: center;
+    font-size: 1.5vw;
+    left: 25%;
+}
+.afterimage{
+    left: 42%;
+    top: 63vw;
+    position: absolute;
+    text-align: center;
+    font-size: 1.5vw;
 }
 
+
+/*Bandeau = la bannière pour accéder aux liens à l'accueil*/
 ul.bandeau{
     list-style: none;
 }
-nav.bandeau{
+nav.bandeau{/*La bordure+taille de la bannière d'accueil*/
     width: 90%;
     margin: 0% 5% 0% 5%;
     display: flex;
     border: solid rgb(28, 59, 28);
     border-radius: 10px;
 }
-a.bandeau{
+a.bandeau{/*Texte et espacement du texte*/
     color:white;
     font-size: 1.5vw;
     text-align: center;
     text-decoration: none;
     padding:4.5% 30% 4.5% 30%;
 }
-a.bandeau[href="presentation.html"]{
+a.bandeau[href="presentation.html"]{/*Arrondir les coins à gauche*/
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
 }
-a.bandeau[href="inscription.html"]{
+a.bandeau[href="inscription.html"]{/*Arrondir les coins à droite*/
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
 }
-li.bandeau{
+li.bandeau{/*Fond transparent*/
     padding: 1% 0% 1% 0%;
     width: 25%;
     background-color: rgba(42, 77, 42, 0.65);
 }
-a.bandeau:hover{
-    transition-duration: 0.5s;
+a.bandeau:hover{/*Changement de couleur au passage de la souris*/
+    transition: all 0.5s;
     /*background-color:rgba(255, 106, 19,0.5);*/
     color:rgb(247, 148, 91);
     background-color: rgba(42, 77, 42, 0.8);
 }
 
-span.etoile{
-    color: red;
+/*Les formulaires*/
+legend{
+    border: rgb(28, 59, 28) 2px solid;
+    color: white;
+    font-size: 2vw;
+    padding: 1% 1% 1% 1%;
+    background-color: rgb(40, 77, 40);
+    border-radius: 1vw;
 }
-
-fieldset{
+form{
+    margin-top: 2vw;
+}
+button{
+    color: white;
+    border-radius: 7px;
+    background-color: rgb(255, 106, 19);
+    border: solid 1px rgb(153, 60, 6);
+}
+button:hover{
+    color: rgb(132, 53, 7);
+    background-color: rgb(230, 97, 20);
+    transition: all 0.5s;
+}
+fieldset{/*Fond et mise en page en grille*/
+    border: rgb(28, 59, 28) solid 3px;
     background-color: rgba(174, 189, 147,0.6);
     margin: 0% 20% 0% 20%;
     display: grid;
     grid-template-columns: 50% 50%;
 }
-label{
-    color:rgb(42, 77, 42);
+label{/*A gauche*/
     font-size: 1.5vw;
     columns: 1;
-    margin: 3% 0% 3% 0%;
+    margin: 2% 0% 2% 0%;
 }
-input,div.inscription,button{
-    color:rgb(42, 77, 42);
+input,div.inscription,button{/*A droite*/
     font-size: 1.5vw;
     columns: 2;
-    margin: 3% 0% 3% 0%;
+    margin: 2% 0% 2% 0%;
 }
-div.inscription{
+div.inscription{/*Elements radius sur la même ligne*/   
     display: flex;
 }
-
-.afterimage{
-    margin-top: 50vw;
-    color:rgb(42, 77, 42);
+input[type="radio"]{/*Espacement de la même ligne*/
+    margin-right: 5vw;
+}
+span.champs{
+    color: black;
+    font-size: 0.7vw;
 }
 
+/*Bouton accueil*/
 a.accueil{
     font-size: 1.5vw;
     color: white;
     text-decoration: none;
-    position: fixed;
-    left: 25px;
-    top: 20px;
-    border-radius: 10px;
     background-color: rgb(166, 182, 137);
-    padding: 1% 2% 1% 2%;
     border: solid rgb(111, 129, 76) 2px;
+    border-radius: 10px;
+
+    position: fixed;
+    left: 3%;
+    top: 3%;
+    padding: 1% 2% 1% 2%;
 }
-a.accueil:hover{
+a.accueil:hover{/*Changement de couleur*/
     background-color: rgb(255, 106, 19);
     border-color: rgb(153, 60, 6);
-    transition-duration: 0.5s;
+    transition: all 0.5s;
 }
