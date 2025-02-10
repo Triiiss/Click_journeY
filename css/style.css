@@ -42,16 +42,6 @@ h1.titre-accueil{/*Le titre de la page d'accueil en gros*/
     font-size: 7vw;
     margin-top: 10vw;
 }
-div.titre{
-    text-align: center;
-}
-span.titre{/*Les sous-titre de page (connexion/Inscription ect)*/
-    font-weight: bold;
-    text-decoration: underline;
-    background-color: rgba(202, 212, 183,0.5);
-    font-size: 3vw;
-    padding: 0.5% 1% 0.5% 1%;
-}
 span.etoile{
     color: rgb(195, 4, 4);
 }
@@ -181,4 +171,42 @@ a.accueil:hover{/*Changement de couleur*/
     background-color: rgb(255, 106, 19);
     border-color: rgb(153, 60, 6);
     transition: all 0.5s;
+}
+
+/*Photo de profil*/
+img.profil_picture{
+    width: 2vw;
+    border-radius: 50%;
+}
+
+/*Présentation*/
+span.presentation{/*Les sous-titre*/
+    font-weight: bold;
+    color: rgb(202, 212, 183);
+    -webkit-text-stroke: 2px rgb(27, 51, 27);
+    border-bottom: solid rgb(27, 51, 27);
+    font-size: 3vw;
+    padding: 0% 10% 0% 0%;
+}
+h2.presentation{
+    font-size: 2.5vw;
+    text-align: center;
+    text-decoration: underline;
+    -webkit-text-stroke: 0.3px white;
+}
+h3.presentation{
+    font-size: 1.5vw;
+}
+p.presentation, span.recherche_rapide{
+    font-size: 1vw;
+    border: 2px rgb(27, 51, 27) solid;
+    border-radius: 10px;
+}
+ul.presentation > li{
+    color: rgb(27, 51, 27);
+}
+span.recherche_rapide{
+    color: white;
+    background-color: rgba(27, 51, 27,0.5);
+    padding: 1% 4% 1% 3%;
 }
