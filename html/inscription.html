@@ -20,13 +20,13 @@
                     </div>
 
                     <label for="prenom">Prénom : <span class="etoile">*</span> </label>
-                    <input type="text" name="prenom" placeholder="Emilie">
+                    <input type="text" name="prenom" placeholder="Emilie" required>
 
                     <label for="nom" >Nom : <span class="etoile">*</span> </label>
-                    <input type="text" name="nom"placeholder="Dupont">
+                    <input type="text" name="nom"placeholder="Dupont" required>
 
                     <label for="email" >Email : <span class="etoile">*</span> </label>
-                    <input type="email" name="mail" placeholder="email@gmail.com">
+                    <input type="email" name="mail" placeholder="email@gmail.com" required>
                     
                     <label for="tel" >Numéro de téléphone</label>
                     <input type="tel" name="tel" placeholder="01 23 45 67 89">
@@ -38,16 +38,16 @@
                     <input type="text" name="adresse" placeholder="01 rue de la paix Paris"/>
 
                     <label for="login" >Identifiant : <span class="etoile">*</span> </label>
-                    <input type="text" name="login" >
+                    <input type="text" name="login" required>
 
                     <label for="mdp" >Mot de passe : <span class="etoile">*</span> </label>
-                    <input type="password" name="mdp" >
+                    <input type="password" name="mdp" required>
 
                     <label for="mdpcfrm" >Confirmation mot de passe : <span class="etoile">*</span> </label>
-                    <input type="password" name="mdpcfrm" >
+                    <input type="password" name="mdpcfrm" required>
                     
                     <label for="conditions"></label>
-                    <span><input name="conditions" type="checkbox" value="conditions"/>   <span class="etoile">*</span>Accepter <a href="conditions.html" target="_blank">conditions d'utilisation</a></span>
+                    <span><input name="conditions" type="checkbox" value="conditions" required/>   <span class="etoile">*</span>Accepter <a href="conditions.html" target="_blank">conditions d'utilisation</a></span>
             
                     <label for="submit"><span class="champs">Les champs obligatoire sont suivis par une étoile rouge <span class="etoile">*</span></span></label>
                     <button name="submit" type="submit" >S'inscrire</button>
@@ -55,7 +55,6 @@
                     <p>Déjà inscrit ? <a href="connexion.html">Connectez vous</a></p>
                 </fieldset>
         </form>
-        
         <p>Accès temporaire au <a href="profil.html">profil</a> et à <a href="admin.html">l'admin</a></p>
 
         <div class="afterimage">
