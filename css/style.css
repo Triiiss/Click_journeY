@@ -15,6 +15,7 @@ body.presentation{
     color:rgb(28, 49, 28);
 }
 p{
+    margin: 0% 20% 0% 20%;
     font-size: 1vw;
     text-align: center;
 }
