@@ -98,7 +98,7 @@ li.bandeau{/*Fond transparent*/
     width: 25%;
     background-color: rgba(42, 77, 42, 0.65);
 }
-a.bandeau:hover{/*Changement de couleur au passage de la souris*/
+a.bandeau:hover, a#current{/*Changement de couleur au passage de la souris*/
     transition: all 0.5s;
     /*background-color:rgba(255, 106, 19,0.5);*/
     color:rgb(247, 148, 91);
@@ -170,7 +170,7 @@ a.accueil{
     top: 3%;
     padding: 1% 2% 1% 2%;
 }
-a.accueil:hover{/*Changement de couleur*/
+a.accueil:hover, a#acceuil{/*Changement de couleur*/
     background-color: rgb(255, 106, 19);
     border-color: rgb(153, 60, 6);
     transition: all 0.5s;
