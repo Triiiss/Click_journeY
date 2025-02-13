@@ -5,20 +5,20 @@ finir le planning
 finir la conception du site
 
 Pages
-Présentation
-  Présentation + description + theme + équipe(noms + photos?)
-  Champs de recherche intégré
 Recherche
   filtres
   affichage de voyage
 Admin
   liste utilisateurs
   modifier une propriété d'utilisateur
+Présentation                          Check
+  Présentation + description + theme + équipe(noms)  Check
+  Champs de recherche intégré          Check
 Profil                                   Check
   modification du profil                Check
   paramètres (mode nuit/langue)         Check
 Accueil                                 Check
-  titre
+  titre                                 Check
   présentation                          Check
   liens vers autre                      Check
 Inscription                             Check
