@@ -231,3 +231,59 @@ li.conditions{
 p.conditions{
     margin: 0% 0% 0% 0%;
 }
+
+ table.admin {
+        width: 60%; /* Largeur ajustée pour mieux s'adapter à la page */
+        margin: 20%; /* Centrer le tableau */
+        border-collapse: collapse; /* Pour éviter les bordures doubles */
+        font-size: 1.5vw; /* Taille du texte */
+    }
+
+    /* Bordures du tableau, des en-têtes et des cellules */
+    .admin table, .admin th, .admin td {
+        border: 2px solid rgb(28, 59, 28); /* Bordure verte */
+    }
+
+    /* Style des en-têtes de colonne */
+    .admin th {
+        background-color: rgb(40, 77, 40); /* Fond vert sombre */
+        color: white; /* Texte en blanc */
+        padding: 12px; /* Espacement dans les cellules d'en-tête */
+        text-align: center; /* Centrer le texte */
+    }
+
+    /* Style des cellules du tableau */
+    .admin td {
+        padding: 10px; /* Espacement dans les cellules */
+        text-align: center; /* Centrer le texte */
+    }
+
+    /* Lignes paires avec fond clair pour améliorer la lisibilité */
+    .admin tr:nth-child(even) {
+        background-color: rgba(202, 212, 183, 0.3); /* Fond plus clair pour les lignes paires */
+    }
+
+    /* Survol des lignes pour un effet visuel */
+    .admin tr:hover {
+        background-color: rgba(28, 59, 28, 0.2); /* Fond plus foncé quand on survole une ligne */
+    }
+
+    /* Style des boutons d'action dans les cellules */
+    .admin button{
+        padding: 4px 8px;
+        background-color: rgb(255, 106, 19); /* Fond orange pour les boutons */
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 7px; /* Coins arrondis */
+        font-size: 1vw;
+        width: auto; /* Fixe la largeur automatiquement selon le texte */
+        max-width: 150px; /* Limite la longueur du bouton */
+        margin: 3px;
+        
+    }
+
+    .admin button:hover {
+        background-color: rgb(230, 97, 20); /* Changement de couleur au survol */
+        transition: all 0.3s; /* Transition fluide */
+    }
