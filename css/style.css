@@ -287,3 +287,7 @@ p.conditions{
         background-color: rgb(230, 97, 20); /* Changement de couleur au survol */
         transition: all 0.3s; /* Transition fluide */
     }
+
+.recherche{
+    background-color: rgba(174, 189, 147,0.6);
+}

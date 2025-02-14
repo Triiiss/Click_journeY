@@ -19,14 +19,16 @@
         </ul>
         
         <form>
-            Filtres : 
             <fieldset class="recherche">
+                <legend>Filtres :</legend>
                 <label for="lieu">Lieu</label>
                 <input type="text" name="lieu"> 
                 <label for="depart">Date de départ</label>
                 <input type="Date" name="depart"> 
                 <label for="duree">Durée (jours)</label>
                 <input type="number" name="duree" maxlength="3" min="1"> 
+            </fieldset>
+            <fieldset class="recherche">
                 <label for="budget">Budget</label>
                 <input type="range" name="budget" min="10" max="10000" value="1000">
                 <!--Sélectionnez votre destination
