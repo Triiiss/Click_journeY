@@ -21,36 +21,56 @@
         <form>
             <fieldset class="recherche">
                 <legend>Filtres :</legend>
-                <label for="lieu">Lieu</label>
-                <input type="text" name="lieu"> 
-                <label for="depart">Date de départ</label>
-                <input type="Date" name="depart"> 
-                <label for="duree">Durée (jours)</label>
-                <input type="number" name="duree" maxlength="3" min="1"> 
+                <div class="filtre">
+                    <label for="lieu">Lieu</label>
+                    <input type="text" name="lieu"> 
+                </div>
+                <div class="filtre">
+                    <label for="depart">Date de départ</label>
+                    <input type="Date" name="depart"> 
+                </div>
+                <div class="filtre">
+                    <label for="duree">Durée (jours)</label>
+                    <input type="number" name="duree" maxlength="3" min="1">  
+                </div>                
             </fieldset>
             <fieldset class="recherche">
-                <label for="budget">Budget</label>
-                <input type="range" name="budget" min="10" max="10000" value="1000">
+                <div class="filtre">
+                    <label for="budget">Budget</label>
+                    <input type="range" name="budget" min="10" max="10000" value="1000">
+                </div>   
+                <div class="filtre">
+                    <label for="nbpersonnes">Nombre de personnes</label>
+                    <input type="number" name="nbpersonnes" min="1" max="10" value="1">
+                </div>   
                 <!--Sélectionnez votre destination
                 <map name="map">
-                </map>-->
-                <label for="nbpersonnes">Nombre de personnes</label>
-                <input type="number" name="nbpersonnes" min="1" max="10" value="1">
+                </map>-->                 
             </fieldset>
             <fieldset class="recherche">
-                <label for="vacances">Type de vacances</label>
-                <input type="checkbox" name="vacances" value="plage">Plage
-                <input type="checkbox" name="vacances" value="montagne">Montagne
-                <input type="checkbox" name="vacances" value="ville">Ville 
-                <input type="checkbox" name="vacances" value="forêt">Forêt
-
-                <label for="randonnée">Randonnée</label>
-                <input type="radio" name="randonnée" value="oui">Oui
-                <input type="radio" name="randonnée" value="non">Non
-
-                <label for="douches">Douches</label>
-                <input type="radio" name="douches" value="oui">Oui
-                <input type="radio" name="douches" value="non">Non
+                <div class="filtre">
+                    <label for="vacances">Type de vacances</label>
+                    <div>
+                        Plage<input type="checkbox" name="vacances" value="plage">
+                        Montagne<input type="checkbox" name="vacances" value="montagne">
+                        Ville <input type="checkbox" name="vacances" value="ville">
+                        Forêt<input type="checkbox" name="vacances" value="forêt">
+                    </div>
+                </div>   
+                <div class="filtre">
+                    <label for="randonnée">Randonnée</label>
+                    <div>
+                        Oui<input type="radio" name="randonnée" value="oui">
+                        Non<input type="radio" name="randonnée" value="non">
+                    </div>
+                </div>   
+                <div class="filtre">
+                    <label for="douches">Douches</label>
+                    <div>
+                        Oui<input type="radio" name="douches" value="oui">
+                        Non<input type="radio" name="douches" value="non">
+                    </div>
+                </div>              
             </fieldset>
             <fieldset class="recherche">
                 <label for="recherche">Recherche</label>

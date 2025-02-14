@@ -290,4 +290,16 @@ p.conditions{
 
 .recherche{
     background-color: rgba(174, 189, 147,0.6);
+    display: flex;
+    flex-direction: row;
+}
+
+.filtre{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+}
+
+.recherche div>div{
+    font-size: 1.2vw;
 }
