@@ -307,3 +307,7 @@ p.conditions{
 .recherche div>div{
     font-size: 1.2vw;
 }
+
+label[for="recherche"]{
+    margin-right: 40px;
+}
