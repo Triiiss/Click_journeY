@@ -170,7 +170,7 @@ a.accueil{
     top: 3%;
     padding: 1% 2% 1% 2%;
 }
-a.accueil:hover, a#acceuil{/*Changement de couleur*/
+a.accueil:hover, a#accueil{/*Changement de couleur*/
     background-color: rgb(255, 106, 19);
     border-color: rgb(153, 60, 6);
     transition: all 0.5s;
@@ -234,7 +234,8 @@ p.conditions{
 
  table.admin {
         width: 60%; /* Largeur ajustée pour mieux s'adapter à la page */
-        margin: 20%; /* Centrer le tableau */
+        margin-left: 20%; /* Centrer le tableau */
+        margin-right: 20%;
         border-collapse: collapse; /* Pour éviter les bordures doubles */
         font-size: 1.5vw; /* Taille du texte */
     }
@@ -287,6 +288,18 @@ p.conditions{
         background-color: rgb(230, 97, 20); /* Changement de couleur au survol */
         transition: all 0.3s; /* Transition fluide */
     }
+
+caption.admin{
+    background-color: rgba(174, 189, 147,0.6);
+    border: solid rgb(28, 59, 28);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: 1.8vw;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
 
 .recherche{
     border: rgb(28, 59, 28) solid 3px;
