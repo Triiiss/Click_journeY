@@ -83,7 +83,10 @@ a.bandeau{/*Texte et espacement du texte*/
     font-size: 1.5vw;
     text-align: center;
     text-decoration: none;
-    padding:4.5% 30% 4.5% 30%;
+    padding:6% 25% 6% 25%;
+}
+a.profil{
+    padding:11% 44% 4.5% 44%;
 }
 a.bandeau[href="presentation.html"]{/*Arrondir les coins à gauche*/
     border-top-left-radius: 7px;
@@ -95,10 +98,15 @@ a.bandeau[href="inscription.html"]{/*Arrondir les coins à droite*/
 }
 li.bandeau{/*Fond transparent*/
     padding: 1% 0% 1% 0%;
-    width: 25%;
+    width: 20%;
     background-color: rgba(42, 77, 42, 0.65);
 }
-a.bandeau:hover, a#current{/*Changement de couleur au passage de la souris*/
+li.profil{
+    padding-top: 0.5%;
+    width: 20%;
+    background-color: rgba(42, 77, 42, 0.65);
+}
+a.bandeau:hover, a.profil:hover, a#current{/*Changement de couleur au passage de la souris*/
     transition: all 0.5s;
     /*background-color:rgba(255, 106, 19,0.5);*/
     color:rgb(247, 148, 91);
