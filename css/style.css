@@ -92,7 +92,7 @@ a.bandeau[href="presentation.html"]{/*Arrondir les coins à gauche*/
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
 }
-a.bandeau[href="inscription.html"]{/*Arrondir les coins à droite*/
+a.profil{/*Arrondir les coins à droite*/
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
 }
