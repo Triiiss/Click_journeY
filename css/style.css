@@ -265,7 +265,7 @@ p.conditions{
 
     /* Survol des lignes pour un effet visuel */
     .admin tr:hover {
-        background-color: rgba(28, 59, 28, 0.2); /* Fond plus foncé quand on survole une ligne */
+        background-color: rgba(174, 189, 147,0.8); /* Fond plus foncé quand on survole une ligne */
     }
 
     /* Style des boutons d'action dans les cellules */
