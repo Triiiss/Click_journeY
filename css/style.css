@@ -259,9 +259,8 @@ p.conditions{
         text-align: center; /* Centrer le texte */
     }
 
-    /* Lignes paires avec fond clair pour améliorer la lisibilité */
-    .admin tr:nth-child(even) {
-        background-color: rgba(202, 212, 183, 0.3); /* Fond plus clair pour les lignes paires */
+    .admin tr {
+        background-color: rgba(174, 189, 147,0.6); 
     }
 
     /* Survol des lignes pour un effet visuel */
