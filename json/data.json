@@ -1,0 +1,28 @@
+{
+    "utilisateurs":[
+        {
+            "login": "exemple@gmail.com",
+            "mdp": "1234",
+            "role": "normal",
+            "profil":{
+                "prenom":"a",
+                "nom":"b",
+                "adresse": "01 rue de la paix Paris",
+                "tel": "01 23 45 67 89"
+            },
+            "inscription":"02/03/25"
+        },
+        {
+            "login": "exemple2@gmail.com",
+            "mdp": "4575",
+            "role": "admin",
+            "profil":{
+                "prenom":"a",
+                "nom":"b",
+                "adresse": "02 rue de la paix Paris",
+                "tel": "01 32 45 67 89"
+            },
+            "inscription":"01/03/25"
+        }
+    ]
+}
