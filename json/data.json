@@ -24,5 +24,19 @@
             },
             "inscription":"01/03/25"
         }
+    ],
+
+    "voyages":[
+        {
+            "titre": ,
+            "prix": ,
+            "etapes":[
+
+            ],
+            "dates":{
+                "depart": ,
+                "arrivee": 
+            }
+        }
     ]
 }
