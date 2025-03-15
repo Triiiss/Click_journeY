@@ -21,7 +21,7 @@ p{
     font-size: 1vw;
     text-align: center;
 }
-p:not(div > p):not(fieldset > p){
+p:not(div > p):not(fieldset > p):not(span > p){
     padding: 10px 10px 10px 10px;
     background-color: rgba(28, 49, 28,0.5);
     color: white;
@@ -50,7 +50,9 @@ span.etoile{
     color: rgb(195, 4, 4);
 }
 .first-afterimage{
+    padding: 0% 5% 0% 5%;
     font-size: 1.5vw;
+    text-align: center;
     border-bottom: rgb(28, 49, 28) solid 1px;
 }
 .afterimageaccueil{
@@ -62,8 +64,6 @@ span.etoile{
 }
 .afterimage{
     left: 42%;
-    top: 63vw;
-    position: absolute;
     text-align: center;
     font-size: 1.5vw;
 }
@@ -85,7 +85,7 @@ a.bandeau{/*Texte et espacement du texte*/
     font-size: 1.5vw;
     text-align: center;
     text-decoration: none;
-    padding:6% 25% 6% 25%;
+   padding:6% 25% 6% 25%;/* */
 }
 a.profil{
     padding:11% 44% 4.5% 44%;
@@ -108,11 +108,14 @@ li.profil{
     width: 20%;
     background-color: rgba(42, 77, 42, 0.65);
 }
-a.bandeau:hover, a.profil:hover, a#current{/*Changement de couleur au passage de la souris*/
+li.bandeau:hover, li.profil:hover, li#current{/*Changement de couleur au passage de la souris*/
     transition: all 0.5s;
     /*background-color:rgba(255, 106, 19,0.5);*/
+    background-color: rgba(32, 60, 32, 0.8);
+}
+a.bandeau:hover, a.profil:hover{/*Changement de couleur au passage de la souris*/
+    transition: all 0.5s;
     color:rgb(247, 148, 91);
-    background-color: rgba(42, 77, 42, 0.8);
 }
 
 /*Les formulaires*/
@@ -226,7 +229,7 @@ span.recherche_rapide{
 }
 
 img.logo{
-    width: 3%;
+    width: 4%;
 }
 
 fieldset.conditions{
