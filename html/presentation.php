@@ -2,8 +2,8 @@
     session_start();
 ?>
 
-<!DOCTYPE html>
-<html>
+<!DOCTYPE php>
+<php>
 	<head>
         <meta charset="UTF-8" />
         <title> Camping de l'extrême - présentation</title>
@@ -12,15 +12,15 @@
 	
 	<body class="presentation">
                 <h1 class="titre">Camping de l'Extreme <img src="../images/logo.png" class="logo" alt="logo de l'image"/></h1>
-                <a class="accueil" href="accueil.html">Accueil</a><br/>
+                <a class="accueil" href="accueil.php">Accueil</a><br/>
                 
                 <ul class="bandeau">
                         <nav class="bandeau">
-                        <li class="bandeau"><a class="bandeau" id="current" href="presentation.html">PRESENTATION</a></li>
-                        <li class="bandeau"><a class="bandeau" href="recherche.html">ITINERAIRES</a></li>
-                        <li class="bandeau"><a class="bandeau" href="connexion.html">CONNEXION</a></li>
-                        <li class="bandeau"><a class="bandeau" href="inscription.html">INSCRIPTION</a></li>
-                        <li class="profil"><a class="profil" href="profil.html"> 
+                        <li class="bandeau" id="current"><a class="bandeau" id="current" href="presentation.php">PRESENTATION</a></li>
+                        <li class="bandeau"><a class="bandeau" href="recherche.php">ITINERAIRES</a></li>
+                        <li class="bandeau"><a class="bandeau" href="connexion.php">CONNEXION</a></li>
+                        <li class="bandeau"><a class="bandeau" href="inscription.php">INSCRIPTION</a></li>
+                        <li class="profil"><a class="profil" href="profil.php"> 
                         <img src="../images/profil_picture.webp" class="profil_picture" alt="Profil"/></a>
                         </li>
                         </nav>
@@ -47,12 +47,12 @@
                         
                 <h2 class="presentation">Notre équipe :</h2>
                 <p class="presentation">Thémis Tran Tu Thien<br/>Florian Bruyant<br/>Alexis Guimbard</p>
-
-		<br>
+                
+                <br><br>
                 <div class="afterimage">
                         <span class="first-afterimage">Nous contacter :</span>
                         <p>Email : contact@campingextreme.com<br/>Téléphone : 01 23 45 67 89</p>
                         <br/>
                 </div>
 	</body>
-</html>
+</php>

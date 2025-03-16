@@ -2,8 +2,8 @@
     session_start();
 ?>
 
-<!DOCTYPE html>
-<html>
+<!DOCTYPE php>
+<php>
     <head>
         <meta charset="utf-8"/>
         <title>camping de l'extreme - Profil</title>
@@ -11,15 +11,15 @@
     </head>
     <body>
         <h1 class="titre">Camping de l'Extreme <img src="../images/logo.png" class="logo" alt="logo de l'image"/></h1>
-        <a class="accueil" href="accueil.html">Accueil</a><br/>
+        <a class="accueil" href="accueil.php">Accueil</a><br/>
 
         <ul class="bandeau">
             <nav class="bandeau">
-                <li class="bandeau"><a class="bandeau" href="presentation.html">PRESENTATION</a></li>
-                <li class="bandeau"><a class="bandeau" href="recherche.html">ITINERAIRES</a></li>
-                <li class="bandeau"><a class="bandeau" href="connexion.html">CONNEXION</a></li>
-                <li class="bandeau"><a class="bandeau" href="inscription.html">INSCRIPTION</a></li>
-                <li class="profil"><a class="profil" href="profil.html" id="current"> 
+                <li class="bandeau"><a class="bandeau" href="presentation.php">PRESENTATION</a></li>
+                <li class="bandeau"><a class="bandeau" href="recherche.php">ITINERAIRES</a></li>
+                <li class="bandeau"><a class="bandeau" href="connexion.php">CONNEXION</a></li>
+                <li class="bandeau"><a class="bandeau" href="inscription.php">INSCRIPTION</a></li>
+                <li class="profil" id="current"><a class="profil" id="current" href="profil.php"> 
                 <img src="../images/profil_picture.webp" class="profil_picture" alt="Profil"/></a>
                 </li>
             </nav>
@@ -45,11 +45,11 @@
                 <button name="modif" type="button" >Modifier le profil</button>
         </fieldset>
 
-        <br>
+        <br><br>
         <div class="afterimage">
             <span class="first-afterimage">Nous contacter :</span>
             <p>Email : contact@campingextreme.com<br/>Téléphone : 01 23 45 67 89</p>
             <br/>
         </div>
     </body>
-</html>
+</php>
