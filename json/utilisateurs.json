@@ -1,0 +1,16 @@
+{
+    "login": "Themis TTT",
+    "mdp": "motdepasse",
+    "email": "themis.trantuthien@gmail.com",
+    "role": "normal",
+    "profil": {
+        "prenom": "Th\u00e9mis",
+        "nom": "Tran Tu Thien",
+        "email": "themis.trantuthien@gmail.com",
+        "genre": "-",
+        "telephone": "0652658979",
+        "date de naissance": "2006-04-25",
+        "adresse": "18 rue de la croix des vignes Ablis"
+    },
+    "date d'inscription": "2025-03-16"
+}
