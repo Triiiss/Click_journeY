@@ -25,7 +25,7 @@
             </nav>
         </ul>
 			
-            <form action="../php/inscription.php" method="post">
+            <form action="inscription.php" method="post">
                 <fieldset class="formulaire">
                     <legend>Formulaire d'inscription</legend>
                     <label for="genre" >Genre :</label>
