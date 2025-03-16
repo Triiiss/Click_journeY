@@ -25,7 +25,7 @@
             </nav>
         </ul>
         
-        <form action="../php/recherche.php">
+        <form action="recherche.php">
             <fieldset class="recherche">
                 <legend>Filtres</legend>
                 <div class="filtre">
