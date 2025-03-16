@@ -26,7 +26,7 @@
             </nav>
         </ul>
 
-        <form action="../php/connexion.php" method="post">
+        <form action="connexion.php" method="post">
             <fieldset class="formulaire">
             <legend>Connexion</legend>
 
