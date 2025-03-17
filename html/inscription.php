@@ -122,9 +122,19 @@
                                             "profil"=> $profil,
                                             "voyages"=> array(),
                                             "date d'inscription"=> date("Y-m-d"));
+                                        
+                                        $json_data = file_get_contents("../json/utilisateurs.json");
+                                        if($json_data === false){
+                                            die("Erreur de lecture du fichier json");
+                                        }
+                                        $users = json_decode($json_data, true);
+
+                                        $users[] = $nouvel_utilisateur;
 
                                         //On le met dans un fichier json
-                                        file_put_contents('../json/utilisateurs.json', json_encode($nouvel_utilisateur, JSON_PRETTY_PRINT), FILE_APPEND);
+                                        if (file_put_contents('../json/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT))===false){
+                                            die("Erreur de sauvegarde de fichier json");
+                                        }
 
                                         // Dire à la session qu'on est connecté, et renvoyer à l'accueil
                                         $_SESSION["connexion"] = "connected";
