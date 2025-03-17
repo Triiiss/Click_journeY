@@ -15,6 +15,7 @@
     $required=0;
     $samepass=0;
     $newlogin=1;
+    $safemdp=0;
 ?>
 
 <!DOCTYPE php>
@@ -90,6 +91,33 @@
 
                     <label for="mdp" >Mot de passe : <span class="etoile">*</span> </label>
                     <input type="password" name="mdp" required>
+                    <?php
+                        $maj=0;
+                        $min=0;
+                        $num=0;
+                        $spe=0;
+                         foreach($mdp as $letter){
+				 if($maj==0 && ctype_upper($user)){
+					 $maj=1;
+				 }
+				 if($min==0 && ctype_lower($user)){
+					 $min=1;
+				 }
+				 if($num==0 && is_numeric($user)){
+					 $num=1;
+				 }
+				 if($spe==0 && ($spe == '!' || $spe == '*' || $spe == '#' || $spe == '%'))){
+					 $spe=1;
+				 }
+			 }
+                         if (strlen($users)>=8 && $maj == 1 && $min == 1 && $num == 1 && $spe == 1){
+				 $safemdp = 1;
+			 }
+			 else{
+				 echo '<p></p>
+                                 <span class="etoile">Le mot de passe n\'est pas assez sécurisé ou long(8 lettres, une maj, une min, un chiffre, un caractere special (!, *, #, %))</span>'
+			 }
+                    ?>
 
                     <label for="mdpcfrm" >Confirmation mot de passe : <span class="etoile">*</span> </label>
                     <input type="password" name="mdpcfrm" required>
@@ -123,7 +151,7 @@
                             $required=1;
                         }
                     
-                        if($required == 1 && $newlogin == 1 && $samepass == 1){
+                        if($required == 1 && $newlogin == 1 && $samepass == 1 && $safemdp == 1){
                             echo '<p>Inscription en cours...</p>';
                             /* Si les informations non required sont vides, on met un - à la place*/
                             if (!isset($genre) || empty($genre)){
