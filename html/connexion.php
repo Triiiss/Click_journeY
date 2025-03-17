@@ -20,9 +20,7 @@
                 <li class="bandeau"><a class="bandeau" href="recherche.php">ITINERAIRES</a></li>
                 <li class="bandeau" id="current"><a class="bandeau" id="current" href="connexion.php">CONNEXION</a></li>
                 <li class="bandeau"><a class="bandeau" href="inscription.php">INSCRIPTION</a></li>
-                <li class="profil"><a class="profil" href="profil.php"> 
-                <img src="../images/profil_picture.webp" class="profil_picture" alt="Profil"/></a>
-                </li>
+                
             </nav>
         </ul>
 

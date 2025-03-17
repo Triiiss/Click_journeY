@@ -19,9 +19,6 @@
                 <li class="bandeau"><a class="bandeau" href="recherche.php">ITINERAIRES</a></li>
                 <li class="bandeau"><a class="bandeau" href="connexion.php">CONNEXION</a></li>
                 <li class="bandeau" id="current"><a class="bandeau" id="current" href="inscription.php">INSCRIPTION</a></li>
-                <li class="profil"><a class="profil" href="profil.php"> 
-                <img src="../images/profil_picture.webp" class="profil_picture" alt="Profil"/></a>
-                </li>
             </nav>
         </ul>
 			
@@ -68,57 +65,79 @@
                     <button class="inscription" name="submit" type="submit" >S'inscrire</button>
 
                     <p>Déjà inscrit ? <a href="connexion.php">Connectez vous</a></p>
+                    
+                    <?php
+                        $genre=$_POST["genre"];
+                        $prenom=$_POST["prenom"];
+                        $nom=$_POST["nom"];
+                        $email=$_POST["email"];
+                        $telephone=$_POST["tel"];
+                        $date=$_POST["age"];
+                        $adresse=$_POST["adresse"];
+                        $login=$_POST["login"];
+                        $mdp=$_POST["mdp"];
+                        $mdpcfrm=$_POST["mdpcfrm"];
+                        $conditions=$_POST["conditions"];
+
+
+                        if((!isset($prenom)) || (!isset($nom)) || (!isset($email)) || (!isset($login)) || (!isset($mdp)) || (!isset($mdpcfrm)) || (!isset($conditions)) || empty($prenom) || empty($nom) || empty($email) || empty($login) || empty($mdp) || empty($mdpcfrm)){          // Vérifie que les informations + importantes sont remplies
+                                echo '<p>Les champs obligatoires n\'ont pas été remplis</p>';
+                        }
+                        else{
+                                if($mdp!==$mdpcfrm){             // Les mots de passe sont les mêmes
+                                        echo '<p>Les mots de passe sont différents</p>';
+                                }
+                                else{                           // Tout est bon
+                                        echo '<p>Inscription en cours...</p>';
+                                        /* Si les informations non required sont vides, on met un - à la place*/
+                                        if (!isset($genre) || empty($genre)){
+                                                $genre = "-";
+                                        }
+                                        if (!isset($telephone) || empty($telephone) || !is_numeric($telephone) || empty($telephone) != 10){
+                                                $telephone = "-";
+                                        }
+                                        if (!isset($date) || empty($date)){
+                                                $date = "-";
+                                        }
+                                        if (!isset($adresse) || empty($adresse)){
+                                                $adresse = "-";
+                                        }
+
+                                        // Profil = informations complémentaires
+                                        $profil=array(
+                                            "prenom"=> $prenom, 
+                                            "nom"=> $nom, 
+                                            "email"=> $email, 
+                                            "genre"=> $genre, 
+                                            "telephone"=> $telephone, 
+                                            "date de naissance"=> $date, 
+                                            "adresse"=> $adresse);
+
+                                        // On rempli la fiche de l'utilisateur dans un array
+                                        $nouvel_utilisateur=array(
+                                            "login"=> $login, 
+                                            "mdp"=> $mdp,
+                                            "email"=> $email, 
+                                            "role"=> "normal", 
+                                            "profil"=> $profil,
+                                            "voyages"=> array(),
+                                            "date d'inscription"=> date("Y-m-d"));
+
+                                        //On le met dans un fichier json
+                                        file_put_contents('../json/utilisateurs.json', json_encode($nouvel_utilisateur, JSON_PRETTY_PRINT), FILE_APPEND);
+
+                                        // Dire à la session qu'on est connecté, et renvoyer à l'accueil
+                                        $_SESSION["connexion"] = "connected";
+                                        $_SESSION["login"] = $login;
+                                        $_SESSION["role"] = "admin";
+
+                                        header("Location: accueil.php");
+                                }
+                        }
+                    ?>
                 </fieldset>
         </form>
 
-        <?php
-            $genre=$_POST["genre"];
-            $prenom=$_POST["prenom"];
-            $nom=$_POST["nom"];
-            $email=$_POST["email"];
-            $telephone=$_POST["tel"];
-            $date=$_POST["age"];
-            $adresse=$_POST["adresse"];
-            $login=$_POST["login"];
-            $mdp=$_POST["mdp"];
-            $mdpcfrm=$_POST["mdpcfrm"];
-            $conditions=$_POST["conditions"];
-
-
-            if((!isset($prenom)) || (!isset($nom)) || (!isset($email)) || (!isset($login)) || (!isset($mdp)) || (!isset($mdpcfrm)) || (!isset($conditions)) || (strlen($prenom) == 0) || (strlen($nom) == 0) || (strlen($email) == 0) || (strlen($login) == 0) || (strlen($mdp) == 0) || (strlen($mdpcfrm) == 0)){          // Vérifie que les informations + importantes sont remplies
-                    echo "Les champs obligatoires n'ont pas été remplis";
-            }
-            else{
-                    if($mdp!=$mdpcfrm){             // Les mots de passe sont les mêmes
-                            echo "Mots de passe différents";
-                    }
-                    else{                           // Tout est bon
-                            echo "Inscription en cours...";
-                            /* Si les informations non required sont vides, on met un - à la place*/
-                            if (!isset($genre) || strlen($genre) == 0){
-                                    $genre = "-";
-                            }
-                            if (!isset($telephone) || strlen($telephone) == 0 || !is_numeric($telephone) || strlen($telephone) != 10){
-                                    $telephone = "-";
-                            }
-                            if (!isset($date) || strlen($date) == 0){
-                                    $date = "-";
-                            }
-                            if (!isset($adresse) || strlen($adresse) == 0){
-                                    $adresse = "-";
-                            }
-
-                            // Profil = informations complémentaires
-                            $profil=array("prenom"=> $prenom, "nom"=> $nom, "email"=> $email, "genre"=> $genre, "telephone"=> $telephone, "date de naissance"=> $date, "adresse"=> $adresse);
-
-                            // On rempli la fiche de l'utilisateur dans un array
-                            $nouvel_utilisateur=array("login"=> $login, "mdp"=> $mdp,"email"=> $email, "role"=> "normal", "profil"=> $profil, "date d'inscription"=> date("Y-m-d"));
-
-                            //On le met dans un fichier json
-                            file_put_contents('../json/utilisateurs.json', json_encode($nouvel_utilisateur, JSON_PRETTY_PRINT), FILE_APPEND);
-                    }
-            }
-        ?>
         <br/>
         <p>Accès temporaire au <a href="profil.php">profil</a> et à <a href="admin.php">l'admin</a></p>
 

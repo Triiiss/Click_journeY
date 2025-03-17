@@ -17,14 +17,18 @@
             <nav class="bandeau">
                 <li class="bandeau"><a class="bandeau" href="presentation.php">PRESENTATION</a></li>
                 <li class="bandeau"><a class="bandeau" href="recherche.php">ITINERAIRES</a></li>
-                <li class="bandeau"><a class="bandeau" href="connexion.php">CONNEXION</a></li>
-                <li class="bandeau"><a class="bandeau" href="inscription.php">INSCRIPTION</a></li>
+                <?php
+                if(isset($_SESSION["role"]) && $_SESSION["role"] == "admin"){
+                    echo '<li class="bandeau"><a class="bandeau" href="admin.php">ADMIN</a></li>';
+                }
+                ?>
                 <li class="profil" id="current"><a class="profil" id="current" href="profil.php"> 
                 <img src="../images/profil_picture.webp" class="profil_picture" alt="Profil"/></a>
                 </li>
             </nav>
         </ul>
 
+        <form action="profil.php" method="POST">
         <fieldset class="formulaire">
             <legend>Profil <img src="../images/profil_picture.webp" class="profil_picture"/></legend>
                 <p>Genre : </p><p>Femme</p>
@@ -43,7 +47,9 @@
                 <p>Mot de passe :</p><p>modifier le mot de passe?</p>
                 <p></p>
                 <button name="modif" type="button" >Modifier le profil</button>
+                <input type="submit" name="deco" value="déconnexion">
         </fieldset>
+        </form>
 
         <br><br>
         <div class="afterimage">
@@ -53,3 +59,9 @@
         </div>
     </body>
 </php>
+<?php
+    if(isset($_POST["deco"])){
+        session_destroy();
+        header("Location: accueil.php");
+    }
+?>
