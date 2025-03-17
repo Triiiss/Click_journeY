@@ -14,7 +14,7 @@
 
     $required=0;
     $samepass=0;
-    $newlogin=0;
+    $newlogin=1;
 ?>
 
 <!DOCTYPE php>
@@ -67,7 +67,18 @@
                     <label for="login" >Identifiant : <span class="etoile">*</span> </label>
                     <input type="text" name="login" required>
                     <?php
-                        if(0){
+                        $json_data=file_get_contentd("../json/utilisateurs.json");
+                        if($json_data === false){
+				die("Erreur de lecture du fichier json.");
+			}
+                        $users=json_decode($json_data, true);
+                        foreach($users as $k=> $user){
+				if(isset($user["login"] && $user["login"] === $login){
+				   $newlogin=0;
+				   break;
+				}
+			}
+                        if($newlogin == 0){
                             echo '<p></p>
                             <span class="etoile">L\'identifiant est déjà pris</span>';
                             $newlogin=0;
