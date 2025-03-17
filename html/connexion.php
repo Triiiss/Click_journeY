@@ -1,5 +1,7 @@
 <?php
     session_start();
+    &login=$_POST["login"];
+    &mdp=$_POST["mdp"];
 ?>
 
 <!DOCTYPE php>
