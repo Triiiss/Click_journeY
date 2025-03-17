@@ -153,7 +153,7 @@
                             if (!isset($genre) || empty($genre)){
                                     $genre = "-";
                             }
-                            if (!isset($telephone) || empty($telephone) || !is_numeric($telephone) || empty($telephone) != 10){
+                            if (!isset($telephone) || empty($telephone)){
                                     $telephone = "-";
                             }
                             if (!isset($date) || empty($date)){
