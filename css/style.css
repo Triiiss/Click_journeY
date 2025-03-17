@@ -1,6 +1,6 @@
 body{/*Fond et police des pages*/
     height: 65vw;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgb(202, 212, 183) 90%), url("../images/fond_2.webp") no-repeat center 65% / contain;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 30%, rgb(202, 212, 183) 90%), url("../images/fond_2.webp") no-repeat center 65% / contain;
     background-color: rgb(202, 212, 183); 
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -77,7 +77,6 @@ img.profil_picture{
     border-radius: 50%;
 }
 
-
 /*Bandeau = la bannière pour accéder aux liens à l'accueil*/
 ul.bandeau{
     list-style: none;
@@ -94,7 +93,7 @@ a.bandeau{/*Texte et espacement du texte*/
     font-size: 1.5vw;
     text-align: center;
     text-decoration: none;
-   padding:6% 25% 6% 25%;/* */
+    padding:6% 25% 6% 25%;
 }
 a.profil{
     padding:11% 44% 4.5% 44%;
@@ -139,7 +138,7 @@ legend{
 form{
     margin-top: 2vw;
 }
-button{
+button,input[name="deco"]{
     color: white;
     font-size: 1vw;
     margin: 0vw 0.5vw 0vw 0.5vw;
@@ -147,7 +146,7 @@ button{
     background-color: rgb(255, 106, 19);
     border: solid 1px rgb(153, 60, 6);
 }
-button:hover{
+button:hover,input[name="deco"]:hover{
     color: rgb(132, 53, 7);
     background-color: rgb(208, 86, 16);
     transition: all 0.5s;
@@ -260,12 +259,12 @@ caption.admin{
     padding-top: 0.2%;
 }
 table.admin {
-    width: 80%;
+    width: 92%;
     height: 10%;
-    margin-left: 10%; /* Centrer le tableau */
-    margin-right: 10%;
+    margin-left: 2%; /* Centrer le tableau */
+    margin-right: 2%;
     border-collapse: collapse; /* Pour éviter les bordures doubles */
-    font-size: 1.5vw;
+    font-size: 1vw;
 }
 .admin table, .admin th, .admin td {
     border: 2px solid rgb(28, 59, 28);
@@ -290,8 +289,8 @@ table.admin {
 .admin td:hover{
     color: rgb(255, 106, 19);
 }
-.admin button{
-    height: 10%;
+button.admin{
+    height: 100%;
     width: 40%;
 }
 
