@@ -1,16 +1,36 @@
-[{
-    "login": "Themis TTT",
-    "mdp": "motdepasse",
-    "email": "themis.trantuthien@gmail.com",
-    "role": "normal",
-    "profil": {
-        "prenom": "Th\u00e9mis",
-        "nom": "Tran Tu Thien",
+[
+    {
+        "login": "Tris",
+        "mdp": "!nf0rmAtique",
         "email": "themis.trantuthien@gmail.com",
-        "genre": "-",
-        "telephone": "0652658979",
-        "date de naissance": "2006-04-25",
-        "adresse": "18 rue de la croix des vignes Ablis"
+        "role": "admin",
+        "profil": {
+            "prenom": "Th\u00e9mis",
+            "nom": "Tran Tu Thien",
+            "email": "themis.trantuthien@gmail.com",
+            "genre": "autre",
+            "telephone": "-",
+            "date de naissance": "2006-04-25",
+            "adresse": "18 rue de la croix des vignes Ablis"
+        },
+        "voyages": [],
+        "date d'inscription": "2025-03-17"
     },
-    "date d'inscription": "2025-03-16"
-}]
+    {
+        "login": "lpoiygf",
+        "mdp": "Myrt1ll_",
+        "email": "louis.nardou@gmail.com",
+        "role": "normal",
+        "profil": {
+            "prenom": "Louis",
+            "nom": "Nardou",
+            "email": "louis.nardou@gmail.com",
+            "genre": "-",
+            "telephone": "-",
+            "date de naissance": "2005-10-15",
+            "adresse": "63 rue de l'eglise"
+        },
+        "voyages": [],
+        "date d'inscription": "2025-03-17"
+    }
+]
