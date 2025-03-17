@@ -66,19 +66,17 @@
                     <input type="text" name="adresse" placeholder="01 rue de la paix Paris"/>
 
                     <label for="login" >Identifiant : <span class="etoile">*</span> </label>
-                    <input type="text" name="login" required>
+                    <input type="text" name="login" placeholder="pseudo" required>
+
                     <?php
-                        $json_data=file_get_contentd("../json/utilisateurs.json");
-                        if($json_data === false){
-				die("Erreur de lecture du fichier json.");
-			}
-                        $users=json_decode($json_data, true);
+                        $json_users=file_get_contents("../json/utilisateurs.json");
+                        $users=json_decode($json_users, true);
                         foreach($users as $k=> $user){
-				if(isset($user["login"] && $user["login"] === $login){
-				   $newlogin=0;
-				   break;
-				}
-			}
+                            if(isset($user["login"]) && $user["login"] === $login){
+                                $newlogin=0;
+                                break;
+                            }
+                        }
                         if($newlogin == 0){
                             echo '<p></p>
                             <span class="etoile">L\'identifiant est déjà pris</span>';
@@ -96,27 +94,27 @@
                         $min=0;
                         $num=0;
                         $spe=0;
-                         foreach($mdp as $letter){
-				 if($maj==0 && ctype_upper($user)){
-					 $maj=1;
-				 }
-				 if($min==0 && ctype_lower($user)){
-					 $min=1;
-				 }
-				 if($num==0 && is_numeric($user)){
-					 $num=1;
-				 }
-				 if($spe==0 && ($spe == '!' || $spe == '*' || $spe == '#' || $spe == '%'))){
-					 $spe=1;
-				 }
-			 }
-                         if (strlen($users)>=8 && $maj == 1 && $min == 1 && $num == 1 && $spe == 1){
-				 $safemdp = 1;
-			 }
-			 else{
-				 echo '<p></p>
-                                 <span class="etoile">Le mot de passe n\'est pas assez sécurisé ou long(8 lettres, une maj, une min, un chiffre, un caractere special (!, *, #, %))</span>'
-			 }
+                        foreach(str_split($mdp) as $letter){
+                            if($maj==0 && ctype_upper($letter)){
+                                $maj=1;
+                            }
+                            if($min==0 && ctype_lower($letter)){
+                                $min=1;
+                            }
+                            if($num==0 && is_numeric($letter)){
+                                $num=1;
+                            }
+                            if($spe==0 && ($letter == '!' || $letter == '*' || $letter == '#' || $letter == '%' || $letter == '_')){
+                                $spe=1;
+                            }
+			            }
+                        if (strlen($mdp)>=8 && $maj == 1 && $min == 1 && $num == 1 && $spe == 1){
+				            $safemdp = 1;
+			            }
+                        else{
+                            echo '<p></p>
+                                            <span class="etoile">Le mdp a besoin de 8min 1 maj 1 min 1 chiffre 1 car. spécial (!, *, #, %, _)</span>';
+                        }
                     ?>
 
                     <label for="mdpcfrm" >Confirmation mot de passe : <span class="etoile">*</span> </label>
@@ -141,9 +139,7 @@
                     <p>Déjà inscrit ? <a href="connexion.php">Connectez vous</a></p>
                     
                     <?php
-
-
-                        if((!isset($prenom)) || (!isset($nom)) || (!isset($email)) || (!isset($login)) || (!isset($mdp)) || (!isset($mdpcfrm)) || (!isset($conditions)) || empty($prenom) || empty($nom) || empty($email) || empty($login) || empty($mdp) || empty($mdpcfrm)){          // Vérifie que les informations + importantes sont remplies
+                        if(empty($prenom) || empty($nom) || empty($email) || empty($login) || empty($mdp) || empty($mdpcfrm)){          // Vérifie que les informations + importantes sont remplies
                                 echo '<span class="etoile">Les champs obligatoires n\'ont pas été remplis</span>';
                                 $required=0;
                         }
@@ -204,7 +200,7 @@
                             // Dire à la session qu'on est connecté, et renvoyer à l'accueil
                             $_SESSION["connexion"] = "connected";
                             $_SESSION["login"] = $login;
-                            $_SESSION["role"] = "admin";
+                            $_SESSION["role"] = "normal";
                 
                             header("Location: accueil.php");
                         }
