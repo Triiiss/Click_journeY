@@ -28,29 +28,42 @@
             <caption class="admin">Liste des utilisateurs</caption>
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Nom</th>
+                <th>login</th>
+                <th>Password</th>
                 <th>Email</th>
                 <th>Statut</th>
+                <th>nom</th>
+                <th>prénom</th>
+                <th>genre</th>
+                <th>tel</th>
+                <th>date naissance</th>
+                <th>adresse</th>
+                <th>date d'inscription</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Jean Dupont </td>
-                <td>jean.dupont@example.com</td>
-                <td>Admin</td>
-                <td><button class="admin">Modifier</button><button class="admin">Supprimer</button></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Marie Durand</td>
-                <td>marie.durand@example.com</td>
-                <td>Utilisateur</td>
-                <td><button class="admin">Modifier</button><button class="admin">Supprimer</button></td>
-            </tr>
-            <!-- Tu peux ajouter plus de lignes ici avec des utilisateurs supplémentaires -->
+            <?php
+                    $json_users=file_get_contents("../json/utilisateurs.json");
+                    $users=json_decode($json_users, true);
+                    foreach($users as $k=> $user){
+                        echo '
+                        <tr>
+                            <td>'.$user['login'].'</td>
+                            <td>'.$user['mdp'].'</td>
+                            <td>'.$user['email'].'</td>
+                            <td>'.$user['role'].'</td>
+                            <td>'.$user['profil']['nom'].'</td>
+                            <td>'.$user['profil']['prenom'].'</td>
+                            <td>'.$user['profil']['genre'].'</td>
+                            <td>'.$user['profil']['telephone'].'</td>
+                            <td>'.$user['profil']['date de naissance'].'</td>
+                            <td>'.$user['profil']['adresse'].'</td>
+                            <td>'.$user['date d\'inscription'].'</td>
+                            <td><button class="admin">Modifier</button><button class="admin">Supprimer</button></td>
+                        </tr>';
+                    }
+            ?>
         </tbody>
     </table>
 
