@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $_SESSION["role"] = "admin";
 ?>
 
 <!DOCTYPE php>
@@ -31,20 +32,32 @@
         <form action="profil.php" method="POST">
         <fieldset class="formulaire">
             <legend>Profil <img src="../images/profil_picture.webp" class="profil_picture"/></legend>
-                <p>Genre : </p><p>Femme</p>
-                <p>Prénom</p><p>Emilie</p>
-                <p>Nom : </p><p>Dupont</p>
-                <p>E-mail : </p><p>email@gmail.com</p>
-                <p>Numéro de téléphone</p><p>01 23 45 67 89</p>
-                <p>Date de naissance</p><p>25/08/1991</p>
-                <p>Adresse :</p><p>01 rue de la paix Paris</p>
-                <p></p><p></p>
-                <p>Mode :</p><p>Nuit/jour</p>
-                <p>Langue</p><p>Français</p>
-                <p>Voyage.s favoris :</p><p>la montagne (jsp laquelle)</p>
-                <p></p><p></p>
-                <p>Identifiant :</p><p></p>
-                <p>Mot de passe :</p><p>modifier le mot de passe?</p>
+                <?php
+                    if(empty($_SESSION["login"])){
+                        session_destroy();
+                        header("Location :accueil.php");
+                    }
+                    else{
+                        $json_users=file_get_contents("../json/utilisateurs.json");
+                        $users=json_decode($json_users, true);
+                        
+                        foreach($users as $k=> $user){
+                            if ($user["login"] == $_SESSION["login"]){echo '
+                                <p>Identifiant</p><p>'.$user["login"].'</p>
+                                <p>Mot de passe</p><p>'.$user["mdp"].'</p>
+                                <p>E-mail : </p><p>'.$user["email"].'</p>
+
+                                <p>Prénom</p><p>'.$user["profil"]["prenom"].'</p>
+                                <p>Nom : </p><p>'.$user["profil"]["nom"].'</p>
+                                <p>Numéro de téléphone</p><p>'.$user["profil"]["telephone"].'</p>
+                                <p>Date de naissance</p><p>'.$user["profil"]["date de naissance"].'</p>
+                                <p>Genre : </p><p>'.$user["profil"]["genre"].'</p>
+                                <p>Adresse :</p><p>'.$user["profil"]["adresse"].'</p>';
+                                break;
+                            }
+                        }                                
+                    }
+                ?>
                 <p></p>
                 <button name="modif" type="button" >Modifier le profil</button>
                 <input type="submit" name="deco" value="déconnexion">
