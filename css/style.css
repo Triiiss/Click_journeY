@@ -109,7 +109,7 @@ a.profil{/*Arrondir les coins à droite*/
 }
 li.bandeau{/*Fond transparent*/
     padding: 1% 0% 1% 0%;
-    width: 20%;
+    width: 50%;
     background-color: rgba(42, 77, 42, 0.65);
 }
 li.profil{
