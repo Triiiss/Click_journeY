@@ -52,7 +52,9 @@
                             // Dire à la session qu'on est connecté
                             $_SESSION["connexion"] = "connected";
                             $_SESSION["login"] = $login;
-                            $_SESSION["role"] = "normal";
+                            $_SESSION["role"] = $user["role"];
+
+                            header("Location: accueil.php");
                         }
                         else{
                             echo '<p></p>
