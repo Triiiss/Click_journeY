@@ -36,15 +36,23 @@
             <label for="mdp" >Mot de passe :</label>
             <input type="password" name="mdp" >
 
+
+            <label for="submit" ></label>
+            <button class="inscription" name="submit" type="submit" >Se connecter</button>
+
+            <p>Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous</a></p>
+
             <?php
                 $json_users=file_get_contents("../json/utilisateurs.json");
                 $users=json_decode($json_users, true);
                 $veriflogin=0;
-                $verifmdp=0;
                 foreach($users as $k=> $user){
                     if(isset($user["login"]) && $user["login"] === $login){
                         if(isset($user["mdp"]) && $user["mdp"] === $mdp){
-                            $verifmdp=1;
+                            // Dire à la session qu'on est connecté
+                            $_SESSION["connexion"] = "connected";
+                            $_SESSION["login"] = $login;
+                            $_SESSION["role"] = "normal";
                         }
                         else{
                             echo '<p></p>
@@ -60,10 +68,6 @@
                 }
             ?>
 
-            <label for="submit" ></label>
-            <button class="inscription" name="submit" type="submit" >Se connecter</button>
-
-            <p>Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous</a></p>
             </fieldset>
         </form>
 
