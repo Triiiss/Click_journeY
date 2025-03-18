@@ -1,7 +1,7 @@
 <?php
     session_start();
-    &login=$_POST["login"];
-    &mdp=$_POST["mdp"];
+    $login=$_POST["login"];
+    $mdp=$_POST["mdp"];
 ?>
 
 <!DOCTYPE php>
@@ -35,6 +35,30 @@
 
             <label for="mdp" >Mot de passe :</label>
             <input type="password" name="mdp" >
+
+            <?php
+                $json_users=file_get_contents("../json/utilisateurs.json");
+                $users=json_decode($json_users, true);
+                $veriflogin=0;
+                $verifmdp=0;
+                foreach($users as $k=> $user){
+                    if(isset($user["login"]) && $user["login"] === $login){
+                        if(isset($user["mdp"]) && $user["mdp"] === $mdp){
+                            $verifmdp=1;
+                        }
+                        else{
+                            echo '<p></p>
+                            <span class="etoile">Mot de passe incorrect</span>';
+                        }
+                        $veriflogin=1;
+                        break;
+                    }
+                }
+                if($veriflogin!=1){
+                    echo '<p></p>
+                    <span class="etoile">Identifiant incorrect</span>';
+                }
+            ?>
 
             <label for="submit" ></label>
             <button class="inscription" name="submit" type="submit" >Se connecter</button>
