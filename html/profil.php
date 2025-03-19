@@ -1,6 +1,9 @@
 <?php
     session_start();
-    $_SESSION["role"] = "admin";
+
+    if(empty($_SESSION["connexion"]) || $_SESSION["connexion"]!="connected"){
+        header("Location :accueil.php");
+    }
 ?>
 
 <!DOCTYPE php>

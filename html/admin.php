@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if(empty($_SESSION["connexion"]) || $_SESSION["connexion"]!="connected"){
+        header("Location :accueil.php");
+    }
 ?>
 
 <!DOCTYPE php>
@@ -40,6 +43,7 @@
                 <th>adresse</th>
                 <th>date d'inscription</th>
                 <th>Actions</th>
+                
             </tr>
         </thead>
         <tbody>
@@ -49,7 +53,7 @@
                     foreach($users as $k=> $user){
                         echo '
                         <tr>
-                            <td>'.$user['login'].'</td>
+                            <td>'.$user['login'].'  <img class="edit_icon" src="../images/edit_icon.png"/> </td>
                             <td>'.$user['mdp'].'</td>
                             <td>'.$user['email'].'</td>
                             <td>'.$user['role'].'</td>
