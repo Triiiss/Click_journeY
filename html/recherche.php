@@ -100,19 +100,20 @@
                 <button class="recherche" type="submit" name="submit">Rechercher</button>
             </fieldset>
         </form>
+   
+        <h3 class="reco">Recommendations</h3>
 
-        <div class="recommendations">
-            <h3>Recommendations</h2>
-            <?php 
-                session_start();
-                $json_voyages=file_get_contents("../json/voyages.json");
-                $voyages=json_decode($json_voyages, true);
+        <div class="reco">
+        <?php 
+            session_start();
+            $json_voyages=file_get_contents("../json/voyages.json");
+            $voyages=json_decode($json_voyages, true);
 
-                foreach($voyages as $k=> $voyage){
-                    echo '<div class="titreVoyage">'.$voyage["titre"].'</div';
-                    echo '<img src='.$voyage["image"].'class="imageVoyage"/>';
-                }
-            ?>
+            foreach($voyages as $k=> $voyage){
+                echo '<div class="titreVoyage">'.$voyage["titre"].'</div>';
+                echo '<img src="'.$voyage["image"].'" class="imgVoyage" alt="photo_voyage"/>';
+            }
+        ?>
         </div>
 
         <br><br>

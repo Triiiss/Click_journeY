@@ -312,3 +312,22 @@ input.recherche, .recherche div>div{
     font-size: 1.2vw;
     width: 15vw;
 }
+
+.reco{
+    border: rgb(28, 59, 28) solid 3px;
+    background-color: rgba(174, 189, 147,0.6);
+    font-size: 1.2vw;
+    margin-bottom: 0.5%;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 1%;
+}
+
+.imgVoyage{
+    width: 20%;
+}
+
+h3.reco{
+    font-size: 1.5vw;
+    text-align: center;
+}
