@@ -64,7 +64,7 @@
                         break;
                     }
                 }
-                if($veriflogin!=1){
+                if($veriflogin!=1 && !empty($login)){
                     echo '<p></p>
                     <span class="etoile">Identifiant incorrect</span>';
                 }
