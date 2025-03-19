@@ -17,7 +17,7 @@
     $newlogin=1;
     $safemdp=0;
 
-    if($_SESSION["connexion"=="connected"]){
+    if($_SESSION["connexion"]=="connected"){
         header("Location: accueil.php");
     }
 ?>
