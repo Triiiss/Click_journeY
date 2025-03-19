@@ -1,6 +1,7 @@
 [
     {
         "titre": "exemple1",
+        "image": "../images/fond_1.webp",
         "description":"",
         "lieu":"",
         "prix": "100",

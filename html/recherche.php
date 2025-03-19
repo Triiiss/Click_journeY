@@ -101,6 +101,20 @@
             </fieldset>
         </form>
 
+        <div class="recommendations">
+            <h3>Recommendations</h2>
+            <?php 
+                session_start();
+                $json_voyages=file_get_contents("../json/voyages.json");
+                $voyages=json_decode($json_voyages, true);
+
+                foreach($voyages as $k=> $voyage){
+                    echo '<div class="titreVoyage">'.$voyage["titre"].'</div';
+                    echo '<img src='.$voyage["image"].'class="imageVoyage"/>';
+                }
+            ?>
+        </div>
+
         <br><br>
         <div class="afterimage">
                 <span class="first-afterimage">Nous contacter :</span>
