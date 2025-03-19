@@ -16,6 +16,10 @@
     $samepass=0;
     $newlogin=1;
     $safemdp=0;
+
+    if($_SESSION["connexion"=="connected"]){
+        header("Location: accueil.php");
+    }
 ?>
 
 <!DOCTYPE php>
@@ -209,7 +213,6 @@
         </form>
 
         <br/>
-        <p>Accès temporaire au <a href="profil.php">profil</a> et à <a href="admin.php">l'admin</a></p>
 
         <br><br>
         <div class="afterimage">

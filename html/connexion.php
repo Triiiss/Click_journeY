@@ -2,6 +2,11 @@
     session_start();
     $login=$_POST["login"];
     $mdp=$_POST["mdp"];
+
+
+    if($_SESSION["connexion"=="connected"]){
+        header("Location: accueil.php");
+    }
 ?>
 
 <!DOCTYPE php>
@@ -72,8 +77,6 @@
 
             </fieldset>
         </form>
-
-        <p>Accès temporaire au <a href="profil.php">profil</a> et à <a href="admin.php">l'admin</a></p>
 
         <br><br>
         <div class="afterimage">
