@@ -293,6 +293,13 @@ button.admin{
     height: 100%;
     width: 40%;
 }
+img.edit_icon{
+    width: 1vw;
+    height: 1vw;
+    background-color: rgb(255, 106, 19);
+    padding: 0.1vw;
+    border-radius: 2px;
+}
 
 /*Recherche*/
 fieldset.recherche{
@@ -312,7 +319,6 @@ input.recherche, .recherche div>div{
     font-size: 1.2vw;
     width: 15vw;
 }
-
 .reco{
     border: rgb(28, 59, 28) solid 3px;
     background-color: rgba(174, 189, 147,0.6);
@@ -322,11 +328,9 @@ input.recherche, .recherche div>div{
     margin-left: 20%;
     padding: 1%;
 }
-
 .imgVoyage{
     width: 20%;
 }
-
 h3.reco{
     font-size: 1.5vw;
     text-align: center;
