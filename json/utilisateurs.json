@@ -8,8 +8,8 @@
             "prenom": "Th\u00e9mis",
             "nom": "Tran Tu Thien",
             "email": "themis.trantuthien@gmail.com",
-            "genre": "autre",
-            "telephone": "-",
+            "genre": "x",
+            "telephone": "0652658979",
             "date de naissance": "2006-04-25",
             "adresse": "18 rue de la croix des vignes Ablis"
         },
@@ -20,15 +20,49 @@
         "login": "lpoiygf",
         "mdp": "Myrt1ll_",
         "email": "louis.nardou@gmail.com",
-        "role": "normal",
+        "role": "client",
         "profil": {
             "prenom": "Louis",
             "nom": "Nardou",
             "email": "louis.nardou@gmail.com",
             "genre": "-",
-            "telephone": "-",
+            "telephone": "6666666666",
             "date de naissance": "2005-10-15",
             "adresse": "63 rue de l'eglise"
+        },
+        "voyages": [],
+        "date d'inscription": "2025-03-17"
+    },
+    {
+        "login": "Physic_Girl",
+        "mdp": "VivePhys1que!",
+        "email": "emilie.dupont@gmail.com",
+        "role": "client",
+        "profil": {
+            "prenom": "Emilie",
+            "nom": "Dupont",
+            "email": "emilie.dupont@gmail.com",
+            "genre": "mme",
+            "telephone": "2997924580",
+            "date de naissance": "1980-03-14",
+            "adresse": "15 rue Marie Curie"
+        },
+        "voyages": [],
+        "date d'inscription": "2025-03-17"
+    },
+    {
+        "login": "Winner",
+        "mdp": "!4Aaaaaa",
+        "email": "prologin@gmail.com",
+        "role": "client",
+        "profil": {
+            "prenom": "Jean",
+            "nom": "Marchand",
+            "email": "prologin@gmail.com",
+            "genre": "-",
+            "telephone": "4545454545",
+            "date de naissance": "-",
+            "adresse": "-"
         },
         "voyages": [],
         "date d'inscription": "2025-03-17"
