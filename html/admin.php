@@ -178,14 +178,14 @@
                                 if(isset($_POST["modif_".$user['login']."_role"])){
                                     /*echo '<td><input class="modifier" type="text" name="new'.$user['login'].'_role_value" placeholder="'.$user['role'].'"/></td>';*/
                                     if($user['role'] == "admin"){
-                                        echo '<td><select name="new'.$user['login'].'_role_value">
+                                        echo '<td><select class="modif_role" name="new'.$user['login'].'_role_value">
                                             <option value="admin">Admin</option>
                                             <option value="client">Client</option>
                                             <option value="vip">VIP</option>
                                         </select></td>';
                                     }
                                     else{
-                                        echo '<td><select name="new'.$user['login'].'_role_value">
+                                        echo '<td><select class="modif_role" name="new'.$user['login'].'_role_value">
                                             <option value="client">Client</option>
                                             <option value="admin">Admin</option>
                                             <option value="vip">VIP</option>
