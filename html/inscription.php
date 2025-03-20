@@ -49,7 +49,7 @@
                     <div class="inscription">
                         Monsieur<input type="radio" name="genre" value="mr"/>
                         Madame<input type="radio" name="genre" value="mme"/>
-                        Autre<input type="radio" name="genre" value="autre"/>
+                        Autre<input type="radio" name="genre" value="x"/>
                     </div>
                     <label for="prenom">Prénom : <span class="etoile">*</span> </label>
                     <input type="text" name="prenom" minlength="2" placeholder="Emilie" required>
@@ -182,7 +182,7 @@
                                 "login"=> $login,
                                 "mdp"=> $mdp,
                                 "email"=> $email, 
-                                "role"=> "normal", 
+                                "role"=> "client", 
                                 "profil"=> $profil,
                                 "voyages"=> array(),
                                 "date d'inscription"=> date("Y-m-d"));
