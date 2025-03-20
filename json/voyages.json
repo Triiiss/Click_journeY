@@ -14,5 +14,22 @@
         ],
         "depart": "20/03/2025",
         "duree": "1 semaine"
+    },
+
+    {
+        "titre": "exemple2",
+        "image": "../images/fond_1.webp",
+        "description":"",
+        "lieu":"",
+        "prix": "100",
+        "etapes":[
+            {
+                "titre": "étape1",
+                "lieu":"",
+                "duree":""
+            }
+        ],
+        "depart": "20/03/2025",
+        "duree": "1 semaine"
     }
 ]

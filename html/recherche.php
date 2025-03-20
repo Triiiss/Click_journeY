@@ -109,9 +109,11 @@
             $json_voyages=file_get_contents("../json/voyages.json");
             $voyages=json_decode($json_voyages, true);
 
-            foreach($voyages as $k=> $voyage){
-                echo '<div class="titreVoyage">'.$voyage["titre"].'</div>';
-                echo '<img src="'.$voyage["image"].'" class="imgVoyage" alt="photo_voyage"/>';
+            for($i=0;$i<10;$i++){
+                if(isset($voyages[$i])){
+                    echo '<div class="titreVoyage">'.$voyages[$i]["titre"].'</div>';
+                    echo '<img src="'.$voyages[$i]["image"].'" class="imgVoyage" alt="photo_voyage"/>';
+                }
             }
         ?>
         </div>
