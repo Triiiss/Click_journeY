@@ -20,9 +20,15 @@
             $json_voyages=file_get_contents("../json/voyages.json");
             $voyages=json_decode($json_voyages, true);
             $id=$_GET["id"];
-            echo '<div class=vueDetail>';
-                echo '<img src="'.$voyages[$id]["image"].'" class="imgVoyage" alt="photo_voyage""/>';
-                echo $voyages[$id]["titre"];
+            echo '<div class=voyages>';
+                echo '<img src="'.$voyages[$id]["image"].'" class="imgDetail" alt="photo_voyage""/>';
+                echo '<div class=recap>';
+                    echo '<div>'.$voyages[$id]["titre"].'</div>';
+                    echo '<div>'.$voyages[$id]["description"].'</div>';
+                    echo '<div>'.'Prix : '.$voyages[$id]["prix"].'euros'.'</div>';
+                    echo '<div>'.'Départ le '.$voyages[$id]["depart"].'</div>';
+                    echo '<div>'.'Durée : '.$voyages[$id]["duree"].'</div>';
+                echo '</div>';
             echo '</div>';
         ?>
 

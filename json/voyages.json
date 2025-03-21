@@ -3,14 +3,23 @@
         "titre": "exemple1",
         "mots_cles":"montagne",
         "image": "../images/fond_camping_montagne.jpg",
-        "description":"",
-        "lieu":"",
-        "prix": "100",
+        "description":"Préparez-vous à vivre l'ascension la plus extrême des Alpes",
+        "lieu":"Alpes",
+        "prix": "1000",
         "etapes":[
             {
                 "titre": "étape1",
-                "lieu":"",
-                "duree":""
+                "lieu":"Saint-Gervais",
+                "duree":"1",
+                "hebergement":[
+                    "location de tente",
+                    "location de sac de couchage"
+                ],
+                "restauration":[
+                    "dejeuner inclus"
+                ],
+                "activités":"",
+                "mode de transport":""
             }
         ],
         "depart": "20/03/2025",

@@ -381,6 +381,9 @@ input.recherche, .recherche div>div{
     text-align: center;
 }
 
+.recap{
+    font-size: 1.4vw;
+}
 
 .itineraire{
     padding-left: 1.5vw;
@@ -389,6 +392,11 @@ input.recherche, .recherche div>div{
 
 .imgVoyage{
     width: 15vw;
+}
+.imgDetail{
+    width: 15vw;
+    padding-right: 3vw;
+    padding-left: 1.5vw;
 }
 h3.reco{
     font-size: 1.5vw;
