@@ -102,7 +102,7 @@
 
                 $recherche=$_POST["search"];
                 foreach($voyages as $k=> $voyage){
-                    if(str_contains($voyage["mots_cles"], $recherche) && $recherche!=""){
+                    if(strpos($voyage["mots_cles"], $recherche)!==false && $recherche!=""){
                         echo '<div class="titreVoyage">'.$voyage["titre"].'</div>';
                         echo '<img src="'.$voyage["image"].'" class="imgVoyage" alt="photo_voyage"/>';
                     }
