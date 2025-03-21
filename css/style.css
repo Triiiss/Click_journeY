@@ -345,6 +345,15 @@ button.admin_defil{/*Fond transparent*/
     border: solid rgb(28, 59, 28);
     background-color: rgba(42, 77, 42, 0.65);
 }
+button.admin_stop{/*Fond transparent*/
+    border: solid rgb(28, 59, 28);
+    color: rgb(144, 144, 144);
+    background-color: rgba(19, 41, 19, 0.65);
+}
+button.admin_defil:hover{
+    color:rgb(247, 148, 91);
+    background-color: rgba(24, 48, 24, 0.65);
+}
 .empty{
     border: none;
     visibility: hidden;
