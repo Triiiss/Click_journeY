@@ -32,7 +32,7 @@
         </ul>
 
         <form action="connexion.php" method="post">
-            <fieldset class="formulaire">
+            <fieldset class="formulaire connexion">
             <legend>Connexion</legend>
 
             <label for="login" >Identifiant :</label>
@@ -55,6 +55,7 @@
                     if(isset($user["login"]) && $user["login"] === $login){
                         if(isset($user["mdp"]) && $user["mdp"] === $mdp){
                             // Dire à la session qu'on est connecté
+                            $_SESSION["user_index"] = $k+1;
                             $_SESSION["connexion"] = "connected";
                             $_SESSION["login"] = $login;
                             $_SESSION["role"] = $user["role"];

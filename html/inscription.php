@@ -43,7 +43,7 @@
         </ul>
 			
             <form action="inscription.php" method="post">
-                <fieldset class="formulaire">
+                <fieldset class="formulaire inscription">
                     <legend>Formulaire d'inscription</legend>
                     <label for="genre" >Genre :</label>
                     <div class="inscription">
@@ -205,6 +205,7 @@
                             $_SESSION["connexion"] = "connected";
                             $_SESSION["login"] = $login;
                             $_SESSION["role"] = "normal";
+                            $_SESSION["user_index"] = array_​key_​last($users)-1;
                 
                             header("Location: accueil.php");
                         }

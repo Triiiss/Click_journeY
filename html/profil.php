@@ -33,38 +33,69 @@
         </ul>
 
         <form action="profil.php" method="POST">
-        <fieldset class="formulaire">
-            <legend>Profil <img src="../images/profil_picture.webp" class="profil_picture"/></legend>
-                <?php
-                    if(empty($_SESSION["login"])){
-                        session_destroy();
-                        header("Location :accueil.php");
-                    }
-                    else{
-                        $json_users=file_get_contents("../json/utilisateurs.json");
-                        $users=json_decode($json_users, true);
-                        
-                        foreach($users as $k=> $user){
-                            if ($user["login"] == $_SESSION["login"]){echo '
-                                <p>Identifiant</p><p>'.$user["login"].'</p>
-                                <p>Mot de passe</p><p>'.$user["mdp"].'</p>
-                                <p>E-mail : </p><p>'.$user["email"].'</p>
+            <fieldset class="formulaire profil">
+                <legend>Profil <img src="../images/profil_picture.webp" class="profil_picture"/></legend>
+                    <?php
+                        if(empty($_SESSION["user_index"])){
+                            session_destroy();
+                            header("Location :accueil.php");
+                        }
+                        else{
+                            $json_users=file_get_contents("../json/utilisateurs.json");
+                            $users=json_decode($json_users, true);
+                            $user=$users[$_SESSION["user_index"]-1];
 
-                                <p>Prénom</p><p>'.$user["profil"]["prenom"].'</p>
-                                <p>Nom : </p><p>'.$user["profil"]["nom"].'</p>
-                                <p>Numéro de téléphone</p><p>'.$user["profil"]["telephone"].'</p>
-                                <p>Date de naissance</p><p>'.$user["profil"]["date de naissance"].'</p>
-                                <p>Genre : </p><p>'.$user["profil"]["genre"].'</p>
-                                <p>Adresse :</p><p>'.$user["profil"]["adresse"].'</p>';
-                                break;
-                            }
-                        }                                
-                    }
-                ?>
-                <p></p>
-                <button name="modif" type="button" >Modifier le profil</button>
-                <input type="submit" name="deco" value="déconnexion">
-        </fieldset>
+                            echo '<p>Identifiant :</p>
+                            <p>'.$user["login"].'</p>
+                            <p><button type="submit" class="edit_icon" name="modif_login"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>
+
+                            <p>Mot de passe :</p>
+                            <p>'.$user["mdp"].'</p>
+                            <p><button type="submit" class="edit_icon" name="modif_mdp"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>
+
+                            <p>E-mail : </p>
+                            <p>'.$user["email"].'</p>
+                            <p><button type="submit" class="edit_icon" name="modif_email"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>
+
+                            <p>Prénom :</p>
+                            <p>'.$user["profil"]["prenom"].'</p>
+                            <p><button type="submit" class="edit_icon" name="modif_prenom"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>
+
+                            <p>Nom : </p>
+                            <p>'.$user["profil"]["nom"].'</p>
+                            <p><button type="submit" class="edit_icon" name="modif_nom"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>
+
+                            <p>Numéro de téléphone :</p>
+                            <p>'.$user["profil"]["telephone"].'</p>
+                            <p><button type="submit" class="edit_icon" name="modif_tel"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>
+
+                            <p>Date de naissance :</p>
+                            <p>'.$user["profil"]["date de naissance"].'</p>
+                            <p><button type="submit" class="edit_icon" name="modif_dob"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>
+
+                            <p>Genre : </p>
+                            <p>'.$user["profil"]["genre"].'</p>
+                            <p><button type="submit" class="edit_icon" name="modif_genre"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>
+
+                            <p>Adresse :</p>
+                            <p>'.$user["profil"]["adresse"].'</p>
+                            <p><button type="submit" class="edit_icon" name="modif_adresse"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>
+                            
+                            <p>Voyages :</p>
+                            <p>...</p>
+                            <p>...</p>
+                            
+                            <p>Date d\'inscription :</p>
+                            <p>'.$user['date d\'inscription'].'</p>
+                            <p></p>';
+                        }
+                    ?>
+                    <p class="empty"> .</p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                <input type="submit" name="deco" value="Déconnexion">
+            </fieldset>
         </form>
 
         <br><br>
