@@ -11,6 +11,8 @@
     if(!isset($_SESSION["display"])){
         $_SESSION["display"] = array();
     }
+
+    $infos = array("login","mdp","email","nom","prenom","role","adresse","tel","dob","genre");
 ?>
 
 <!DOCTYPE php>
@@ -49,60 +51,46 @@
                         if($users === null){
                             echo "<p>Problème de récupération des données côté serveur</p>";
                         }
+
                         else{
                             foreach($users as $k=> $user){
-                                /* Changer les informations*/
-                                if(isset($_POST["new".$user['login']."_login"])){
-                                    $newlogin=new_login($_POST["new".$user['login']."_login_value"],"../json/utilisateurs.json");
-
-                                    if($newlogin == 1){
-                                        $users[$k]['login'] = $_POST["new".$user['login']."_login_value"];
-                                        $user['login'] = $_POST["new".$user['login']."_login_value"];
-                                    }
-
-                                }
-                                if(isset($_POST["new".$user['login']."_mdp"]) && !empty($_POST["new".$user['login']."_mdp_value"])){
-                                    $users[$k]['mdp'] = $_POST["new".$user['login']."_mdp_value"];
-                                    $user['mdp'] = $_POST["new".$user['login']."_mdp_value"];
-                                }
-                                if(isset($_POST["new".$user['login']."_email"]) && !empty($_POST["new".$user['login']."_email_value"])){
-                                    $users[$k]['email'] = $_POST["new".$user['login']."_email_value"];
-                                    $user['email'] = $_POST["new".$user['login']."_email_value"];
-                                }
-                                if(isset($_POST["new".$user['login']."_nom"]) && !empty($_POST["new".$user['login']."_nom_value"])){
-                                    $users[$k]['profil']['nom'] = $_POST["new".$user['login']."_nom_value"];
-                                    $user['profil']['nom'] = $_POST["new".$user['login']."_nom_value"];
-                                }
-                                if(isset($_POST["new".$user['login']."_prenom"]) && !empty($_POST["new".$user['login']."_prenom_value"])){
-                                    $users[$k]['profil']['prenom'] = $_POST["new".$user['login']."_prenom_value"];
-                                    $user['profil']['prenom'] = $_POST["new".$user['login']."_prenom_value"];
-                                }
-                                if(isset($_POST["new".$user['login']."_role"]) && !empty($_POST["new".$user['login']."_role_value"])){
-                                    $users[$k]['role'] = $_POST["new".$user['login']."_role_value"];
-                                    $user['role'] = $_POST["new".$user['login']."_role_value"];
-                                }
-                                if(isset($_POST["new".$user['login']."_adresse"]) && !empty($_POST["new".$user['login']."_adresse_value"])){
-                                    $users[$k]['profil']['adresse'] = $_POST["new".$user['login']."_adresse_value"];
-                                    $user['profil']['adresse'] = $_POST["new".$user['login']."_adresse_value"];
-                                }
-                                if(isset($_POST["new".$user['login']."_tel"]) && !empty($_POST["new".$user['login']."_tel_value"])){
-                                    $users[$k]['profil']['tel'] = $_POST["new".$user['login']."_tel_value"];
-                                    $user['profil']['tel'] = $_POST["new".$user['login']."_tel_value"];
-                                }
-                                if(isset($_POST["new".$user['login']."_dob"]) && !empty($_POST["new".$user['login']."_dob_value"])){
-                                    $users[$k]['profil']['date de naissance'] = $_POST["new".$user['login']."_dob_value"];
-                                    $user['profil']['date de naissance'] = $_POST["new".$user['login']."_dob_value"];
-                                }
-                                if(isset($_POST["new".$user['login']."_genre"]) && !empty($_POST["new".$user['login']."_genre_value"])){
-                                    $users[$k]['profil']['genre'] = $_POST["new".$user['login']."_genre_value"];
-                                    $user['profil']['genre'] = $_POST["new".$user['login']."_genre_value"];
-                                }
-
                                 /*Delete a user */
                                 if(isset($_POST["supprimer_".$user['login']])){
                                     unset($users[$k]);
                                 }
-                                else{/*Afficher les informations*/
+                                else{
+                                    /*Change la valeur de displaye[indice du user] pour savoir si on affiche ou non le "plus" */
+                                    if(isset($_POST["plus_".$user['login']])){
+                                        $_SESSION["display"][$k]=1;
+                                    }
+                                    if(isset($_POST["moins_".$user['login']])){
+                                        $_SESSION["display"][$k]=0;
+                                    }
+
+                                    /* Changer les informations*/
+                                    foreach ($infos as $info){
+                                        if (isset($POST["new".$user['login']."_".$info])){
+                                            if($info == "login"){
+                                                $newlogin=new_login($_POST["new".$user['login']."_login_value"],"../json/utilisateurs.json");
+            
+                                                if($newlogin == 1){
+                                                    $users[$k]['login'] = $_POST["new".$user['login']."_login_value"];
+                                                    $user['login'] = $_POST["new".$user['login']."_login_value"];
+                                                }
+                                            }
+                                            else if($info == "mdp" || $info == "email" || $info == "role"){
+                                                $users[$k][$info] = $_POST["new".$user['login']."_".$info."_value"];
+                                                $user[$info] = $_POST["new".$user['login']."_".$info."_value"];
+                                            }
+                                            else{
+                                                $users[$k]['profil'][$info] = $_POST["new".$user['login']."_".$info."_value"];
+                                                $user['profil'][$info] = $_POST["new".$user['login']."_".$info."_value"];
+                                            }
+                                        }
+                                    }
+
+                                    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                    /*Afficher les informations*/
                                     echo '<tr>';
                                     /*Login */
                                     if(isset($_POST["modif_".$user['login']."_login"])){
@@ -180,14 +168,6 @@
                                         <td><button type="submit" class="edit_icon" name="modif_'.$user['login'].'_role"><img class="edit_icon" src="../images/edit_icon.png"/></button></td>';
                                     }
         
-                                    /*Change la valeur de displaye[indice du user] pour savoir si on affiche ou non le "plus" */
-                                    if(isset($_POST["plus_".$user['login']])){
-                                        $_SESSION["display"][$k]=1;
-                                    }
-                                    if(isset($_POST["moins_".$user['login']])){
-                                        $_SESSION["display"][$k]=0;
-                                    }
-        
                                     /*Affiche le "voir plus" */
                                     if(isset($_SESSION["display"][$k]) && $_SESSION["display"][$k] == 1){
                                         echo '<td><input type="submit" class="admin" name="moins_'.$user['login'].'" value="Réduire"><input type="submit" class="admin" name="supprimer_'.$user['login'].'" value="Supprimer"></td></tr>
@@ -218,11 +198,11 @@
                                             
                                             /*Date de naissance (dob = Date of birth) */
                                             if(isset($_POST["modif_".$user['login']."_dob"])){
-                                                echo '<td><input class="modifier" type="text" name="new'.$user['login'].'_dob_value" placeholder="'.$user['profil']['date de naissance'].'"/></td>';
+                                                echo '<td><input class="modifier" type="text" name="new'.$user['login'].'_dob_value" placeholder="'.$user['profil']['dob'].'"/></td>';
                                                 echo '<td><input class="admin" type="submit" name="new'.$user['login'].'_dob" value="Valider"/></td>';
                                             }
                                             else{
-                                                echo '<td><b>Annif: </b>'.$user['profil']['date de naissance'].' </td>
+                                                echo '<td><b>Annif: </b>'.$user['profil']['dob'].' </td>
                                                 <td><button type="submit" class="edit_icon" name="modif_'.$user['login'].'_dob"><img class="edit_icon" src="../images/edit_icon.png"/></button></td>';
                                             }
                                             

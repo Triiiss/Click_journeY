@@ -138,8 +138,8 @@
                                 "nom"=> $nom, 
                                 "email"=> $email, 
                                 "genre"=> $genre, 
-                                "telephone"=> $telephone, 
-                                "date de naissance"=> $date, 
+                                "tel"=> $telephone, 
+                                "dob"=> $date, 
                                 "adresse"=> $adresse);
                 
                             // On rempli la fiche de l'utilisateur dans un array
@@ -166,6 +166,7 @@
                             file_put_contents('../json/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
                 
                             // Dire à la session qu'on est connecté, et renvoyer à l'accueil
+                            $_SESSION["user_index"] = array_key_last($users)+1;
                             $_SESSION["connexion"] = "connected";
                             $_SESSION["login"] = $login;
                             $_SESSION["role"] = "normal";
