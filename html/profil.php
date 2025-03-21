@@ -32,7 +32,7 @@
             </nav>
         </ul>
 
-        <form action="profil.php" method="POST">
+        <form action="profil.php" method="POST" enctype="multipart/form-data">
             <fieldset class="formulaire profil">
                 <legend>Profil <img src="../images/profil_picture.webp" class="profil_picture"/></legend>
                     <?php
@@ -237,6 +237,15 @@
                                 echo '<p>'.$user["profil"]["adresse"].'</p>
                                 <p><button type="submit" class="edit_icon" name="modif_adresse"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>';
                             }
+
+                            echo '<p>Photo de profil</p>
+                            <p><label class="admin" for="profil_picture_value">Photo de profil</label><input class="admin" type="file" accept=".png,.jpeg,.jpg" name="profil_picture_value"/></p>
+                            <td><input class="admin" type="submit" name="profil_picture" value="Valider"/></td>
+
+                            <p class="empty"> .</p>
+                            <p></p>
+                            <p></p>
+                            ';
 
 
                             echo '<p>Voyages :</p>
