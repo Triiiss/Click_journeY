@@ -147,7 +147,7 @@
                                 "login"=> $login,
                                 "mdp"=> $mdp,
                                 "email"=> $email, 
-                                "role"=> "normal", 
+                                "role"=> "client", 
                                 "profil"=> $profil,
                                 "voyages"=> array(),
                                 "date d'inscription"=> date("Y-m-d"));
@@ -169,7 +169,7 @@
                             $_SESSION["user_index"] = array_key_last($users)+1;
                             $_SESSION["connexion"] = "connected";
                             $_SESSION["login"] = $login;
-                            $_SESSION["role"] = "normal";
+                            $_SESSION["role"] = "client";
                 
                             header("Location: accueil.php");
                         }
