@@ -87,7 +87,7 @@
                 foreach($voyages as $k=> $voyage){
                     if(strpos($voyage["mots_cles"], $recherche)!==false && $recherche!=""){
                         echo '<div class="itineraire">';
-                        echo '<img src="'.$voyage["image"].'" class="imgVoyage" alt="photo_voyage"/>';
+                        echo '<a href="voyage.php?id='.$k.'"><img src="'.$voyage["image"].'" class="imgVoyage" alt="photo_voyage"/></a>';
                         echo '<div class="titreVoyage">'.$voyage["titre"].'</div>';          
                         echo '</div>';   
                     }
