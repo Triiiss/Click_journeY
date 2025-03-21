@@ -176,7 +176,6 @@
     
                                 /*Role */
                                 if(isset($_POST["modif_".$user['login']."_role"])){
-                                    /*echo '<td><input class="modifier" type="text" name="new'.$user['login'].'_role_value" placeholder="'.$user['role'].'"/></td>';*/
                                     if($user['role'] == "admin"){
                                         echo '<td><select class="modif_role" name="new'.$user['login'].'_role_value">
                                             <option value="admin">Admin</option>
@@ -246,7 +245,27 @@
                                         
                                         /*Genre */
                                         if(isset($_POST["modif_".$user['login']."_genre"])){
-                                            echo '<td><input class="modifier" type="text" name="new'.$user['login'].'_genre_value" placeholder="'.$user['profil']['genre'].'"/></td>';
+                                            if($user['profil']['genre'] == "mme"){
+                                                echo '<td><select class="modif_role" name="new'.$user['login'].'_genre_value">
+                                                    <option value="mme">Mme</option>
+                                                    <option value="mr">Mr</option>
+                                                    <option value="x">X</option>
+                                                </select></td>';
+                                            }
+                                            else if($user['profil']['genre'] == "mr"){
+                                                echo '<td><select class="modif_role" name="new'.$user['login'].'_genre_value">
+                                                    <option value="mr">Mr</option>
+                                                    <option value="mme">Mme</option>
+                                                    <option value="x">X</option>
+                                                </select></td>';
+                                            }
+                                            else{
+                                                echo '<td><select class="modif_role" name="new'.$user['login'].'_genre_value">
+                                                    <option value="x">X</option>
+                                                    <option value="mme">Mme</option>
+                                                    <option value="mr">Mr</option>
+                                                </select></td>';
+                                            }
                                             echo '<td><input class="admin" type="submit" name="new'.$user['login'].'_genre" value="Valider"/></td>';
                                         }
                                         else{

@@ -43,7 +43,7 @@
         </ul>
 			
             <form action="inscription.php" method="post">
-                <fieldset class="formulaire inscription">
+                <fieldset class="formulaire">
                     <legend>Formulaire d'inscription</legend>
                     <label for="genre" >Genre :</label>
                     <div class="inscription">
@@ -182,7 +182,7 @@
                                 "login"=> $login,
                                 "mdp"=> $mdp,
                                 "email"=> $email, 
-                                "role"=> "client", 
+                                "role"=> "normal", 
                                 "profil"=> $profil,
                                 "voyages"=> array(),
                                 "date d'inscription"=> date("Y-m-d"));
@@ -205,7 +205,6 @@
                             $_SESSION["connexion"] = "connected";
                             $_SESSION["login"] = $login;
                             $_SESSION["role"] = "normal";
-                            $_SESSION["user_index"] = array_​key_​last($users)-1;
                 
                             header("Location: accueil.php");
                         }
