@@ -33,7 +33,7 @@
             </nav>
         </ul>
         
-        <form action="recherche.php">
+        <form action="recherche.php" method="post">
             <fieldset class="recherche">
                 <legend>Filtres</legend>
                 <div class="filtre">
@@ -95,6 +95,21 @@
                 <input class="recherche" type="text" name="search">
             </fieldset>
 
+            <div class="reco">
+            <?php 
+                $json_voyages=file_get_contents("../json/voyages.json");
+                $voyages=json_decode($json_voyages, true);
+
+                $recherche=$_POST["search"];
+                foreach($voyages as $k=> $voyage){
+                    if(str_contains($voyage["mots_cles"], $recherche) && $recherche!=""){
+                        echo '<div class="titreVoyage">'.$voyage["titre"].'</div>';
+                        echo '<img src="'.$voyage["image"].'" class="imgVoyage" alt="photo_voyage"/>';
+                    }
+                }
+            ?>
+            </div>
+
             <fieldset class="recherche">
                 <button class="recherche" type="reset" name="reset">Supprimer les filtres</button>
                 <button class="recherche" type="submit" name="submit">Rechercher</button>
@@ -105,10 +120,6 @@
 
         <div class="reco">
         <?php 
-            session_start();
-            $json_voyages=file_get_contents("../json/voyages.json");
-            $voyages=json_decode($json_voyages, true);
-
             for($i=0;$i<10;$i++){
                 if(isset($voyages[$i])){
                     echo '<div class="titreVoyage">'.$voyages[$i]["titre"].'</div>';

@@ -1,6 +1,7 @@
 [
     {
         "titre": "exemple1",
+        "mots_cles":"montagne",
         "image": "../images/fond_1.webp",
         "description":"",
         "lieu":"",
@@ -18,6 +19,7 @@
 
     {
         "titre": "exemple2",
+        "mots_cles":"foret",
         "image": "../images/fond_1.webp",
         "description":"",
         "lieu":"",
