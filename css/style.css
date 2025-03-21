@@ -158,6 +158,9 @@ fieldset.formulaire{/*Fond et mise en page en grille*/
     display: grid;
     grid-template-columns: 50% 50%;
 }
+fieldset.connexion, fieldset.inscription{
+    grid-template-columns: 50% 50%;
+}
 label{/*A gauche*/
     font-size: 1.5vw;
     columns: 1;
@@ -246,6 +249,14 @@ p.conditions{
     margin: 0% 0% 0% 0%;
 }
 
+/*Profil*/
+fieldset.profil{/*Fond et mise en page en grille*/
+    grid-template-columns: 45% 45% 10%;
+}
+fieldset.profil p{
+    font-size: 1.5vw;
+}
+
 /*Admin*/
 caption.admin{
     background-color: rgba(174, 189, 147,0.6);
@@ -318,7 +329,7 @@ button.edit_icon{
     font-size: 1vw;
     background-color: rgb(255, 106, 19);
 }
-td.empty{
+.empty{
     border: none;
     visibility: hidden;
 }
