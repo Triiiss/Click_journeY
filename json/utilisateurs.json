@@ -7,7 +7,6 @@
         "profil": {
             "prenom": "Th\u00e9mis",
             "nom": "Tran Tu Thien",
-            "email": "themis.trantuthien@gmail.com",
             "genre": "x",
             "tel": "0652658979",
             "dob": "2006-04-25",
@@ -24,7 +23,6 @@
         "profil": {
             "prenom": "Louis",
             "nom": "Nardou",
-            "email": "louis.nardou@gmail.com",
             "genre": "mr",
             "tel": "0606060606",
             "dob": "2005-10-15",
@@ -36,12 +34,10 @@
     {
         "login": "Braysake",
         "mdp": "Aaaaaaaa0!",
-        "email": "matheo.malle@gmail.com",
         "role": "client",
         "profil": {
             "prenom": "Math\u00e9o",
             "nom": "Malle",
-            "email": "matheo.malle@gmail.com",
             "genre": "mr",
             "tel": "0000000000",
             "dob": "2005-06-05",
@@ -58,7 +54,6 @@
         "profil": {
             "prenom": "Irssane",
             "nom": "L\u00ea",
-            "email": "irssane.le@gmail.com",
             "genre": "mr",
             "tel": "0101010101",
             "dob": "2005-07-05",
@@ -75,7 +70,6 @@
         "profil": {
             "prenom": "Florian",
             "nom": "Bruyant",
-            "email": "florian.bruyant@gmail.com",
             "genre": "mr",
             "tel": "0123456789",
             "dob": "2005-01-01",
@@ -92,7 +86,6 @@
         "profil": {
             "prenom": "Alexis",
             "nom": "Guimbard",
-            "email": "alexis.guimbard@gmail.com",
             "genre": "mr",
             "tel": "9876543210",
             "dob": "2005-01-02",
