@@ -108,7 +108,7 @@
             for($i=0;$i<10;$i++){
                 if(isset($voyages[$i])){
                     echo '<div class="itineraire">';
-                    echo '<a href="voyage.php?titre='.$voyages[$i]["titre"].'"><img src="'.$voyages[$i]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>';
+                    echo '<a href="voyage.php?id='.$i.'"><img src="'.$voyages[$i]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>';
                     echo '<div class="titreVoyage">'.$voyages[$i]["titre"].'</div>';   
                     echo '</div>';                
                 }
