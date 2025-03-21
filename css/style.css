@@ -256,6 +256,12 @@ fieldset.profil{/*Fond et mise en page en grille*/
 fieldset.profil p{
     font-size: 1.5vw;
 }
+.modif_profil{
+    width: 2vw;
+}
+input[type="file"]{
+    display: none;
+}
 
 /*Admin*/
 caption.admin{
@@ -364,10 +370,13 @@ input.recherche, .recherche div>div{
     flex-direction: row;
     text-align: center;
 }
+
+
 .itineraire{
     padding-left: 1.5vw;
     padding-right: 1.5vw;
 }
+
 .imgVoyage{
     width: 15vw;
 }
