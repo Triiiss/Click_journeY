@@ -20,7 +20,7 @@
         "login": "lpoiygf",
         "mdp": "Myrt1ll_",
         "email": "louis.nardou@gmail.com",
-        "role": "normal",
+        "role": "client",
         "profil": {
             "prenom": "Louis",
             "nom": "Nardou",
@@ -37,7 +37,7 @@
         "login": "Braysake",
         "mdp": "Aaaaaaaa0!",
         "email": "matheo.malle@gmail.com",
-        "role": "normal",
+        "role": "client",
         "profil": {
             "prenom": "Math\u00e9o",
             "nom": "Malle",
@@ -54,7 +54,7 @@
         "login": "Niroben",
         "mdp": "Alphaa0_",
         "email": "irssane.le@gmail.com",
-        "role": "normal",
+        "role": "client",
         "profil": {
             "prenom": "Irssane",
             "nom": "L\u00ea",
@@ -63,6 +63,40 @@
             "tel": "0101010101",
             "dob": "2005-07-05",
             "adresse": "Trou paum\u00e9 2"
+        },
+        "voyages": [],
+        "date d'inscription": "2025-03-21"
+    },
+    {
+        "login": "LeTaitre",
+        "mdp": "florian",
+        "email": "florian.bruyant@gmail.com",
+        "role": "admin",
+        "profil": {
+            "prenom": "Florian",
+            "nom": "Bruyant",
+            "email": "florian.bruyant@gmail.com",
+            "genre": "mr",
+            "tel": "0123456789",
+            "dob": "2005-01-01",
+            "adresse": "Pas \u00e0 CY tech"
+        },
+        "voyages": [],
+        "date d'inscription": "2025-03-21"
+    },
+    {
+        "login": "AlexisG115",
+        "mdp": "alexis",
+        "email": "alexis.guimbard@gmail.com",
+        "role": "admin",
+        "profil": {
+            "prenom": "Alexis",
+            "nom": "Guimbard",
+            "email": "alexis.guimbard@gmail.com",
+            "genre": "mr",
+            "tel": "9876543210",
+            "dob": "2005-01-02",
+            "adresse": "Avenue du Parc"
         },
         "voyages": [],
         "date d'inscription": "2025-03-21"
