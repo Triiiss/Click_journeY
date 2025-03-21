@@ -2,7 +2,7 @@
     {
         "titre": "exemple1",
         "mots_cles":"montagne",
-        "image": "../images/fond_1.webp",
+        "image": "../images/fond_camping_montagne.jpg",
         "description":"",
         "lieu":"",
         "prix": "100",
@@ -20,7 +20,7 @@
     {
         "titre": "exemple2",
         "mots_cles":"foret",
-        "image": "../images/fond_1.webp",
+        "image": "../images/fond_camping_montagne.jpg",
         "description":"",
         "lieu":"",
         "prix": "100",
