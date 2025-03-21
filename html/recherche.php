@@ -95,7 +95,7 @@
                 <input class="recherche" type="text" name="search">
             </fieldset>
 
-            <div class="reco">
+            <div class="voyages">
             <?php 
                 $json_voyages=file_get_contents("../json/voyages.json");
                 $voyages=json_decode($json_voyages, true);
@@ -103,8 +103,10 @@
                 $recherche=$_POST["search"];
                 foreach($voyages as $k=> $voyage){
                     if(strpos($voyage["mots_cles"], $recherche)!==false && $recherche!=""){
-                        echo '<div class="titreVoyage">'.$voyage["titre"].'</div>';
+                        echo '<div class="itineraire">';
                         echo '<img src="'.$voyage["image"].'" class="imgVoyage" alt="photo_voyage"/>';
+                        echo '<div class="titreVoyage">'.$voyage["titre"].'</div>';          
+                        echo '</div>';   
                     }
                 }
             ?>
@@ -116,14 +118,16 @@
             </fieldset>
         </form>
    
-        <h3 class="reco">Recommendations</h3>
+        <h3 class="voyages">Recommendations</h3>
 
-        <div class="reco">
+        <div class="voyages">
         <?php 
             for($i=0;$i<10;$i++){
                 if(isset($voyages[$i])){
-                    echo '<div class="titreVoyage">'.$voyages[$i]["titre"].'</div>';
+                    echo '<div class="itineraire">';
                     echo '<img src="'.$voyages[$i]["image"].'" class="imgVoyage" alt="photo_voyage"/>';
+                    echo '<div class="titreVoyage">'.$voyages[$i]["titre"].'</div>';   
+                    echo '</div>';                
                 }
             }
         ?>
