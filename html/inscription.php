@@ -1,4 +1,5 @@
 <?php
+    include 'fonctions.php';
     session_start();
     $genre=$_POST["genre"];
     $prenom=$_POST["prenom"];
@@ -33,14 +34,7 @@
             <h1 class="titre">Camping de l'Extreme <img src="../images/logo.png" class="logo" alt="logo de l'image"/></h1>
             <a class="accueil" href="accueil.php">Accueil</a><br/>
 
-        <ul class="bandeau">
-            <nav class="bandeau">
-                <li class="bandeau"><a class="bandeau" href="presentation.php">PRESENTATION</a></li>
-                <li class="bandeau"><a class="bandeau" href="recherche.php">ITINERAIRES</a></li>
-                <li class="bandeau"><a class="bandeau" href="connexion.php">CONNEXION</a></li>
-                <li class="bandeau" id="current"><a class="bandeau" id="current" href="inscription.php">INSCRIPTION</a></li>
-            </nav>
-        </ul>
+            <?php bandeau("inscription");?>
 			
             <form action="inscription.php" method="post">
                 <fieldset class="formulaire">
@@ -73,49 +67,20 @@
                     <input type="text" name="login" placeholder="pseudo" required>
 
                     <?php
-                        $json_users=file_get_contents("../json/utilisateurs.json");
-                        $users=json_decode($json_users, true);
-                        foreach($users as $k=> $user){
-                            if(isset($user["login"]) && $user["login"] === $login){
-                                $newlogin=0;
-                                break;
-                            }
-                        }
+                        $newlogin = new_login($login,"../json/utilisateurs.json");
+
                         if($newlogin == 0){
                             echo '<p></p>
                             <span class="etoile">L\'identifiant est déjà pris</span>';
-                            $newlogin=0;
                         }
-                        else{
-                            $newlogin=1;
-                        }
+                        
                     ?>
 
                     <label for="mdp" >Mot de passe : <span class="etoile">*</span> </label>
                     <input type="password" name="mdp" required>
                     <?php
-                        $maj=0;
-                        $min=0;
-                        $num=0;
-                        $spe=0;
-                        foreach(str_split($mdp) as $letter){
-                            if($maj==0 && ctype_upper($letter)){
-                                $maj=1;
-                            }
-                            if($min==0 && ctype_lower($letter)){
-                                $min=1;
-                            }
-                            if($num==0 && is_numeric($letter)){
-                                $num=1;
-                            }
-                            if($spe==0 && ($letter == '!' || $letter == '*' || $letter == '#' || $letter == '%' || $letter == '_')){
-                                $spe=1;
-                            }
-			            }
-                        if (strlen($mdp)>=8 && $maj == 1 && $min == 1 && $num == 1 && $spe == 1){
-				            $safemdp = 1;
-			            }
-                        else{
+                        $safemdp = password_safe($mdp);
+                        if ($safemdp == 0){
                             echo '<p></p>
                                             <span class="etoile">Le mdp a besoin de 8min 1 maj 1 min 1 chiffre 1 car. spécial (!, *, #, %, _)</span>';
                         }
@@ -190,11 +155,10 @@
                             
                             //Récupère les données
                 
-                            $json_data = file_get_contents("../json/utilisateurs.json");
-                            if($json_data === false){
-                                die("Erreur de lecture du fichier json");
+                            $users = get_data("../json/utilisateurs.json");
+                            if ($users === null){
+                                $users = array();
                             }
-                            $users = json_decode($json_data, true);
                 
                             $users[] = $nouvel_utilisateur;
                 

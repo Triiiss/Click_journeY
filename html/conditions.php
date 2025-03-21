@@ -1,4 +1,5 @@
 <?php
+    include 'fonctions.php';
     session_start();
 ?>
 
@@ -13,25 +14,7 @@
             <h1 class="titre">Camping de l'Extreme <img src="../images/logo.png" class="logo" alt="logo de l'image"/></h1>
             <a class="accueil" href="accueil.php">Accueil</a><br/>
             
-            <ul class="bandeau">
-                <nav class="bandeau">
-                    <li class="bandeau"><a class="bandeau" href="presentation.php">PRESENTATION</a></li>
-                    <li class="bandeau"><a class="bandeau" href="recherche.php">ITINERAIRES</a></li>
-                        <?php
-                        if(isset($_SESSION["connexion"]) && $_SESSION["connexion"] == "connected"){
-                                if(isset($_SESSION["role"]) && $_SESSION["role"] == "admin"){
-                                echo '<li class="bandeau"><a class="bandeau" href="admin.php">ADMIN</a></li>';
-                                }
-                                echo '<li class="profil"><a class="profil" href="profil.php"><img src="../images/profil_picture.webp" class="profil_picture" alt="Profil"/></a></li>';
-
-                        }
-                        else{
-                                echo '<li class="bandeau"><a class="bandeau" href="connexion.php">CONNEXION</a></li>';
-                                echo '<li class="bandeau"><a class="bandeau" href="inscription.php">INSCRIPTION</a></li>';
-                        }
-                        ?>
-                </nav>
-            </ul>
+            <?php bandeau("conditions");?>
 			
             <fieldset class="conditions">
                 <legend>Conditions d'utilisation</legend>

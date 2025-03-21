@@ -1,4 +1,5 @@
 <?php
+    include 'fonctions.php';
     session_start();
     $login=$_POST["login"];
     $mdp=$_POST["mdp"];
@@ -20,16 +21,7 @@
         <h1 class="titre">Camping de l'Extreme <img src="../images/logo.png" class="logo" alt="logo de l'image"/></h1>
         <a class="accueil" href="accueil.php">Accueil</a><br/>
 
-
-        <ul class="bandeau">
-            <nav class="bandeau">
-                <li class="bandeau"><a class="bandeau" href="presentation.php">PRESENTATION</a></li>
-                <li class="bandeau"><a class="bandeau" href="recherche.php">ITINERAIRES</a></li>
-                <li class="bandeau" id="current"><a class="bandeau" id="current" href="connexion.php">CONNEXION</a></li>
-                <li class="bandeau"><a class="bandeau" href="inscription.php">INSCRIPTION</a></li>
-                
-            </nav>
-        </ul>
+        <?php bandeau("connexion");?>
 
         <form action="connexion.php" method="post">
             <fieldset class="formulaire connexion">
@@ -48,31 +40,36 @@
             <p>Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous</a></p>
 
             <?php
-                $json_users=file_get_contents("../json/utilisateurs.json");
-                $users=json_decode($json_users, true);
-                $veriflogin=0;
-                foreach($users as $k=> $user){
-                    if(isset($user["login"]) && $user["login"] === $login){
-                        if(isset($user["mdp"]) && $user["mdp"] === $mdp){
-                            // Dire à la session qu'on est connecté
-                            $_SESSION["user_index"] = $k+1;
-                            $_SESSION["connexion"] = "connected";
-                            $_SESSION["login"] = $login;
-                            $_SESSION["role"] = $user["role"];
-
-                            header("Location: accueil.php");
-                        }
-                        else{
-                            echo '<p></p>
-                            <span class="etoile">Mot de passe incorrect</span>';
-                        }
-                        $veriflogin=1;
-                        break;
-                    }
+                $users = get_data("../json/utilisateurs.json");
+                
+                if($users == null){
+                    echo "<p>Problème de récupération des données côté serveur</p>";
                 }
-                if($veriflogin!=1 && !empty($login)){
-                    echo '<p></p>
-                    <span class="etoile">Identifiant incorrect</span>';
+                else{
+                    $veriflogin=0;
+                    foreach($users as $k=> $user){
+                        if(isset($user["login"]) && $user["login"] === $login){
+                            if(isset($user["mdp"]) && $user["mdp"] === $mdp){
+                                // Dire à la session qu'on est connecté
+                                $_SESSION["user_index"] = $k+1;
+                                $_SESSION["connexion"] = "connected";
+                                $_SESSION["login"] = $login;
+                                $_SESSION["role"] = $user["role"];
+    
+                                header("Location: accueil.php");
+                            }
+                            else{
+                                echo '<p></p>
+                                <span class="etoile">Mot de passe incorrect</span>';
+                            }
+                            $veriflogin=1;
+                            break;
+                        }
+                    }
+                    if($veriflogin!=1 && !empty($login)){
+                        echo '<p></p>
+                        <span class="etoile">Identifiant incorrect</span>';
+                    }
                 }
             ?>
 
