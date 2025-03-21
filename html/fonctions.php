@@ -20,8 +20,7 @@
 
         $donnees=json_decode($contenu,true);
         if($donnees == null){
-            echo "Erreur : Décodage JSON échoué.";
-            return null;
+            return array();
         }
 
         return $donnees;
@@ -116,7 +115,14 @@
             else{
                 echo '><a';
             }
-            echo ' class="profil" href="profil.php"> <img src="../images/profil_picture.webp" class="profil_picture" alt="Profil"/></a>';
+
+            if (file_exists("../images/profil_picture/profil_picture_".$_SESSION['login'])){
+                echo ' class="profil" href="profil.php"> <img src="../images/profil_picture/profil_picture_'.$_SESSION['login'].'" class="profil_picture" alt="Profil"/></a>';
+            }
+            else{
+                echo ' class="profil" href="profil.php"> <img src="../images/profil_picture/default.webp" class="profil_picture" alt="Profil"/></a>';
+            }
+
         }
         else{
             echo '
@@ -144,7 +150,6 @@
         </nav>
         </ul>';
     }
-
 ?>
                         
                         

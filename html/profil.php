@@ -27,7 +27,17 @@
 
         <form action="profil.php" method="POST" enctype="multipart/form-data">
             <fieldset class="formulaire profil">
-                <legend>Profil <img src="../images/profil_picture.webp" class="profil_picture"/></legend>
+                <?php
+                    if (file_exists("../images/profil_picture/profil_picture_".$_SESSION['login'])){
+                        echo '<legend>Profil <img src="../images/profil_picture/profil_picture_'.$_SESSION['login'].'" class="profil_picture"/></legend>';
+                    }
+                    else{
+                        
+                        echo '<legend>Profil <img src="../images/profil_picture/default.webp" class="profil_picture"/></legend>';
+                    }
+                ?>
+
+                
                     <?php
                             $users=get_data("../json/utilisateurs.json");
                             if($users===null){
@@ -37,6 +47,14 @@
                                 $user=$users[$_SESSION["user_index"]-1];
 
                                 /*Changer les informations */
+                                if(isset($_POST["profil_picture"])){
+                                    $photo = $_FILES["profil_picture_value"];
+                                    
+                                    if($photo["size"] <= 2000000 && $photo["error"] === UPLOAD_ERR_OK){       /*Taille de la photo */
+                                        move_uploaded_file($photo['tmp_name'], "../images/profil_picture/profil_picture_".$user['login']);
+                                    }
+                                }
+
                                 if(isset($_POST["new_login"])){
                                     $newlogin=new_login($_POST["new_login_value"],"../json/utilisateurs.json");
     
@@ -201,7 +219,7 @@
                                 }
     
                                 echo '<p>Photo de profil</p>
-                                <p><label class="admin" for="profil_picture_value">Photo de profil</label><input class="admin" type="file" accept=".png,.jpeg,.jpg" name="profil_picture_value"/></p>
+                                <p><input type="file" accept="image/*" name="profil_picture_value"/></p>
                                 <td><input class="admin" type="submit" name="profil_picture" value="Valider"/></td>
     
                                 <p class="empty"> .</p>
