@@ -135,8 +135,7 @@
                             // Profil = informations complémentaires
                             $profil=array(
                                 "prenom"=> $prenom, 
-                                "nom"=> $nom, 
-                                "email"=> $email, 
+                                "nom"=> $nom,
                                 "genre"=> $genre, 
                                 "tel"=> $telephone, 
                                 "dob"=> $date, 

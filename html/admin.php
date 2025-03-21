@@ -12,6 +12,10 @@
         $_SESSION["display"] = array();
     }
 
+    if (!isset($_SESSION["npage"])){
+        $_SESSION["npage"]=1;
+    }
+    $maxusers=5;
     $infos = array("login","mdp","email","nom","prenom","role","adresse","tel","dob","genre");
 ?>
 
@@ -28,23 +32,23 @@
 
         <?php bandeau("admin");?>
 
-        <table class="admin">
-            <caption class="admin">Liste des utilisateurs</caption>
-        <thead>
-            <tr>
-                <th class"admin" colspan="2">Login</th>
-                <th class"admin" colspan="2">Password</th>
-                <th class"admin" colspan="2">Email</th>
-                <th class"admin" colspan="2">Nom</th>
-                <th class"admin" colspan="2">Prénom</th>
-                <th class"admin" colspan="2">Date d'inscription</th>
-                <th class"admin" colspan="2">Statut</th>
-                <th class"admin" colspan="2">Actions</th>
-                
-            </tr>
-        </thead>
-        <tbody>
-            <form action="admin.php" method="post">
+        <form action="admin.php" method="post">
+            <table class="admin">
+                <caption class="admin">Liste des utilisateurs</caption>
+            <thead>
+                <tr>
+                    <th class"admin" colspan="2">Login</th>
+                    <th class"admin" colspan="2">Password</th>
+                    <th class"admin" colspan="2">Email</th>
+                    <th class"admin" colspan="2">Nom</th>
+                    <th class"admin" colspan="2">Prénom</th>
+                    <th class"admin" colspan="2">Date d'inscription</th>
+                    <th class"admin" colspan="2">Statut</th>
+                    <th class"admin" colspan="2">Actions</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
                 <?php
                         /*Récupérer le fichier sous forme d'array */
                         $users=get_data("../json/utilisateurs.json");
@@ -53,7 +57,23 @@
                         }
 
                         else{
-                            foreach($users as $k=> $user){
+                            $maxpage=(array_key_last($users)+1)/$maxusers;
+                            /*Pour défiler les pages */
+                            if (isset($_POST["plus_defil"]) && $_SESSION["npage"] < $maxpage){
+                                $_SESSION["npage"]++;
+                            }
+                            else if(isset($_POST["moins_defil"]) && $_SESSION["npage"] > 1){
+                                $_SESSION["npage"]--;
+                            }
+                            for($i=1;$i<=$maxpage+1;$i++){
+                                if(isset($_POST["goto_".$i])){
+                                    $_SESSION["npage"]=$i;
+                                }                                
+                            }
+
+                            $users_shown = array_slice($users,$maxusers*($_SESSION["npage"]-1),$maxusers);
+
+                            foreach($users_shown as $k=> $user){
                                 /*Delete a user */
                                 if(isset($_POST["supprimer_".$user['login']])){
                                     unset($users[$k]);
@@ -107,8 +127,8 @@
                                         $user['profil']['tel'] = $_POST["new".$user['login']."_tel_value"];
                                     }
                                     if(isset($_POST["new".$user['login']."_dob"]) && !empty($_POST["new".$user['login']."_dob_value"])){
-                                        $users[$k]['profil']['date de naissance'] = $_POST["new".$user['login']."_dob_value"];
-                                        $user['profil']['date de naissance'] = $_POST["new".$user['login']."_dob_value"];
+                                        $users[$k]['profil']['dob'] = $_POST["new".$user['login']."_dob_value"];
+                                        $user['profil']['dob'] = $_POST["new".$user['login']."_dob_value"];
                                     }
                                     if(isset($_POST["new".$user['login']."_genre"]) && !empty($_POST["new".$user['login']."_genre_value"])){
                                         $users[$k]['profil']['genre'] = $_POST["new".$user['login']."_genre_value"];
@@ -222,11 +242,11 @@
                                             
                                             /*Date de naissance (dob = Date of birth) */
                                             if(isset($_POST["modif_".$user['login']."_dob"])){
-                                                echo '<td><input class="modifier" type="text" name="new'.$user['login'].'_dob_value" placeholder="'.$user['profil']['date de naissance'].'"/></td>';
+                                                echo '<td><input class="modifier" type="text" name="new'.$user['login'].'_dob_value" placeholder="'.$user['profil']['dob'].'"/></td>';
                                                 echo '<td><input class="admin" type="submit" name="new'.$user['login'].'_dob" value="Valider"/></td>';
                                             }
                                             else{
-                                                echo '<td><b>Annif: </b>'.$user['profil']['date de naissance'].' </td>
+                                                echo '<td><b>Annif: </b>'.$user['profil']['dob'].' </td>
                                                 <td><button type="submit" class="edit_icon" name="modif_'.$user['login'].'_dob"><img class="edit_icon" src="../images/edit_icon.png"/></button></td>';
                                             }
                                             
@@ -270,9 +290,94 @@
                         }
                         file_put_contents('../json/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
                 ?>
-            </form>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+        
+        <ul class="admin_defil">
+            <nav class="admin_defil">
+        <?php
+            if($_SESSION["npage"] <= 1){
+                echo '<li class="admin_stop"><button class="admin_stop" name="moins_defil">_</button></li>';
+            }
+            else{
+                echo '<li class="admin_defil"><button class="admin_defil" name="moins_defil"><<</button></li>';
+            }
+
+            if($_SESSION["npage"] <= 1){
+                echo '
+                <li class="admin_defil"><button class="admin_defil" name="goto_'.$_SESSION["npage"].'">_'.$_SESSION["npage"].'_</button></li>';
+
+                    if($maxpage > 1){
+                        echo '
+                    <li class="admin_defil"><button class="admin_defil" name="goto_'.($_SESSION["npage"]+1).'">_'.($_SESSION["npage"]+1).'_</button></li>';
+                    }
+                    if($maxpage > 2){
+                        echo '
+                    <li class="admin_defil"><button class="admin_defil" name="goto_'.($_SESSION["npage"]+2).'">_'.($_SESSION["npage"]+2).'_</button></li>';
+                    }
+                    if($maxpage > 3){
+                        echo '
+                    <li class="admin_defil"><button class="admin_defil" name="goto_'.($_SESSION["npage"]+3).'">_'.($_SESSION["npage"]+3).'_</button></li>';
+                    }
+                    if($maxpage > 4){
+                        echo '
+                    <li class="admin_defil"><button class="admin_defil" name="goto_'.($_SESSION["npage"]+4).'">_'.($_SESSION["npage"]+4).'_</button></li>';
+                    }
+            }
+            else if($_SESSION["npage"] >= $maxpage){
+                if ($maxpage > 4){
+                    echo '
+                    <li class="admin_defil"><button class="admin_defil" name="goto_'.($_SESSION["npage"]-4).'">_'.($_SESSION["npage"]-4).'_</button></li>';
+                }
+                if ($maxpage > 3){
+                    echo '
+                    <li class="admin_defil"><button class="admin_defil" name="goto_'.($_SESSION["npage"]-3).'">_'.($_SESSION["npage"]-3).'_</button></li>';
+                }
+                if ($maxpage > 2){
+                    echo '
+                    <li class="admin_defil"><button class="admin_defil" name="goto_'.($_SESSION["npage"]-2).'">_'.($_SESSION["npage"]-2).'_</button></li>';
+                }
+                if ($maxpage > 1){
+                    echo '
+                    <li class="admin_defil"><button class="admin_defil" name="goto_'.($_SESSION["npage"]-1).'">_'.($_SESSION["npage"]-1).'_</button></li>';
+                }
+                echo '
+                    <li class="admin_defil"><button class="admin_defil" name="goto_'.$_SESSION["npage"].'">_'.$_SESSION["npage"].'_</button></li>';
+            }
+            else{
+                if($maxpage > 4 && $_SESSION["npage"] > 2){
+                    echo '
+                    <li class="admin_defil"><button class="admin_defil" name="goto_'.($_SESSION["npage"]-2).'">_'.($_SESSION["npage"]-2).'_</button></li>';
+                }
+                if($maxpage > 2){
+                    echo '
+                    <li class="admin_defil"><button class="admin_defil" name="goto_'.($_SESSION["npage"]-1).'">_'.($_SESSION["npage"]-1).'_</button></li>';
+                }
+
+                echo '
+                    <li class="admin_defil"><button class="admin_defil" name="goto_'.$_SESSION["npage"].'">_'.$_SESSION["npage"].'_</button></li>';
+
+                if($maxpage > 2){
+                    echo '
+                <li class="admin_defil"><button class="admin_defil" name="goto_'.($_SESSION["npage"]+1).'">_'.($_SESSION["npage"]+1).'_</button></li>';
+                }
+                if($maxpage > 4 && $_SESSION["npage"] < $maxpage - 2){
+                    echo '
+                <li class="admin_defil"><button class="admin_defil" name="goto_'.($_SESSION["npage"]+2).'">_'.($_SESSION["npage"]+2).'_</button></li>';
+                }
+            }
+
+            if ($_SESSION["npage"] >= $maxpage){
+                echo '<li class="admin_stop"><button class="admin_stop" name="plus_defil">_</button></li>';
+            }
+            else{
+                echo '<li class="admin_defil"><button class="admin_defil" name="plus_defil">>></button></li>';
+            }
+        ?>
+            </nav>
+        </ul>
+    
+    </form>
 
     <br><br>
     <div class="afterimage">
