@@ -11,7 +11,7 @@
 <php>
     <head>
         <meta charset="utf-8"/>
-        <title>camping de l'extreme - Recherche</title>
+        <title>camping de l'extreme - Voyage</title>
         <link rel="stylesheet" type="text/css" href="../css/style.css"/>
     </head>
     <body>
@@ -80,6 +80,8 @@
                     </fieldset>';
                 }
             ?>
+            <input type="hidden" name="id" value="<?php echo "".$id."" ?>"></input>
+
             <fieldset class="options">
                 <button class="options" type="reset" name="reset">Réinitialiser</button>
                 <button class="options" type="submit" name="submit">Récapitulatif</button>
