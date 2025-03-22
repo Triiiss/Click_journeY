@@ -1,6 +1,10 @@
 <?php
     include 'fonctions.php';
     session_start();
+
+    if($_SESSION["connexion"]!="connected"){
+        header("Location: connexion.php");
+    }
 ?>
 
 <!DOCTYPE php>
