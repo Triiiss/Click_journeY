@@ -25,39 +25,194 @@
         "depart": "20/03/2025",
         "duree": "1 semaine"
     },
+    
+    
+    {
+        "titre": "Le sommet de l'Everest",
+        "depart": "2026-12-21",
+        "fin": "2026-12-28",
+        "duree":"1 semaine",
+        "mots_cles":"montagne randonnee",
+        "image": "../images/fond_camping_montagne.jpg",
+        "description":"Allez au septième ciel, ou au plus proche possible. En haut de l'Evreste le monde semble si petit.",
+        "lieu":"Népal",
+        "prix": "215",
+        "etapes":[
+            {
+                "titre": "Camp de base",
+                "depart": "2026-12-21",
+                "fin": "2026-12-22",
+                "lieu":"5 364 m",
+                "option":"Acclimatation"
+            },
+            {
+                "titre": "Camp 2",
+                "depart": "2026-12-22",
+                "fin": "2026-12-24",
+                "lieu":"6 065 m",
+                "option":""
+            },
+            {
+                "titre": "Camp 3",
+                "depart": "2026-12-24",
+                "fin": "2026-12-26",
+                "lieu":"6 400 m",
+                "option":""
+            },
+            {
+                "titre": "Camp 4",
+                "depart": "2026-12-26",
+                "fin": "2026-12-27",
+                "lieu":"6 400 m",
+                "option":""
+            },
+            {
+                "titre": "Zone de la mort",
+                "depart": "2026-12-27",
+                "fin": "2026-12-28",
+                "lieu":"7 900 m",
+                "option":""
+            }
+        ]
+    },
 
     {
-        "titre": "exemple2",
-        "mots_cles":"foret",
+        "titre": "Forêt à couper le sang",
+        "depart": "2026-11-29",
+        "fin": "2026-12-01",
+        "duree":"2 jours",
+        "mots_cles":"foret vampires",
         "image": "../images/fond_camping_montagne.jpg",
-        "description":"",
-        "lieu":"",
-        "prix": "100",
+        "description":"Visitez la culture de la transilvanie, rencontrez les célébrités locales... à vos risques et périls",
+        "lieu":"Roumanie",
+        "prix": "180",
         "etapes":[
             {
-                "titre": "étape1",
-                "lieu":"",
-                "duree":""
+                "titre": "Chateau de Dracula",
+                "depart": "2026-11-29",
+                "fin": "2026-11-30",
+                "lieu":"Brașov",
+                "option":""
+            },
+            {
+                "titre": "Cimetière",
+                "depart": "2026-11-30",
+                "fin": "2026-12-01",
+                "lieu":"6 pieds sous terre",
+                "option":""
             }
-        ],
-        "depart": "20/03/2025",
-        "duree": "1 semaine"
+        ]
     },
+
     {
-        "titre": "exemple3",
-        "mots_cles":"foret",
+        "titre": "Une retraite exotique brûlante",
+        "depart": "2026-06-12",
+        "fin": "2026-06-26",
+        "duree":"2 semaines",
+        "mots_cles":"îles volcans",
         "image": "../images/fond_camping_montagne.jpg",
         "description":"",
-        "lieu":"",
-        "prix": "100",
+        "lieu":"Hawaii",
+        "prix": "500",
         "etapes":[
             {
-                "titre": "étape1",
-                "lieu":"",
-                "duree":""
+                "titre": "Retraite hawaiienne",
+                "depart": "2026-06-12",
+                "fin": "2026-06-19",
+                "lieu":"Plages de Hawaii",
+                "option":""
+            },
+            {
+                "titre": "Ascention d'une montagne",
+                "depart": "2026-06-19",
+                "fin": "2026-06-25",
+                "lieu":"Kīlauea",
+                "option":""
+            },
+            {
+                "titre": "Chute dans un volcan",
+                "depart": "2026-06-25",
+                "fin": "2026-06-26",
+                "lieu":"Dans la lave",
+                "option":""
             }
-        ],
-        "depart": "20/03/2025",
-        "duree": "1 semaine"
+        ]
+    },
+
+    {
+        "titre": "Camping parisien",
+        "depart": "2026-09-01",
+        "fin": "2026-09-08",
+        "duree":"1 semaines",
+        "mots_cles":"villes Paris",
+        "image": "../images/fond_camping_montagne.jpg",
+        "description":"",
+        "lieu":"Paris",
+        "prix": "95",
+        "etapes":[
+            {
+                "titre": "Sur la scène",
+                "depart": "2026-09-01",
+                "fin": "2026-09-03",
+                "lieu":"Sur les rives de la Seine",
+                "option":""
+            },
+            {
+                "titre": "Sans ciel, sans argent",
+                "depart": "2026-09-03",
+                "fin": "2026-09-06",
+                "lieu":"Métro parisien gare de Lyon",
+                "option":"Comme les sdf"
+            },
+            {
+                "titre": "Paris de haut",
+                "depart": "2026-09-06",
+                "fin": "2026-09-08",
+                "lieu":"Tour Eiffel",
+                "option":""
+            }
+        ]
+    },
+
+    {
+        "titre": "20 mille lieux sous la mer",
+        "depart": "2026-02-18",
+        "fin": "2026-02-25",
+        "duree":"1 semaines",
+        "mots_cles":"mer",
+        "image": "../images/fond_camping_montagne.jpg",
+        "description":"",
+        "lieu":"Océan Pacifique",
+        "prix": "150",
+        "etapes":[
+            {
+                "titre": "Arrivée et préparations",
+                "depart": "2026-02-18",
+                "fin": "2026-02-19",
+                "lieu":"Palau",
+                "option":""
+            },
+            {
+                "titre": "Début de la descente",
+                "depart": "2026-02-19",
+                "fin": "2026-02-20",
+                "lieu":"-30m",
+                "option":""
+            },
+            {
+                "titre": "Découverte d'espèces inconnues",
+                "depart": "2026-02-20",
+                "fin": "2026-02-20",
+                "lieu":"-200m",
+                "option":""
+            },
+            {
+                "titre": "Implosion du navire",
+                "depart": "2026-02-20",
+                "fin": "2026-02-20",
+                "lieu":"-500m",
+                "option":""
+            }
+        ]
     }
 ]

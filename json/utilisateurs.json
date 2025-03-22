@@ -12,9 +12,11 @@
             "dob": "2006-04-25",
             "adresse": "18 rue de la croix des vignes"
         },
-        "voyages_achete": [],
-        "voyages_favoris": [],
-        "voyages_panier": [1,2,3],
+        "voyages": {
+            "0":"favoris",
+            "2" : "achete",
+            "3" : "panier"
+        },
         "date d'inscription": "2025-03-21"
     },
     {
@@ -30,14 +32,13 @@
             "dob": "2005-10-15",
             "adresse": "63 rue de l'eglise"
         },
-        "voyages_achete": [],
-        "voyages_favoris": [],
-        "voyages_panier": [],
+        "voyages":{},
         "date d'inscription": "2025-03-21"
     },
     {
         "login": "Braysake",
         "mdp": "Aaaaaaaa0!",
+        "email": "matheo.malle@gmail.com",
         "role": "client",
         "profil": {
             "prenom": "Math\u00e9o",
@@ -47,9 +48,7 @@
             "dob": "2005-06-05",
             "adresse": "4 allee des charbonniers"
         },
-        "voyages_achete": [],
-        "voyages_favoris": [],
-        "voyages_panier": [],
+        "voyages":{},
         "date d'inscription": "2025-03-21"
     },
     {
@@ -65,9 +64,7 @@
             "dob": "2005-07-05",
             "adresse": "Trou paum\u00e9 2"
         },
-        "voyages_achete": [],
-        "voyages_favoris": [],
-        "voyages_panier": [],
+        "voyages":{},
         "date d'inscription": "2025-03-21"
     },
     {
@@ -83,9 +80,7 @@
             "dob": "2005-01-01",
             "adresse": "Pas \u00e0 CY tech"
         },
-        "voyages_achete": [],
-        "voyages_favoris": [],
-        "voyages_panier": [],
+        "voyages":{},
         "date d'inscription": "2025-03-21"
     },
     {
@@ -101,9 +96,7 @@
             "dob": "2005-01-02",
             "adresse": "Avenue du Parc"
         },
-        "voyages_achete": [],
-        "voyages_favoris": [],
-        "voyages_panier": [],
+        "voyages":{},
         "date d'inscription": "2025-03-21"
     }
 ]
