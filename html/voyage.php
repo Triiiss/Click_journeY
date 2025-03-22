@@ -31,10 +31,60 @@
                     echo '<div>'.$voyages[$id]["description"].'</div>';
                     echo '<div>'.'Prix : '.$voyages[$id]["prix"].'euros'.'</div>';
                     echo '<div>'.'Départ le '.$voyages[$id]["depart"].'</div>';
-                    echo '<div>'.'Durée : '.$voyages[$id]["duree"].'</div>';
+                    echo '<div>'.'Durée : '.$voyages[$id]["duree"].'</div>'; 
                 echo '</div>';
             echo '</div>';
         ?>
+
+        <form action="recap.php" method="post">
+            <?php
+            $etapes = $voyages[$id]["etapes"];
+                foreach($etapes as $k=> $etape){
+                    echo '
+                    <fieldset class="options">
+                        <legend>Options</legend>
+                        <h3>Etape : '.$etape["titre"].'</h3>
+                        <div>Lieu : '.$etape["lieu"].'</div>
+                        <div>Durée : '.$etape["duree"].' jours</div>
+
+                        <label for="hebergement">Choisissez votre hébergement</label>
+                        <div>';
+                            foreach($etape["hebergement"] as $i=> $hebergement){
+                                echo $hebergement.'<input class="options" type="checkbox" name="hebergement" value="'.$hebergement.'">';
+                            }
+                        echo '</div>';
+
+                        echo'
+                        <label for="restauration">Choisissez votre mode de restauration</label>
+                        <div>';
+                            foreach($etape["restauration"] as $i=> $restauration){
+                                echo $restauration.'<input class="options" type="checkbox" name="restauration" value="'.$restauration.'">';
+                            }
+                        echo '</div>';
+
+                        echo'
+                        <label for="transport">Choisissez votre mode de transport</label>
+                        <div>';
+                            foreach($etape["transport"] as $i=> $transport){
+                                echo $transport.'<input class="options" type="checkbox" name="transport" value="'.$transport.'">';
+                            }
+                        echo '</div>';
+
+                        echo'
+                        <label for="activites">Activités optionnelles</label>
+                        <div>';
+                            foreach($etape["activites"] as $i=> $activite){
+                                echo $activite.'<input class="options" type="checkbox" name="activite" value="'.$activite.'">';
+                            }
+                        echo '</div>
+                    </fieldset>';
+                }
+            ?>
+            <fieldset class="options">
+                <button class="options" type="reset" name="reset">Réinitialiser</button>
+                <button class="options" type="submit" name="submit">Récapitulatif</button>
+            </fieldset>
+        </form>
 
         <br><br>
         <div class="afterimage">
