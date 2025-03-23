@@ -82,25 +82,15 @@
             <?php 
                 $json_voyages=file_get_contents("../json/voyages.json");
                 $voyages=json_decode($json_voyages, true);
-                $count=0;
+
                 $recherche=$_POST["search"];
                 foreach($voyages as $k=> $voyage){
                     if(strpos($voyage["mots_cles"], $recherche)!==false && $recherche!=""){
-                        if(($count)%3==0){
-                            echo '<div class="grpV">';
-                        }
                         echo '<div class="itineraire">';
                         echo '<a href="voyage.php?id='.$k.'"><img src="'.$voyage["image"].'" class="imgVoyage" alt="photo_voyage"/></a>';
                         echo '<div class="titreVoyage">'.$voyage["titre"].'</div>';          
-                        echo '</div>'; 
-                        if(($count+1)%3 == 0){
-                            echo '</div>';
-                        }     
-                        $count++;
+                        echo '</div>';   
                     }
-                }
-                if($count%3 != 0){
-                        echo '</div>';
                 }
             ?>
             </div>
@@ -113,20 +103,14 @@
    
         <h3 class="voyages">Recommendations</h3>
 
-        <div class="voyages">
+        <div class="voyages all">
         <?php 
-            for($i=0;$i<10;$i++){
-                if(isset($voyages[$i])){
-                    if($i%3==0){
-                        echo '<div class="grpV">';
-                    }
+            foreach($voyages as $k=> $voyage){
+                if(isset($voyage)){
                     echo '<div class="itineraire">';
-                    echo '<a href="voyage.php?id='.$i.'"><img src="'.$voyages[$i]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>';
-                    echo '<div class="titreVoyage">'.$voyages[$i]["titre"].'</div>';   
-                    echo '</div>';    
-                    if($i>8 || ($i+1)%3 == 0){
-                        echo '</div>';
-                    }              
+                    echo '<a href="voyage.php?id='.$k.'"><img src="'.$voyage["image"].'" class="imgVoyage" alt="photo_voyage""/></a>';
+                    echo '<div class="titreVoyage">'.$voyage["titre"].'</div>';   
+                    echo '</div>';                
                 }
             }
         ?>
