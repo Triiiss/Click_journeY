@@ -40,10 +40,11 @@
             <?php
             $etapes = $voyages[$id]["etapes"];
                 foreach($etapes as $k=> $etape){
-                    echo '
-                    <fieldset class="options">
-                        <legend>Options</legend>
-                        <h3>Etape : '.$etape["titre"].'</h3>
+                    echo '<fieldset class="voyages">';
+                        if ($k==0) {
+                            echo '<legend>Options</legend>';
+                        }
+                        echo'<h3>Etape '.($k+1).' : '.$etape["titre"].'</h3>
                         <div>Lieu : '.$etape["lieu"].'</div>
                         <div>Durée : '.$etape["duree"].' jours</div>
 
