@@ -395,9 +395,12 @@ input.recherche, .recherche div>div{
     margin-right: 20%;
     margin-left: 20%;
     padding: 1%;
+    text-align: center;
+}
+
+.grpV{
     display: flex;
     flex-direction: row;
-    text-align: center;
 }
 
 .recap{
