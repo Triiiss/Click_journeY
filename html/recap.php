@@ -38,6 +38,9 @@
                     echo '<div>'.'Activites : '.$activites.'</div>'; 
                 echo '</div>';
             echo '</div>';
+
+            echo '<a href = "voyage.php?id='.$id.'"><button>Modifier</button></a>'
+            
         ?>
 
         <br><br>
