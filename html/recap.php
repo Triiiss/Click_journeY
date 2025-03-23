@@ -36,10 +36,15 @@
                     echo '<div>'.'Restauration : '.$restauration.'</div>'; 
                     echo '<div>'.'Transport : '.$transport.'</div>'; 
                     echo '<div>'.'Activites : '.$activites.'</div>'; 
+
+                    echo '<a href = "voyage.php?id='.$id.'"><button>Modifier</button></a>';
+                    echo '<a href = "ajout_panier.php?id='.$id.'"><button>Ajouter au panier</button></a>';
+                    
+
                 echo '</div>';
             echo '</div>';
 
-            echo '<a href = "voyage.php?id='.$id.'"><button>Modifier</button></a>'
+            
             
         ?>
 
