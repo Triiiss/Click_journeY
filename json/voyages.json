@@ -28,7 +28,7 @@
     
     
     {
-        "titre": "Le sommet de l'Everest",
+        "titre": "Le sommet du monde",
         "depart": "2026-12-21",
         "fin": "2026-12-28",
         "duree":"1 semaine",
@@ -77,7 +77,7 @@
     },
 
     {
-        "titre": "Forêt à couper le sang",
+        "titre": "Forêt au sang froid",
         "depart": "2026-11-29",
         "fin": "2026-12-01",
         "duree":"2 jours",
@@ -111,7 +111,7 @@
         "duree":"2 semaines",
         "mots_cles":"îles volcans",
         "image": "../images/fond_camping_montagne.jpg",
-        "description":"",
+        "description":"Relaxez vous sur une île tout confort avant d'explorer et étancher votre soif de curiosité brûlante.",
         "lieu":"Hawaii",
         "prix": "500",
         "etapes":[
@@ -146,7 +146,7 @@
         "duree":"1 semaines",
         "mots_cles":"villes Paris",
         "image": "../images/fond_camping_montagne.jpg",
-        "description":"",
+        "description":"Découvrez la beauté parisienne du plus profond des souterrains jusqu'en haut de la tour Eiffel",
         "lieu":"Paris",
         "prix": "95",
         "etapes":[
@@ -181,7 +181,7 @@
         "duree":"1 semaines",
         "mots_cles":"mer",
         "image": "../images/fond_camping_montagne.jpg",
-        "description":"",
+        "description":"Explorez les contrés non-explorés de la Terre à bord d'un des sous-marins les plus sécurisé du monde.",
         "lieu":"Océan Pacifique",
         "prix": "150",
         "etapes":[
@@ -211,6 +211,384 @@
                 "depart": "2026-02-20",
                 "fin": "2026-02-20",
                 "lieu":"-500m",
+                "option":""
+            }
+        ]
+    },
+
+    {
+        "titre": "100% vertical",
+        "depart": "2026-05-01",
+        "fin": "2026-05-10",
+        "duree":"9 jours",
+        "mots_cles":"montagne escalade",
+        "image": "../images/fond_camping_montagne.jpg",
+        "description":"Grimpez, grimpez et grimpez encore et encore. Votre ascension jusqu'à l'aventure sera l'ascension de la montagne.",
+        "lieu":"Antilles",
+        "prix": "125",
+        "etapes":[
+            {
+                "titre": "Petit piton",
+                "depart": "2026-05-01",
+                "fin": "2026-05-03",
+                "lieu":"Alpes",
+                "option":""
+            },
+            {
+                "titre": "Dent du géant",
+                "depart": "2026-05-03",
+                "fin": "2026-05-06",
+                "lieu":"Alpes",
+                "option":""
+            },
+            {
+                "titre": "Mont blanc",
+                "depart": "2026-05-06",
+                "fin": "2026-05-10",
+                "lieu":"Alpes",
+                "option":""
+            }
+        ]
+    },
+
+    {
+        "titre": "Les aventuriers du rail",
+        "depart": "2026-08-14",
+        "fin": "2026-08-17",
+        "duree":"3 jours",
+        "mots_cles":"sncf train",
+        "image": "../images/fond_camping_montagne.jpg",
+        "description":"Partez à la découverte de la SNCF à vitesse grand V",
+        "lieu":"Paris-Marseille-Paris",
+        "prix": "90",
+        "etapes":[
+            {
+                "titre": "Arrivée à la gare",
+                "depart": "2026-08-14",
+                "fin": "2026-08-15",
+                "lieu":"Paris Marne la Vallée Chessy",
+                "option":""
+            },
+            {
+                "titre": "Paris-Marseille",
+                "depart": "2026-08-15",
+                "fin": "2026-08-16",
+                "lieu":"TGV N°786137",
+                "option":""
+            },
+            {
+                "titre": "Marseille-Paris",
+                "depart": "2026-08-15",
+                "fin": "2026-08-16",
+                "lieu":"TGV N°525358",
+                "option":""
+            }
+        ]
+    },
+
+    {
+        "titre": "Cosmic Yonder",
+        "depart": "2873-01-03",
+        "fin": "2881-06-14",
+        "duree":"8 ans",
+        "mots_cles":"espace",
+        "image": "../images/fond_camping_montagne.jpg",
+        "description":"Vous passerez 8 ans de votre vie en ayant l'impression de n'avoir vécu qu'une heure.",
+        "lieu":"l'espace planète M195",
+        "prix": "1999",
+        "etapes":[
+            {
+                "titre": "Acclimatation à la planète",
+                "depart": "2873-01-03",
+                "fin": "2875-06-20",
+                "lieu":"planète M195",
+                "option":""
+            },
+            {
+                "titre": "Echange avec les scientifiques",
+                "depart": "2875-06-20",
+                "fin": "2878-10-02",
+                "lieu":"Centre de données",
+                "option":""
+            },
+            {
+                "titre": "Retour dans le passé",
+                "depart": "2878-10-02",
+                "fin": "2025-03-07",
+                "lieu":"L'espace temps",
+                "option":""
+            }
+        ]
+    },
+
+    {
+        "titre": "Conquête de l'Antartique",
+        "depart": "2026-07-25",
+        "fin": "2026-08-08",
+        "duree":"2 semaines",
+        "mots_cles":"antartique",
+        "image": "../images/fond_camping_montagne.jpg",
+        "description":"Si vous n'avez pas froid aux yeux découvrez l'Antartique",
+        "lieu":"Antartique",
+        "prix": "68.9",
+        "etapes":[
+            {
+                "titre": "Durée de l'été dans l'Antartique",
+                "depart": "2026-07-25",
+                "fin": "2026-07-27",
+                "lieu":"Centre de recherche",
+                "option":""
+            },
+            {
+                "titre": "Bataille contre un ours polaire",
+                "depart": "2026-07-27",
+                "fin": "2026-07-29",
+                "lieu":"Sur la banquise",
+                "option":""
+            },
+            {
+                "titre": "Visite du tueur du Titanic",
+                "depart": "2026-07-29",
+                "fin": "2026-08-03",
+                "lieu":"Sur la banquise",
+                "option":""
+            },
+            {
+                "titre": "Découverte d'une emaladie vieille d'un million d'années",
+                "depart": "2026-08-03",
+                "fin": "2026-08-08",
+                "lieu":"Dans une grotte de glace",
+                "option":""
+            }
+        ]
+    },
+
+    {
+        "titre": "Crab wave",
+        "depart": "2026-02-17",
+        "fin": "2026-02-19",
+        "duree":"2 jours",
+        "mots_cles":"îles crabe",
+        "image": "../images/fond_camping_montagne.jpg",
+        "description":"Entrez sur le territoire des crabes, le zénith de l'évolution",
+        "lieu":"Crab Island aux îles maurice",
+        "prix": "260",
+        "etapes":[
+            {
+                "titre": "Migration des crabes",
+                "depart": "2026-02-17",
+                "fin": "2026-02-18",
+                "lieu":"Crab Island capital",
+                "option":""
+            },
+            {
+                "titre": "crabification",
+                "depart": "2026-02-18",
+                "fin": "2026-02-19",
+                "lieu":"Crab Island sur la plage",
+                "option":""
+            }
+        ]
+    },
+
+    {
+        "titre": "Aurores boréales et ciels nocturnes",
+        "depart": "2026-08-25",
+        "fin": "2026-08-30",
+        "duree":"5 jours",
+        "mots_cles":"aurores boréales",
+        "image": "../images/fond_camping_montagne.jpg",
+        "description":"Admirez les aurores boréales des pays nordiques",
+        "lieu":"Norvège",
+        "prix": "480",
+        "etapes":[
+            {
+                "titre": "Pêche de la truite",
+                "depart": "2026-08-25",
+                "fin": "2026-08-28",
+                "lieu":"Côtes de Norvège",
+                "option":""
+            },
+            {
+                "titre": "Observation des aurores boréales",
+                "depart": "2026-08-28",
+                "fin": "2026-08-30",
+                "lieu":"Campagne sans lumière",
+                "option":""
+            }
+        ]
+    },
+
+    {
+        "titre": "Timidité des cimes",
+        "depart": "2026-03-24",
+        "fin": "2026-04-31",
+        "duree":"1 semaine",
+        "mots_cles":"forêt acrobranche",
+        "image": "../images/fond_camping_montagne.jpg",
+        "description":"Dormez entre les feuilles des arbres après avoir",
+        "lieu":"Aurillac",
+        "prix": "30",
+        "etapes":[
+            {
+                "titre": "Accrobranche  haut dans les arbres",
+                "depart": "2026-03-24",
+                "fin": "2026-03-29",
+                "lieu":"Aurillac",
+                "option":""
+            },
+            {
+                "titre": "Perdu dans la forêt",
+                "depart": "2026-03-29",
+                "fin": "2026-03-30",
+                "lieu":"???",
+                "option":""
+            },
+            {
+                "titre": "Rencontre avec Slender man",
+                "depart": "2026-03-30",
+                "fin": "2026-03-31",
+                "lieu":"??????",
+                "option":""
+            }
+        ]
+    },
+
+    {
+        "titre": "Urbex dans un hôpital abandonné",
+        "depart": "2026-09-13",
+        "fin": "2026-09-16",
+        "duree":"1 semaines",
+        "mots_cles":"urbex hopital",
+        "image": "../images/fond_camping_montagne.jpg",
+        "description":"Dans toute la légalité, visitez un hôpital qui a été évacué avec tout le matériel laissé en plan. Attention au tétanos",
+        "lieu": "",
+        "prix": "99",
+        "etapes":[
+            {
+                "titre": "Entrée dans l'hôpital",
+                "depart": "2026-09-14",
+                "fin": "2026-09-15",
+                "lieu":"Entrée",
+                "option":""
+            },
+            {
+                "titre": "Découverte de substance chère",
+                "depart": "2026-09-14",
+                "fin": "2026-09-15",
+                "lieu":"Fond du laboratoire",
+                "option":""
+            },
+            {
+                "titre": "Arrivée de la police",
+                "depart": "2026-09-15",
+                "fin": "2026-09-16",
+                "lieu":"Commissariat de police",
+                "option":""
+            }
+        ]
+    },
+
+    {
+        "titre": "Une forêt mortelle",
+        "depart": "2026-10-09",
+        "fin": "2026-10-14",
+        "duree":"5 jours",
+        "mots_cles":"forêt japon",
+        "image": "../images/fond_camping_montagne.jpg",
+        "description":"Vous allez pendre au cou de la culture",
+        "lieu":"Forêt d'Aokigahara au Japon",
+        "prix": "320",
+        "etapes":[
+            {
+                "titre": "Camping à Tokyo",
+                "depart": "2026-10-09",
+                "fin": "2026-10-11",
+                "lieu":"Tokyo",
+                "option":""
+            },
+            {
+                "titre": "Balades en forêt",
+                "depart": "2026-10-11",
+                "fin": "2026-10-13",
+                "lieu":"Forêt d'Aokigahara",
+                "option":""
+            },
+            {
+                "titre": "Fin du voyage",
+                "depart": "2026-10-13",
+                "fin": "2026-10-14",
+                "lieu":"paradis",
+                "option":""
+            }
+        ]
+    },
+
+    {
+        "titre": "Les dunes Sahara",
+        "depart": "2026-01-22",
+        "fin": "2026-01-27",
+        "duree":"5 jours",
+        "mots_cles":"desert sahara",
+        "image": "../images/fond_camping_montagne.jpg",
+        "description":"N'ayez pas peur d'avoir du sable dans vos bottes et commencez à marcher.",
+        "lieu":"Au Nord de l'Afrique",
+        "prix": "87",
+        "etapes":[
+            {
+                "titre": "Balade à dos de dromadaire",
+                "depart": "2026-01-22",
+                "fin": "2026-01-23",
+                "lieu":"sur la dune n°52",
+                "option":""
+            },
+            {
+                "titre": "Découverte d'une oasis",
+                "depart": "2026-01-23",
+                "fin": "2026-01-25",
+                "lieu":"Oasis (et pas fanta ahahahaha)",
+                "option":""
+            },
+            {
+                "titre": "Visite des pyramides de Kéops",
+                "depart": "2026-01-23",
+                "fin": "2026-01-25",
+                "lieu":"Egypte",
+                "option":""
+            }
+        ]
+    },
+
+    {
+        "titre": "Twisters",
+        "depart": "2026-12-03",
+        "fin": "2026-12-10",
+        "duree":"1 semaine",
+        "mots_cles":"tempête amerique",
+        "image": "../images/fond_camping_montagne.jpg",
+        "description":"Allez dans l'oeil de la tempête",
+        "lieu":"Etats Unis de l'est",
+        "prix": "12.5",
+        "etapes":[
+            {
+                "titre": "Formation d'un cyclone",
+                "depart": "2026-12-03",
+                "fin": "2026-12-07",
+                "lieu":"Wow, ça se forme vachement près de nous non ?",
+                "option":""
+            },
+            {
+                "titre": "L'oeil de la tempête",
+                "depart": "2026-12-07",
+                "fin": "2026-12-09",
+                "lieu":"Au milieu d'un cyclone",
+                "option":""
+            },
+            {
+                "titre": "Envol",
+                "depart": "2026-12-07",
+                "fin": "2026-12-09",
+                "lieu":"Dans les airs",
                 "option":""
             }
         ]
