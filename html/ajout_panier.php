@@ -19,8 +19,8 @@
         <div class="voyages">
         <h3>Le voyage a bien été ajouté à votre panier</h3>
 
-        <a href = "recherche.php"><button>Chercher un autre voyage</button></a>';
-        <a href = "profil.php"><button>Aller au panier</button></a>';
+        <a href = "recherche.php"><button>Chercher un autre voyage</button></a>
+        <a href = "profil.php"><button>Aller au panier</button></a>
 
         </div>
 
