@@ -138,7 +138,7 @@ legend{
 form{
     margin-top: 2vw;
 }
-button,input[name="deco"],input.admin{
+button,input[name="deco"],input[name="supp"],input.admin{
     color: white;
     font-size: 1vw;
     margin: 0vw 0.5vw 0vw 0.5vw;
@@ -253,15 +253,24 @@ p.conditions{
 fieldset.profil{/*Fond et mise en page en grille*/
     grid-template-columns: 45% 45% 10%;
 }
+fieldset.voyages{/*Fond et mise en page en grille*/
+    grid-template-columns: 100%;
+}
+span.voyages{/*Fond et mise en page en grille*/
+    grid-template-columns: 33% 33% 33%;
+}
+fieldset.voyages p{
+    font-size: 1.2vw;
+}
 fieldset.profil p{
-    font-size: 1.5vw;
+    font-size: 1.2vw;
 }
 .modif_profil{
     width: 2vw;
 }
-/*input[type="file"]{
-    display: none;
-}*/
+table.achat{
+    text-align: center;
+}
 
 /*Admin*/
 caption.admin{
@@ -283,8 +292,9 @@ table.admin {
     border-collapse: collapse; /* Pour éviter les bordures doubles */
     font-size: 1vw;
 }
-.admin table, .admin th, .admin td {
+.admin table, .admin th, .admin td, table, th,td {
     border: 2px solid rgb(28, 59, 28);
+    border-collapse: collapse; /* Pour éviter les bordures doubles */
 }
 th.admin {
     background-color: rgb(40, 77, 40);
@@ -410,4 +420,8 @@ input.recherche, .recherche div>div{
 h3.reco{
     font-size: 1.5vw;
     text-align: center;
+}
+div.all{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
 }
