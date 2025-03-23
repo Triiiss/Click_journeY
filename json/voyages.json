@@ -1,33 +1,5 @@
 [
     {
-        "titre": "exemple1",
-        "mots_cles":"montagne",
-        "image": "../images/voyages/voy0.jpg",
-        "description":"Préparez-vous à vivre l'ascension la plus extrême des Alpes",
-        "lieu":"Alpes",
-        "prix": "1000",
-        "etapes":[
-            {
-                "titre": "étape1",
-                "lieu":"Saint-Gervais",
-                "duree":"1",
-                "hebergement":[
-                    "location de tente",
-                    "location de sac de couchage"
-                ],
-                "restauration":[
-                    "dejeuner inclus"
-                ],
-                "activités":"",
-                "transport":""
-            }
-        ],
-        "depart": "20/03/2025",
-        "duree": "1 semaine"
-    },
-    
-    
-    {
         "titre": "Le sommet du monde",
         "depart": "2026-12-21",
         "fin": "2026-12-28",
@@ -43,35 +15,45 @@
                 "depart": "2026-12-21",
                 "fin": "2026-12-22",
                 "lieu":"5 364 m",
-                "option":"Acclimatation"
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Camp 2",
                 "depart": "2026-12-22",
                 "fin": "2026-12-24",
                 "lieu":"6 065 m",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Camp 3",
                 "depart": "2026-12-24",
                 "fin": "2026-12-26",
                 "lieu":"6 400 m",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Camp 4",
                 "depart": "2026-12-26",
                 "fin": "2026-12-27",
                 "lieu":"6 400 m",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Zone de la mort",
                 "depart": "2026-12-27",
                 "fin": "2026-12-28",
                 "lieu":"7 900 m",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     },
@@ -92,14 +74,18 @@
                 "depart": "2026-11-29",
                 "fin": "2026-11-30",
                 "lieu":"Brașov",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Cimetière",
                 "depart": "2026-11-30",
                 "fin": "2026-12-01",
                 "lieu":"6 pieds sous terre",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     },
@@ -120,21 +106,27 @@
                 "depart": "2026-06-12",
                 "fin": "2026-06-19",
                 "lieu":"Plages de Hawaii",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Ascention d'une montagne",
                 "depart": "2026-06-19",
                 "fin": "2026-06-25",
                 "lieu":"Kīlauea",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Chute dans un volcan",
                 "depart": "2026-06-25",
                 "fin": "2026-06-26",
                 "lieu":"Dans la lave",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     },
@@ -155,7 +147,9 @@
                 "depart": "2026-09-01",
                 "fin": "2026-09-03",
                 "lieu":"Sur les rives de la Seine",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Sans ciel, sans argent",
@@ -169,7 +163,9 @@
                 "depart": "2026-09-06",
                 "fin": "2026-09-08",
                 "lieu":"Tour Eiffel",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     },
@@ -190,28 +186,36 @@
                 "depart": "2026-02-18",
                 "fin": "2026-02-19",
                 "lieu":"Palau",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Début de la descente",
                 "depart": "2026-02-19",
                 "fin": "2026-02-20",
                 "lieu":"-30m",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Découverte d'espèces inconnues",
                 "depart": "2026-02-20",
                 "fin": "2026-02-20",
                 "lieu":"-200m",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Implosion du navire",
                 "depart": "2026-02-20",
                 "fin": "2026-02-20",
                 "lieu":"-500m",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     },
@@ -232,21 +236,27 @@
                 "depart": "2026-05-01",
                 "fin": "2026-05-03",
                 "lieu":"Alpes",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Dent du géant",
                 "depart": "2026-05-03",
                 "fin": "2026-05-06",
                 "lieu":"Alpes",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Mont blanc",
                 "depart": "2026-05-06",
                 "fin": "2026-05-10",
                 "lieu":"Alpes",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     },
@@ -267,21 +277,27 @@
                 "depart": "2026-08-14",
                 "fin": "2026-08-15",
                 "lieu":"Paris Marne la Vallée Chessy",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Paris-Marseille",
                 "depart": "2026-08-15",
                 "fin": "2026-08-16",
                 "lieu":"TGV N°786137",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Marseille-Paris",
                 "depart": "2026-08-15",
                 "fin": "2026-08-16",
                 "lieu":"TGV N°525358",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     },
@@ -302,21 +318,27 @@
                 "depart": "2873-01-03",
                 "fin": "2875-06-20",
                 "lieu":"planète M195",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Echange avec les scientifiques",
                 "depart": "2875-06-20",
                 "fin": "2878-10-02",
                 "lieu":"Centre de données",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Retour dans le passé",
                 "depart": "2878-10-02",
                 "fin": "2025-03-07",
                 "lieu":"L'espace temps",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     },
@@ -337,28 +359,36 @@
                 "depart": "2026-07-25",
                 "fin": "2026-07-27",
                 "lieu":"Centre de recherche",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Bataille contre un ours polaire",
                 "depart": "2026-07-27",
                 "fin": "2026-07-29",
                 "lieu":"Sur la banquise",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Visite du tueur du Titanic",
                 "depart": "2026-07-29",
                 "fin": "2026-08-03",
                 "lieu":"Sur la banquise",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Découverte d'une emaladie vieille d'un million d'années",
                 "depart": "2026-08-03",
                 "fin": "2026-08-08",
                 "lieu":"Dans une grotte de glace",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     },
@@ -379,14 +409,18 @@
                 "depart": "2026-02-17",
                 "fin": "2026-02-18",
                 "lieu":"Crab Island capital",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "crabification",
                 "depart": "2026-02-18",
                 "fin": "2026-02-19",
                 "lieu":"Crab Island sur la plage",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     },
@@ -407,14 +441,18 @@
                 "depart": "2026-08-25",
                 "fin": "2026-08-28",
                 "lieu":"Côtes de Norvège",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Observation des aurores boréales",
                 "depart": "2026-08-28",
                 "fin": "2026-08-30",
                 "lieu":"Campagne sans lumière",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     },
@@ -435,21 +473,27 @@
                 "depart": "2026-03-24",
                 "fin": "2026-03-29",
                 "lieu":"Aurillac",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Perdu dans la forêt",
                 "depart": "2026-03-29",
                 "fin": "2026-03-30",
                 "lieu":"???",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Rencontre avec Slender man",
                 "depart": "2026-03-30",
                 "fin": "2026-03-31",
                 "lieu":"??????",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     },
@@ -470,21 +514,27 @@
                 "depart": "2026-09-14",
                 "fin": "2026-09-15",
                 "lieu":"Entrée",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Découverte de substance chère",
                 "depart": "2026-09-14",
                 "fin": "2026-09-15",
                 "lieu":"Fond du laboratoire",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Arrivée de la police",
                 "depart": "2026-09-15",
                 "fin": "2026-09-16",
                 "lieu":"Commissariat de police",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     },
@@ -505,21 +555,27 @@
                 "depart": "2026-10-09",
                 "fin": "2026-10-11",
                 "lieu":"Tokyo",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Balades en forêt",
                 "depart": "2026-10-11",
                 "fin": "2026-10-13",
                 "lieu":"Forêt d'Aokigahara",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Fin du voyage",
                 "depart": "2026-10-13",
                 "fin": "2026-10-14",
                 "lieu":"paradis",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     },
@@ -540,21 +596,27 @@
                 "depart": "2026-01-22",
                 "fin": "2026-01-23",
                 "lieu":"sur la dune n°52",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Découverte d'une oasis",
                 "depart": "2026-01-23",
                 "fin": "2026-01-25",
                 "lieu":"Oasis (et pas fanta ahahahaha)",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Visite des pyramides de Kéops",
                 "depart": "2026-01-23",
                 "fin": "2026-01-25",
                 "lieu":"Egypte",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     },
@@ -575,21 +637,27 @@
                 "depart": "2026-12-03",
                 "fin": "2026-12-07",
                 "lieu":"Wow, ça se forme vachement près de nous non ?",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "L'oeil de la tempête",
                 "depart": "2026-12-07",
                 "fin": "2026-12-09",
                 "lieu":"Au milieu d'un cyclone",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             },
             {
                 "titre": "Envol",
                 "depart": "2026-12-07",
                 "fin": "2026-12-09",
                 "lieu":"Dans les airs",
-                "option":""
+                "option":[
+                    "Acclimatation"
+                ]
             }
         ]
     }

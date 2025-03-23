@@ -47,34 +47,10 @@
                         <div>Lieu : '.$etape["lieu"].'</div>
                         <div>Durée : '.$etape["duree"].' jours</div>
 
-                        <label for="hebergement">Choisissez votre hébergement</label>
+                        <label for="option'.$k.'">Options :</label>
                         <div>';
-                            foreach($etape["hebergement"] as $i=> $hebergement){
-                                echo $hebergement.'<input class="options" type="checkbox" name="hebergement" value="'.$hebergement.'">';
-                            }
-                        echo '</div>';
-
-                        echo'
-                        <label for="restauration">Choisissez votre mode de restauration</label>
-                        <div>';
-                            foreach($etape["restauration"] as $i=> $restauration){
-                                echo $restauration.'<input class="options" type="checkbox" name="restauration" value="'.$restauration.'">';
-                            }
-                        echo '</div>';
-
-                        echo'
-                        <label for="transport">Choisissez votre mode de transport</label>
-                        <div>';
-                            foreach($etape["transport"] as $i=> $transport){
-                                echo $transport.'<input class="options" type="checkbox" name="transport" value="'.$transport.'">';
-                            }
-                        echo '</div>';
-
-                        echo'
-                        <label for="activites">Activités optionnelles</label>
-                        <div>';
-                            foreach($etape["activites"] as $i=> $activite){
-                                echo $activite.'<input class="options" type="checkbox" name="activite" value="'.$activite.'">';
+                            foreach($etape["option"] as $option){
+                                echo $option.'<input class="options" type="checkbox" name="option'.$k.'" value="'.$option.'">';
                             }
                         echo '</div>
                     </fieldset>';
