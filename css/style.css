@@ -1,22 +1,27 @@
+/*BODY*/
 body{/*Fond et police des pages*/
     height: 65vw;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 30%, rgb(202, 212, 183) 90%), url("../images/fond_2.webp") no-repeat center 65% / contain;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 30%, rgb(202, 212, 183) 90%), url("../images/fond_2.webp") no-repeat center 65% / contain;/*Fond dégradé avec l'image*/ 
     background-color: rgb(202, 212, 183); 
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
-    cursor: url("../images/tree.ico"),  auto;
+    cursor: url("../images/tree.ico"),  auto;/*Curseur arbre*/
 }
-body.presentation{
+body.presentation{/*Fond de la présentation plus uniforme*/
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, rgb(202, 212, 183) 90%), url("../images/fond_2.webp") no-repeat center 65% / contain;
     background-color: rgb(202, 212, 183); 
 }
 
-/*Typographies texte*/
+
+/*TYPOGRAPHIE TEXTE*/
 *{
     color:rgb(28, 49, 28);
 }
-p{
+*:hover{
+    transition: all 0.5s;
+}
+p, tr.voyages_achat td{
     margin: 0% 20% 0% 20%;
     font-size: 1vw;
     text-align: center;
@@ -27,11 +32,8 @@ p:not(div > p):not(fieldset > p):not(span > p){
     color: white;
 }
 a{
-    color: rgb(195, 85, 21);
+    color: white;
     text-decoration: none;
-}
-h2{
-    font-size: 3vw;
 }
 h1.titre{/*Le titre sur la bande au dessus*/
     margin-top: 1vw;
@@ -49,35 +51,61 @@ h1.titre-accueil{/*Le titre de la page d'accueil en gros*/
 span.etoile{
     color: rgb(195, 4, 4);
 }
-.first-afterimage{
-    padding: 0% 5% 0% 5%;
-    font-size: 1.5vw;
+.orange{
+    color: rgb(255, 106, 19);
+}
+
+
+/*FOOTER*/
+.first-afterimage,.afterimageaccueil,.afterimage,a.bandeau{
     text-align: center;
-    border-bottom: rgb(28, 49, 28) solid 1px;
+    font-size: 1.5vw;
+}
+.first-afterimage{ /*Souligner le "nous contacter" ou "accueil"*/
+    padding: 0% 5% 0% 5%;
+    border-bottom: 2px rgb(42, 77, 42) solid;
 }
 .afterimageaccueil{
     top: 63vw;
     position: absolute;
-    text-align: center;
-    font-size: 1.5vw;
     left: 25%;
 }
 .afterimage{
     left: 42%;
-    text-align: center;
-    font-size: 1.5vw;
 }
 
-/*Taille des photos*/
-img.logo{
+
+/*PHOTOS*/
+img.logo{/*Logo en haut de la page*/
     width: 4%;
 }
-img.profil_picture{
+img.profil_picture{/*Photo de profil sur la bannière et dans le profil est ronde*/
     width: 2vw;
     border-radius: 50%;
 }
+img.edit_icon{/*Petit crayon ou croix*/
+    width: 1vw;
+    height: 1vw;
+    background-color: rgb(255, 106, 19);
+}
+.imgVoyage{/*images de voyages*/
+    width: 15vw;
+    height: 15vw;
+    border-radius: 10px;
+}
+.imgVoyage:hover{/*Agrandir si on passe par dessus*/
+    width: 16vw;
+    height: 16vw;
+    border-radius: 10px;
+}
+.imgDetail{
+    width: 15vw;
+    padding-right: 3vw;
+    padding-left: 1.5vw;
+}
 
-/*Bandeau = la bannière pour accéder aux liens à l'accueil*/
+
+/*BANDEAU*/
 ul.bandeau, ul.admin_defil{
     list-style: none;
 }
@@ -89,22 +117,11 @@ nav.bandeau{/*La bordure+taille de la bannière d'accueil*/
     border-radius: 10px;
 }
 a.bandeau{/*Texte et espacement du texte*/
-    color:white;
-    font-size: 1.5vw;
-    text-align: center;
     text-decoration: none;
     padding:6% 25% 6% 25%;
 }
 a.profil{
     padding:11% 44% 4.5% 44%;
-}
-a.bandeau[href="presentation.html"]{/*Arrondir les coins à gauche*/
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
-}
-a.profil{/*Arrondir les coins à droite*/
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
 }
 li.bandeau{/*Fond transparent*/
     padding: 1% 0% 1% 0%;
@@ -117,16 +134,13 @@ li.profil{
     background-color: rgba(42, 77, 42, 0.65);
 }
 li.bandeau:hover, li.profil:hover, li#current{/*Changement de couleur au passage de la souris*/
-    transition: all 0.5s;
-    /*background-color:rgba(255, 106, 19,0.5);*/
     background-color: rgba(32, 60, 32, 0.8);
 }
 a.bandeau:hover, a.profil:hover{/*Changement de couleur au passage de la souris*/
-    transition: all 0.5s;
     color:rgb(247, 148, 91);
 }
 
-/*Les formulaires*/
+/*FORMULAIRES*/
 legend{
     border: rgb(28, 59, 28) 2px solid;
     color: white;
@@ -138,19 +152,6 @@ legend{
 form{
     margin-top: 2vw;
 }
-button,input[name="deco"],input[name="supp"],input.admin{
-    color: white;
-    font-size: 1vw;
-    margin: 0vw 0.5vw 0vw 0.5vw;
-    border-radius: 7px;
-    background-color: rgb(255, 106, 19);
-    border: solid 1px rgb(153, 60, 6);
-}
-button:hover,input[name="deco"]:hover{
-    color: rgb(132, 53, 7);
-    background-color: rgb(208, 86, 16);
-    transition: all 0.5s;
-}
 fieldset.formulaire{/*Fond et mise en page en grille*/
     border: rgb(28, 59, 28) solid 3px;
     background-color: rgba(174, 189, 147,0.6);
@@ -161,15 +162,15 @@ fieldset.formulaire{/*Fond et mise en page en grille*/
 fieldset.connexion, fieldset.inscription{
     grid-template-columns: 50% 50%;
 }
-label{/*A gauche*/
+label,input,div.inscription,button.inscription{/*A gauche*/
     font-size: 1.5vw;
-    columns: 1;
     margin: 2% 0% 2% 0%;
 }
+label{
+    columns: 1;
+}
 input,div.inscription,button.inscription{/*A droite*/
-    font-size: 1.5vw;
     columns: 2;
-    margin: 2% 0% 2% 0%;
 }
 div.inscription{/*Elements radius sur la même ligne*/   
     display: flex;
@@ -182,15 +183,29 @@ span.champs{
     font-size: 0.7vw;
 }
 
-/*Bouton accueil*/
-a.accueil{
-    font-size: 1.5vw;
+
+/*BOUTONS*/
+button,input[name="deco"],input[name="supp"],input.admin{/*Boutons oranges*/
     color: white;
+    font-size: 1vw;
+    margin: 0vw 0.5vw 0vw 0.5vw;
+    border-radius: 7px;
+    background-color: rgb(255, 106, 19);
+    border: solid 1px rgb(153, 60, 6);
+}
+input[name="deco"],input[name="supp"]{/*Les boutons avec plus de textes prennent plus de place*/
+    padding: 0vw 2.5vw 0vw 2.5vw;
+}
+button:hover,input[name="deco"]:hover,input[name="supp"]:hover,input.admin:hover{
+    color: rgb(132, 53, 7);
+    background-color: rgb(208, 86, 16);
+}
+a.accueil{/*Bouton accueil en haut à gauche*/
+    font-size: 1.5vw;
     text-decoration: none;
     background-color: rgb(166, 182, 137);
     border: solid rgb(111, 129, 76) 2px;
     border-radius: 10px;
-
     position: fixed;
     left: 3%;
     top: 3%;
@@ -199,10 +214,35 @@ a.accueil{
 a.accueil:hover, a#accueil{/*Changement de couleur*/
     background-color: rgb(255, 106, 19);
     border-color: rgb(153, 60, 6);
-    transition: all 0.5s;
+}
+button.edit_icon{
+    background-color: rgb(255, 106, 19);
+    padding: 0.1vw;
+    border-radius: 3px;
+}
+.modif_role,.modif_role option{
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 1vw;
+    background-color: rgb(255, 106, 19);
+}
+button.admin_defil{/*Fond transparent*/
+    border: solid rgb(28, 59, 28);
+    background-color: rgba(42, 77, 42, 0.65);
+}
+button.admin_stop{/*Fond transparent*/
+    border: solid rgb(28, 59, 28);
+    color: rgb(144, 144, 144);
+    background-color: rgba(19, 41, 19, 0.65);
+}
+button.admin_defil:hover{
+    color:rgb(247, 148, 91);
+    background-color: rgba(24, 48, 24, 0.65);
 }
 
-/*Présentation*/
+
+/*PAGE PRESENTATION*/
 span.presentation{/*Les sous-titre*/
     font-weight: bold;
     color: rgb(202, 212, 183);
@@ -235,7 +275,8 @@ span.recherche_rapide{
     padding: 1% 4% 1% 3%;
 }
 
-/*Conditions*/
+
+/*PAGE CONDITIONS*/
 fieldset.conditions{
     border: rgb(28, 59, 28) solid 3px;
     background-color: rgba(174, 189, 147,0.6);
@@ -249,7 +290,8 @@ p.conditions{
     margin: 0% 0% 0% 0%;
 }
 
-/*Profil*/
+
+/*PAGE PROFIL*/
 fieldset.profil{/*Fond et mise en page en grille*/
     grid-template-columns: 45% 45% 10%;
 }
@@ -259,10 +301,7 @@ fieldset.voyages{/*Fond et mise en page en grille*/
 span.voyages{/*Fond et mise en page en grille*/
     grid-template-columns: 33% 33% 33%;
 }
-fieldset.voyages p{
-    font-size: 1.2vw;
-}
-fieldset.profil p{
+fieldset.voyages p, fieldset.profil p{
     font-size: 1.2vw;
 }
 .modif_profil{
@@ -272,7 +311,8 @@ table.achat{
     text-align: center;
 }
 
-/*Admin*/
+
+/*PAGE ADMIN*/
 caption.admin{
     background-color: rgba(174, 189, 147,0.6);
     border: solid rgb(28, 59, 28);
@@ -292,7 +332,7 @@ table.admin {
     border-collapse: collapse; /* Pour éviter les bordures doubles */
     font-size: 1vw;
 }
-.admin table, .admin th, .admin td, table, th,td {
+.admin table, .admin th, .admin td, table, th,td{
     border: 2px solid rgb(28, 59, 28);
     border-collapse: collapse; /* Pour éviter les bordures doubles */
 }
@@ -328,48 +368,18 @@ input.modifier{
     margin: 0vw;
     padding: 0vw;
 }
-img.edit_icon{
-    width: 1vw;
-    height: 1vw;
-    background-color: rgb(255, 106, 19);
-}
-button.edit_icon{
-    background-color: rgb(255, 106, 19);
-    padding: 0.1vw;
-    border-radius: 3px;
-}
-.modif_role,.modif_role option{
-    color: white;
-    border: none;
-    border-radius: 3px;
-    font-size: 1vw;
-    background-color: rgb(255, 106, 19);
-}
 nav.admin_defil{
     width: 10vw;
     height: 1.5vw;
     margin: 0% 5% 0% 40.5vw;
     display: flex;
 }
-button.admin_defil{/*Fond transparent*/
-    border: solid rgb(28, 59, 28);
-    background-color: rgba(42, 77, 42, 0.65);
-}
-button.admin_stop{/*Fond transparent*/
-    border: solid rgb(28, 59, 28);
-    color: rgb(144, 144, 144);
-    background-color: rgba(19, 41, 19, 0.65);
-}
-button.admin_defil:hover{
-    color:rgb(247, 148, 91);
-    background-color: rgba(24, 48, 24, 0.65);
-}
 .empty{
     border: none;
     visibility: hidden;
 }
 
-/*Recherche*/
+/*PAGE DE RECHERCHE*/
 fieldset.recherche{
     border: rgb(28, 59, 28) solid 3px;
     background-color: rgba(174, 189, 147,0.6);
@@ -397,29 +407,16 @@ input.recherche, .recherche div>div{
     padding: 1%;
     text-align: center;
 }
-
 .grpV{
     display: flex;
     flex-direction: row;
 }
-
 .recap{
     font-size: 1.4vw;
 }
-
 .itineraire{
     padding-left: 1.5vw;
     padding-right: 1.5vw;
-}
-
-.imgVoyage{
-    width: 15vw;
-    height: 15vw;
-}
-.imgDetail{
-    width: 15vw;
-    padding-right: 3vw;
-    padding-left: 1.5vw;
 }
 h3.reco{
     font-size: 1.5vw;
