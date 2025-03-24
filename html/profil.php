@@ -42,7 +42,7 @@
                 <?php
                     echo '<div class="all">';
 
-                    echo '<p></p><p>Panier : </p> <p><button class="admin"><a class="acheter" href="achat.php">Acheter</a></button></p>';
+                    echo '<p>----------------------------</p><p>---------Panier : --------</p> <p>--------<button class="admin"><a class="acheter" href="achat.php">Acheter</a></button>-------</p>';
                     if(empty($user["voyages_panier"])){
                         echo '<p></p><p>Vous n\'avez pas de voyages dans votre panier</p>';
                     }
@@ -74,7 +74,7 @@
                     echo '</div>';
 
                     
-                    echo '<p class="empty">.</p><p>Favoris :</p>';
+                    echo '<p class="empty">.</p><p>----------------------------Favoris :----------------------------</p>';
                     if(empty($user["voyages_favoris"])){
                         echo '<p></p><p>Vous n\'avez pas de voyages favoris</p>';
                     }
@@ -108,7 +108,7 @@
 
 
 
-                    echo '<p class="empty">.</p><p>Voyages achetés :</p><p class="empty">.</p>
+                    echo '<p class="empty">.</p><p>----------------------------Voyages achetés :----------------------------</p><p class="empty">.</p>
                         <table class="achat">';
 
                     if(empty($user["voyages_achete"])){
@@ -125,7 +125,7 @@
                         if (count($user["voyages_achete"]) < 5 || isset($_POST["plus_achat"])){
                             foreach ($user["voyages_achete"] as $achat){
                                 echo '<tr>
-                                    <td>'.$voyages[$achat]["titre"].'</td>
+                                    <td><form action="recap.php" method="POST"><input type="hidden" name="id" value="'.$user["voyages_achete"][$i].'"><input type="hidden" name="type" value="achete"><button type="submit" name="submit">'.$voyages[$achat]["titre"].'</button></form></td>
                                     <td>'.$voyages[$achat]["lieu"].'</td>
                                     <td>'.$voyages[$achat]["depart"].'</td>
                                     <td>'.$voyages[$achat]["duree"].'</td>
@@ -141,7 +141,7 @@
                         else{
                             for($i=0;$i<5;$i++){
                                 echo '<tr>
-                                    <td>'.$voyages[$user["voyages_achete"][$i]]["titre"].'</td>
+                                    <td><form action="recap.php" method="POST"><input type="hidden" name="id" value="'.$user["voyages_achete"][$i].'"><input type="hidden" name="type" value="achete"><button type="submit" name="submit">'.$voyages[$user["voyages_achete"][$i]]["titre"].'</button></form></td>
                                     <td>'.$voyages[$user["voyages_achete"][$i]]["lieu"].'</td>
                                     <td>'.$voyages[$user["voyages_achete"][$i]]["depart"].'</td>
                                     <td>'.$voyages[$user["voyages_achete"][$i]]["duree"].'</td>
@@ -174,6 +174,14 @@
                     <?php
 
                             /*Changer les informations */
+                            if(isset($_POST["supp"])){
+                                unset($users[$_SESSION["user_index"]-1]);
+                                $users=array_values($users);
+                                session_destroy();
+                                file_put_contents('../json/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
+                                header("Location: accueil.php");
+                            }
+
                             if(isset($_POST["profil_picture"])){
                                 $photo = $_FILES["profil_picture_value"];
                                 
@@ -350,7 +358,7 @@
                             <p></p>';
 
                             echo '<p>Photo de profil</p>
-                            <p><input type="file" accept="image/*" name="profil_picture_value"/></p>
+                            <p><input type="file" class="button_file" accept="image/*" name="profil_picture_value"/></p>
                             <td><input class="admin" type="submit" name="profil_picture" value="Valider"/></td>';
                             
                             echo '<p>Date d\'inscription :</p>

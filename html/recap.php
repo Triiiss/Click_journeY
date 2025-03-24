@@ -46,8 +46,10 @@
                     }
                     echo'</div>';  
 
-                    echo '<a href = "voyage.php?id='.$id.'"><button>Modifier</button></a>';
-                    echo '<a href = "ajout_panier.php?id='.$id.'"><button>Ajouter au panier</button></a>';
+                    if(!isset($_POST["type"]) || $_POST["type"] != achete){
+                        echo '<a href = "voyage.php?id='.$id.'"><button>Modifier</button></a>';
+                        echo '<a href = "ajout_panier.php?id='.$id.'"><button>Ajouter au panier</button></a>';
+                    }
                     
 
                 echo '</div>';

@@ -144,6 +144,30 @@
                                         $users[$k]['profil']['genre'] = $_POST["new".$user['login']."_genre_value"];
                                         $user['profil']['genre'] = $_POST["new".$user['login']."_genre_value"];
                                     }
+                                    for($i=max(count($user["voyages_achete"]),count($user["voyages_favoris"]),count($user["voyages_panier"]));$i>=0;$i--){
+                                        if(isset($_POST["supp_".$user['login']."_panier_".$i])){
+                                            unset($user["voyages_panier"][$i]);
+                                            unset($users[$k]["voyages_panier"][$i]);
+
+                                            $user["voyages_panier"] = array_values($user["voyages_panier"]);
+                                            $users[$k]["voyages_panier"] = array_values($users[$k]["voyages_panier"]);
+                                        }
+                                        if(isset($_POST["supp_".$user['login']."_fav_".$i])){
+                                            unset($user["voyages_favoris"][$i]);
+                                            unset($users[$k]["voyages_favoris"][$i]);
+
+                                            $user["voyages_favoris"] = array_values($user["voyages_favoris"]);
+                                            $users[$k]["voyages_favoris"] = array_values($users[$k]["voyages_favoris"]);
+                                        }
+                                        if(isset($_POST["supp_".$user['login']."_achat_".$i])){
+                                            unset($user["voyages_achete"][$i]);
+                                            unset($users[$k]["voyages_achete"][$i]);
+
+                                            $user["voyages_achete"] = array_values($user["voyages_achete"]);
+                                            $users[$k]["voyages_achete"] = array_values($users[$k]["voyages_achete"]);
+                                        }
+                                    }
+
                                     /*Afficher les informations*/
                                     echo '<tr>';
                                     /*Login */
@@ -302,52 +326,54 @@
                                             /*Afficher tous les voyages */
                                             if(isset($_SESSION["voyage"][$k]) && $_SESSION["voyage"][$k] == 1){
                                                 echo '<tr>
-                                                    <td class="empty" colspan="4"></td>
-                                                    <td colspan="2"> Panier :</td>';
+                                                    <td class="empty" colspan="2"></td>
+                                                    <td colspan="2"> <b>Panier :</b></td>';
                                                     if (empty($user["voyages_panier"])){
                                                         echo '<td colspan="2">None</td>';
                                                     }
                                                     else{
                                                         echo '<td>'.$voyages[$user["voyages_panier"][0]]["titre"].'</td>
-                                                        <td><button type="submit" class="edit_icon" name="modif_'.$user['login'].'_panier_0"><img class="edit_icon" src="../images/edit_icon.png"/></button></td>';
+                                                        <td><button type="submit" class="edit_icon" name="supp_'.$user['login'].'_panier_0">X</button></td>';
                                                     }
-                                                    echo '<td colspan="2"> Favoris :</td>';
+                                                    echo '<td colspan="2"><b>Favoris :</b></td>';
                                                     if (empty($user["voyages_favoris"])){
                                                         echo '<td colspan="2">None</td>';
                                                     }
                                                     else{
                                                         echo '<td>'.$voyages[$user["voyages_favoris"][0]]["titre"].'</td>
-                                                        <td><button type="submit" class="edit_icon" name="modif_'.$user['login'].'_fav_0"><img class="edit_icon" src="../images/edit_icon.png"/></button></td>';
+                                                        <td><button type="submit" class="edit_icon" name="supp_'.$user['login'].'_fav_0">X</button></td>';
                                                     }
-                                                    echo '<td colspan="2"> Déjà acheté</td>';
+                                                    echo '<td colspan="2"><b>Déjà acheté :</b></td>';
                                                     if (empty($user["voyages_achete"])){
                                                         echo '<td colspan="2">None</td>';
                                                     }
                                                     else{
                                                         echo '<td>'.$voyages[$user["voyages_achete"][0]]["titre"].'</td>
-                                                        <td><button type="submit" class="edit_icon" name="modif_'.$user['login'].'_achat_0"><img class="edit_icon" src="../images/edit_icon.png"/></button></td>';
+                                                        <td><button type="submit" class="edit_icon" name="supp_'.$user['login'].'_achat_0">X</button></td>';
                                                     }
 
                                                 for ($i=1;$i<max(count($user["voyages_achete"]),count($user["voyages_favoris"]),count($user["voyages_panier"]));$i++){
                                                     echo '</tr>
-                                                            <td class="empty" colspan="6"></td>';
+                                                            <td class="empty" colspan="4"></td>';
                                                     if (isset($user["voyages_panier"][$i])){
                                                         echo '<td>'.$voyages[$user["voyages_panier"][$i]]["titre"].'</td>
-                                                        <td><button type="submit" class="edit_icon" name="modif_'.$user['login'].'_panier_'.$i.'"><img class="edit_icon" src="../images/edit_icon.png"/></button></td>';
+                                                        <td><button type="submit" class="edit_icon" name="supp_'.$user['login'].'_panier_'.$i.'">X</button></td>';
                                                     }
                                                     else{
                                                         echo '<td class="empty" colspan="2"></td>';
                                                     }
+                                                    echo '<td class="empty" colspan="2"></td>';
                                                     if (isset($user["voyages_favoris"][$i])){
                                                         echo '<td>'.$voyages[$user["voyages_favoris"][$i]]["titre"].'</td>
-                                                        <td><button type="submit" class="edit_icon" name="modif_'.$user['login'].'_fav_'.$i.'"><img class="edit_icon" src="../images/edit_icon.png"/></button></td>';
+                                                        <td><button type="submit" class="edit_icon" name="supp_'.$user['login'].'_fav_'.$i.'">X</button></td>';
                                                     }
                                                     else{
                                                         echo '<td class="empty" colspan="2"></td>';
                                                     }
+                                                    echo '<td class="empty" colspan="2"></td>';
                                                     if (isset($user["voyages_achete"][$i])){
                                                         echo '<td>'.$voyages[$user["voyages_achete"][$i]]["titre"].'</td>
-                                                        <td><button type="submit" class="edit_icon" name="modif_'.$user['login'].'_achat_'.$i.'"><img class="edit_icon" src="../images/edit_icon.png"/></button></td>';
+                                                        <td><button type="submit" class="edit_icon" name="supp_'.$user['login'].'_achat_'.$i.'">X</button></td>';
                                                     }
                                                 
 
