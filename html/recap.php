@@ -24,8 +24,11 @@
             $voyages=json_decode($json_voyages, true);
             $id=$_POST["id"];
 
-            for ($i=0; $i < count($voyages[$id]["etapes"]); $i++) { 
-                $options[$i]=$_POST['option'.$i];
+            $total=$voyages[$id]["prix"];
+
+            for($i=0; $i < count($voyages[$id]["etapes"]); $i++) { 
+                $options[$i]=$voyages[$id]["etapes"][$i]["option"][$_POST['option'.$i]];
+                $total+=$options[$i]["prix"];
             }
 
             echo '<div class=voyages>';
@@ -33,7 +36,8 @@
                 echo '<div class=recap>';
                     echo '<div>'.$voyages[$id]["titre"].'</div>';
                     echo '<div>'.$voyages[$id]["description"].'</div>';
-                    echo '<div>Prix : '.$voyages[$id]["prix"].'euros'.'</div>';
+                    echo '<div>Prix de base: '.$voyages[$id]["prix"].'euros'.'</div>';
+                    echo '<div>Prix total: '.$total.'euros'.'</div>';
                     echo '<div>Départ le '.$voyages[$id]["depart"].'</div>';
                     echo '<div>Durée : '.$voyages[$id]["duree"].'</div>'; 
                     
@@ -41,8 +45,7 @@
 
                     foreach($voyages[$id]["etapes"] as $k => $etape){
                         echo $etape["titre"];
-                        echo '<div>'.$options[$k].'</div>';
-
+                        echo '<div>'.$options[$k]["titre"].'</div>';
                     }
                     echo'</div>';  
 

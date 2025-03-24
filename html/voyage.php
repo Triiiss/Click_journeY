@@ -50,8 +50,8 @@
 
                         <label for="option'.$k.'">Options :</label>
                         <div>';
-                            foreach($etape["option"] as $option){
-                                echo $option["titre"].'<input class="options" type="checkbox" name="option'.$k.'" value="'.$option["titre"].'">';
+                            foreach($etape["option"] as $i => $option){
+                                echo $option["titre"].'('.$option["prix"].'€)'.'<input class="options" type="checkbox" name="option'.$k.'" value="'.$i.'">';
                             }
                         echo '</div>
                     </fieldset>';
