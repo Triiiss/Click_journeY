@@ -29,8 +29,13 @@
 
             foreach($voyages[$id]["etapes"] as $k=> $etape){
                 foreach($etape["option"] as $i=>$option){
-                    $options[$k][$i] = explode(';',$_POST['option'.$k.$i]) ;
-                    $total+=$options[$k][$i][1];
+                    if(isset($_POST['option'.$k.$i])){
+                        $options[$k][$i] = explode(';',$_POST['option'.$k.$i]) ;
+                        $total+=$options[$k][$i][1];
+                    }
+                    else{
+                        $options[$k][$i] = "";
+                    }
                 }
             }
 
@@ -48,10 +53,16 @@
 
                     foreach($voyages[$id]["etapes"] as $k => $etape){
                         echo '<div>'.$etape["titre"].'</div>';
+                        $optExiste=0;
                         foreach($etape["option"] as $i=>$option){
-                            echo '<div>'.$options[$k][$i][0].'</div>';
+                            if($options[$k][$i]!=""){
+                                echo '<div>'.$options[$k][$i][0].'</div>';
+                                $optExiste=1;
+                            }
                         }
-                        
+                        if($optExiste==0){
+                            echo '<div>Aucune option<div>';
+                        }
                     }
 
                     if(!isset($_POST["type"]) || $_POST["type"] != achete){
