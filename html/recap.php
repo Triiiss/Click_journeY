@@ -26,9 +26,12 @@
 
             $total=$voyages[$id]["prix"];
 
-            for($i=0; $i < count($voyages[$id]["etapes"]); $i++) { 
-                $options[$i]=$voyages[$id]["etapes"][$i]["option"][$_POST['option'.$i]];
-                $total+=$options[$i]["prix"];
+
+            foreach($voyages[$id]["etapes"] as $k=> $etape){
+                foreach($etape["option"] as $i=>$option){
+                    $options[$k][$i] = explode(';',$_POST['option'.$k.$i]) ;
+                    $total+=$options[$k][$i][1];
+                }
             }
 
             echo '<div class=voyages>';
@@ -41,13 +44,15 @@
                     echo '<div>Départ le '.$voyages[$id]["depart"].'</div>';
                     echo '<div>Durée : '.$voyages[$id]["duree"].'</div>'; 
                     
-                    echo '<div>Options : ';
+                    echo '<div>Options : </div>';
 
                     foreach($voyages[$id]["etapes"] as $k => $etape){
-                        echo $etape["titre"];
-                        echo '<div>'.$options[$k]["titre"].'</div>';
+                        echo '<div>'.$etape["titre"].'</div>';
+                        foreach($etape["option"] as $i=>$option){
+                            echo '<div>'.$options[$k][$i][0].'</div>';
+                        }
+                        
                     }
-                    echo'</div>';  
 
                     if(!isset($_POST["type"]) || $_POST["type"] != achete){
                         echo '<a href = "voyage.php?id='.$id.'"><button>Modifier</button></a>';
