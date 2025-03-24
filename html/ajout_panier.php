@@ -9,7 +9,7 @@
     $users=get_data("../json/utilisateurs.json");
     $id=$_GET["id"];
 
-    array_push($users[$_SESSION["user_index"]-1]["voyages_panier"], $id);
+    array_push($users[$_SESSION["user_index"]-1]["voyages_panier"], intval($id));
 
     file_put_contents('../json/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
 ?>

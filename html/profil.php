@@ -40,18 +40,37 @@
                 <legend>Voyages</legend>
     
                 <?php
+                    for($i=max(count($user["voyages_favoris"]),count($user["voyages_panier"]));$i>=-2;$i--){
+                        if(isset($_POST["supp_".$user['login']."_panier_".$i])){
+                            unset($user["voyages_panier"][$i]);
+                            unset($users[$_SESSION["user_index"]-1]["voyages_panier"][$i]);
+
+                            $user["voyages_panier"] = array_values($user["voyages_panier"]);
+                            $users[$_SESSION["user_index"]-1]["voyages_panier"] = array_values($users[$_SESSION["user_index"]-1]["voyages_panier"]);
+                        }
+                        if(isset($_POST["supp_".$user['login']."_favoris_".$i])){
+                            unset($user["voyages_favoris"][$i]);
+                            unset($users[$_SESSION["user_index"]-1]["voyages_favoris"][$i]);
+
+                            $user["voyages_favoris"] = array_values($user["voyages_favoris"]);
+                            $users[$_SESSION["user_index"]-1]["voyages_favoris"] = array_values($users[$_SESSION["user_index"]-1]["voyages_favoris"]);
+                        }
+                    }
+                    file_put_contents('../json/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
+
                     echo '<div class="all">';
 
-                    echo '<p>----------------------------</p><p>---------Panier : --------</p> <p>--------<button class="admin"><a class="acheter" href="achat.php">Acheter</a></button>-------</p>';
+                    echo '<p>----------------------------</p><p>---------Panier : --------</p> <p>----<button class="admin"><a class="acheter" href="achat.php">Payer le panier</a></button>----</p>
+                    <p class="empty">d</p><p></p><p></p>';
                     if(empty($user["voyages_panier"])){
                         echo '<p></p><p>Vous n\'avez pas de voyages dans votre panier</p>';
                     }
                     else{
-                        if(count($user["voyages_panier"]) < 5 || isset($_POST["plus_panier"])){
+                        if(count($user["voyages_panier"]) <= 3 || isset($_POST["plus_panier"])){
                             foreach ($user["voyages_panier"] as $panier){
                                 echo '<div class="itineraire">
                                     <a href="voyage.php?id='.$panier.'"><img src="'.$voyages[$panier]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>
-                                    <div class="titreVoyage">'.$voyages[$panier]["titre"].'</div>
+                                    <div class="titreVoyage">'.$voyages[$panier]["titre"].'<button type="submit" class="edit_icon" name="supp_'.$user['login'].'_panier_'.$i.'">X</button></div>
                                 </div>';
                             }
                             if(isset($_POST["plus_panier"])){
@@ -64,7 +83,7 @@
                             for($i=0;$i<3;$i++){
                                 echo '<div class="itineraire">
                                     <a href="voyage.php?id='.$user["voyages_panier"][$i].'"><img src="'.$voyages[$user["voyages_panier"][$i]]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>
-                                    <div class="titreVoyage">'.$voyages[$user["voyages_panier"][$i]]["titre"].'</div>
+                                    <div class="titreVoyage">'.$voyages[$user["voyages_panier"][$i]]["titre"].'<button type="submit" class="edit_icon" name="supp_'.$user['login'].'_panier_'.$i.'">X</button></div>
                                 </div>';
                             }
                             echo '<p></p>
@@ -74,17 +93,19 @@
                     echo '</div>';
 
                     
-                    echo '<p class="empty">.</p><p>----------------------------Favoris :----------------------------</p>';
+                    echo '
+                    <p class="empty">d</p><p></p><p></p><p class="empty">.</p><p>----------------------------Favoris :----------------------------</p>
+                    <p class="empty">d</p><p></p><p></p>';
                     if(empty($user["voyages_favoris"])){
                         echo '<p></p><p>Vous n\'avez pas de voyages favoris</p>';
                     }
                     else{
                         echo '<div class="all">';
-                        if(count($user["voyages_favoris"]) < 5 || isset($_POST["plus_favoris"])){
+                        if(count($user["voyages_favoris"]) < 3 || isset($_POST["plus_favoris"])){
                             foreach ($user["voyages_favoris"] as $favoris){
                                 echo '<div class="itineraire">
                                     <a href="voyage.php?id='.$favoris.'"><img src="'.$voyages[$favoris]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>
-                                    <div class="titreVoyage">'.$voyages[$favoris]["titre"].'</div>
+                                    <div class="titreVoyage">'.$voyages[$favoris]["titre"].'<button type="submit" class="edit_icon" name="supp_'.$user['login'].'_favoris_'.$i.'">X</button></div>
                                 </div>';
                             }
                             if(isset($_POST["plus_favoris"])){
@@ -97,7 +118,7 @@
                             for($i=0;$i<3;$i++){
                                 echo '<div class="itineraire">
                                     <a href="voyage.php?id='.$user["voyages_favoris"][$i].'"><img src="'.$voyages[$user["voyages_favoris"][$i]]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>
-                                    <div class="titreVoyage">'.$voyages[$user["voyages_favoris"][$i]]["titre"].'</div>
+                                    <div class="titreVoyage">'.$voyages[$user["voyages_favoris"][$i]]["titre"].'<button type="submit" class="edit_icon" name="supp_'.$user['login'].'_favoris_'.$i.'">X</button></div>
                                 </div>';
                             }
                             echo '<p></p>
@@ -129,7 +150,7 @@
                                     <td>'.$voyages[$achat]["lieu"].'</td>
                                     <td>'.$voyages[$achat]["depart"].'</td>
                                     <td>'.$voyages[$achat]["duree"].'</td>
-                                    <td>'.$voyages[$achat]["prix"].'</td>
+                                    <td>'.$voyages[$achat]["prix"].'€</td>
                                 </tr>';
                             }
                             if(isset($_POST["plus_achat"])){
@@ -141,11 +162,15 @@
                         else{
                             for($i=0;$i<5;$i++){
                                 echo '<tr>
-                                    <td><form action="recap.php" method="POST"><input type="hidden" name="id" value="'.$user["voyages_achete"][$i].'"><input type="hidden" name="type" value="achete"><button type="submit" name="submit">'.$voyages[$user["voyages_achete"][$i]]["titre"].'</button></form></td>
+                                    <td><form action="recap.php" method="POST">
+                                        <input type="hidden" name="id" value="'.$user["voyages_achete"][$i].'">
+                                        <input type="hidden" name="type" value="achete">
+                                        <button type="submit" name="submit">'.$voyages[$user["voyages_achete"][$i]]["titre"].'a</button>
+                                    </form></td>
                                     <td>'.$voyages[$user["voyages_achete"][$i]]["lieu"].'</td>
                                     <td>'.$voyages[$user["voyages_achete"][$i]]["depart"].'</td>
                                     <td>'.$voyages[$user["voyages_achete"][$i]]["duree"].'</td>
-                                    <td>'.$voyages[$user["voyages_achete"][$i]]["prix"].'</td>
+                                    <td>'.$voyages[$user["voyages_achete"][$i]]["prix"].'€</td>
                                 </tr>';
                             }
                             echo '<tr>
