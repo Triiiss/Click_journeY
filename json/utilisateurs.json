@@ -114,7 +114,9 @@
         },
         "voyages_achete": [],
         "voyages_favoris": [],
-        "voyages_panier": [],
+        "voyages_panier": [
+            "0"
+        ],
         "date d'inscription": "2025-03-21"
     },
     {

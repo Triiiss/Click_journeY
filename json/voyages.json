@@ -16,8 +16,14 @@
                 "fin": "2026-12-22",
                 "lieu":"5 364 m",
                 "option":[
-                    "Acclimatation",
-                    "location de sac de couchage"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    },
+                    {
+                        "titre":"location de sac de couchage",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -26,9 +32,19 @@
                 "fin": "2026-12-24",
                 "lieu":"6 065 m",
                 "option":[
-                    "Acclimatation",
-                    "Déjeuner inclus",
-                    "location de sac de couchage"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    },
+                    {
+                        "titre":"Déjeuner inclus",
+                        "prix":10
+
+                    },
+                    {
+                        "titre":"location de sac de couchage",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -37,8 +53,14 @@
                 "fin": "2026-12-26",
                 "lieu":"6 400 m",
                 "option":[
-                    "Acclimatation",
-                    "location de sac de couchage"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    },
+                    {
+                        "titre":"location de sac de couchage",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -47,9 +69,18 @@
                 "fin": "2026-12-27",
                 "lieu":"6 400 m",
                 "option":[
-                    "Acclimatation",
-                    "Diner inclus",
-                    "location de sac de couchage"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    },
+                    {
+                        "titre":"Diner inclus",
+                        "prix":10
+                    },
+                    {
+                        "titre":"location de sac de couchage",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -58,9 +89,18 @@
                 "fin": "2026-12-28",
                 "lieu":"7 900 m",
                 "option":[
-                    "Acclimatation",
-                    "location de sac de couchage",
-                    "location de skis"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    },
+                    {
+                        "titre":"location de sac de couchage",
+                        "prix":10
+                    },
+                    {
+                        "titre":"location de skis",
+                        "prix":10
+                    }               
                 ]
             }
         ]
