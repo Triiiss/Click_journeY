@@ -145,7 +145,7 @@
                         </tr>';
                         if (count($user["voyages_achete"]) < 5 || isset($_POST["plus_achat"])){
                             foreach ($user["voyages_achete"] as $achat){
-                                echo '<tr>
+                                echo '<tr class="voyages_achat">
                                     <td><form action="recap.php" method="POST"><input type="hidden" name="id" value="'.$user["voyages_achete"][$i].'"><input type="hidden" name="type" value="achete"><button type="submit" name="submit">'.$voyages[$achat]["titre"].'</button></form></td>
                                     <td>'.$voyages[$achat]["lieu"].'</td>
                                     <td>'.$voyages[$achat]["depart"].'</td>
@@ -161,11 +161,11 @@
                         }
                         else{
                             for($i=0;$i<5;$i++){
-                                echo '<tr>
+                                echo '<tr class="voyages_achat">
                                     <td><form action="recap.php" method="POST">
                                         <input type="hidden" name="id" value="'.$user["voyages_achete"][$i].'">
                                         <input type="hidden" name="type" value="achete">
-                                        <button type="submit" name="submit">'.$voyages[$user["voyages_achete"][$i]]["titre"].'a</button>
+                                        <button type="submit" name="submit">'.$voyages[$user["voyages_achete"][$i]]["titre"].'</button>
                                     </form></td>
                                     <td>'.$voyages[$user["voyages_achete"][$i]]["lieu"].'</td>
                                     <td>'.$voyages[$user["voyages_achete"][$i]]["depart"].'</td>

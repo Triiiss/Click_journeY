@@ -37,7 +37,7 @@
             <label for="submit" ></label>
             <button class="inscription" name="submit" type="submit" >Se connecter</button>
 
-            <p>Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous</a></p>
+            <p>Vous n'avez pas encore de compte ? <a class="orange" href="inscription.php">Inscrivez-vous</a></p>
 
             <?php
                 $users = get_data("../json/utilisateurs.json");

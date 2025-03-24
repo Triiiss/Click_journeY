@@ -44,7 +44,7 @@
                 }
                 else{
                         echo '
-                        <fieldset class="formulaire connexion">
+                        <fieldset class="formulaire">
                         <legend>Panier :</legend>';
                         $sum=0;
                         if(empty($user["voyages_panier"])){
@@ -54,12 +54,13 @@
                         else{
                                 foreach($user["voyages_panier"] as $k=> $panier){
                                         echo '<a href="voyage.php?id='.$panier.'"><img src="'.$voyages[$panier]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>
-                                        <p>'.$voyages[$panier]["titre"].'<br><br><br>de '.$voyages[$panier]["depart"].' à '.$voyages[$panier]["fin"].'<br>Durée '.$voyages[$panier]["duree"].'<br><br>Description '.$voyages[$panier]["description"].'<br><br>Prix '.$voyages[$panier]["prix"].'</p>';
+                                        <p><b>'.$voyages[$panier]["titre"].'</b>
+                                        <br><br><br>de '.$voyages[$panier]["depart"].' à '.$voyages[$panier]["fin"].'<br>Durée '.$voyages[$panier]["duree"].'<br><br>Description '.$voyages[$panier]["description"].'<br><br>Prix '.$voyages[$panier]["prix"].'</p>';
                                         $sum+=$voyages[$panier]["prix"];
                                 }
 
                                 echo '<p class="empty">a</p><p></p>
-                                <p>Total :</p> <p>'.$sum.'€</p>';
+                                <p></p> <p><b>Total :</b> '.$sum.'€</p>';
                         }
                         echo '<p></p>
                         <form action="https://www.plateforme-smc.fr/cybank/index.php" method="POST">

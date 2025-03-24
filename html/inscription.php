@@ -105,7 +105,7 @@
                     <label for="submit"><span class="champs">Les champs obligatoire sont suivis par une étoile rouge <span class="etoile">*</span></span></label>
                     <button class="inscription" name="submit" type="submit" >S'inscrire</button>
 
-                    <p>Déjà inscrit ? <a href="connexion.php">Connectez vous</a></p>
+                    <p>Déjà inscrit ? <a class="orange" href="connexion.php">Connectez vous</a></p>
                     
                     <?php
                         if(empty($prenom) || empty($nom) || empty($email) || empty($login) || empty($mdp) || empty($mdpcfrm)){          // Vérifie que les informations + importantes sont remplies
