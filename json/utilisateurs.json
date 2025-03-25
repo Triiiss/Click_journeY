@@ -115,12 +115,33 @@
         "voyages_achete": [],
         "voyages_favoris": [],
         "voyages_panier": [
-            "0",
-            "0",
             {
                 "id": 0,
-                "total": 215,
+                "total": 235,
                 "options": [
+                    [
+                        "Acclimatation",
+                        ""
+                    ],
+                    [
+                        "",
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        "location de sac de couchage"
+                    ],
+                    [
+                        "",
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        "",
+                        ""
+                    ]
                 ]
             }
         ],

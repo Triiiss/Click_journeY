@@ -8,7 +8,7 @@
         "image": "../images/voyages/voy1.jpg",
         "description":"Allez au septième ciel, ou au plus proche possible. En haut de l'Evreste le monde semble si petit.",
         "lieu":"Népal",
-        "prix": "215",
+        "prix": 215,
         "etapes":[
             {
                 "titre": "Camp de base",
@@ -115,7 +115,7 @@
         "image": "../images/voyages/voy2.jpg",
         "description":"Visitez la culture de la transilvanie, rencontrez les célébrités locales... à vos risques et périls",
         "lieu":"Roumanie",
-        "prix": "180",
+        "prix": 180,
         "etapes":[
             {
                 "titre": "Chateau de Dracula",
@@ -148,7 +148,7 @@
         "image": "../images/voyages/voy3.jpg",
         "description":"Relaxez vous sur une île tout confort avant d'explorer et étancher votre soif de curiosité brûlante.",
         "lieu":"Hawaii",
-        "prix": "500",
+        "prix": 500,
         "etapes":[
             {
                 "titre": "Retraite hawaiienne",
@@ -190,7 +190,7 @@
         "image": "../images/voyages/voy4.jpg",
         "description":"Découvrez la beauté parisienne du plus profond des souterrains jusqu'en haut de la tour Eiffel",
         "lieu":"Paris",
-        "prix": "95",
+        "prix": 95,
         "etapes":[
             {
                 "titre": "Sur la scène",
@@ -231,7 +231,7 @@
         "image": "../images/voyages/voy5.jpg",
         "description":"Explorez les contrés non-explorés de la Terre à bord d'un des sous-marins les plus sécurisé du monde.",
         "lieu":"Océan Pacifique",
-        "prix": "150",
+        "prix": 150,
         "etapes":[
             {
                 "titre": "Arrivée et préparations",
@@ -281,7 +281,7 @@
         "image": "../images/voyages/voy6.jpg",
         "description":"Grimpez, grimpez et grimpez encore et encore. Votre ascension jusqu'à l'aventure sera l'ascension de la montagne.",
         "lieu":"Antilles",
-        "prix": "125",
+        "prix": 125,
         "etapes":[
             {
                 "titre": "Petit piton",
@@ -325,7 +325,7 @@
         "image": "../images/voyages/voy7.jpg",
         "description":"Partez à la découverte de la SNCF à vitesse grand V",
         "lieu":"Paris-Marseille-Paris",
-        "prix": "90",
+        "prix": 90,
         "etapes":[
             {
                 "titre": "Arrivée à la gare",
@@ -366,7 +366,7 @@
         "image": "../images/voyages/voy8.jpg",
         "description":"Vous passerez 8 ans de votre vie en ayant l'impression de n'avoir vécu qu'une heure.",
         "lieu":"l'espace planète M195",
-        "prix": "1999",
+        "prix": 1999,
         "etapes":[
             {
                 "titre": "Acclimatation à la planète",
@@ -407,7 +407,7 @@
         "image": "../images/voyages/voy9.jpg",
         "description":"Si vous n'avez pas froid aux yeux découvrez l'Antartique",
         "lieu":"Antartique",
-        "prix": "68.9",
+        "prix": 68.9,
         "etapes":[
             {
                 "titre": "Durée de l'été dans l'Antartique",
@@ -457,7 +457,7 @@
         "image": "../images/voyages/voy10.jpg",
         "description":"Entrez sur le territoire des crabes, le zénith de l'évolution",
         "lieu":"Crab Island aux îles maurice",
-        "prix": "260",
+        "prix": 260,
         "etapes":[
             {
                 "titre": "Migration des crabes",
@@ -489,7 +489,7 @@
         "image": "../images/voyages/voy11.jpg",
         "description":"Admirez les aurores boréales des pays nordiques",
         "lieu":"Norvège",
-        "prix": "480",
+        "prix": 480,
         "etapes":[
             {
                 "titre": "Pêche de la truite",
@@ -521,7 +521,7 @@
         "image": "../images/voyages/voy12.jpg",
         "description":"Dormez entre les feuilles des arbres après avoir",
         "lieu":"Aurillac",
-        "prix": "30",
+        "prix": 30,
         "etapes":[
             {
                 "titre": "Accrobranche  haut dans les arbres",
@@ -562,7 +562,7 @@
         "image": "../images/voyages/voy13.jpg",
         "description":"Dans toute la légalité, visitez un hôpital qui a été évacué avec tout le matériel laissé en plan. Attention au tétanos",
         "lieu": "",
-        "prix": "99",
+        "prix": 99,
         "etapes":[
             {
                 "titre": "Entrée dans l'hôpital",
@@ -603,7 +603,7 @@
         "image": "../images/voyages/voy14.jpg",
         "description":"Vous allez pendre au cou de la culture",
         "lieu":"Forêt d'Aokigahara au Japon",
-        "prix": "320",
+        "prix": 320,
         "etapes":[
             {
                 "titre": "Camping à Tokyo",
@@ -644,7 +644,7 @@
         "image": "../images/voyages/voy15.jpg",
         "description":"N'ayez pas peur d'avoir du sable dans vos bottes et commencez à marcher.",
         "lieu":"Au Nord de l'Afrique",
-        "prix": "87",
+        "prix": 87,
         "etapes":[
             {
                 "titre": "Balade à dos de dromadaire",
@@ -685,7 +685,7 @@
         "image": "../images/voyages/voy16.jpg",
         "description":"Allez dans l'oeil de la tempête",
         "lieu":"Etats Unis de l'est",
-        "prix": "12.5",
+        "prix": 12.5,
         "etapes":[
             {
                 "titre": "Formation d'un cyclone",

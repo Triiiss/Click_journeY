@@ -73,7 +73,7 @@
 
                         foreach($voyages[$id]["etapes"] as $k => $etape){ 
                             foreach($etape["option"] as $i=>$option){
-                                echo '<input type="hidden" name="option'.$k.$i.'" value="'.$_POST['option'.$k.$i].'">';
+                                echo '<input type="hidden" name="option'.$k.$i.'" value="'.$options[$k][$i][0].'">';
                             }
                         }
                         echo '<a href = "voyage.php?id='.$id.'"><button>Modifier</button></a>';

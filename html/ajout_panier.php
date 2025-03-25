@@ -22,17 +22,16 @@
 
         <?php
             $users=get_data("../json/utilisateurs.json");
-            $id=$_POST["id"];
             $json_voyages=file_get_contents("../json/voyages.json");
             $voyages=json_decode($json_voyages, true);
 
-            $total=$voyages[$id]["prix"];
+            $id=$_POST["id"];
+            $total=$_POST["total"];
             
             foreach($voyages[$id]["etapes"] as $k=> $etape){
                 foreach($etape["option"] as $i=>$option){
                     if(isset($_POST['option'.$k.$i])){
                         $options[$k][$i] = $_POST['option'.$k.$i] ;
-                        $total+=$options[$k][$i][1];
                     }
                     else{
                         $options[$k][$i] = "";
