@@ -22,19 +22,33 @@
         <?php
             $json_voyages=file_get_contents("../json/voyages.json");
             $voyages=json_decode($json_voyages, true);
-            $id=$_POST["id"];
 
-            $total=$voyages[$id]["prix"];
+            if(isset($_POST["idPanier"])){
+                $users=get_data("../json/utilisateurs.json");
+                if($users===null){
+                    echo "<p>Problème de récupération des données côté serveur</p>";
+                }
+                $user=$users[$_SESSION["user_index"]-1];
 
+                $idPanier=$_POST["idPanier"];
+                $id=$user["voyages_panier"][$idPanier]["id"];
+                $total=$user["voyages_panier"][$idPanier]["total"];
+                $options=$user["voyages_panier"][$idPanier]["options"];
+            }
+            else{
 
-            foreach($voyages[$id]["etapes"] as $k=> $etape){
-                foreach($etape["option"] as $i=>$option){
-                    if(isset($_POST['option'.$k.$i])){
-                        $options[$k][$i] = explode(';',$_POST['option'.$k.$i]) ;
-                        $total+=$options[$k][$i][1];
-                    }
-                    else{
-                        $options[$k][$i] = [];
+                $id=$_POST["id"];
+                $total=$voyages[$id]["prix"];
+
+                foreach($voyages[$id]["etapes"] as $k=> $etape){
+                    foreach($etape["option"] as $i=>$option){
+                        if(isset($_POST['option'.$k.$i])){
+                            $options[$k][$i] = explode(';',$_POST['option'.$k.$i])[0] ;
+                            $total+=explode(';',$_POST['option'.$k.$i])[1];
+                        }
+                        else{
+                            $options[$k][$i] = "";
+                        }
                     }
                 }
             }
@@ -55,8 +69,8 @@
                         echo '<div>'.$etape["titre"].'</div>';
                         $optExiste=0;
                         foreach($etape["option"] as $i=>$option){
-                            if($options[$k][$i]!=[]){
-                                echo '<div>'.$options[$k][$i][0].'</div>';
+                            if($options[$k][$i]!=""){
+                                echo '<div>'.$options[$k][$i].'</div>';
                                 $optExiste=1;
                             }
                         }
@@ -73,7 +87,7 @@
 
                         foreach($voyages[$id]["etapes"] as $k => $etape){ 
                             foreach($etape["option"] as $i=>$option){
-                                echo '<input type="hidden" name="option'.$k.$i.'" value="'.$options[$k][$i][0].'">';
+                                echo '<input type="hidden" name="option'.$k.$i.'" value="'.$options[$k][$i].'">';
                             }
                         }
                         echo '<a href = "voyage.php?id='.$id.'"><button>Modifier</button></a>';

@@ -35,7 +35,7 @@
 
         <?php bandeau("profil");?>
 
-        <form action="profil.php" method="POST" enctype="multipart/form-data">
+        <form action="profil.php" method="POST" id="global" enctype="multipart/form-data">
             <fieldset class="formulaire voyages">
                 <legend>Voyages</legend>
     
@@ -67,20 +67,14 @@
                     }
                     else{
                         if(count($user["voyages_panier"]) <= 3 || isset($_POST["plus_panier"])){
-                            foreach ($user["voyages_panier"] as $panier){
+                            foreach ($user["voyages_panier"] as $k=>$panier){
                                 echo '<div class="itineraire">
-                                    <form action="recap.php" method="post">
-                                    <input type="hidden" name="id" value="'.$panier["id"].'"></input>';
-
-                                    foreach($etapes as $k=> $etape){
-                                        foreach($panier["options"] as $i=>$option){
-                                            echo '<input class="options" type="checkbox" name="option'.$k.$i.'" value="'.$option.'">';
-                                        }
-                                    }
-
-                                    echo '<input type="image" src="'.$voyages[$panier]["image"].'" class="imgVoyage" alt="photo_voyage"">
-                                    <div class="titreVoyage">'.$voyages[$panier]["titre"].'<button type="submit" class="edit_icon" name="supp_'.$user['login'].'_panier_'.$i.'">X</button></div>
+                                    <form action="recap.php" method="post" id="panier">
+                                        <input type="hidden" name="idPanier" value="'.$k.'"></input>
+                                        <input type="image" form="panier" src="'.$voyages[$panier["id"]]["image"].'" class="imgVoyage" alt="photo_voyage"></input>
                                     </form>
+
+                                    <div class="titreVoyage">'.$voyages[$panier["id"]]["titre"].'<button type="submit" class="edit_icon" form="global" name="supp_'.$user['login'].'_panier_'.$i.'">X</button></div>
                                 </div>';
                             }
                             if(isset($_POST["plus_panier"])){
