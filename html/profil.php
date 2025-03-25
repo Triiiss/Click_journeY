@@ -69,8 +69,18 @@
                         if(count($user["voyages_panier"]) <= 3 || isset($_POST["plus_panier"])){
                             foreach ($user["voyages_panier"] as $panier){
                                 echo '<div class="itineraire">
-                                    <a href="voyage.php?id='.$panier.'"><img src="'.$voyages[$panier]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>
+                                    <form action="recap.php" method="post">
+                                    <input type="hidden" name="id" value="'.$panier["id"].'"></input>';
+
+                                    foreach($etapes as $k=> $etape){
+                                        foreach($panier["options"] as $i=>$option){
+                                            echo '<input class="options" type="checkbox" name="option'.$k.$i.'" value="'.$option.'">';
+                                        }
+                                    }
+
+                                    echo '<input type="image" src="'.$voyages[$panier]["image"].'" class="imgVoyage" alt="photo_voyage"">
                                     <div class="titreVoyage">'.$voyages[$panier]["titre"].'<button type="submit" class="edit_icon" name="supp_'.$user['login'].'_panier_'.$i.'">X</button></div>
+                                    </form>
                                 </div>';
                             }
                             if(isset($_POST["plus_panier"])){

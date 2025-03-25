@@ -117,7 +117,12 @@
         "voyages_panier": [
             "0",
             "0",
-            "0"
+            {
+                "id": 0,
+                "total": 215,
+                "options": [
+                ]
+            }
         ],
         "date d'inscription": "2025-03-21"
     },

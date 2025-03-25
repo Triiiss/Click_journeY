@@ -31,7 +31,6 @@
             foreach($voyages[$id]["etapes"] as $k=> $etape){
                 foreach($etape["option"] as $i=>$option){
                     if(isset($_POST['option'.$k.$i])){
-                        echo $_POST['option'.$k.$i];
                         $options[$k][$i] = $_POST['option'.$k.$i] ;
                         $total+=$options[$k][$i][1];
                     }
