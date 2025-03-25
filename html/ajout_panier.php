@@ -5,13 +5,6 @@
     if($_SESSION["connexion"]!="connected"){
         header("Location: connexion.php");
     }
-
-    $users=get_data("../json/utilisateurs.json");
-    $id=$_GET["id"];
-
-    array_push($users[$_SESSION["user_index"]-1]["voyages_panier"], intval($id));
-
-    file_put_contents('../json/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
 ?>
 
 <!DOCTYPE php>
@@ -26,6 +19,35 @@
         <a class="accueil" href="accueil.php">Accueil</a><br/>
 
         <?php bandeau("recherche");?>
+
+        <?php
+            $users=get_data("../json/utilisateurs.json");
+            $id=$_POST["id"];
+            $json_voyages=file_get_contents("../json/voyages.json");
+            $voyages=json_decode($json_voyages, true);
+
+            $total=$voyages[$id]["prix"];
+            
+            foreach($voyages[$id]["etapes"] as $k=> $etape){
+                foreach($etape["option"] as $i=>$option){
+                    if(isset($_POST['option'.$k.$i])){
+                        echo $_POST['option'.$k.$i];
+                        $options[$k][$i] = $_POST['option'.$k.$i] ;
+                        $total+=$options[$k][$i][1];
+                    }
+                    else{
+                        $options[$k][$i] = "";
+                    }
+                }
+            }
+            array_push($users[$_SESSION["user_index"]-1]["voyages_panier"], array(
+                "id"=>intval($id),
+                "total"=>intval($total),
+                "options"=>$options 
+            ));
+
+            file_put_contents('../json/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
+        ?>
             
         <div class="voyages">
         <h3>Le voyage a bien été ajouté à votre panier</h3>

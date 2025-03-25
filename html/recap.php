@@ -34,7 +34,7 @@
                         $total+=$options[$k][$i][1];
                     }
                     else{
-                        $options[$k][$i] = "";
+                        $options[$k][$i] = [];
                     }
                 }
             }
@@ -55,7 +55,7 @@
                         echo '<div>'.$etape["titre"].'</div>';
                         $optExiste=0;
                         foreach($etape["option"] as $i=>$option){
-                            if($options[$k][$i]!=""){
+                            if($options[$k][$i]!=[]){
                                 echo '<div>'.$options[$k][$i][0].'</div>';
                                 $optExiste=1;
                             }
@@ -66,8 +66,20 @@
                     }
 
                     if(!isset($_POST["type"]) || $_POST["type"] != achete){
+                        echo '<form action="ajout_panier.php" method="post">
+
+                        <input type="hidden" name="id" value="'.$id.'"></input>
+                        <input type="hidden" name="total" value="'.$total.'"></input>';
+
+                        foreach($voyages[$id]["etapes"] as $k => $etape){ 
+                            foreach($etape["option"] as $i=>$option){
+                                echo '<input type="hidden" name="option'.$k.$i.'" value="'.$_POST['option'.$k.$i].'">';
+                            }
+                        }
                         echo '<a href = "voyage.php?id='.$id.'"><button>Modifier</button></a>';
-                        echo '<a href = "ajout_panier.php?id='.$id.'"><button>Ajouter au panier</button></a>';
+                        echo' <button type="submit" name="submit">Ajouter au panier</button>
+
+                        </form>';
                     }
                     
 
