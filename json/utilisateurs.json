@@ -12,37 +12,9 @@
             "dob": "2006-04-25",
             "adresse": "18 rue de la croix des vignes"
         },
-        "voyages_achete": [
-            1,
-            2,
-            0,
-            5,
-            8,
-            7,
-            2,
-            0,
-            5,
-            8,
-            7
-        ],
-        "voyages_favoris": [
-            1,
-            2,
-            0,
-            5,
-            8,
-            7,
-            2,
-            0,
-            5,
-            8,
-            7
-        ],
-        "voyages_panier": [
-            1,
-            2,
-            0
-        ],
+        "voyages_achete": [],
+        "voyages_favoris": [],
+        "voyages_panier": [],
         "date d'inscription": "2025-03-21"
     },
     {
