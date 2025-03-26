@@ -176,7 +176,7 @@
                                     <td>'.$voyages[$achat["id"]]["lieu"].'</td>
                                     <td>'.$voyages[$achat["id"]]["depart"].'</td>
                                     <td>'.$voyages[$achat["id"]]["duree"].'</td>
-                                    <td>'.$voyages[$achat["id"]]["prix"].'€</td>
+                                    <td>'.$achat["total"].'€</td>
                                 </tr>';
                             }
                             if(isset($_POST["plus_achat"])){
@@ -194,11 +194,11 @@
                                         <button type="submit" name="submit">'.$voyages[$user["voyages_achete"][$i]]["titre"].'</button>
                                     </form>
                                     </td>
-                                    
+
                                     <td>'.$voyages[$user["voyages_achete"][$i]["id"]]["lieu"].'</td>
                                     <td>'.$voyages[$user["voyages_achete"][$i]["id"]]["depart"].'</td>
                                     <td>'.$voyages[$user["voyages_achete"][$i]["id"]]["duree"].'</td>
-                                    <td>'.$voyages[$user["voyages_achete"][$i]["id"]]["prix"].'€</td>
+                                    <td>'.$user["voyages_achete"][$i]["total"].'€</td>
                                 </tr>';
                             }
                             echo '<tr>
