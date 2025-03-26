@@ -84,13 +84,6 @@
                                     
                                 </div>';
                             }
-                            if(isset($_POST["plus_panier"])){
-                                echo '<tr>
-                                    <form action="profil.php" method="post" enctype="multipart/form-data">
-                                        <td colspan="5"><input type="submit" class="admin" value="Voir moins"></td>
-                                    </form>
-                                </tr>';
-                            }
                         }
                         else{
                             for($i=0;$i<3;$i++){
@@ -114,7 +107,16 @@
                     }
                     echo '</div>';
 
-                    
+                    echo '<div>';
+                        if(isset($_POST["plus_panier"])){
+                            echo '<tr>
+                                <form action="profil.php" method="post" enctype="multipart/form-data">
+                                    <td colspan="5"><input type="submit" class="admin" value="Voir moins"></td>
+                                </form>
+                            </tr>';
+                            }
+                    echo '</div>';
+
                     /*echo '
                     <p class="empty">d</p><p></p><p></p><p class="empty">.</p><p>----------------------------Favoris :----------------------------</p>
                     <p class="empty">d</p><p></p><p></p>';
