@@ -34,6 +34,7 @@
                         echo '
                         <fieldset class="formulaire connexion">';
                         if (isset($_GET["status"]) && $_GET["status"]=="accepted"){
+                                $users[$_SESSION["user_index"]-1]["voyages_achete"] = $users[$_SESSION["user_index"]-1]["voyages_panier"];
                                 $users[$_SESSION["user_index"]-1]["voyages_panier"] = [];
                                 echo 'Votre panier a été acheté';
                         }

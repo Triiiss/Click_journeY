@@ -35,6 +35,18 @@
                 $total=$user["voyages_panier"][$idPanier]["total"];
                 $options=$user["voyages_panier"][$idPanier]["options"];
             }
+            else if(isset($_POST["idAchat"])){
+                $users=get_data("../json/utilisateurs.json");
+                if($users===null){
+                    echo "<p>Problème de récupération des données côté serveur</p>";
+                }
+                $user=$users[$_SESSION["user_index"]-1];
+
+                $idAchat=$_POST["idAchat"];
+                $id=$user["voyages_achete"][$idAchat]["id"];
+                $total=$user["voyages_achete"][$idAchat]["total"];
+                $options=$user["voyages_achete"][$idAchat]["options"];
+            }
             else{
 
                 $id=$_POST["id"];
@@ -80,7 +92,6 @@
                     }
 
                     if(!isset($_POST["type"]) || $_POST["type"] != achete){
-                        echo '<a href = "voyage.php?id='.$id.'"><button>Modifier</button></a>';
                         echo '<form action="ajout_panier.php" method="post">
 
                         <input type="hidden" name="id" value="'.$id.'"></input>
@@ -91,7 +102,12 @@
                                 echo '<input type="hidden" name="option'.$k.$i.'" value="'.$options[$k][$i].'">';
                             }
                         }
-                        if(isset($_POST["idPanier"])!=true){
+
+                        if(isset($_POST["idAchat"])==false){
+                            echo '<a href = "voyage.php?id='.$id.'"><button>Modifier</button></a>';
+                        }
+
+                        if(isset($_POST["id"])){
                             echo' <button type="submit" name="submit">Ajouter au panier</button>';
                         }
                         echo '</form>';

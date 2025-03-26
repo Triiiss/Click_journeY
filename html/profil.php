@@ -149,7 +149,7 @@
 
 
 
-                    /*echo '<p class="empty">.</p><p>----------------------------Voyages achetés :----------------------------</p><p class="empty">.</p>
+                    echo '<p class="empty">.</p><p>----------------------------Voyages achetés :----------------------------</p><p class="empty">.</p>
                         <table class="achat">';
 
                     if(empty($user["voyages_achete"])){
@@ -164,13 +164,19 @@
                             <th>Prix</th>
                         </tr>';
                         if (count($user["voyages_achete"]) < 5 || isset($_POST["plus_achat"])){
-                            foreach ($user["voyages_achete"] as $achat){
+                            foreach ($user["voyages_achete"] as $i =>$achat){
                                 echo '<tr class="voyages_achat">
-                                    <td><form action="recap.php" method="POST"><input type="hidden" name="id" value="'.$user["voyages_achete"][$i].'"><input type="hidden" name="type" value="achete"><button type="submit" name="submit">'.$voyages[$achat]["titre"].'</button></form></td>
-                                    <td>'.$voyages[$achat]["lieu"].'</td>
-                                    <td>'.$voyages[$achat]["depart"].'</td>
-                                    <td>'.$voyages[$achat]["duree"].'</td>
-                                    <td>'.$voyages[$achat]["prix"].'€</td>
+                                    <td>
+                                    <form action="recap.php" method="post">
+                                        <input type="hidden" name="idAchat" value="'.$i.'"></input>
+                                        <button type="submit" name="submit">'.$voyages[$achat["id"]]["titre"].'</button>
+                                    </form>
+                                    </td>
+
+                                    <td>'.$voyages[$achat["id"]]["lieu"].'</td>
+                                    <td>'.$voyages[$achat["id"]]["depart"].'</td>
+                                    <td>'.$voyages[$achat["id"]]["duree"].'</td>
+                                    <td>'.$voyages[$achat["id"]]["prix"].'€</td>
                                 </tr>';
                             }
                             if(isset($_POST["plus_achat"])){
@@ -182,15 +188,17 @@
                         else{
                             for($i=0;$i<5;$i++){
                                 echo '<tr class="voyages_achat">
-                                    <td><form action="recap.php" method="POST">
-                                        <input type="hidden" name="id" value="'.$user["voyages_achete"][$i].'">
-                                        <input type="hidden" name="type" value="achete">
+                                    <td>
+                                    <form action="recap.php" method="post">
+                                        <input type="hidden" name="idAchat" value="'.$i.'"></input>
                                         <button type="submit" name="submit">'.$voyages[$user["voyages_achete"][$i]]["titre"].'</button>
-                                    </form></td>
-                                    <td>'.$voyages[$user["voyages_achete"][$i]]["lieu"].'</td>
-                                    <td>'.$voyages[$user["voyages_achete"][$i]]["depart"].'</td>
-                                    <td>'.$voyages[$user["voyages_achete"][$i]]["duree"].'</td>
-                                    <td>'.$voyages[$user["voyages_achete"][$i]]["prix"].'€</td>
+                                    </form>
+                                    </td>
+                                    
+                                    <td>'.$voyages[$user["voyages_achete"][$i]["id"]]["lieu"].'</td>
+                                    <td>'.$voyages[$user["voyages_achete"][$i]["id"]]["depart"].'</td>
+                                    <td>'.$voyages[$user["voyages_achete"][$i]["id"]]["duree"].'</td>
+                                    <td>'.$voyages[$user["voyages_achete"][$i]["id"]]["prix"].'€</td>
                                 </tr>';
                             }
                             echo '<tr>
@@ -198,7 +206,7 @@
                             </tr>';
                         }
                     }
-                    echo '</table>';*/
+                    echo '</table>';
                 ?>
             </fieldset>
 

@@ -112,12 +112,10 @@
             "dob": "2005-01-01",
             "adresse": "Pas \u00e0 CY tech"
         },
-        "voyages_achete": [],
-        "voyages_favoris": [],
-        "voyages_panier": [
+        "voyages_achete": [
             {
                 "id": 0,
-                "total": 245,
+                "total": 235,
                 "options": [
                     [
                         "Acclimatation",
@@ -133,7 +131,7 @@
                         ""
                     ],
                     [
-                        "Acclimatation",
+                        "",
                         "",
                         ""
                     ],
@@ -145,6 +143,8 @@
                 ]
             }
         ],
+        "voyages_favoris": [],
+        "voyages_panier": [],
         "date d'inscription": "2025-03-21"
     },
     {
