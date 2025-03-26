@@ -22,7 +22,7 @@
                     },
                     {
                         "titre":"location de sac de couchage",
-                        "prix":10
+                        "prix":5
                     }
                 ]
             },
@@ -38,12 +38,12 @@
                     },
                     {
                         "titre":"Déjeuner inclus",
-                        "prix":10
+                        "prix":5
 
                     },
                     {
                         "titre":"location de sac de couchage",
-                        "prix":10
+                        "prix":5
                     }
                 ]
             },
@@ -59,7 +59,7 @@
                     },
                     {
                         "titre":"location de sac de couchage",
-                        "prix":10
+                        "prix":5
                     }
                 ]
             },
@@ -75,11 +75,11 @@
                     },
                     {
                         "titre":"Diner inclus",
-                        "prix":10
+                        "prix":5
                     },
                     {
                         "titre":"location de sac de couchage",
-                        "prix":10
+                        "prix":5
                     }
                 ]
             },
@@ -95,11 +95,11 @@
                     },
                     {
                         "titre":"location de sac de couchage",
-                        "prix":10
+                        "prix":5
                     },
                     {
                         "titre":"location de skis",
-                        "prix":10
+                        "prix":20
                     }               
                 ]
             }
@@ -123,7 +123,10 @@
                 "fin": "2026-11-30",
                 "lieu":"Brașov",
                 "option":[
-                    "Ail"
+                    {
+                        "titre":"Ail",
+                        "prix":5
+                    }
                 ]
             },
             {
@@ -132,8 +135,14 @@
                 "fin": "2026-12-01",
                 "lieu":"6 pieds sous terre",
                 "option":[
-                    "Ail",
-                    "Détecteur de fantômes"
+                    {
+                        "titre":"Ail",
+                        "prix":5
+                    },
+                    {
+                        "titre":"Détecteur de fantômes",
+                        "prix":20
+                    }                 
                 ]
             }
         ]
@@ -156,8 +165,14 @@
                 "fin": "2026-06-19",
                 "lieu":"Plages de Hawaii",
                 "option":[
-                    "Activité surf",
-                    "Activité ski nautique"
+                    {
+                        "titre":"Activité surf",
+                        "prix":20
+                    },
+                    {
+                        "titre":"Activité ski nautique",
+                        "prix":35
+                    }                       
                 ]
             },
             {
@@ -166,7 +181,10 @@
                 "fin": "2026-06-25",
                 "lieu":"Kīlauea",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -175,7 +193,10 @@
                 "fin": "2026-06-26",
                 "lieu":"Dans la lave",
                 "option":[
-                    "Parasol"
+                    {
+                        "titre":"Parasol",
+                        "prix":10
+                    }                    
                 ]
             }
         ]
@@ -198,7 +219,10 @@
                 "fin": "2026-09-03",
                 "lieu":"Sur les rives de la Seine",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -207,7 +231,10 @@
                 "fin": "2026-09-06",
                 "lieu":"Métro parisien gare de Lyon",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -216,7 +243,10 @@
                 "fin": "2026-09-08",
                 "lieu":"Tour Eiffel",
                 "option":[
-                    "Saut en parachute"
+                    {
+                        "titre":"Saut en parachute",
+                        "prix":25
+                    }                    
                 ]
             }
         ]
@@ -239,7 +269,10 @@
                 "fin": "2026-02-19",
                 "lieu":"Palau",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -248,7 +281,10 @@
                 "fin": "2026-02-20",
                 "lieu":"-30m",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -257,7 +293,10 @@
                 "fin": "2026-02-20",
                 "lieu":"-200m",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -266,7 +305,10 @@
                 "fin": "2026-02-20",
                 "lieu":"-500m",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             }
         ]
@@ -289,8 +331,14 @@
                 "fin": "2026-05-03",
                 "lieu":"Alpes",
                 "option":[
-                    "Corde",
-                    "Chaussures d'escalade"
+                    {
+                        "titre":"Corde",
+                        "prix":40
+                    },
+                    {
+                        "titre":"Chaussures d'escalade",
+                        "prix":30
+                    }
                 ]
             },
             {
@@ -299,8 +347,14 @@
                 "fin": "2026-05-06",
                 "lieu":"Alpes",
                 "option":[
-                    "Corde",
-                    "Chaussures d'escalade"
+                    {
+                        "titre":"Corde",
+                        "prix":40
+                    },
+                    {
+                        "titre":"Chaussures d'escalade",
+                        "prix":30
+                    }
                 ]
             },
             {
@@ -309,8 +363,14 @@
                 "fin": "2026-05-10",
                 "lieu":"Alpes",
                 "option":[
-                    "Corde",
-                    "Chaussures d'escalade"
+                    {
+                        "titre":"Corde",
+                        "prix":40
+                    },
+                    {
+                        "titre":"Chaussures d'escalade",
+                        "prix":30
+                    }
                 ]
             }
         ]
@@ -333,7 +393,10 @@
                 "fin": "2026-08-15",
                 "lieu":"Paris Marne la Vallée Chessy",
                 "option":[
-                    "Déjeuner inclus"
+                    {
+                        "titre":"Déjeuner inclus",
+                        "prix":5
+                    }
                 ]
             },
             {
@@ -342,7 +405,10 @@
                 "fin": "2026-08-16",
                 "lieu":"TGV N°786137",
                 "option":[
-                    "Déjeuner inclus"
+                    {
+                        "titre":"Déjeuner inclus",
+                        "prix":5
+                    }
                 ]
             },
             {
@@ -351,7 +417,10 @@
                 "fin": "2026-08-16",
                 "lieu":"TGV N°525358",
                 "option":[
-                    "Déjeuner inclus"
+                    {
+                        "titre":"Déjeuner inclus",
+                        "prix":5
+                    }
                 ]
             }
         ]
@@ -374,7 +443,10 @@
                 "fin": "2875-06-20",
                 "lieu":"planète M195",
                 "option":[
-                    "Combinaison spatiale"
+                    {
+                        "titre":"Combinaison spatiale",
+                        "prix":50
+                    }                    
                 ]
             },
             {
@@ -383,7 +455,10 @@
                 "fin": "2878-10-02",
                 "lieu":"Centre de données",
                 "option":[
-                    "Schémas du vaisseau"
+                    {
+                        "titre":"Schémas du vaisseau",
+                        "prix":15
+                    }                    
                 ]
             },
             {
@@ -392,7 +467,10 @@
                 "fin": "2025-03-07",
                 "lieu":"L'espace temps",
                 "option":[
-                    "Déjeuner inclus"
+                    {
+                        "titre":"Déjeuner inclus",
+                        "prix":5
+                    }
                 ]
             }
         ]
@@ -415,7 +493,10 @@
                 "fin": "2026-07-27",
                 "lieu":"Centre de recherche",
                 "option":[
-                    "Chauffage"
+                    {
+                        "titre":"Chauffage",
+                        "prix":30
+                    }                    
                 ]
             },
             {
@@ -424,7 +505,10 @@
                 "fin": "2026-07-29",
                 "lieu":"Sur la banquise",
                 "option":[
-                    "Arme"
+                    {
+                        "titre":"Arme",
+                        "prix":60
+                    }                      
                 ]
             },
             {
@@ -433,7 +517,10 @@
                 "fin": "2026-08-03",
                 "lieu":"Sur la banquise",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -442,7 +529,10 @@
                 "fin": "2026-08-08",
                 "lieu":"Dans une grotte de glace",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             }
         ]
@@ -465,7 +555,10 @@
                 "fin": "2026-02-18",
                 "lieu":"Crab Island capital",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -474,7 +567,10 @@
                 "fin": "2026-02-19",
                 "lieu":"Crab Island sur la plage",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             }
         ]
@@ -497,7 +593,10 @@
                 "fin": "2026-08-28",
                 "lieu":"Côtes de Norvège",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -506,7 +605,10 @@
                 "fin": "2026-08-30",
                 "lieu":"Campagne sans lumière",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             }
         ]
@@ -529,7 +631,10 @@
                 "fin": "2026-03-29",
                 "lieu":"Aurillac",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -538,7 +643,10 @@
                 "fin": "2026-03-30",
                 "lieu":"???",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -547,7 +655,10 @@
                 "fin": "2026-03-31",
                 "lieu":"??????",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             }
         ]
@@ -570,7 +681,10 @@
                 "fin": "2026-09-15",
                 "lieu":"Entrée",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -579,7 +693,10 @@
                 "fin": "2026-09-15",
                 "lieu":"Fond du laboratoire",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -588,7 +705,10 @@
                 "fin": "2026-09-16",
                 "lieu":"Commissariat de police",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             }
         ]
@@ -611,7 +731,10 @@
                 "fin": "2026-10-11",
                 "lieu":"Tokyo",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -620,7 +743,10 @@
                 "fin": "2026-10-13",
                 "lieu":"Forêt d'Aokigahara",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -629,7 +755,10 @@
                 "fin": "2026-10-14",
                 "lieu":"paradis",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             }
         ]
@@ -652,7 +781,10 @@
                 "fin": "2026-01-23",
                 "lieu":"sur la dune n°52",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -661,7 +793,10 @@
                 "fin": "2026-01-25",
                 "lieu":"Oasis (et pas fanta ahahahaha)",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -670,7 +805,10 @@
                 "fin": "2026-01-25",
                 "lieu":"Egypte",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             }
         ]
@@ -693,7 +831,10 @@
                 "fin": "2026-12-07",
                 "lieu":"Wow, ça se forme vachement près de nous non ?",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -702,7 +843,10 @@
                 "fin": "2026-12-09",
                 "lieu":"Au milieu d'un cyclone",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             },
             {
@@ -711,7 +855,10 @@
                 "fin": "2026-12-09",
                 "lieu":"Dans les airs",
                 "option":[
-                    "Acclimatation"
+                    {
+                        "titre":"Acclimatation",
+                        "prix":10
+                    }
                 ]
             }
         ]
