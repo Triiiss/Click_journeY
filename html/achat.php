@@ -53,10 +53,15 @@
                         }
                         else{
                                 foreach($user["voyages_panier"] as $k=> $panier){
-                                        echo '<a href="voyage.php?id='.$panier.'"><img src="'.$voyages[$panier]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>
-                                        <p><b>'.$voyages[$panier]["titre"].'</b>
-                                        <br><br><br>de '.$voyages[$panier]["depart"].' à '.$voyages[$panier]["fin"].'<br>Durée '.$voyages[$panier]["duree"].'<br><br>Description '.$voyages[$panier]["description"].'<br><br>Prix '.$voyages[$panier]["prix"].'</p>';
-                                        $sum+=$voyages[$panier]["prix"];
+                                        echo '<a href="voyage.php?id='.$panier["id"].'"><img src="'.$voyages[$panier["id"]]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>
+                                        <p><b>'.$voyages[$panier["id"]]["titre"].'</b>
+                                        <br><br><br>de '.$voyages[$panier["id"]]["depart"].' à '.$voyages[$panier["id"]]["fin"].
+                                        '<br>Durée '.$voyages[$panier["id"]]["duree"].
+                                        '<br><br>Description '.$voyages[$panier["id"]]["description"].
+                                        '<br><br>Prix de base'.$voyages[$panier["id"]]["prix"].
+                                        '<br><br>Prix total'.$panier["total"].
+                                        '</p>';
+                                        $sum+=$panier["total"];
                                 }
 
                                 echo '<p class="empty">a</p><p></p>
