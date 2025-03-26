@@ -117,7 +117,6 @@
                         $count++;  
                     }
                 }
-
                 if($count%3 != 0){
                         echo '</div>';
                 }
@@ -125,8 +124,9 @@
                 if($page>1){
                     echo '<a href="recherche.php?page='.($page-1).'&search='.$recherche.'"><button type="button">Page précédente</button></a>';
                 }
-                //A FAIRE page suivante
-                echo '<a href="recherche.php?page='.($page+1).'&search='.$recherche.'"><button type="button">Page suivante</button></a>';             
+                if($count>=9*$page){
+                    echo '<a href="recherche.php?page='.($page+1).'&search='.$recherche.'"><button type="button">Page suivante</button></a>';             
+                }
                 
             ?>
             </div>
