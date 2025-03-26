@@ -90,7 +90,8 @@
                 
                 foreach($voyages as $k=> $voyage){
                     if((strpos(strtolower($voyage["mots_cles"]), strtolower($recherche))!==false ||
-                    strpos(strtolower($voyage["titre"]), strtolower($recherche))!==false) 
+                    strpos(strtolower($voyage["titre"]), strtolower($recherche))!==false||
+                    strpos(strtolower($voyage["lieu"]), strtolower($recherche))!==false)
                     && $recherche!=""){
                         if(($count)%3==0){
                             echo '<div class="grpV">';
