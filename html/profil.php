@@ -48,6 +48,7 @@
                             $user["voyages_panier"] = array_values($user["voyages_panier"]);
                             $users[$_SESSION["user_index"]-1]["voyages_panier"] = array_values($users[$_SESSION["user_index"]-1]["voyages_panier"]);
                         }
+                        /*
                         if(isset($_POST["supp_".$user['login']."_favoris_".$i])){
                             unset($user["voyages_favoris"][$i]);
                             unset($users[$_SESSION["user_index"]-1]["voyages_favoris"][$i]);
@@ -55,6 +56,7 @@
                             $user["voyages_favoris"] = array_values($user["voyages_favoris"]);
                             $users[$_SESSION["user_index"]-1]["voyages_favoris"] = array_values($users[$_SESSION["user_index"]-1]["voyages_favoris"]);
                         }
+                        */
                     }
                     file_put_contents('../json/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
 
@@ -101,7 +103,7 @@
                     echo '</div>';
 
                     
-                    echo '
+                    /*echo '
                     <p class="empty">d</p><p></p><p></p><p class="empty">.</p><p>----------------------------Favoris :----------------------------</p>
                     <p class="empty">d</p><p></p><p></p>';
                     if(empty($user["voyages_favoris"])){
@@ -133,11 +135,11 @@
                                 <p colspan="5"><input type="submit" class="admin" name="plus_favoris" value="Voir plus"></p>';
                         }
                         echo '</div>';
-                    }
+                    }*/
 
 
 
-                    echo '<p class="empty">.</p><p>----------------------------Voyages achetés :----------------------------</p><p class="empty">.</p>
+                    /*echo '<p class="empty">.</p><p>----------------------------Voyages achetés :----------------------------</p><p class="empty">.</p>
                         <table class="achat">';
 
                     if(empty($user["voyages_achete"])){
@@ -186,7 +188,7 @@
                             </tr>';
                         }
                     }
-                    echo '</table>';
+                    echo '</table>';*/
                 ?>
             </fieldset>
 
