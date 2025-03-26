@@ -84,7 +84,10 @@
                 $voyages=json_decode($json_voyages, true);
                 $count=0;
 
-                $recherche=$_POST["search"];
+                if(isset($_POST["search"])){
+                    $recherche=$_POST["search"];
+                }
+                
                 foreach($voyages as $k=> $voyage){
                     if(strpos($voyage["mots_cles"], $recherche)!==false && $recherche!=""){
                         if(($count)%3==0){
@@ -112,15 +115,15 @@
             </fieldset>
         </form>
    
-        <h3 class="voyages">Recommendations</h3>
+        <h3 class="voyages">Les plus récents</h3>
 
         <div class="voyages all">
         <?php 
-            foreach($voyages as $k=> $voyage){
-                if(isset($voyage)){
+            for($i=count($voyages);$i>count($voyages)-7;$i--){
+                if(isset($voyages[$i])){
                     echo '<div class="itineraire">';
-                    echo '<a href="voyage.php?id='.$k.'"><img src="'.$voyage["image"].'" class="imgVoyage" alt="photo_voyage""/></a>';
-                    echo '<div class="titreVoyage">'.$voyage["titre"].'</div>';   
+                    echo '<a href="voyage.php?id='.$i.'"><img src="'.$voyages[$i]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>';
+                    echo '<div class="titreVoyage">'.$voyages[$i]["titre"].'</div>';   
                     echo '</div>';                
                 }
             }
