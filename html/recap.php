@@ -80,6 +80,7 @@
                     }
 
                     if(!isset($_POST["type"]) || $_POST["type"] != achete){
+                        echo '<a href = "voyage.php?id='.$id.'"><button>Modifier</button></a>';
                         echo '<form action="ajout_panier.php" method="post">
 
                         <input type="hidden" name="id" value="'.$id.'"></input>
@@ -90,10 +91,10 @@
                                 echo '<input type="hidden" name="option'.$k.$i.'" value="'.$options[$k][$i].'">';
                             }
                         }
-                        echo '<a href = "voyage.php?id='.$id.'"><button>Modifier</button></a>';
-                        echo' <button type="submit" name="submit">Ajouter au panier</button>
-
-                        </form>';
+                        if(isset($_POST["idPanier"])!=true){
+                            echo' <button type="submit" name="submit">Ajouter au panier</button>';
+                        }
+                        echo '</form>';
                     }
                     
 

@@ -86,8 +86,12 @@
                         else{
                             for($i=0;$i<3;$i++){
                                 echo '<div class="itineraire">
-                                    <a href="voyage.php?id='.$user["voyages_panier"][$i].'"><img src="'.$voyages[$user["voyages_panier"][$i]]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>
-                                    <div class="titreVoyage">'.$voyages[$user["voyages_panier"][$i]]["titre"].'<button type="submit" class="edit_icon" name="supp_'.$user['login'].'_panier_'.$i.'">X</button></div>
+                                    <form action="recap.php" method="post" id="panier">
+                                        <input type="hidden" name="idPanier" value="'.$k.'"></input>
+                                        <input type="image" form="panier" src="'.$voyages[$user["voyages_panier"][$i]]["image"].'" class="imgVoyage" alt="photo_voyage"></input>
+                                    </form>
+
+                                    <div class="titreVoyage">'.$voyages[$user["voyages_panier"][$i]]["titre"].'<button type="submit" class="edit_icon" form="global" name="supp_'.$user['login'].'_panier_'.$i.'">X</button></div>
                                 </div>';
                             }
                             echo '<p></p>
