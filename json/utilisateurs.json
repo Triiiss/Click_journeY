@@ -173,6 +173,21 @@
                         ""
                     ]
                 ]
+            },
+            {
+                "id": 13,
+                "total": 340,
+                "options": [
+                    [
+                        "Acclimatation"
+                    ],
+                    [
+                        ""
+                    ],
+                    [
+                        "Acclimatation"
+                    ]
+                ]
             }
         ],
         "date d'inscription": "2025-03-21"
