@@ -91,34 +91,38 @@
                     $recherche=$_GET["search"];
                 }
 
-                $page=0;
-                $idDebut=0;
+                $page=1;
                 
                 if(isset($_GET["page"])){
                     $page=$_GET["page"];
-                    $idDebut=10*$_GET["page"];
                 }
 
-                for ($i=$idDebut; $i < $idDebut+9; $i++) { 
-                    if((strpos(strtolower($voyages[$i]["mots_cles"]), strtolower($recherche))!==false ||
-                    strpos(strtolower($voyages[$i]["titre"]), strtolower($recherche))!==false||
-                    strpos(strtolower($voyages[$i]["lieu"]), strtolower($recherche))!==false)
-                    && $recherche!=""){
-                        if(($count)%3==0){
-                            echo '<div class="grpV">';
+                foreach($voyages as $k=> $voyage){
+                    if((strpos(strtolower($voyage["mots_cles"]), strtolower($recherche))!==false ||
+                    strpos(strtolower($voyage["titre"]), strtolower($recherche))!==false||
+                    strpos(strtolower($voyage["lieu"]), strtolower($recherche))!==false)
+                    && $recherche!="" && $count<9*$page){
+                        if($count>=9*($page-1)){
+                            if(($count)%3==0){
+                                echo '<div class="grpV">';
+                            }
+                            echo '<div class="itineraire">';
+                            echo '<a href="voyage.php?id='.$k.'"><img src="'.$voyage["image"].'" class="imgVoyage" alt="photo_voyage"/></a>';
+                            echo '<div class="titreVoyage">'.$voyage["titre"].'</div>';          
+                            echo '</div>'; 
+                            if(($count+1)%3 == 0){
+                                echo '</div>';
+                            }     
                         }
-                        echo '<div class="itineraire">';
-                        echo '<a href="voyage.php?id='.$i.'"><img src="'.$voyages[$i]["image"].'" class="imgVoyage" alt="photo_voyage"/></a>';
-                        echo '<div class="titreVoyage">'.$voyages[$i]["titre"].'</div>';          
-                        echo '</div>'; 
-                        if(($count+1)%3 == 0){
-                            echo '</div>';
-                        }     
                         $count++;  
                     }
                 }
 
-                if($page>0){
+                if($count%3 != 0){
+                        echo '</div>';
+                }
+
+                if($page>1){
                     echo '<a href="recherche.php?page='.($page-1).'&search='.$recherche.'"><button type="button">Page précédente</button></a>';
                 }
                 //A FAIRE page suivante
