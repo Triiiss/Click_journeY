@@ -144,7 +144,37 @@
             }
         ],
         "voyages_favoris": [],
-        "voyages_panier": [],
+        "voyages_panier": [
+            {
+                "id": 0,
+                "total": 225,
+                "options": [
+                    [
+                        "Acclimatation",
+                        ""
+                    ],
+                    [
+                        "",
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        "",
+                        ""
+                    ]
+                ]
+            }
+        ],
         "date d'inscription": "2025-03-21"
     },
     {

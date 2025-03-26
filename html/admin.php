@@ -332,7 +332,7 @@
                                                         echo '<td colspan="2">None</td>';
                                                     }
                                                     else{
-                                                        echo '<td>'.$voyages[$user["voyages_panier"][0]]["titre"].'</td>
+                                                        echo '<td>'.$voyages[$user["voyages_panier"][0]["id"]]["titre"].'</td>
                                                         <td><button type="submit" class="edit_icon" name="supp_'.$user['login'].'_panier_0">X</button></td>';
                                                     }
                                                     echo '<td colspan="2"><b>Favoris :</b></td>';
@@ -348,7 +348,7 @@
                                                         echo '<td colspan="2">None</td>';
                                                     }
                                                     else{
-                                                        echo '<td>'.$voyages[$user["voyages_achete"][0]]["titre"].'</td>
+                                                        echo '<td>'.$voyages[$user["voyages_achete"][0]["id"]]["titre"].'</td>
                                                         <td><button type="submit" class="edit_icon" name="supp_'.$user['login'].'_achat_0">X</button></td>';
                                                     }
 
@@ -356,7 +356,7 @@
                                                     echo '</tr>
                                                             <td class="empty" colspan="4"></td>';
                                                     if (isset($user["voyages_panier"][$i])){
-                                                        echo '<td>'.$voyages[$user["voyages_panier"][$i]]["titre"].'</td>
+                                                        echo '<td>'.$voyages[$user["voyages_panier"][$i]["id"]]["titre"].'</td>
                                                         <td><button type="submit" class="edit_icon" name="supp_'.$user['login'].'_panier_'.$i.'">X</button></td>';
                                                     }
                                                     else{
@@ -372,7 +372,7 @@
                                                     }
                                                     echo '<td class="empty" colspan="2"></td>';
                                                     if (isset($user["voyages_achete"][$i])){
-                                                        echo '<td>'.$voyages[$user["voyages_achete"][$i]]["titre"].'</td>
+                                                        echo '<td>'.$voyages[$user["voyages_achete"][$i]["id"]]["titre"].'</td>
                                                         <td><button type="submit" class="edit_icon" name="supp_'.$user['login'].'_achat_'.$i.'">X</button></td>';
                                                     }
                                                 
