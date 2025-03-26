@@ -35,13 +35,13 @@
 
         <?php bandeau("profil");?>
 
-        <form action="profil.php" method="POST" id="global" enctype="multipart/form-data">
-            <fieldset class="formulaire voyages">
+
+        <fieldset class="formulaire voyages">
                 <legend>Voyages</legend>
     
                 <?php
-                    for($i=max(count($user["voyages_favoris"]),count($user["voyages_panier"]));$i>=-2;$i--){
-                        if(isset($_POST["supp_".$user['login']."_panier_".$i])){
+                    for($i=max(count($user["voyages_favoris"]),count($user["voyages_panier"]));$i>=0;$i--){
+                        if(isset($_POST['supp_'.$user["login"].'_panier_'.$i])){
                             unset($user["voyages_panier"][$i]);
                             unset($users[$_SESSION["user_index"]-1]["voyages_panier"][$i]);
 
@@ -69,14 +69,19 @@
                     }
                     else{
                         if(count($user["voyages_panier"]) <= 3 || isset($_POST["plus_panier"])){
-                            foreach ($user["voyages_panier"] as $k=>$panier){
+                            foreach ($user["voyages_panier"] as $i=>$panier){
                                 echo '<div class="itineraire">
-                                    <form action="recap.php" method="post" id="panier">
-                                        <input type="hidden" name="idPanier" value="'.$k.'"></input>
-                                        <input type="image" form="panier" src="'.$voyages[$panier["id"]]["image"].'" class="imgVoyage" alt="photo_voyage"></input>
+                                    <form action="recap.php" method="post">
+                                        <input type="hidden" name="idPanier" value="'.$i.'"></input>
+                                        <input type="image" src="'.$voyages[$panier["id"]]["image"].'" class="imgVoyage" alt="photo_voyage"></input>
                                     </form>
 
-                                    <div class="titreVoyage">'.$voyages[$panier["id"]]["titre"].'<button type="submit" class="edit_icon" form="global" name="supp_'.$user['login'].'_panier_'.$i.'">X</button></div>
+                                    <form action="profil.php" method="post" enctype="multipart/form-data">
+                                        <div class="titreVoyage">'.$voyages[$panier["id"]]["titre"].
+                                        '<button type="submit" class="edit_icon" name="supp_'.$user['login'].'_panier_'.$i.'">X</button>
+                                        </div>
+                                    </form>
+                                    
                                 </div>';
                             }
                             if(isset($_POST["plus_panier"])){
@@ -88,16 +93,21 @@
                         else{
                             for($i=0;$i<3;$i++){
                                 echo '<div class="itineraire">
-                                    <form action="recap.php" method="post" id="panier">
-                                        <input type="hidden" name="idPanier" value="'.$k.'"></input>
-                                        <input type="image" form="panier" src="'.$voyages[$user["voyages_panier"][$i]]["image"].'" class="imgVoyage" alt="photo_voyage"></input>
+                                    <form action="recap.php" method="post">
+                                        <input type="hidden" name="idPanier" value="'.$i.'"></input>
+                                        <input type="image" src="'.$voyages[$user["voyages_panier"][$i]]["image"].'" class="imgVoyage" alt="photo_voyage"></input>
                                     </form>
 
-                                    <div class="titreVoyage">'.$voyages[$user["voyages_panier"][$i]]["titre"].'<button type="submit" class="edit_icon" form="global" name="supp_'.$user['login'].'_panier_'.$i.'">X</button></div>
+                                    <form action="profil.php" method="post" enctype="multipart/form-data">
+                                        <div class="titreVoyage">'.$voyages[$user["voyages_panier"][$i]]["titre"].'<button type="submit" class="edit_icon" name="supp_'.$user['login'].'_panier_'.$i.'">X</button></div>
+                                    </form>
+
                                 </div>';
                             }
                             echo '<p></p>
-                                <p colspan="5"><input type="submit" class="admin" name="plus_panier" value="Voir plus"></p>';
+                            <form action="profil.php" method="post" enctype="multipart/form-data">
+                                <p colspan="5"><input type="submit" class="admin" name="plus_panier" value="Voir plus"></p>
+                            </form>';
                         }
                     }
                     echo '</div>';
@@ -194,7 +204,9 @@
 
             <br>
 
-            <fieldset class="formulaire profil">
+
+            <form action="profil.php" method="POST" enctype="multipart/form-data">
+                <fieldset class="formulaire profil">
                 <?php
                     if (file_exists("../images/profil_picture/profil_picture_".$_SESSION['login'])){
                         echo '<legend>Profil <img src="../images/profil_picture/profil_picture_'.$_SESSION['login'].'" class="profil_picture"/></legend>';
@@ -409,8 +421,8 @@
                     <p><input type="submit" name="supp" value="Supprimer le compte"></p>
                         
                     <input type="submit" name="deco" value="Déconnexion">
-            </fieldset>
-        </form>
+                </fieldset>
+            </form>
 
         <br><br>
         <div class="afterimage">

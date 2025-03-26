@@ -114,7 +114,37 @@
         },
         "voyages_achete": [],
         "voyages_favoris": [],
-        "voyages_panier": [],
+        "voyages_panier": [
+            {
+                "id": 0,
+                "total": 245,
+                "options": [
+                    [
+                        "Acclimatation",
+                        ""
+                    ],
+                    [
+                        "",
+                        "D\u00e9jeuner inclus",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "Acclimatation",
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        "",
+                        ""
+                    ]
+                ]
+            }
+        ],
         "date d'inscription": "2025-03-21"
     },
     {
