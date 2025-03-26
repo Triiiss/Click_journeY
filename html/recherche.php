@@ -98,6 +98,7 @@
                 }
 
                 foreach($voyages as $k=> $voyage){
+                    //on compare la recherche avec les mots clés, le titre et le lieu de chaque voyage
                     if((strpos(strtolower($voyage["mots_cles"]), strtolower($recherche))!==false ||
                     strpos(strtolower($voyage["titre"]), strtolower($recherche))!==false||
                     strpos(strtolower($voyage["lieu"]), strtolower($recherche))!==false)

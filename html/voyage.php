@@ -24,6 +24,8 @@
             $json_voyages=file_get_contents("../json/voyages.json");
             $voyages=json_decode($json_voyages, true);
             $id=$_GET["id"];
+            
+            //affichage des infos du voyage
             echo '<div class=voyages>';
                 echo '<img src="'.$voyages[$id]["image"].'" class="imgDetail" alt="photo_voyage""/>';
                 echo '<div class=recap>';

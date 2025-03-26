@@ -40,6 +40,7 @@
                 <legend>Voyages</legend>
     
                 <?php
+                    //suppression voyage
                     for($i=max(count($user["voyages_favoris"]),count($user["voyages_panier"]));$i>=0;$i--){
                         if(isset($_POST['supp_'.$user["login"].'_panier_'.$i])){
                             unset($user["voyages_panier"][$i]);
@@ -48,6 +49,7 @@
                             $user["voyages_panier"] = array_values($user["voyages_panier"]);
                             $users[$_SESSION["user_index"]-1]["voyages_panier"] = array_values($users[$_SESSION["user_index"]-1]["voyages_panier"]);
                         }
+                        //voyage favoris pas encore implémentée
                         /*
                         if(isset($_POST["supp_".$user['login']."_favoris_".$i])){
                             unset($user["voyages_favoris"][$i]);
@@ -62,6 +64,7 @@
 
                     echo '<div class="all">';
 
+                    //afichage panier
                     echo '<p>----------------------------</p><p>---------Panier : --------</p> <p>----<button class="admin"><a class="acheter" href="achat.php">Payer le panier</a></button>----</p>
                     <p class="empty">d</p><p></p><p></p>';
                     if(empty($user["voyages_panier"])){
@@ -151,8 +154,7 @@
                         echo '</div>';
                     }*/
 
-
-
+                    //affichage voyages achetés
                     echo '<p class="empty">.</p><p>----------------------------Voyages achetés :----------------------------</p><p class="empty">.</p>
                         <table class="achat">';
 

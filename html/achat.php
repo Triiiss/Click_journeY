@@ -30,12 +30,14 @@
         <?php bandeau("panier");?>
 
         <?php
+                //Après paiement
                 if(isset($_GET["transaction"]) && $_GET["transaction"]=="154632ABCD"){
                         echo '
                         <fieldset class="formulaire connexion">';
                         if (isset($_GET["status"]) && $_GET["status"]=="accepted"){
-
-                                $users[$_SESSION["user_index"]-1]["voyages_achete"]=array_merge($users[$_SESSION["user_index"]-1]["voyages_achete"],$users[$_SESSION["user_index"]-1]["voyages_panier"]);                            
+                                //on rajoute les voyages du panier dans les voyages achetés
+                                $users[$_SESSION["user_index"]-1]["voyages_achete"]=array_merge($users[$_SESSION["user_index"]-1]["voyages_achete"],$users[$_SESSION["user_index"]-1]["voyages_panier"]);
+                                //on supprime les voyages du panier                            
                                 $users[$_SESSION["user_index"]-1]["voyages_panier"] = [];
 
                                 echo 'Votre panier a été acheté';
@@ -52,9 +54,10 @@
                         $sum=0;
                         if(empty($user["voyages_panier"])){
                                 echo '<p>Votre panier est vide</p>
-                                        <p>Trouvez vos <a href="rercherche.php">nouveaux voyages</a></p>';
+                                        <p>Trouvez vos <a href="recherche.php">nouveaux voyages</a></p>';
                         }
                         else{
+                                //affichage des informations de chaque voyage du panier
                                 foreach($user["voyages_panier"] as $k=> $panier){
                                         echo '<a href="voyage.php?id='.$panier["id"].'"><img src="'.$voyages[$panier["id"]]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>
                                         <p><b>'.$voyages[$panier["id"]]["titre"].'</b>
@@ -64,12 +67,14 @@
                                         '<br><br>Prix de base : '.$voyages[$panier["id"]]["prix"].' €
                                         <br><br>Prix total : '.$panier["total"].' €
                                         </p>';
+                                        //ajout du prix du voyage au prix total du panier
                                         $sum+=$panier["total"];
                                 }
 
                                 echo '<p class="empty">a</p><p></p>
                                 <p></p> <p><b>Total :</b> '.$sum.'€</p>';
                         }
+                        //formulaire de paiement
                         echo '<p></p>
                         <form action="https://www.plateforme-smc.fr/cybank/index.php" method="POST">
                                 <input type="hidden" name="transaction" value="154632ABCD">

@@ -23,6 +23,9 @@
             $json_voyages=file_get_contents("../json/voyages.json");
             $voyages=json_decode($json_voyages, true);
 
+            //On récupère l'id, le prix total et les options choisies du voyage
+
+            //cas où la page est accédée depuis le panier
             if(isset($_POST["idPanier"])){
                 $users=get_data("../json/utilisateurs.json");
                 if($users===null){
@@ -35,6 +38,7 @@
                 $total=$user["voyages_panier"][$idPanier]["total"];
                 $options=$user["voyages_panier"][$idPanier]["options"];
             }
+            //cas où la page est accédée depuis la liste des voyages achetés
             else if(isset($_POST["idAchat"])){
                 $users=get_data("../json/utilisateurs.json");
                 if($users===null){
@@ -47,8 +51,8 @@
                 $total=$user["voyages_achete"][$idAchat]["total"];
                 $options=$user["voyages_achete"][$idAchat]["options"];
             }
+            //cas où la page est accédée depuis la recherche
             else{
-
                 $id=$_POST["id"];
                 $total=$voyages[$id]["prix"];
 
@@ -117,8 +121,6 @@
                 echo '</div>';
             echo '</div>';
 
-            
-            
         ?>
 
         <br><br>

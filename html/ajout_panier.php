@@ -27,9 +27,11 @@
 
             $id=$_POST["id"];
             $total=$_POST["total"];
-            
+
+            //pour chaque étape, on ajoute les options sélectionnées dans un tableau
             foreach($voyages[$id]["etapes"] as $k=> $etape){
                 foreach($etape["option"] as $i=>$option){
+                    //Si l'option est sélectionnée on met le nom de l'option dans le tableau sinon une chaîne vide
                     if(isset($_POST['option'.$k.$i])){
                         $options[$k][$i] = $_POST['option'.$k.$i] ;
                     }
@@ -38,6 +40,7 @@
                     }
                 }
             }
+            //ajout des données dans le panier de l'utilisateur
             array_push($users[$_SESSION["user_index"]-1]["voyages_panier"], array(
                 "id"=>intval($id),
                 "total"=>intval($total),
