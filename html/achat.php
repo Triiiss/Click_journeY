@@ -34,12 +34,14 @@
                         echo '
                         <fieldset class="formulaire connexion">';
                         if (isset($_GET["status"]) && $_GET["status"]=="accepted"){
-                                $users[$_SESSION["user_index"]-1]["voyages_achete"] = $users[$_SESSION["user_index"]-1]["voyages_panier"];
+
+                                $users[$_SESSION["user_index"]-1]["voyages_achete"]=array_merge($users[$_SESSION["user_index"]-1]["voyages_achete"],$users[$_SESSION["user_index"]-1]["voyages_panier"]);                            
                                 $users[$_SESSION["user_index"]-1]["voyages_panier"] = [];
+
                                 echo 'Votre panier a été acheté';
                         }
                         else{
-                                echo 'L\'achat de votre panier a achoué';
+                                echo 'L\'achat de votre panier a échoué';
                         }
                         echo '</fieldset>';
                 }
@@ -57,11 +59,11 @@
                                         echo '<a href="voyage.php?id='.$panier["id"].'"><img src="'.$voyages[$panier["id"]]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>
                                         <p><b>'.$voyages[$panier["id"]]["titre"].'</b>
                                         <br><br><br>de '.$voyages[$panier["id"]]["depart"].' à '.$voyages[$panier["id"]]["fin"].
-                                        '<br>Durée '.$voyages[$panier["id"]]["duree"].
-                                        '<br><br>Description '.$voyages[$panier["id"]]["description"].
-                                        '<br><br>Prix de base'.$voyages[$panier["id"]]["prix"].
-                                        '<br><br>Prix total'.$panier["total"].
-                                        '</p>';
+                                        '<br>Durée : '.$voyages[$panier["id"]]["duree"].
+                                        '<br><br>Description : '.$voyages[$panier["id"]]["description"].
+                                        '<br><br>Prix de base : '.$voyages[$panier["id"]]["prix"].' €
+                                        <br><br>Prix total : '.$panier["total"].' €
+                                        </p>';
                                         $sum+=$panier["total"];
                                 }
 

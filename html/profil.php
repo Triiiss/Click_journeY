@@ -197,7 +197,7 @@
                                     <td>
                                     <form action="recap.php" method="post">
                                         <input type="hidden" name="idAchat" value="'.$i.'"></input>
-                                        <button type="submit" name="submit">'.$voyages[$user["voyages_achete"][$i]]["titre"].'</button>
+                                        <button type="submit" name="submit">'.$voyages[$user["voyages_achete"][$i]["id"]]["titre"].'</button>
                                     </form>
                                     </td>
 

@@ -114,61 +114,17 @@
         },
         "voyages_achete": [
             {
-                "id": 0,
-                "total": 235,
-                "options": [
-                    [
-                        "Acclimatation",
-                        ""
-                    ],
-                    [
-                        "",
-                        "D\u00e9jeuner inclus",
-                        ""
-                    ],
-                    [
-                        "",
-                        ""
-                    ],
-                    [
-                        "",
-                        "",
-                        ""
-                    ],
-                    [
-                        "",
-                        "",
-                        ""
-                    ]
-                ]
-            }
-        ],
-        "voyages_favoris": [],
-        "voyages_panier": [
-            {
-                "id": 14,
-                "total": 107,
-                "options": [
-                    [
-                        "Acclimatation"
-                    ],
-                    [
-                        ""
-                    ],
-                    [
-                        "Acclimatation"
-                    ]
-                ]
-            },
-            {
-                "id": 12,
-                "total": 109,
+                "id": 4,
+                "total": 150,
                 "options": [
                     [
                         ""
                     ],
                     [
-                        "Acclimatation"
+                        ""
+                    ],
+                    [
+                        ""
                     ],
                     [
                         ""
@@ -176,14 +132,14 @@
                 ]
             },
             {
-                "id": 11,
-                "total": 40,
+                "id": 6,
+                "total": 90,
                 "options": [
                     [
                         ""
                     ],
                     [
-                        "Acclimatation"
+                        ""
                     ],
                     [
                         ""
@@ -191,12 +147,9 @@
                 ]
             },
             {
-                "id": 14,
-                "total": 87,
+                "id": 9,
+                "total": 260,
                 "options": [
-                    [
-                        ""
-                    ],
                     [
                         ""
                     ],
@@ -206,6 +159,8 @@
                 ]
             }
         ],
+        "voyages_favoris": [],
+        "voyages_panier": [],
         "date d'inscription": "2025-03-21"
     },
     {
