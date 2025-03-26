@@ -86,7 +86,9 @@
                             }
                             if(isset($_POST["plus_panier"])){
                                 echo '<tr>
-                                    <td colspan="5"><input type="submit" class="admin" value="Voir moins"></td>
+                                    <form action="profil.php" method="post" enctype="multipart/form-data">
+                                        <td colspan="5"><input type="submit" class="admin" value="Voir moins"></td>
+                                    </form>
                                 </tr>';
                             }
                         }
@@ -95,11 +97,11 @@
                                 echo '<div class="itineraire">
                                     <form action="recap.php" method="post">
                                         <input type="hidden" name="idPanier" value="'.$i.'"></input>
-                                        <input type="image" src="'.$voyages[$user["voyages_panier"][$i]]["image"].'" class="imgVoyage" alt="photo_voyage"></input>
+                                        <input type="image" src="'.$voyages[$user["voyages_panier"][$i]["id"]]["image"].'" class="imgVoyage" alt="photo_voyage"></input>
                                     </form>
 
                                     <form action="profil.php" method="post" enctype="multipart/form-data">
-                                        <div class="titreVoyage">'.$voyages[$user["voyages_panier"][$i]]["titre"].'<button type="submit" class="edit_icon" name="supp_'.$user['login'].'_panier_'.$i.'">X</button></div>
+                                        <div class="titreVoyage">'.$voyages[$user["voyages_panier"][$i]["id"]]["titre"].'<button type="submit" class="edit_icon" name="supp_'.$user['login'].'_panier_'.$i.'">X</button></div>
                                     </form>
 
                                 </div>';
@@ -181,7 +183,9 @@
                             }
                             if(isset($_POST["plus_achat"])){
                                 echo '<tr>
-                                    <td colspan="5"><input type="submit" class="admin" value="Voir moins"></td>
+                                    <form action="profil.php" method="post" enctype="multipart/form-data">
+                                        <td colspan="5"><input type="submit" class="admin" value="Voir moins"></td>
+                                    </form>
                                 </tr>';
                             }
                         }
@@ -201,8 +205,10 @@
                                     <td>'.$user["voyages_achete"][$i]["total"].'€</td>
                                 </tr>';
                             }
-                            echo '<tr>
-                                <td colspan="5"><input type="submit" class="admin" name="plus_achat" value="Voir plus"></td>
+                            echo '<tr>  
+                                <form action="profil.php" method="post" enctype="multipart/form-data">
+                                    <td colspan="5"><input type="submit" class="admin" name="plus_achat" value="Voir plus"></td>
+                                </form>
                             </tr>';
                         }
                     }

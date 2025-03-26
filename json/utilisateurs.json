@@ -146,46 +146,77 @@
         "voyages_favoris": [],
         "voyages_panier": [
             {
-                "id": 0,
-                "total": 225,
+                "id": 14,
+                "total": 107,
                 "options": [
                     [
-                        "Acclimatation",
+                        "Acclimatation"
+                    ],
+                    [
                         ""
                     ],
                     [
-                        "",
-                        "",
+                        "Acclimatation"
+                    ]
+                ]
+            },
+            {
+                "id": 12,
+                "total": 109,
+                "options": [
+                    [
                         ""
                     ],
                     [
-                        "",
-                        ""
+                        "Acclimatation"
                     ],
                     [
-                        "",
-                        "",
-                        ""
-                    ],
-                    [
-                        "",
-                        "",
                         ""
                     ]
                 ]
             },
             {
-                "id": 13,
-                "total": 340,
+                "id": 11,
+                "total": 40,
                 "options": [
-                    [
-                        "Acclimatation"
-                    ],
                     [
                         ""
                     ],
                     [
                         "Acclimatation"
+                    ],
+                    [
+                        ""
+                    ]
+                ]
+            },
+            {
+                "id": 14,
+                "total": 87,
+                "options": [
+                    [
+                        ""
+                    ],
+                    [
+                        ""
+                    ],
+                    [
+                        ""
+                    ]
+                ]
+            },
+            {
+                "id": 15,
+                "total": 12,
+                "options": [
+                    [
+                        ""
+                    ],
+                    [
+                        ""
+                    ],
+                    [
+                        ""
                     ]
                 ]
             }
