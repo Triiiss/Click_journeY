@@ -148,9 +148,141 @@
             "dob": "2005-01-02",
             "adresse": "Avenue du Parc"
         },
-        "voyages_achete": [],
+        "voyages_achete": [
+            {
+                "id": 14,
+                "total": 97,
+                "options": [
+                    [
+                        ""
+                    ],
+                    [
+                        "Acclimatation"
+                    ],
+                    [
+                        ""
+                    ]
+                ]
+            },
+            {
+                "id": 15,
+                "total": 32,
+                "options": [
+                    [
+                        ""
+                    ],
+                    [
+                        "Acclimatation"
+                    ],
+                    [
+                        "Acclimatation"
+                    ]
+                ]
+            },
+            {
+                "id": 10,
+                "total": 490,
+                "options": [
+                    [
+                        ""
+                    ],
+                    [
+                        "Acclimatation"
+                    ]
+                ]
+            },
+            {
+                "id": 1,
+                "total": 205,
+                "options": [
+                    [
+                        "Ail"
+                    ],
+                    [
+                        "",
+                        "D\u00e9tecteur de fant\u00f4mes"
+                    ]
+                ]
+            }
+        ],
         "voyages_favoris": [],
-        "voyages_panier": [],
+        "voyages_panier": [
+            {
+                "id": 3,
+                "total": 130,
+                "options": [
+                    [
+                        ""
+                    ],
+                    [
+                        "Acclimatation"
+                    ],
+                    [
+                        "Saut en parachute"
+                    ]
+                ]
+            },
+            {
+                "id": 0,
+                "total": 235,
+                "options": [
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        "D\u00e9jeuner inclus",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        "",
+                        "location de sac de couchage"
+                    ],
+                    [
+                        "Acclimatation",
+                        "",
+                        ""
+                    ]
+                ]
+            },
+            {
+                "id": 2,
+                "total": 545,
+                "options": [
+                    [
+                        "",
+                        "Activit\u00e9 ski nautique"
+                    ],
+                    [
+                        ""
+                    ],
+                    [
+                        "Parasol"
+                    ]
+                ]
+            },
+            {
+                "id": 12,
+                "total": 109,
+                "options": [
+                    [
+                        ""
+                    ],
+                    [
+                        ""
+                    ],
+                    [
+                        "Acclimatation"
+                    ]
+                ]
+            }
+        ],
         "date d'inscription": "2025-03-21"
     }
 ]

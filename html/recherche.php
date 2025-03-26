@@ -121,10 +121,11 @@
                 if($count%3 != 0){
                         echo '</div>';
                 }
-
+                //affichage du bouton page précédente si la page est supérieure à 1
                 if($page>1){
                     echo '<a href="recherche.php?page='.($page-1).'&search='.$recherche.'"><button type="button">Page précédente</button></a>';
                 }
+                //affichage du bouton page suivante s'il reste des voyages à afficher
                 if($count>=9*$page){
                     echo '<a href="recherche.php?page='.($page+1).'&search='.$recherche.'"><button type="button">Page suivante</button></a>';             
                 }
