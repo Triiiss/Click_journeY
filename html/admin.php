@@ -37,14 +37,14 @@
                 <caption class="admin">Liste des utilisateurs</caption>
             <thead>
                 <tr>
-                    <th class"admin" colspan="2">Login</th>
-                    <th class"admin" colspan="2">Password</th>
-                    <th class"admin" colspan="2">Email</th>
-                    <th class"admin" colspan="2">Nom</th>
-                    <th class"admin" colspan="2">Prénom</th>
-                    <th class"admin" colspan="2">Date d'inscription</th>
-                    <th class"admin" colspan="2">Statut</th>
-                    <th class"admin" colspan="2">Actions</th>
+                    <th class="admin" colspan="2">Login</th>
+                    <th class="admin" colspan="2">Password</th>
+                    <th class="admin" colspan="2">Email</th>
+                    <th class="admin" colspan="2">Nom</th>
+                    <th class="admin" colspan="2">Prénom</th>
+                    <th class="admin" colspan="2">Date d'inscription</th>
+                    <th class="admin" colspan="2">Statut</th>
+                    <th class="admin" colspan="2">Actions</th>
                     
                 </tr>
             </thead>
