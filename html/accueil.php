@@ -7,7 +7,7 @@
 <php>
     <head>
         <meta charset="utf-8"/>
-        <title>Camping de l'extreme - Accueil</title>
+        <title>Camping de l'extreme - Accueil </title>
         <link rel="stylesheet" type="text/css" href="../css/style.css"/>
     </head>
     <body class="accueilpage">
