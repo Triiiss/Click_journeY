@@ -1,7 +1,7 @@
 /*BODY*/
 body{/*Fond et police des pages*/
     height: 65vw;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 30%, rgb(202, 212, 183) 90%), url("../images/fond_2.webp") no-repeat center 65% / contain;/*Fond dégradé avec l'image*/ 
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 30%, rgb(202, 212, 183) 90%), url("../images/background.webp") no-repeat center 65% / contain;/*Fond dégradé avec l'image*/ 
     background-color: rgb(202, 212, 183); 
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -9,7 +9,7 @@ body{/*Fond et police des pages*/
     cursor: url("../images/tree.ico"),  auto;/*Curseur arbre*/
 }
 body.presentation{/*Fond de la présentation plus uniforme*/
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, rgb(202, 212, 183) 90%), url("../images/fond_2.webp") no-repeat center 65% / contain;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, rgb(202, 212, 183) 90%), url("../images/background.webp") no-repeat center 65% / contain;
     background-color: rgb(202, 212, 183); 
 }
 
