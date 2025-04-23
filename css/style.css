@@ -51,6 +51,9 @@ h1.titre-accueil{/*Le titre de la page d'accueil en gros*/
 span.etoile{
     color: rgb(195, 4, 4);
 }
+span.vert{
+    color: rgb(32, 115, 37);
+}
 .orange{
     color: rgb(255, 106, 19);
 }
@@ -181,6 +184,9 @@ input[type="radio"]{/*Espacement de la même ligne*/
 span.champs{
     color: black;
     font-size: 0.7vw;
+}
+input[name=mdp],input[name=mdpcfrm]{
+    width: 25vw;
 }
 
 
