@@ -80,7 +80,8 @@
                             foreach($users_shown as $k=> $user){
                                 /*Delete a user */
                                 if(isset($_POST["supprimer_".$user['login']])){
-                                    unset($users[$k]);
+                                    unset($users[$k+($_SESSION["npage"]-1)*$maxusers]);
+                                    $users = array_values($users);
                                 }
                                 else{
                                     /*Change la valeur de display[indice du user] pour savoir si on affiche ou non le "plus" */
@@ -103,68 +104,68 @@
                                         $newlogin=new_login($_POST["new".$user['login']."_login_value"],"../json/utilisateurs.json");
     
                                         if($newlogin == 1){
-                                            $users[$k]['login'] = $_POST["new".$user['login']."_login_value"];
+                                            $users[$k+($_SESSION["npage"]-1)*$maxusers]['login'] = $_POST["new".$user['login']."_login_value"];
                                             $user['login'] = $_POST["new".$user['login']."_login_value"];
                                         }
     
                                     }
                                     if(isset($_POST["new".$user['login']."_mdp"]) && !empty($_POST["new".$user['login']."_mdp_value"])){
-                                        $users[$k]['mdp'] = $_POST["new".$user['login']."_mdp_value"];
+                                        $users[$k+($_SESSION["npage"]-1)*$maxusers]['mdp'] = $_POST["new".$user['login']."_mdp_value"];
                                         $user['mdp'] = $_POST["new".$user['login']."_mdp_value"];
                                     }
                                     if(isset($_POST["new".$user['login']."_email"]) && !empty($_POST["new".$user['login']."_email_value"])){
-                                        $users[$k]['email'] = $_POST["new".$user['login']."_email_value"];
+                                        $users[$k+($_SESSION["npage"]-1)*$maxusers]['email'] = $_POST["new".$user['login']."_email_value"];
                                         $user['email'] = $_POST["new".$user['login']."_email_value"];
                                     }
                                     if(isset($_POST["new".$user['login']."_nom"]) && !empty($_POST["new".$user['login']."_nom_value"])){
-                                        $users[$k]['profil']['nom'] = $_POST["new".$user['login']."_nom_value"];
+                                        $users[$k+($_SESSION["npage"]-1)*$maxusers]['profil']['nom'] = $_POST["new".$user['login']."_nom_value"];
                                         $user['profil']['nom'] = $_POST["new".$user['login']."_nom_value"];
                                     }
                                     if(isset($_POST["new".$user['login']."_prenom"]) && !empty($_POST["new".$user['login']."_prenom_value"])){
-                                        $users[$k]['profil']['prenom'] = $_POST["new".$user['login']."_prenom_value"];
+                                        $users[$k+($_SESSION["npage"]-1)*$maxusers]['profil']['prenom'] = $_POST["new".$user['login']."_prenom_value"];
                                         $user['profil']['prenom'] = $_POST["new".$user['login']."_prenom_value"];
                                     }
                                     if(isset($_POST["new".$user['login']."_role"]) && !empty($_POST["new".$user['login']."_role_value"])){
-                                        $users[$k]['role'] = $_POST["new".$user['login']."_role_value"];
+                                        $users[$k+($_SESSION["npage"]-1)*$maxusers]['role'] = $_POST["new".$user['login']."_role_value"];
                                         $user['role'] = $_POST["new".$user['login']."_role_value"];
                                     }
                                     if(isset($_POST["new".$user['login']."_adresse"]) && !empty($_POST["new".$user['login']."_adresse_value"])){
-                                        $users[$k]['profil']['adresse'] = $_POST["new".$user['login']."_adresse_value"];
+                                        $users[$k+($_SESSION["npage"]-1)*$maxusers]['profil']['adresse'] = $_POST["new".$user['login']."_adresse_value"];
                                         $user['profil']['adresse'] = $_POST["new".$user['login']."_adresse_value"];
                                     }
                                     if(isset($_POST["new".$user['login']."_tel"]) && !empty($_POST["new".$user['login']."_tel_value"])){
-                                        $users[$k]['profil']['tel'] = $_POST["new".$user['login']."_tel_value"];
+                                        $users[$k+($_SESSION["npage"]-1)*$maxusers]['profil']['tel'] = $_POST["new".$user['login']."_tel_value"];
                                         $user['profil']['tel'] = $_POST["new".$user['login']."_tel_value"];
                                     }
                                     if(isset($_POST["new".$user['login']."_dob"]) && !empty($_POST["new".$user['login']."_dob_value"])){
-                                        $users[$k]['profil']['dob'] = $_POST["new".$user['login']."_dob_value"];
+                                        $users[$k+($_SESSION["npage"]-1)*$maxusers]['profil']['dob'] = $_POST["new".$user['login']."_dob_value"];
                                         $user['profil']['dob'] = $_POST["new".$user['login']."_dob_value"];
                                     }
                                     if(isset($_POST["new".$user['login']."_genre"]) && !empty($_POST["new".$user['login']."_genre_value"])){
-                                        $users[$k]['profil']['genre'] = $_POST["new".$user['login']."_genre_value"];
+                                        $users[$k+($_SESSION["npage"]-1)*$maxusers]['profil']['genre'] = $_POST["new".$user['login']."_genre_value"];
                                         $user['profil']['genre'] = $_POST["new".$user['login']."_genre_value"];
                                     }
                                     for($i=max(count($user["voyages_achete"]),count($user["voyages_favoris"]),count($user["voyages_panier"]));$i>=0;$i--){
                                         if(isset($_POST["supp_".$user['login']."_panier_".$i])){
                                             unset($user["voyages_panier"][$i]);
-                                            unset($users[$k]["voyages_panier"][$i]);
+                                            unset($users[$k+($_SESSION["npage"]-1)*$maxusers]["voyages_panier"][$i]);
 
                                             $user["voyages_panier"] = array_values($user["voyages_panier"]);
-                                            $users[$k]["voyages_panier"] = array_values($users[$k]["voyages_panier"]);
+                                            $users[$k+($_SESSION["npage"]-1)*$maxusers]["voyages_panier"] = array_values($users[$k+($_SESSION["npage"]-1)*$maxusers]["voyages_panier"]);
                                         }
                                         if(isset($_POST["supp_".$user['login']."_fav_".$i])){
                                             unset($user["voyages_favoris"][$i]);
-                                            unset($users[$k]["voyages_favoris"][$i]);
+                                            unset($users[$k+($_SESSION["npage"]-1)*$maxusers]["voyages_favoris"][$i]);
 
                                             $user["voyages_favoris"] = array_values($user["voyages_favoris"]);
-                                            $users[$k]["voyages_favoris"] = array_values($users[$k]["voyages_favoris"]);
+                                            $users[$k+($_SESSION["npage"]-1)*$maxusers]["voyages_favoris"] = array_values($users[$k+($_SESSION["npage"]-1)*$maxusers]["voyages_favoris"]);
                                         }
                                         if(isset($_POST["supp_".$user['login']."_achat_".$i])){
                                             unset($user["voyages_achete"][$i]);
-                                            unset($users[$k]["voyages_achete"][$i]);
+                                            unset($users[$k+($_SESSION["npage"]-1)*$maxusers]["voyages_achete"][$i]);
 
                                             $user["voyages_achete"] = array_values($user["voyages_achete"]);
-                                            $users[$k]["voyages_achete"] = array_values($users[$k]["voyages_achete"]);
+                                            $users[$k+($_SESSION["npage"]-1)*$maxusers]["voyages_achete"] = array_values($users[$k+($_SESSION["npage"]-1)*$maxusers]["voyages_achete"]);
                                         }
                                     }
 
