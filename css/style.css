@@ -191,8 +191,9 @@ input[name=mdp],input[name=mdpcfrm]{
 
 
 /*BOUTONS*/
-button,input[name="deco"],input[name="supp"],input.admin{/*Boutons oranges*/
+button,input[name="deco"],input[name="supp"],input.admin,#pp_button{/*Boutons oranges*/
     color: white;
+    cursor: pointer;
     font-size: 1vw;
     margin: 0vw 0.5vw 0vw 0.5vw;
     border-radius: 7px;
@@ -202,7 +203,7 @@ button,input[name="deco"],input[name="supp"],input.admin{/*Boutons oranges*/
 input[name="deco"],input[name="supp"]{/*Les boutons avec plus de textes prennent plus de place*/
     padding: 0vw 2.5vw 0vw 2.5vw;
 }
-button:hover,input[name="deco"]:hover,input[name="supp"]:hover,input.admin:hover{
+button:hover,input[name="deco"]:hover,input[name="supp"]:hover,input.admin:hover,#pp_button:hover{
     color: rgb(132, 53, 7);
     background-color: rgb(208, 86, 16);
 }
@@ -316,7 +317,17 @@ fieldset.voyages p, fieldset.profil p{
 table.achat{
     text-align: center;
 }
-
+#pp_button{
+    display: inline-block;
+    padding: 5px 10px;
+    font-family: sans-serif;
+}
+input[type="file"] {
+    display: none;
+}
+#file_name{
+    font-size: 0.7vw;
+}
 
 /*PAGE ADMIN*/
 caption.admin{
