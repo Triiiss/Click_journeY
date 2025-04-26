@@ -31,7 +31,7 @@
                 echo '<div class=recap>';
                     echo '<div>'.$voyages[$id]["titre"].'</div>';
                     echo '<div>'.$voyages[$id]["description"].'</div>';
-                    echo '<div>'.'Prix : '.$voyages[$id]["prix"].'euros'.'</div>';
+                    echo '<div>'.'Prix : <span id="prix">'.$voyages[$id]["prix"].'</span>euros'.'</div>';
                     echo '<div>'.'Départ le '.$voyages[$id]["depart"].'</div>';
                     echo '<div>'.'Durée : '.$voyages[$id]["duree"].'</div>'; 
                 echo '</div>';
@@ -41,24 +41,26 @@
         <form action="recap.php" method="post">
             <?php
             $etapes = $voyages[$id]["etapes"];
-                foreach($etapes as $k=> $etape){
-                    echo '<fieldset class="voyages">';
-                        if ($k==0) {
-                            echo '<legend>Options</legend>';
-                        }
-                        echo'<h3>Etape '.($k+1).' : '.$etape["titre"].'</h3>
-                        <div>Lieu : '.$etape["lieu"].'</div>
-                        <div>Durée : '.$etape["duree"].' jours</div>
+            foreach($etapes as $k=> $etape){
+                echo '<fieldset class="voyages">';
+                    if ($k==0) {
+                        echo '<legend>Options</legend>';
+                    }
+                    echo'<h3>Etape '.($k+1).' : '.$etape["titre"].'</h3>
+                    <div>Lieu : '.$etape["lieu"].'</div>
+                    <div>Durée : '.$etape["duree"].' jours</div>
 
-                        <label for="option'.$k.'">Options :</label>
-                        <div>';
-                            foreach($etape["option"] as $i=>$option){
-                                echo $option["titre"].'('.$option["prix"].'€)'.'<input class="options" type="checkbox" name="option'.$k.$i.'" value="'.
-                                $option["titre"].';'.$option["prix"].'">';
-                            }
-                        echo '</div>
-                    </fieldset>';
-                }
+                    <label for="option'.$k.'">Options :</label>
+                    <div>';
+                        foreach($etape["option"] as $i=>$option){
+                            echo $option["titre"].'('.$option["prix"].'€)'.'<input class="options" type="checkbox" name="option'.$k.$i.'" value="'.
+                            $option["titre"].';'.$option["prix"].'">';
+                        }
+                    echo '</div>
+                </fieldset>';
+            }
+            echo '<div>'.'Total : <span id="total">'.$voyages[$id]["prix"].'</span>euros'.'</div>';
+
             ?>
             <input type="hidden" name="id" value="<?php echo "".$id."" ?>"></input>
 
@@ -67,6 +69,26 @@
                 <button class="options" type="submit" name="submit">Récapitulatif</button>
             </fieldset>
         </form>
+
+        <script>
+            const prix = parseFloat(document.getElementById('prix').textContent);
+            const ptot = document.getElementById('total');
+            const options = document.getElementsByClassName('options');
+
+            function updateTotalPrice() {
+              let total = prix;
+              for (var i in options) {
+                  if (options[i].checked) {
+                    total += parseFloat(options[i].value.split(';')[1]);
+                  }
+              }
+              ptot.textContent = total;
+            }
+
+            for (var i in options) {
+                  options[i].addEventListener('change', updateTotalPrice);
+            }
+      </script>
 
         <br><br>
         <div class="afterimage">
