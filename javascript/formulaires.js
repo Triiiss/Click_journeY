@@ -137,5 +137,24 @@ function verification_inscription(){
         button.type = "submit";
 }
 
-/*Mettre values si jamais ça marche pas
- */
+function waiting_time(event, formId) {
+        event.preventDefault(); // Empêche l'envoi immédiat
+    
+        const form = document.getElementById(formId);
+        const button = event.target;
+        const buttonName = button.getAttribute('name'); 
+        const buttonValue = button.getAttribute('value'); 
+        button.disabled = true; // Désactive le bouton pour éviter plusieurs clics
+
+        if (buttonName) {
+                const hiddenInput = document.createElement('input');
+                hiddenInput.type = 'hidden';
+                hiddenInput.name = buttonName;
+                hiddenInput.value = buttonValue;
+                form.appendChild(hiddenInput);
+        }
+    
+        setTimeout(function() {
+            form.submit(); // Après 1 seconde
+        }, 1000);
+}
