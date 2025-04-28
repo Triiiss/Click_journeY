@@ -132,7 +132,68 @@
             }
         ],
         "voyages_favoris": [],
-        "voyages_panier": [],
+        "voyages_panier": [
+            {
+                "id": 14,
+                "total": 87,
+                "options": [
+                    [
+                        ""
+                    ],
+                    [
+                        ""
+                    ],
+                    [
+                        ""
+                    ]
+                ]
+            },
+            {
+                "id": 15,
+                "total": 12,
+                "options": [
+                    [
+                        ""
+                    ],
+                    [
+                        ""
+                    ],
+                    [
+                        ""
+                    ]
+                ]
+            },
+            {
+                "id": 15,
+                "total": 12,
+                "options": [
+                    [
+                        ""
+                    ],
+                    [
+                        ""
+                    ],
+                    [
+                        ""
+                    ]
+                ]
+            },
+            {
+                "id": 15,
+                "total": 12,
+                "options": [
+                    [
+                        ""
+                    ],
+                    [
+                        ""
+                    ],
+                    [
+                        ""
+                    ]
+                ]
+            }
+        ],
         "date d'inscription": "2025-03-21"
     },
     {

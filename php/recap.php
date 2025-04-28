@@ -108,7 +108,7 @@
                         }
 
                         if(isset($_POST["idAchat"])==false){
-                            echo '<a href = "voyage.php?id='.$id.'"><button>Modifier</button></a>';
+                            echo '<a href = "voyage.php?id='.$id.'"><button type="button">Modifier</button></a>';
                         }
 
                         if(isset($_POST["id"])){
