@@ -48,7 +48,7 @@
                     }
                     echo'<h3>Etape '.($k+1).' : '.$etape["titre"].'</h3>
                     <div>Lieu : '.$etape["lieu"].'</div>
-                    <div>Durée : '.$etape["duree"].' jours</div>
+                    <div>Durée : '.$etape["duree"].'</div>
 
                     <label for="option'.$k.'">Options :</label>
                     <div>';

@@ -12,8 +12,7 @@
         "etapes":[
             {
                 "titre": "Camp de base",
-                "depart": "2026-12-21",
-                "fin": "2026-12-22",
+                "duree":"2 jours",
                 "lieu":"5 364 m",
                 "option":[
                     {
@@ -28,8 +27,7 @@
             },
             {
                 "titre": "Camp 2",
-                "depart": "2026-12-22",
-                "fin": "2026-12-24",
+                "duree":"1 jour",
                 "lieu":"6 065 m",
                 "option":[
                     {
@@ -49,8 +47,7 @@
             },
             {
                 "titre": "Camp 3",
-                "depart": "2026-12-24",
-                "fin": "2026-12-26",
+                "duree":"1 jour",
                 "lieu":"6 400 m",
                 "option":[
                     {
@@ -65,8 +62,7 @@
             },
             {
                 "titre": "Camp 4",
-                "depart": "2026-12-26",
-                "fin": "2026-12-27",
+                "duree":"1 jour",
                 "lieu":"6 400 m",
                 "option":[
                     {
@@ -85,8 +81,7 @@
             },
             {
                 "titre": "Zone de la mort",
-                "depart": "2026-12-27",
-                "fin": "2026-12-28",
+                "duree":"2 jours",
                 "lieu":"7 900 m",
                 "option":[
                     {
@@ -119,8 +114,7 @@
         "etapes":[
             {
                 "titre": "Chateau de Dracula",
-                "depart": "2026-11-29",
-                "fin": "2026-11-30",
+                "duree":"1 jour",
                 "lieu":"Brașov",
                 "option":[
                     {
@@ -131,8 +125,7 @@
             },
             {
                 "titre": "Cimetière",
-                "depart": "2026-11-30",
-                "fin": "2026-12-01",
+                "duree":"1 jour",
                 "lieu":"6 pieds sous terre",
                 "option":[
                     {
@@ -161,8 +154,7 @@
         "etapes":[
             {
                 "titre": "Retraite hawaiienne",
-                "depart": "2026-06-12",
-                "fin": "2026-06-19",
+                "duree":"7 jours",
                 "lieu":"Plages de Hawaii",
                 "option":[
                     {
@@ -177,8 +169,7 @@
             },
             {
                 "titre": "Ascension d'une montagne",
-                "depart": "2026-06-19",
-                "fin": "2026-06-25",
+                "duree":"6 jours",
                 "lieu":"Kīlauea",
                 "option":[
                     {
@@ -189,8 +180,7 @@
             },
             {
                 "titre": "Chute dans un volcan",
-                "depart": "2026-06-25",
-                "fin": "2026-06-26",
+                "duree":"1 jour",
                 "lieu":"Dans la lave",
                 "option":[
                     {
@@ -215,8 +205,7 @@
         "etapes":[
             {
                 "titre": "Sur la scène",
-                "depart": "2026-09-01",
-                "fin": "2026-09-03",
+                "duree":"2 jours",
                 "lieu":"Sur les rives de la Seine",
                 "option":[
                     {
@@ -227,8 +216,7 @@
             },
             {
                 "titre": "Sans ciel, sans argent",
-                "depart": "2026-09-03",
-                "fin": "2026-09-06",
+                "duree":"3 jours",
                 "lieu":"Métro parisien gare de Lyon",
                 "option":[
                     {
@@ -239,8 +227,7 @@
             },
             {
                 "titre": "Paris de haut",
-                "depart": "2026-09-06",
-                "fin": "2026-09-08",
+                "duree":"2 jours",
                 "lieu":"Tour Eiffel",
                 "option":[
                     {
@@ -265,8 +252,7 @@
         "etapes":[
             {
                 "titre": "Arrivée et préparations",
-                "depart": "2026-02-18",
-                "fin": "2026-02-19",
+                "duree":"1 jour",
                 "lieu":"Palau",
                 "option":[
                     {
@@ -277,8 +263,7 @@
             },
             {
                 "titre": "Début de la descente",
-                "depart": "2026-02-19",
-                "fin": "2026-02-20",
+                "duree":"2 jours",
                 "lieu":"-30m",
                 "option":[
                     {
@@ -289,8 +274,7 @@
             },
             {
                 "titre": "Découverte d'espèces inconnues",
-                "depart": "2026-02-20",
-                "fin": "2026-02-20",
+                "duree":"3 jours",
                 "lieu":"-200m",
                 "option":[
                     {
@@ -301,8 +285,7 @@
             },
             {
                 "titre": "Implosion du navire",
-                "depart": "2026-02-20",
-                "fin": "2026-02-20",
+                "duree":"1 jour",
                 "lieu":"-500m",
                 "option":[
                     {
@@ -327,8 +310,7 @@
         "etapes":[
             {
                 "titre": "Petit piton",
-                "depart": "2026-05-01",
-                "fin": "2026-05-03",
+                "duree":"3 jours",
                 "lieu":"Alpes",
                 "option":[
                     {
@@ -343,8 +325,7 @@
             },
             {
                 "titre": "Dent du géant",
-                "depart": "2026-05-03",
-                "fin": "2026-05-06",
+                "duree":"3 jours",
                 "lieu":"Alpes",
                 "option":[
                     {
@@ -359,8 +340,7 @@
             },
             {
                 "titre": "Mont blanc",
-                "depart": "2026-05-06",
-                "fin": "2026-05-10",
+                "duree":"3 jours",
                 "lieu":"Alpes",
                 "option":[
                     {
@@ -389,8 +369,7 @@
         "etapes":[
             {
                 "titre": "Arrivée à la gare",
-                "depart": "2026-08-14",
-                "fin": "2026-08-15",
+                "duree":"1 jour",
                 "lieu":"Paris Marne la Vallée Chessy",
                 "option":[
                     {
@@ -401,8 +380,7 @@
             },
             {
                 "titre": "Paris-Marseille",
-                "depart": "2026-08-15",
-                "fin": "2026-08-16",
+                "duree":"1 jour",
                 "lieu":"TGV N°786137",
                 "option":[
                     {
@@ -413,8 +391,7 @@
             },
             {
                 "titre": "Marseille-Paris",
-                "depart": "2026-08-15",
-                "fin": "2026-08-16",
+                "duree":"1 jour",
                 "lieu":"TGV N°525358",
                 "option":[
                     {
@@ -439,8 +416,7 @@
         "etapes":[
             {
                 "titre": "Acclimatation à la planète",
-                "depart": "2873-01-03",
-                "fin": "2875-06-20",
+                "duree":"4 ans",
                 "lieu":"planète M195",
                 "option":[
                     {
@@ -451,8 +427,7 @@
             },
             {
                 "titre": "Echange avec les scientifiques",
-                "depart": "2875-06-20",
-                "fin": "2878-10-02",
+                "duree":"4 ans",
                 "lieu":"Centre de données",
                 "option":[
                     {
@@ -463,8 +438,7 @@
             },
             {
                 "titre": "Retour dans le passé",
-                "depart": "2878-10-02",
-                "fin": "2025-03-07",
+                "duree":"-8 ans",
                 "lieu":"L'espace temps",
                 "option":[
                     {
@@ -489,8 +463,7 @@
         "etapes":[
             {
                 "titre": "Durée de l'été dans l'Antartique",
-                "depart": "2026-07-25",
-                "fin": "2026-07-27",
+                "duree":"7 jours",
                 "lieu":"Centre de recherche",
                 "option":[
                     {
@@ -501,8 +474,7 @@
             },
             {
                 "titre": "Bataille contre un ours polaire",
-                "depart": "2026-07-27",
-                "fin": "2026-07-29",
+                "duree":"2 jours",
                 "lieu":"Sur la banquise",
                 "option":[
                     {
@@ -513,8 +485,7 @@
             },
             {
                 "titre": "Visite du tueur du Titanic",
-                "depart": "2026-07-29",
-                "fin": "2026-08-03",
+                "duree":"2 jours",
                 "lieu":"Sur la banquise",
                 "option":[
                     {
@@ -525,8 +496,7 @@
             },
             {
                 "titre": "Découverte d'une maladie vieille d'un million d'années",
-                "depart": "2026-08-03",
-                "fin": "2026-08-08",
+                "duree":"3 jours",
                 "lieu":"Dans une grotte de glace",
                 "option":[
                     {
@@ -551,8 +521,7 @@
         "etapes":[
             {
                 "titre": "Migration des crabes",
-                "depart": "2026-02-17",
-                "fin": "2026-02-18",
+                "duree":"1 jour",
                 "lieu":"Crab Island capital",
                 "option":[
                     {
@@ -563,8 +532,7 @@
             },
             {
                 "titre": "crabification",
-                "depart": "2026-02-18",
-                "fin": "2026-02-19",
+                "duree":"1 jour",
                 "lieu":"Crab Island sur la plage",
                 "option":[
                     {
@@ -589,8 +557,7 @@
         "etapes":[
             {
                 "titre": "Pêche de la truite",
-                "depart": "2026-08-25",
-                "fin": "2026-08-28",
+                "duree":"3 jours",
                 "lieu":"Côtes de Norvège",
                 "option":[
                     {
@@ -601,8 +568,7 @@
             },
             {
                 "titre": "Observation des aurores boréales",
-                "depart": "2026-08-28",
-                "fin": "2026-08-30",
+                "duree":"2 jours",
                 "lieu":"Campagne sans lumière",
                 "option":[
                     {
@@ -627,8 +593,7 @@
         "etapes":[
             {
                 "titre": "Accrobranche haut dans les arbres",
-                "depart": "2026-03-24",
-                "fin": "2026-03-29",
+                "duree":"2 jours",
                 "lieu":"Aurillac",
                 "option":[
                     {
@@ -639,8 +604,7 @@
             },
             {
                 "titre": "Perdu dans la forêt",
-                "depart": "2026-03-29",
-                "fin": "2026-03-30",
+                "duree":"4 jours",
                 "lieu":"???",
                 "option":[
                     {
@@ -651,8 +615,7 @@
             },
             {
                 "titre": "Rencontre avec Slender man",
-                "depart": "2026-03-30",
-                "fin": "2026-03-31",
+                "duree":"1 jour",
                 "lieu":"??????",
                 "option":[
                     {
@@ -677,8 +640,7 @@
         "etapes":[
             {
                 "titre": "Entrée dans l'hôpital",
-                "depart": "2026-09-14",
-                "fin": "2026-09-15",
+                "duree":"2 jours",
                 "lieu":"Entrée",
                 "option":[
                     {
@@ -689,8 +651,7 @@
             },
             {
                 "titre": "Découverte de substance chère",
-                "depart": "2026-09-14",
-                "fin": "2026-09-15",
+                "duree":"4 jours",
                 "lieu":"Fond du laboratoire",
                 "option":[
                     {
@@ -701,8 +662,7 @@
             },
             {
                 "titre": "Arrivée de la police",
-                "depart": "2026-09-15",
-                "fin": "2026-09-16",
+                "duree":"1 jour",
                 "lieu":"Commissariat de police",
                 "option":[
                     {
@@ -727,8 +687,7 @@
         "etapes":[
             {
                 "titre": "Camping à Tokyo",
-                "depart": "2026-10-09",
-                "fin": "2026-10-11",
+                "duree":"2 jours",
                 "lieu":"Tokyo",
                 "option":[
                     {
@@ -739,8 +698,7 @@
             },
             {
                 "titre": "Balades en forêt",
-                "depart": "2026-10-11",
-                "fin": "2026-10-13",
+                "duree":"2 jours",
                 "lieu":"Forêt d'Aokigahara",
                 "option":[
                     {
@@ -751,8 +709,7 @@
             },
             {
                 "titre": "Fin du voyage",
-                "depart": "2026-10-13",
-                "fin": "2026-10-14",
+                "duree":"1 jour",
                 "lieu":"paradis",
                 "option":[
                     {
@@ -777,8 +734,7 @@
         "etapes":[
             {
                 "titre": "Balade à dos de dromadaire",
-                "depart": "2026-01-22",
-                "fin": "2026-01-23",
+                "duree":"2 jours",
                 "lieu":"sur la dune n°52",
                 "option":[
                     {
@@ -789,8 +745,7 @@
             },
             {
                 "titre": "Découverte d'une oasis",
-                "depart": "2026-01-23",
-                "fin": "2026-01-25",
+                "duree":"1 jour",
                 "lieu":"Oasis (et pas fanta ahahahaha)",
                 "option":[
                     {
@@ -801,8 +756,7 @@
             },
             {
                 "titre": "Visite des pyramides de Kéops",
-                "depart": "2026-01-23",
-                "fin": "2026-01-25",
+                "duree":"2 jours",
                 "lieu":"Egypte",
                 "option":[
                     {
@@ -827,8 +781,7 @@
         "etapes":[
             {
                 "titre": "Formation d'un cyclone",
-                "depart": "2026-12-03",
-                "fin": "2026-12-07",
+                "duree":"3 jours",
                 "lieu":"Wow, ça se forme vachement près de nous non ?",
                 "option":[
                     {
@@ -839,8 +792,7 @@
             },
             {
                 "titre": "L'oeil de la tempête",
-                "depart": "2026-12-07",
-                "fin": "2026-12-09",
+                "duree":"3 jours",
                 "lieu":"Au milieu d'un cyclone",
                 "option":[
                     {
@@ -851,8 +803,7 @@
             },
             {
                 "titre": "Envol",
-                "depart": "2026-12-07",
-                "fin": "2026-12-09",
+                "duree":"1 jour",
                 "lieu":"Dans les airs",
                 "option":[
                     {
