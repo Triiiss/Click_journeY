@@ -250,7 +250,7 @@
         
                                     /*Affiche le "voir plus" */
                                     if(isset($_SESSION["display"][$k]) && $_SESSION["display"][$k] == 1){
-                                        echo '<td><input type="submit" class="admin" name="moins_'.$user['login'].'" value="Réduire"><input type="submit" class="admin" name="supprimer_'.$user['login'].'" value="Supprimer"></td></tr>
+                                        echo '<td><input type="submit" class="admin" name="moins_'.$user['login'].'" value="Réduire"><input type="submit" class="admin" name="supprimer_'.$user['login'].'" value="Supprimer" onclick="waiting_time(event,\'form_admin\')"></td></tr>
                                         
                                         <tr>
                                             <td class="empty" colspan="2"></td>';
@@ -384,7 +384,7 @@
                                             }
                                     }
                                     else{
-                                        echo '<td><input type="submit" class="admin" name="plus_'.$user['login'].'" value="Voir plus"><input type="submit" class="admin" name="supprimer_'.$user['login'].'" value="Supprimer"></td></tr>';
+                                        echo '<td><input type="submit" class="admin" name="plus_'.$user['login'].'" value="Voir plus"><input type="submit" class="admin" name="supprimer_'.$user['login'].'" value="Supprimer" onclick="waiting_time(event,\'form_admin\')"></td></tr>';
                                     }
                                 }
                             }
