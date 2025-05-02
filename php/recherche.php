@@ -99,6 +99,7 @@
             ?>
             <script>
                 let voyages = <?php echo json_encode($voyages); ?>;
+                let recherche = <?php echo json_encode($recherche); ?>;
                 let page = parseInt(<?php echo json_encode($page); ?>);
                 let count = 0;
 
