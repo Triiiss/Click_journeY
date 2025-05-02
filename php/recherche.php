@@ -78,11 +78,10 @@
                 <input class="recherche" type="text" name="search">
             </fieldset>
 
-            <div class="voyages">
+            <div class="voyages" id="resultats">
             <?php 
                 $json_voyages=file_get_contents("../json/voyages.json");
                 $voyages=json_decode($json_voyages, true);
-                $count=0;
 
                 if(isset($_POST["search"])){
                     $recherche=$_POST["search"];
@@ -90,47 +89,92 @@
                 else if(isset($_GET["search"])){
                     $recherche=$_GET["search"];
                 }
-
+                else{
+                    $recherche="";
+                }
                 $page=1;
-                
                 if(isset($_GET["page"])){
                     $page=$_GET["page"];
                 }
+            ?>
+            <script>
+                let voyages = <?php echo json_encode($voyages); ?>;
+                let page = parseInt(<?php echo json_encode($page); ?>);
+                let count = 0;
 
-                foreach($voyages as $k=> $voyage){
+                function afficherVoyages(voyages, recherche, page) {
+                    const resultats = document.getElementById("resultats");
+                    recherche = recherche.toLowerCase();
+
                     //on compare la recherche avec les mots clés, le titre et le lieu de chaque voyage
-                    if((strpos(strtolower($voyage["mots_cles"]), strtolower($recherche))!==false ||
-                    strpos(strtolower($voyage["titre"]), strtolower($recherche))!==false||
-                    strpos(strtolower($voyage["lieu"]), strtolower($recherche))!==false)
-                    && $recherche!="" && $count<9*$page){
-                        if($count>=9*($page-1)){
-                            if(($count)%3==0){
-                                echo '<div class="grpV">';
+                    for (let k in voyages) {
+                        const voyage = voyages[k];
+                        const mots_cles = voyage.mots_cles.toLowerCase();
+                        const titre = voyage.titre.toLowerCase();
+                        const lieu = voyage.lieu.toLowerCase();
+
+                        if (
+                            (mots_cles.includes(recherche) || titre.includes(recherche) || lieu.includes(recherche)) &&
+                            recherche !== "" &&
+                            count < 9 * page
+                        ) {
+                            if (count >= 9 * (page - 1)) {
+                                if (count % 3 === 0) {
+                                    var pageDiv = document.createElement("div");
+                                    pageDiv.className = "grpV";
+                                    resultats.appendChild(pageDiv);
+                                }
+
+                                const itineraire = document.createElement("div");
+                                itineraire.className = "itineraire";
+
+                                const link = document.createElement("a");
+                                link.href = 'voyage.php?id='+k;
+
+                                const img = document.createElement("img");
+                                img.src = voyage.image;
+                                img.alt = "photo_voyage";
+                                img.className = "imgVoyage";
+
+                                const titreDiv = document.createElement("div");
+                                titreDiv.className = "titreVoyage";
+                                titreDiv.textContent = voyage.titre;
+
+                                link.appendChild(img);
+                                itineraire.appendChild(link);
+                                itineraire.appendChild(titreDiv);
+                                pageDiv.appendChild(itineraire);
+
+                                if ((count + 1) % 3 === 0) {
+                                    resultats.appendChild(pageDiv);
+                                }
                             }
-                            echo '<div class="itineraire">';
-                            echo '<a href="voyage.php?id='.$k.'"><img src="'.$voyage["image"].'" class="imgVoyage" alt="photo_voyage"/></a>';
-                            echo '<div class="titreVoyage">'.$voyage["titre"].'</div>';          
-                            echo '</div>'; 
-                            if(($count+1)%3 == 0){
-                                echo '</div>';
-                            }     
+                            count++;
                         }
-                        $count++;  
+                    }
+
+                    if (count % 3 !== 0) {
+                        resultats.appendChild(pageDiv);
+                    }
+                    //affichage du bouton page précédente si la page est supérieure à 1
+                    if (page > 1) {
+                        const pagePrec = document.createElement("a");
+                        pagePrec.href = '?page='+(page - 1)+'&search='+recherche;
+                        pagePrec.innerHTML = '<button type="button">Page précédente</button>';
+                        resultats.appendChild(pagePrec);
+                    }
+                    //affichage du bouton page suivante s'il reste des voyages à afficher
+                    if (count >= 9 * page) {
+                        const pageSuiv = document.createElement("a");
+                        pageSuiv.href = '?page='+(page + 1)+'&search='+recherche;
+                        pageSuiv.innerHTML = '<button type="button">Page suivante</button>';
+                        resultats.appendChild(pageSuiv);
                     }
                 }
-                if($count%3 != 0){
-                        echo '</div>';
-                }
-                //affichage du bouton page précédente si la page est supérieure à 1
-                if($page>1){
-                    echo '<a href="recherche.php?page='.($page-1).'&search='.$recherche.'"><button type="button">Page précédente</button></a>';
-                }
-                //affichage du bouton page suivante s'il reste des voyages à afficher
-                if($count>=9*$page){
-                    echo '<a href="recherche.php?page='.($page+1).'&search='.$recherche.'"><button type="button">Page suivante</button></a>';             
-                }
-                
-            ?>
+
+                afficherVoyages(voyages, recherche, page);                
+            </script>
+
             </div>
 
             <fieldset class="recherche">
