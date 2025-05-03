@@ -76,6 +76,7 @@
             <fieldset class="recherche">
                 <label for="tri">Trier par :</label>
                 <select id="tri" name="tri">
+                    <option value="ajout" selected>Date d'ajout</option>
                     <option value="duree">Durée</option>
                     <option value="prix">Prix</option>                   
                 </select>
@@ -181,8 +182,6 @@
                     }
                 }
 
-                afficherVoyages(voyages, recherche, page);
-
                 function calcDureeVoyage(v) {
                     const depart = new Date(v.depart);
                     const fin = new Date(v.fin);
@@ -193,7 +192,16 @@
                 const tri = document.getElementById('tri');
 
                 function compare(a, b) {
-                    if(tri.value == "prix"){
+                    if(tri.value == "ajout"){
+                        if (a.id > b.id){
+                            return -1;
+                        }
+                        if (a.id < b.id){
+                            return 1;
+                        }
+                        return 0;
+                    }
+                    else if(tri.value == "prix"){
                         if (a.prix < b.prix){
                         return -1;
                         }
@@ -222,7 +230,9 @@
                 }
 
                 tri.addEventListener('change', trier);
-                          
+                
+                voyages = voyages.sort(compare);
+                afficherVoyages(voyages, recherche, page);                             
             </script>
 
             </div>
