@@ -247,7 +247,10 @@ button.admin_defil:hover{
     color:rgb(247, 148, 91);
     background-color: rgba(24, 48, 24, 0.65);
 }
-
+button.chg_theme{
+    border-radius: 100%;
+    background-color: #1c1c1c;
+}
 
 /*PAGE PRESENTATION*/
 span.presentation{/*Les sous-titre*/

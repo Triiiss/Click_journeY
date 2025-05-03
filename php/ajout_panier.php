@@ -16,7 +16,13 @@
     </head>
     <body>
         <script src="../javascript/chg_theme.js"></script>
-        <h1 class="titre">Camping de l'Extreme <img src="../images/logo.png" class="logo" alt="logo de l'image"/></h1>
+        <h1 class="titre">
+            Camping de l'Extreme <img src="../images/logo.png" class="logo" alt="logo de l'image"/>
+            <button class="chg_theme"> 
+                <img src="../images/mode_sombre.png" class="mode_sombre" alt="Mode sombre"/>
+            </button>
+        </h1>
+        
         <a class="accueil" href="accueil.php">Accueil</a><br/>
 
         <?php bandeau("recherche");?>
