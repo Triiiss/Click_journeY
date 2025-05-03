@@ -74,6 +74,12 @@
             </fieldset>
 
             <fieldset class="recherche">
+                <label for="tri">Trier par :</label>
+                <select id="tri" name="tri">
+                    <option value="duree">Durée</option>
+                    <option value="prix">Prix</option>                   
+                </select>
+
                 <label for="search">Recherche :</label>
                 <input class="recherche" type="text" name="search">
             </fieldset>
@@ -101,11 +107,13 @@
                 let voyages = <?php echo json_encode($voyages); ?>;
                 let recherche = <?php echo json_encode($recherche); ?>;
                 let page = parseInt(<?php echo json_encode($page); ?>);
-                let count = 0;
-
+                
                 function afficherVoyages(voyages, recherche, page) {
+                    let count = 0;
                     const resultats = document.getElementById("resultats");
                     recherche = recherche.toLowerCase();
+
+                    resultats.innerHTML = "";
 
                     //on compare la recherche avec les mots clés, le titre et le lieu de chaque voyage
                     for (let k in voyages) {
@@ -130,7 +138,7 @@
                                 itineraire.className = "itineraire";
 
                                 const link = document.createElement("a");
-                                link.href = 'voyage.php?id='+k;
+                                link.href = 'voyage.php?id='+voyage.id;
 
                                 const img = document.createElement("img");
                                 img.src = voyage.image;
@@ -173,7 +181,48 @@
                     }
                 }
 
-                afficherVoyages(voyages, recherche, page);                
+                afficherVoyages(voyages, recherche, page);
+
+                function calcDureeVoyage(v) {
+                    const depart = new Date(v.depart);
+                    const fin = new Date(v.fin);
+                    const duree = fin - depart;
+                    return duree;
+                }
+                
+                const tri = document.getElementById('tri');
+
+                function compare(a, b) {
+                    if(tri.value == "prix"){
+                        if (a.prix < b.prix){
+                        return -1;
+                        }
+                        if (a.prix > b.prix){
+                            return 1;
+                        }
+                        return 0;
+                    }
+                    else if(tri.value == "duree"){
+                        const dureeA = calcDureeVoyage(a);
+                        const dureeB = calcDureeVoyage(b);
+                        if (dureeA < dureeB){
+                        return -1;
+                        }
+                        if (dureeA > dureeB){
+                            return 1;
+                        }
+                        return 0;
+                    }
+                    
+                }
+
+                function trier(){
+                    voyages = voyages.sort(compare);
+                    afficherVoyages(voyages, recherche, page);
+                }
+
+                tri.addEventListener('change', trier);
+                          
             </script>
 
             </div>
