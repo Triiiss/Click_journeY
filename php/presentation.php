@@ -12,6 +12,7 @@
 	</head>
 	
 	<body class="presentation">
+                <script src="../javascript/chg_theme.js"></script>
                 <h1 class="titre">Camping de l'Extreme <img src="../images/logo.png" class="logo" alt="logo de l'image"/></h1>
                 <a class="accueil" href="accueil.php">Accueil</a><br/>
                 
