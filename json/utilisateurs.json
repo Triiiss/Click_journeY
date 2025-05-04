@@ -164,8 +164,8 @@
                 ]
             },
             {
-                "id": 15,
-                "total": 12,
+                "id": 11,
+                "total": 40,
                 "options": [
                     [
                         ""
@@ -174,13 +174,25 @@
                         ""
                     ],
                     [
-                        ""
+                        "Acclimatation"
                     ]
                 ]
             },
             {
-                "id": 15,
-                "total": 12,
+                "id": 10,
+                "total": 490,
+                "options": [
+                    [
+                        ""
+                    ],
+                    [
+                        "Acclimatation"
+                    ]
+                ]
+            },
+            {
+                "id": 13,
+                "total": 330,
                 "options": [
                     [
                         ""
@@ -189,7 +201,7 @@
                         ""
                     ],
                     [
-                        ""
+                        "Acclimatation"
                     ]
                 ]
             }

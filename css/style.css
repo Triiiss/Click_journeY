@@ -21,6 +21,9 @@ body.sombre{
 *{
     color:rgb(28, 49, 28);
 }
+.sombre *{
+    color:white;
+}
 *:hover{
     transition: all 0.5s;
 }
@@ -53,6 +56,9 @@ h1.titre-accueil{/*Le titre de la page d'accueil en gros*/
     font-size: 7vw;
     margin-top: 10vw;
     -webkit-text-stroke: 5px rgb(202, 212, 183);
+}
+.sombre h1.titre-accueil{
+    -webkit-text-stroke: 5px rgb(42, 77, 42);
 }
 span.etoile{
     color: rgb(195, 4, 4);
@@ -167,6 +173,9 @@ fieldset.formulaire{/*Fond et mise en page en grille*/
     margin: 0% 20% 0% 20%;
     display: grid;
     grid-template-columns: 50% 50%;
+}
+.sombre fieldset.formulaire{
+    background-color: rgba(40, 77, 40,0.6);
 }
 fieldset.connexion, fieldset.inscription{
     grid-template-columns: 50% 50%;
@@ -285,6 +294,9 @@ ul.presentation > li{
     font-size: 0.9vw;
     color: rgb(27, 51, 27);
 }
+.sombre ul.presentation > li{
+    color:rgb(202, 212, 183); 
+}
 span.recherche_rapide{
     color: white;
     background-color: rgba(27, 51, 27,0.5);
@@ -297,6 +309,9 @@ fieldset.conditions{
     border: rgb(28, 59, 28) solid 3px;
     background-color: rgba(174, 189, 147,0.6);
     margin: 0% 20% 0% 20%;
+}
+.sombre fieldset.conditions{
+    background-color: rgba(40, 77, 40,0.6);
 }
 li.conditions{
     font-weight: bold;
@@ -415,6 +430,9 @@ fieldset.recherche{
     margin-right: 20%;
     margin-left: 20%;
 }
+.sombre fieldset.recherche{
+    background-color: rgba(40, 77, 40,0.6);
+}
 .filtre{
     display: flex;
     flex-direction: column;
@@ -432,6 +450,9 @@ input.recherche, .recherche div>div{
     margin-left: 20%;
     padding: 1%;
     text-align: center;
+}
+.sombre .voyages{
+    background-color: rgba(40, 77, 40,0.6);
 }
 .grpV{
     display: flex;
@@ -451,4 +472,10 @@ h3.reco{
 div.all{
     display: grid;
     grid-template-columns: 33% 33% 33%;
+}
+.sombre input{
+    color: black;
+}
+.sombre select{
+    color: black;
 }
