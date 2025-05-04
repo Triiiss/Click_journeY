@@ -30,13 +30,9 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css"/>
     </head>
     <body>
-        <h1 class="titre">
-            Camping de l'Extreme <img src="../images/logo.png" class="logo" alt="logo de l'image"/>
-            <button class="chg_theme"> 
-                <img src="../images/mode_sombre.png" class="mode_sombre" alt="Mode sombre"/>
-            </button>
-        </h1>
-        
+        <script src="../javascript/informations.js"></script>
+        <script src="../javascript/chg_theme.js"></script>
+        <h1 class="titre">Camping de l'Extreme <img src="../images/logo.png" class="logo" alt="logo de l'image"/></h1>
         <a class="accueil" href="accueil.php">Accueil</a><br/>
 
         <?php bandeau("profil");?>
@@ -229,7 +225,7 @@
             <br>
 
 
-            <form action="profil.php" method="POST" enctype="multipart/form-data">
+            <form id="form_profil" action="profil.php" method="POST" enctype="multipart/form-data">
                 <fieldset class="formulaire profil">
                 <?php
                     if (file_exists("../images/profil_picture/profil_picture_".$_SESSION['login'])){
@@ -313,116 +309,107 @@
 
                         /*Afficher les informations */
                         echo '<p>Identifiant :</p>';
-                        if(isset($_POST["modif_login"])){
-                            echo '<td><input type="text" name="new_login_value" placeholder="'.$user["login"].'"/></td>';
-                            echo '<td><input class="admin" type="submit" name="new_login" value="Valider"/></td>';
-                        }
-                        else{
-                            echo '<p>'.$user["login"].'</p>
-                            <p><button type="submit" class="edit_icon" name="modif_login"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>';
-                        }
+                        echo '
+                        <p><span class="login_info_">'.$user['login'].' </span>
+                        <span class="hidden login_edit_"><input class="modifier" type="text" name="new_login_value" placeholder="'.$user['login'].'"/></span></p>
+
+                        <p><span class="login_info_"><button type="button" class="edit_icon" onclick="edit_infos(\'\',\'login\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
+                        <span class="hidden login_edit_"><input class="admin" type="submit" name="new_login" value="Valider" onclick="waiting_time(event,\'form_profil\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit(\'\',\'login\')"/></span></p>';
 
 
                         echo '<p>Mot de passe :</p>';
-                        if(isset($_POST["modif_mdp"])){
-                            echo '<td><input type="text" name="new_mdp_value" placeholder="'.$user["mdp"].'"/></td>';
-                            echo '<td><input class="admin" type="submit" name="new_mdp" value="Valider"/></td>';
-                        }
-                        else{
-                            echo '<p>'.$user["mdp"].'</p>
-                            <p><button type="submit" class="edit_icon" name="modif_mdp"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>';
-                        }
+                        echo '
+                        <p><span class="mdp_info_">'.$user['mdp'].' </span>
+                        <span class="hidden mdp_edit_"><input class="modifier" type="text" name="new_mdp_value" placeholder="'.$user['mdp'].'"/></span></p>
+
+                        <p><span class="mdp_info_"><button type="button" class="edit_icon" onclick="edit_infos(\'\',\'mdp\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
+                        <span class="hidden mdp_edit_"><input class="admin" type="submit" name="new_mdp" value="Valider" onclick="waiting_time(event,\'form_profil\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit(\'\',\'mdp\')"/></span></p>';
 
 
                         echo '<p>E-mail : </p>';
-                        if(isset($_POST["modif_email"])){
-                            echo '<td><input type="text" name="new_email_value" placeholder="'.$user["email"].'"/></td>';
-                            echo '<td><input class="admin" type="submit" name="new_email" value="Valider"/></td>';
-                        }
-                        else{
-                            echo '<p>'.$user["email"].'</p>
-                            <p><button type="submit" class="edit_icon" name="modif_email"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>';
-                        }
+                        echo '
+                        <p><span class="email_info_">'.$user['email'].' </span>
+                        <span class="hidden email_edit_"><input class="modifier" type="text" name="new_email_value" placeholder="'.$user['email'].'"/></span></p>
+
+                        <p><span class="email_info_"><button type="button" class="edit_icon" onclick="edit_infos(\'\',\'email\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
+                        <span class="hidden email_edit_"><input class="admin" type="submit" name="new_email" value="Valider" onclick="waiting_time(event,\'form_profil\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit(\'\',\'email\')"/></span></p>';
+            
 
                         echo '<p>Prénom :</p>';
-                        if(isset($_POST["modif_prenom"])){
-                            echo '<td><input type="text" name="new_prenom_value" placeholder="'.$user["profil"]["prenom"].'"/></td>';
-                            echo '<td><input class="admin" type="submit" name="new_prenom" value="Valider"/></td>';
-                        }
-                        else{
-                            echo '<p>'.$user["profil"]["prenom"].'</p>
-                            <p><button type="submit" class="edit_icon" name="modif_prenom"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>';
-                        }
+                        echo '
+                        <p><span class="prenom_info_">'.$user['profil']['prenom'].' </span>
+                        <span class="hidden prenom_edit_"><input class="modifier" type="text" name="new_prenom_value" placeholder="'.$user['profil']['prenom'].'"/></span></p>
+
+                        <p><span class="prenom_info_"><button type="button" class="edit_icon" onclick="edit_infos(\'\',\'prenom\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
+                        <span class="hidden prenom_edit_"><input class="admin" type="submit" name="new_prenom" value="Valider" onclick="waiting_time(event,\'form_profil\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit(\'\',\'prenom\')"/></span></p>';
+                        
 
                         echo '<p>Nom :</p>';
-                        if(isset($_POST["modif_nom"])){
-                            echo '<td><input type="text" name="new_nom_value" placeholder="'.$user["profil"]["nom"].'"/></td>';
-                            echo '<td><input class="admin" type="submit" name="new_nom" value="Valider"/></td>';
-                        }
-                        else{
-                            echo '<p>'.$user["profil"]["nom"].'</p>
-                            <p><button type="submit" class="edit_icon" name="modif_nom"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>';
-                        }
+                        echo '
+                        <p><span class="nom_info_">'.$user['profil']['nom'].' </span>
+                        <span class="hidden nom_edit_"><input class="modifier" type="text" name="new_nom_value" placeholder="'.$user['profil']['nom'].'"/></span></p>
+
+                        <p><span class="nom_info_"><button type="button" class="edit_icon" onclick="edit_infos(\'\',\'nom\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
+                        <span class="hidden nom_edit_"><input class="admin" type="submit" name="new_nom" value="Valider" onclick="waiting_time(event,\'form_profil\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit(\'\',\'nom\')"/></span></p>';
+                        
 
                         echo '<p>Numéro de téléphone :</p>';
-                        if(isset($_POST["modif_tel"])){
-                            echo '<td><input type="tel" pattern="[0-9]*" name="new_tel_value" placeholder="'.$user["profil"]["tel"].'"/></td>';
-                            echo '<td><input class="admin" type="submit" name="new_tel" value="Valider"/></td>';
-                        }
-                        else{
-                            echo '<p>'.$user["profil"]["tel"].'</p>
-                            <p><button type="submit" class="edit_icon" name="modif_tel"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>';
-                        }
+                        echo '
+                        <p><span class="tel_info_">'.$user['profil']['tel'].' </span>
+                        <span class="hidden tel_edit_"><input class="modifier" type="text" name="new_tel_value" placeholder="'.$user['profil']['tel'].'"/></span></p>
+
+                        <p><span class="tel_info_"><button type="button" class="edit_icon" onclick="edit_infos(\'\',\'tel\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
+                        <span class="hidden tel_edit_"><input class="admin" type="submit" name="new_tel" value="Valider" onclick="waiting_time(event,\'form_profil\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit(\'\',\'tel\')"/></span></p>';
+                        
 
                         echo '<p>Date de naissance :</p>';
-                        if(isset($_POST["modif_dob"])){
-                            echo '<td><input type="text" name="new_dob_value" placeholder="'.$user["profil"]["dob"].'"/></td>';
-                            echo '<td><input class="admin" type="submit" name="new_dob" value="Valider"/></td>';
-                        }
-                        else{
-                            echo '<p>'.$user["profil"]["dob"].'</p>
-                            <p><button type="submit" class="edit_icon" name="modif_dob"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>';
-                        }
+                        echo '
+                        <p><span class="dob_info_">'.$user['profil']['dob'].' </span>
+                        <span class="hidden dob_edit_"><input class="modifier" type="text" name="new_dob_value" placeholder="'.$user['profil']['dob'].'"/></span></p>
+
+                        <p><span class="dob_info_"><button type="button" class="edit_icon" onclick="edit_infos(\'\',\'dob\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
+                        <span class="hidden dob_edit_"><input class="admin" type="submit" name="new_dob" value="Valider" onclick="waiting_time(event,\'form_profil\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit(\'\',\'dob\')"/></span></p>';
+                        
 
                         echo '<p>Genre :</p>';
-                        if(isset($_POST["modif_genre"])){
-                            if($user['profil']['genre'] == "mme"){
-                                echo '<td><select class="modif_role" name="new_genre_value">
+                        echo '
+                        <p><span class="genre_info_">'.$user['profil']['genre'].' </span>
+                        <span class="hidden genre_edit_">';
+                        if($user['profil']['genre'] == "mme"){
+                                echo '<select class="modif_role" name="new_genre_value">
                                     <option value="mme">Mme</option>
                                     <option value="mr">Mr</option>
                                     <option value="x">X</option>
-                                </select></td>';
+                                </select>';
                             }
                             else if($user['profil']['genre'] == "mr"){
-                                echo '<td><select class="modif_role" name="new_genre_value">
+                                echo '<select class="modif_role" name="new_genre_value">
                                     <option value="mr">Mr</option>
                                     <option value="mme">Mme</option>
                                     <option value="x">X</option>
-                                </select></td>';
+                                </select>';
                             }
                             else{
-                                echo '<td><select class="modif_role" name="new_genre_value">
+                                echo '<select class="modif_role" name="new_genre_value">
                                     <option value="x">X</option>
                                     <option value="mme">Mme</option>
                                     <option value="mr">Mr</option>
-                                </select></td>';
+                                </select>';
                             }
-                            echo '<td><input class="admin" type="submit" name="new_genre" value="Valider"/></td>';
-                        }
-                        else{
-                            echo '<p>'.$user["profil"]["genre"].'</p>
-                            <p><button type="submit" class="edit_icon" name="modif_genre"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>';
-                        }
+                        
+                        echo '</span></p>
+
+                        <p><span class="genre_info_"><button type="button" class="edit_icon" onclick="edit_infos(\'\',\'genre\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
+                        <span class="hidden genre_edit_"><input class="admin" type="submit" name="new_genre" value="Valider" onclick="waiting_time(event,\'form_profil\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit(\'\',\'genre\')"/></span></p>';
+                        
 
                         echo '<p>Adresse :</p>';
-                        if(isset($_POST["modif_adresse"])){
-                            echo '<td><input type="text" name="new_adresse_value" placeholder="'.$user["profil"]["adresse"].'"/></td>';
-                            echo '<td><input class="admin" type="submit" name="new_adresse" value="Valider"/></td>';
-                        }
-                        else{
-                            echo '<p>'.$user["profil"]["adresse"].'</p>
-                            <p><button type="submit" class="edit_icon" name="modif_adresse"><img class="edit_icon" src="../images/edit_icon.png"/></button></p>';
-                        }
+                        echo '
+                        <p><span class="adresse_info_">'.$user['profil']['adresse'].' </span>
+                        <span class="hidden adresse_edit_"><input class="modifier" type="text" name="new_adresse_value" placeholder="'.$user['profil']['adresse'].'"/></span></p>
+
+                        <p><span class="adresse_info_"><button type="button" class="edit_icon" onclick="edit_infos(\'\',\'adresse\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
+                        <span class="hidden adresse_edit_"><input class="admin" type="submit" name="new_adresse" value="Valider" onclick="waiting_time(event,\'form_profil\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit(\'\',\'adresse\')"/></span></p>';
                     ?>
                         
                     <p class="empty"> .</p>
@@ -473,7 +460,5 @@
             <p>Email : contact@campingextreme.com<br/>Téléphone : 01 23 45 67 89</p>
             <br/>
         </div>
-
-        <script src="../javascript/chg_theme.js"></script>
     </body>
 </php>
