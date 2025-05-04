@@ -12,7 +12,10 @@ body.presentation{/*Fond de la présentation plus uniforme*/
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, rgb(202, 212, 183) 90%), url("../images/background.webp") no-repeat center 65% / contain;
     background-color: rgb(202, 212, 183); 
 }
-
+body.sombre{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, rgb(28, 59, 36) 90%), url("../images/background.webp") no-repeat center 65% / contain;
+    background-color: rgb(28, 59, 36);
+}
 
 /*TYPOGRAPHIE TEXTE*/
 *{
@@ -41,6 +44,9 @@ h1.titre{/*Le titre sur la bande au dessus*/
     color:rgb(42, 77, 42);
     text-align: center;
     -webkit-text-stroke: 1px rgb(27, 51, 27);
+}
+.sombre h1.titre{
+    color:rgb(202, 212, 183); 
 }
 h1.titre-accueil{/*Le titre de la page d'accueil en gros*/
     text-align: center;

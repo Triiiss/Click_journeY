@@ -11,7 +11,6 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css"/>
     </head>
     <body>
-        <script src="../javascript/chg_theme.js"></script>
         <h1 class="titre">
             Camping de l'Extreme <img src="../images/logo.png" class="logo" alt="logo de l'image"/>
             <button class="chg_theme"> 
@@ -271,6 +270,8 @@
                 <p>Email : contact@campingextreme.com<br/>Téléphone : 01 23 45 67 89</p>
                 <br/>
         </div>
+
+        <script src="../javascript/chg_theme.js"></script>
     </body>
 </php>
 

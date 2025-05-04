@@ -24,7 +24,6 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css"/>
     </head>
     <body>
-        <script src="../javascript/chg_theme.js"></script>
         <h1 class="titre">
             Camping de l'Extreme <img src="../images/logo.png" class="logo" alt="logo de l'image"/>
             <button class="chg_theme"> 
@@ -97,7 +96,6 @@
                 file_put_contents('../json/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
         ?>
 
-
-
+        <script src="../javascript/chg_theme.js"></script>
     </body>
 </php>
