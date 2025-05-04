@@ -1,24 +1,13 @@
-function hide_view(num){
-        if (num === 0){
-                var icon = document.getElementById("icon");
-                var mdp = document.getElementById("password");
-        }
-        else if (num === 1){
-                var icon = document.getElementById("icon_first");
-                var mdp = document.getElementById("password_first");
-        }
-        else{
-                var icon = document.getElementById("icon_second");
-                var mdp = document.getElementById("password_second");
-        }
-
+function hide_view(password_name, icon_name){
+        var password = document.getElementById(password_name);
+        var icon = document.getElementById(icon_name);
         
-        if (mdp.type === "password"){
-                mdp.type = "text";
+        if (password.type === "password"){
+                password.type = "text";
                 icon.src = "../images/hide.png";
         }
         else{
-                mdp.type = "password";
+                password.type = "password";
                 icon.src = "../images/view.png";
         }
 }
@@ -135,26 +124,4 @@ function verification_inscription(){
         nom.value = nomFormatted;
         
         button.type = "submit";
-}
-
-function waiting_time(event, formId) {
-        event.preventDefault(); // Empêche l'envoi immédiat
-    
-        const form = document.getElementById(formId);
-        const button = event.target;
-        const buttonName = button.getAttribute('name'); 
-        const buttonValue = button.getAttribute('value'); 
-        button.disabled = true; // Désactive le bouton pour éviter plusieurs clics
-
-        if (buttonName) {
-                const hiddenInput = document.createElement('input');
-                hiddenInput.type = 'hidden';
-                hiddenInput.name = buttonName;
-                hiddenInput.value = buttonValue;
-                form.appendChild(hiddenInput);
-        }
-    
-        setTimeout(function() {
-            form.submit(); // Après 1 seconde
-        }, 1000);
 }
