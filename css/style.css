@@ -12,17 +12,11 @@ body.presentation{/*Fond de la présentation plus uniforme*/
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, rgb(202, 212, 183) 90%), url("../images/background.webp") no-repeat center 65% / contain;
     background-color: rgb(202, 212, 183); 
 }
-body.sombre{
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, rgb(28, 59, 36) 90%), url("../images/background.webp") no-repeat center 65% / contain;
-    background-color: rgb(28, 59, 36);
-}
+
 
 /*TYPOGRAPHIE TEXTE*/
 *{
     color:rgb(28, 49, 28);
-}
-.sombre *{
-    color:white;
 }
 *:hover{
     transition: all 0.5s;
@@ -48,17 +42,11 @@ h1.titre{/*Le titre sur la bande au dessus*/
     text-align: center;
     -webkit-text-stroke: 1px rgb(27, 51, 27);
 }
-.sombre h1.titre{
-    color:rgb(202, 212, 183); 
-}
 h1.titre-accueil{/*Le titre de la page d'accueil en gros*/
     text-align: center;
     font-size: 7vw;
     margin-top: 10vw;
     -webkit-text-stroke: 5px rgb(202, 212, 183);
-}
-.sombre h1.titre-accueil{
-    -webkit-text-stroke: 5px rgb(42, 77, 42);
 }
 span.etoile{
     color: rgb(195, 4, 4);
@@ -68,6 +56,12 @@ span.vert{
 }
 .orange{
     color: rgb(255, 106, 19);
+}
+.sombre *{
+    color:white;
+}
+.sombre h1.titre-accueil{
+    -webkit-text-stroke: 5px rgb(42, 77, 42);
 }
 
 
@@ -174,15 +168,15 @@ fieldset.formulaire{/*Fond et mise en page en grille*/
     display: grid;
     grid-template-columns: 50% 50%;
 }
-.sombre fieldset.formulaire{
-    background-color: rgba(40, 77, 40,0.6);
-}
 fieldset.connexion, fieldset.inscription{
     grid-template-columns: 50% 50%;
 }
 label,input,div.inscription,button.inscription{/*A gauche*/
     font-size: 1.5vw;
     margin: 2% 0% 2% 0%;
+}
+.sombre fieldset.formulaire{
+    background-color: rgba(40, 77, 40,0.6);
 }
 label{
     columns: 1;
@@ -206,7 +200,7 @@ input[name=mdp],input[name=mdpcfrm]{
 
 
 /*BOUTONS*/
-button,input[name="deco"],input[name="supp"],input.admin,#pp_button{/*Boutons oranges*/
+button,input[name="deco"],input[name="supp"],#pp_button{/*Boutons oranges*/
     color: white;
     cursor: pointer;
     font-size: 1vw;
@@ -237,10 +231,13 @@ a.accueil:hover, a#accueil{/*Changement de couleur*/
     background-color: rgb(255, 106, 19);
     border-color: rgb(153, 60, 6);
 }
-button.edit_icon{
+button.edit_icon, input.edit_icon{
+    font-size: 1vw;
+    color: white;
     background-color: rgb(255, 106, 19);
     padding: 0.1vw;
     border-radius: 3px;
+    border: solid 1px rgb(132, 53, 7);
 }
 .modif_role,.modif_role option{
     color: white;
@@ -262,10 +259,7 @@ button.admin_defil:hover{
     color:rgb(247, 148, 91);
     background-color: rgba(24, 48, 24, 0.65);
 }
-button.chg_theme{
-    border-radius: 100%;
-    background-color: #1c1c1c;
-}
+
 
 /*PAGE PRESENTATION*/
 span.presentation{/*Les sous-titre*/
@@ -324,7 +318,7 @@ p.conditions{
 
 /*PAGE PROFIL*/
 fieldset.profil{/*Fond et mise en page en grille*/
-    grid-template-columns: 45% 45% 10%;
+    grid-template-columns: 40% 45% 15%;
 }
 fieldset.voyages{/*Fond et mise en page en grille*/
     grid-template-columns: 100%;
@@ -351,6 +345,9 @@ input[type="file"] {
 }
 #file_name{
     font-size: 0.7vw;
+}
+.hidden{
+    display: none;
 }
 
 /*PAGE ADMIN*/
@@ -398,9 +395,15 @@ th.admin {
     color: rgb(255, 106, 19);
 }
 input.admin{
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+    background-color: rgb(255, 106, 19);
+    border: solid 1px rgb(153, 60, 6);
     font-size: 0.9vw;
     height: 1.5vw;
-    width: 5vw;
+    width: 3.2vw;
+    margin:0vw 0.1vw 0vw 0vw;
 }
 input.modifier{
     font-size: 1.1vw;
