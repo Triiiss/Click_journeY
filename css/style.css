@@ -13,7 +13,7 @@ body.presentation{/*Fond de la présentation plus uniforme*/
     background-color: rgb(202, 212, 183); 
 }
 body.sombre{
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, rgb(28, 59, 36) 90%), url("../images/background.webp") no-repeat center 65% / contain;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, rgb(28, 59, 36) 90%), url("../images/backgroundSombre.webp") no-repeat center 65% / contain;
     background-color: rgb(28, 59, 36);
 }
 
@@ -110,9 +110,7 @@ img.edit_icon{/*Petit crayon ou croix*/
     border-radius: 10px;
 }
 .imgVoyage:hover{/*Agrandir si on passe par dessus*/
-    width: 16vw;
-    height: 16vw;
-    border-radius: 10px;
+    transform: scale(1.03);
 }
 .imgDetail{
     width: 15vw;
@@ -268,7 +266,7 @@ button.admin_defil:hover{
 }
 button.chg_theme{
     border-radius: 100%;
-    background-color: #1c1c1c;
+    background-color: rgb(28, 59, 36);
 }
 
 
@@ -277,7 +275,7 @@ span.presentation{/*Les sous-titre*/
     font-weight: bold;
     color: rgb(202, 212, 183);
     -webkit-text-stroke: 2px rgb(27, 51, 27);
-    border-bottom: solid rgb(27, 51, 27);
+    border-bottom: solid rgb(51, 94, 51);
     font-size: 3vw;
     padding: 0% 10% 0% 0%;
 }
