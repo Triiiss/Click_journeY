@@ -167,7 +167,7 @@
                     <label for="mdp" >Mot de passe : <span class="etoile">*</span> </label>
                     <span>
                         <input type="password" name="mdp" id="password_first" placeholder="********" required>
-                        <button type="button" class="edit_icon" onclick="hide_view(1)">
+                        <button type="button" class="edit_icon" onclick="hide_view('password_first','icon_first')">
                             <img id="icon_first" src="../images/view.png"/>
                         </button>
                     </span>
@@ -206,7 +206,7 @@
                     <label for="mdpcfrm" >Confirmation mot de passe : <span class="etoile">*</span> </label>
                     <span>
                         <input type="password" name="mdpcfrm" id="password_second" placeholder="********" required>
-                        <button type="button" class="edit_icon" onclick="hide_view(2)">
+                        <button type="button" class="edit_icon" onclick="hide_view('password_second','icon_second')">
                             <img id="icon_second" src="../images/view.png"/>
                         </button>
                     </span>

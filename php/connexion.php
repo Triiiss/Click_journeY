@@ -81,7 +81,7 @@
 
             <span>
                 <input type="password" name="mdp" id="password" required>
-                <button type="button" class="edit_icon" onclick="hide_view(0)">
+                <button type="button" class="edit_icon" onclick="hide_view('password','icon')">
                     <img id="icon" src="../images/view.png"/>
                 </button>
             </span>
