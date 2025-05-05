@@ -12,6 +12,10 @@ body.presentation{/*Fond de la présentation plus uniforme*/
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, rgb(202, 212, 183) 90%), url("../images/background.webp") no-repeat center 65% / contain;
     background-color: rgb(202, 212, 183); 
 }
+body.sombre{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, rgb(28, 59, 36) 90%), url("../images/background.webp") no-repeat center 65% / contain;
+    background-color: rgb(28, 59, 36);
+}
 
 
 /*TYPOGRAPHIE TEXTE*/
@@ -62,6 +66,9 @@ span.vert{
 }
 .sombre h1.titre-accueil{
     -webkit-text-stroke: 5px rgb(42, 77, 42);
+}
+.sombre h1.titre{
+    color:rgb(202, 212, 183); 
 }
 
 
@@ -258,6 +265,10 @@ button.admin_stop{/*Fond transparent*/
 button.admin_defil:hover{
     color:rgb(247, 148, 91);
     background-color: rgba(24, 48, 24, 0.65);
+}
+button.chg_theme{
+    border-radius: 100%;
+    background-color: #1c1c1c;
 }
 
 
