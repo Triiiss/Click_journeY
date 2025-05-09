@@ -22,7 +22,7 @@
 
         <?php bandeau("recherche");?>
         
-        <form action="recherche.php" method="post">
+        <form action="recherche.php" method="get">
             <fieldset class="recherche">
                 <legend>Filtres</legend>
                 <div class="filtre">
@@ -43,9 +43,9 @@
                 <div class="filtre">
                     <label for="budget">Budget</label>
                     <?php
-                        if(isset($_POST["budget"])){
-                            echo '<input class="recherche" type="range" name="budget" min="10" max="5000" value="'.$_POST["budget"].'" oninput="majBudget(this.value)">
-                            <span id="valBudget">'.$_POST["budget"].' €</span>';
+                        if(isset($_GET["budget"])){
+                            echo '<input class="recherche" type="range" name="budget" min="10" max="5000" value="'.$_GET["budget"].'" oninput="majBudget(this.value)">
+                            <span id="valBudget">'.$_GET["budget"].' €</span>';
                         }
                         else{
                            echo '<input class="recherche" type="range" name="budget" min="10" max="5000" value="1000" oninput="majBudget(this.value)">
@@ -105,17 +105,14 @@
                 $json_voyages=file_get_contents("../json/voyages.json");
                 $voyages=json_decode($json_voyages, true);
 
-                if(isset($_POST["search"])){
-                    $recherche=$_POST["search"];
-                }
-                else if(isset($_GET["search"])){
+                if(isset($_GET["search"])){
                     $recherche=$_GET["search"];
                 }
                 else{
                     $recherche="";
                 }
-                if(isset($_POST["budget"])){
-                    $budget=$_POST["budget"];
+                if(isset($_GET["budget"])){
+                    $budget=$_GET["budget"];
                 }
                 else{
                     $budget=1000;
@@ -189,20 +186,31 @@
                     if (count % 3 !== 0) {
                         resultats.appendChild(pageDiv);
                     }
+                    
                     //affichage du bouton page précédente si la page est supérieure à 1
                     if (page > 1) {
-                        const pagePrec = document.createElement("a");
-                        pagePrec.href = '?page='+(page - 1)+'&search='+recherche;
-                        pagePrec.innerHTML = '<button type="button">Page précédente</button>';
-                        resultats.appendChild(pagePrec);
+                        const btnPrec = document.createElement("a");
+                        btnPrec.href = '#resultats';
+                        btnPrec.innerHTML = '<button type="button" onclick="pagePrec()">Page précédente</button>';
+                        resultats.appendChild(btnPrec);
                     }
                     //affichage du bouton page suivante s'il reste des voyages à afficher
                     if (count >= 9 * page) {
-                        const pageSuiv = document.createElement("a");
-                        pageSuiv.href = '?page='+(page + 1)+'&search='+recherche;
-                        pageSuiv.innerHTML = '<button type="button">Page suivante</button>';
-                        resultats.appendChild(pageSuiv);
+                        const btnSuiv = document.createElement("a");
+                        btnSuiv.href = '#resultats';
+                        btnSuiv.innerHTML = '<button type="button" onclick="pageSuiv()">Page suivante</button>';
+                        resultats.appendChild(btnSuiv);
                     }
+                }
+                
+                function pagePrec(){
+                    page--;
+                    afficherVoyages(voyages, recherche, page);
+                }
+
+                function pageSuiv(){
+                    page++;
+                    afficherVoyages(voyages, recherche, page);
                 }
 
                 function calcDureeVoyage(v) {
