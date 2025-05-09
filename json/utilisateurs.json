@@ -129,83 +129,39 @@
                         ""
                     ]
                 ]
-            }
-        ],
-        "voyages_favoris": [],
-        "voyages_panier": [
-            {
-                "id": 14,
-                "total": 87,
-                "options": [
-                    [
-                        ""
-                    ],
-                    [
-                        ""
-                    ],
-                    [
-                        ""
-                    ]
-                ]
             },
             {
-                "id": 15,
-                "total": 12,
+                "id": 0,
+                "total": 215,
                 "options": [
                     [
+                        "",
                         ""
                     ],
                     [
+                        "",
+                        "",
                         ""
                     ],
                     [
-                        ""
-                    ]
-                ]
-            },
-            {
-                "id": 11,
-                "total": 40,
-                "options": [
-                    [
+                        "",
                         ""
                     ],
                     [
+                        "",
+                        "",
                         ""
                     ],
                     [
-                        "Acclimatation"
-                    ]
-                ]
-            },
-            {
-                "id": 10,
-                "total": 490,
-                "options": [
-                    [
+                        "",
+                        "",
                         ""
-                    ],
-                    [
-                        "Acclimatation"
-                    ]
-                ]
-            },
-            {
-                "id": 13,
-                "total": 330,
-                "options": [
-                    [
-                        ""
-                    ],
-                    [
-                        ""
-                    ],
-                    [
-                        "Acclimatation"
                     ]
                 ]
             }
         ],
+        "voyages_favoris": [],
+        "voyages_panier": [],
         "date d'inscription": "2025-03-21"
     },
     {

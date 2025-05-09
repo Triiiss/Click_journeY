@@ -43,6 +43,10 @@
                         if (isset($_GET["status"]) && $_GET["status"]=="accepted"){
                                 //on rajoute les voyages du panier dans les voyages achetés
                                 $users[$_SESSION["user_index"]-1]["voyages_achete"]=array_merge($users[$_SESSION["user_index"]-1]["voyages_achete"],$users[$_SESSION["user_index"]-1]["voyages_panier"]);
+                                //on incrémente le nombre de personnes de chaque voyage qui est dans le panier
+                                foreach($user["voyages_panier"] as $k=> $panier){
+                                        $voyages[$panier["id"]]["nb_personnes"]++;
+                                }
                                 //on supprime les voyages du panier                            
                                 $users[$_SESSION["user_index"]-1]["voyages_panier"] = [];
 
@@ -86,14 +90,15 @@
                                 <input type="hidden" name="transaction" value="154632ABCD">
                                 <input type="hidden" name="montant" value="'.$sum.'">
                                 <input type="hidden" name="vendeur" value="MI-4_J">
-                                <input type="hidden" name="retour" value="http://localhost:8080/html/achat.php?session=s">
-                                <input type="hidden" name="control" value="'.md5(getAPIKey("MI-4_J") . "#" . "154632ABCD" . "#" . $sum . "#" . "MI-4_J" . "#" . "http://localhost:8080/html/achat.php?session=s" . "#").'">
+                                <input type="hidden" name="retour" value="http://localhost:8080/php/achat.php?session=s">
+                                <input type="hidden" name="control" value="'.md5(getAPIKey("MI-4_J") . "#" . "154632ABCD" . "#" . $sum . "#" . "MI-4_J" . "#" . "http://localhost:8080/php/achat.php?session=s" . "#").'">
                                 
                                 <input type="submit" value="Valider et payer">
                         </form>
                         </fieldset> ';
                 }
                 file_put_contents('../json/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
+                file_put_contents('../json/voyages.json', json_encode($voyages, JSON_PRETTY_PRINT));
         ?>
 
         <script src="../javascript/chg_theme.js"></script>

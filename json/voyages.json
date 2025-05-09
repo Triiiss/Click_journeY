@@ -1,830 +1,830 @@
 [
     {
         "titre": "Le sommet du monde",
-        "id":0,
+        "id": 0,
+        "nb_personnes": 1,
         "depart": "2026-12-21",
         "fin": "2026-12-28",
-        "duree":"1 semaine",
-        "mots_cles":"montagnes randonnées alpinisme everest",
-        "image": "../images/voyages/voy1.jpg",
-        "description":"Allez au septième ciel, ou au plus proche possible. En haut de l'Everest le monde semble si petit.",
-        "lieu":"Népal",
+        "duree": "1 semaine",
+        "mots_cles": "montagnes randonn\u00e9es alpinisme everest",
+        "image": "..\/images\/voyages\/voy1.jpg",
+        "description": "Allez au septi\u00e8me ciel, ou au plus proche possible. En haut de l'Everest le monde semble si petit.",
+        "lieu": "N\u00e9pal",
         "prix": 215,
-        "etapes":[
+        "etapes": [
             {
                 "titre": "Camp de base",
-                "duree":"2 jours",
-                "lieu":"5 364 m",
-                "option":[
+                "duree": "2 jours",
+                "lieu": "5 364 m",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     },
                     {
-                        "titre":"location de sac de couchage",
-                        "prix":5
+                        "titre": "location de sac de couchage",
+                        "prix": 5
                     }
                 ]
             },
             {
                 "titre": "Camp 2",
-                "duree":"1 jour",
-                "lieu":"6 065 m",
-                "option":[
+                "duree": "1 jour",
+                "lieu": "6 065 m",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     },
                     {
-                        "titre":"Déjeuner inclus",
-                        "prix":5
-
+                        "titre": "D\u00e9jeuner inclus",
+                        "prix": 5
                     },
                     {
-                        "titre":"location de sac de couchage",
-                        "prix":5
+                        "titre": "location de sac de couchage",
+                        "prix": 5
                     }
                 ]
             },
             {
                 "titre": "Camp 3",
-                "duree":"1 jour",
-                "lieu":"6 400 m",
-                "option":[
+                "duree": "1 jour",
+                "lieu": "6 400 m",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     },
                     {
-                        "titre":"location de sac de couchage",
-                        "prix":5
+                        "titre": "location de sac de couchage",
+                        "prix": 5
                     }
                 ]
             },
             {
                 "titre": "Camp 4",
-                "duree":"1 jour",
-                "lieu":"6 400 m",
-                "option":[
+                "duree": "1 jour",
+                "lieu": "6 400 m",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     },
                     {
-                        "titre":"Diner inclus",
-                        "prix":5
+                        "titre": "Diner inclus",
+                        "prix": 5
                     },
                     {
-                        "titre":"location de sac de couchage",
-                        "prix":5
+                        "titre": "location de sac de couchage",
+                        "prix": 5
                     }
                 ]
             },
             {
                 "titre": "Zone de la mort",
-                "duree":"2 jours",
-                "lieu":"7 900 m",
-                "option":[
+                "duree": "2 jours",
+                "lieu": "7 900 m",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     },
                     {
-                        "titre":"location de sac de couchage",
-                        "prix":5
+                        "titre": "location de sac de couchage",
+                        "prix": 5
                     },
                     {
-                        "titre":"location de skis",
-                        "prix":20
-                    }               
+                        "titre": "location de skis",
+                        "prix": 20
+                    }
                 ]
             }
         ]
     },
-
     {
-        "titre": "Forêt au sang froid",
-        "id":1,
+        "titre": "For\u00eat au sang froid",
+        "id": 1,
+        "nb_personnes": 0,
         "depart": "2026-11-29",
         "fin": "2026-12-01",
-        "duree":"2 jours",
-        "mots_cles":"forêts vampires transilvanie",
-        "image": "../images/voyages/voy2.jpg",
-        "description":"Visitez la culture de la transilvanie, rencontrez les célébrités locales... à vos risques et périls",
-        "lieu":"Roumanie",
+        "duree": "2 jours",
+        "mots_cles": "for\u00eats vampires transilvanie",
+        "image": "..\/images\/voyages\/voy2.jpg",
+        "description": "Visitez la culture de la transilvanie, rencontrez les c\u00e9l\u00e9brit\u00e9s locales... \u00e0 vos risques et p\u00e9rils",
+        "lieu": "Roumanie",
         "prix": 180,
-        "etapes":[
+        "etapes": [
             {
                 "titre": "Chateau de Dracula",
-                "duree":"1 jour",
-                "lieu":"Brașov",
-                "option":[
+                "duree": "1 jour",
+                "lieu": "Bra\u0219ov",
+                "option": [
                     {
-                        "titre":"Ail",
-                        "prix":5
+                        "titre": "Ail",
+                        "prix": 5
                     }
                 ]
             },
             {
-                "titre": "Cimetière",
-                "duree":"1 jour",
-                "lieu":"6 pieds sous terre",
-                "option":[
+                "titre": "Cimeti\u00e8re",
+                "duree": "1 jour",
+                "lieu": "6 pieds sous terre",
+                "option": [
                     {
-                        "titre":"Ail",
-                        "prix":5
+                        "titre": "Ail",
+                        "prix": 5
                     },
                     {
-                        "titre":"Détecteur de fantômes",
-                        "prix":20
-                    }                 
+                        "titre": "D\u00e9tecteur de fant\u00f4mes",
+                        "prix": 20
+                    }
                 ]
             }
         ]
     },
-
     {
-        "titre": "Une retraite exotique brûlante",
-        "id":2,
+        "titre": "Une retraite exotique br\u00fblante",
+        "id": 2,
+        "nb_personnes": 0,
         "depart": "2026-06-12",
         "fin": "2026-06-26",
-        "duree":"2 semaines",
-        "mots_cles":"îles volcans plages montagnes lave",
-        "image": "../images/voyages/voy3.jpg",
-        "description":"Relaxez vous sur une île tout confort avant d'explorer et étancher votre soif de curiosité brûlante.",
-        "lieu":"Hawaii",
+        "duree": "2 semaines",
+        "mots_cles": "\u00eeles volcans plages montagnes lave",
+        "image": "..\/images\/voyages\/voy3.jpg",
+        "description": "Relaxez vous sur une \u00eele tout confort avant d'explorer et \u00e9tancher votre soif de curiosit\u00e9 br\u00fblante.",
+        "lieu": "Hawaii",
         "prix": 500,
-        "etapes":[
+        "etapes": [
             {
                 "titre": "Retraite hawaiienne",
-                "duree":"7 jours",
-                "lieu":"Plages de Hawaii",
-                "option":[
+                "duree": "7 jours",
+                "lieu": "Plages de Hawaii",
+                "option": [
                     {
-                        "titre":"Activité surf",
-                        "prix":20
+                        "titre": "Activit\u00e9 surf",
+                        "prix": 20
                     },
                     {
-                        "titre":"Activité ski nautique",
-                        "prix":35
-                    }                       
+                        "titre": "Activit\u00e9 ski nautique",
+                        "prix": 35
+                    }
                 ]
             },
             {
                 "titre": "Ascension d'une montagne",
-                "duree":"6 jours",
-                "lieu":"Kīlauea",
-                "option":[
+                "duree": "6 jours",
+                "lieu": "K\u012blauea",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
                 "titre": "Chute dans un volcan",
-                "duree":"1 jour",
-                "lieu":"Dans la lave",
-                "option":[
+                "duree": "1 jour",
+                "lieu": "Dans la lave",
+                "option": [
                     {
-                        "titre":"Parasol",
-                        "prix":10
-                    }                    
+                        "titre": "Parasol",
+                        "prix": 10
+                    }
                 ]
             }
         ]
     },
-
     {
         "titre": "Camping parisien",
-        "id":3,
+        "id": 3,
+        "nb_personnes": 0,
         "depart": "2026-09-01",
         "fin": "2026-09-08",
-        "duree":"1 semaines",
-        "mots_cles":"villes Paris",
-        "image": "../images/voyages/voy4.jpg",
-        "description":"Découvrez la beauté parisienne du plus profond des souterrains jusqu'en haut de la tour Eiffel",
-        "lieu":"Paris",
+        "duree": "1 semaines",
+        "mots_cles": "villes Paris",
+        "image": "..\/images\/voyages\/voy4.jpg",
+        "description": "D\u00e9couvrez la beaut\u00e9 parisienne du plus profond des souterrains jusqu'en haut de la tour Eiffel",
+        "lieu": "Paris",
         "prix": 95,
-        "etapes":[
+        "etapes": [
             {
-                "titre": "Sur la scène",
-                "duree":"2 jours",
-                "lieu":"Sur les rives de la Seine",
-                "option":[
+                "titre": "Sur la sc\u00e8ne",
+                "duree": "2 jours",
+                "lieu": "Sur les rives de la Seine",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
                 "titre": "Sans ciel, sans argent",
-                "duree":"3 jours",
-                "lieu":"Métro parisien gare de Lyon",
-                "option":[
+                "duree": "3 jours",
+                "lieu": "M\u00e9tro parisien gare de Lyon",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
                 "titre": "Paris de haut",
-                "duree":"2 jours",
-                "lieu":"Tour Eiffel",
-                "option":[
+                "duree": "2 jours",
+                "lieu": "Tour Eiffel",
+                "option": [
                     {
-                        "titre":"Saut en parachute",
-                        "prix":25
-                    }                    
+                        "titre": "Saut en parachute",
+                        "prix": 25
+                    }
                 ]
             }
         ]
     },
-
     {
         "titre": "20 mille lieux sous la mer",
-        "id":4,
+        "id": 4,
+        "nb_personnes": 0,
         "depart": "2026-02-18",
         "fin": "2026-02-25",
-        "duree":"1 semaines",
-        "mots_cles":"mer sous-marins",
-        "image": "../images/voyages/voy5.jpg",
-        "description":"Explorez les contrés non-explorés de la Terre à bord d'un des sous-marins les plus sécurisé du monde.",
-        "lieu":"Océan Pacifique",
+        "duree": "1 semaines",
+        "mots_cles": "mer sous-marins",
+        "image": "..\/images\/voyages\/voy5.jpg",
+        "description": "Explorez les contr\u00e9s non-explor\u00e9s de la Terre \u00e0 bord d'un des sous-marins les plus s\u00e9curis\u00e9 du monde.",
+        "lieu": "Oc\u00e9an Pacifique",
         "prix": 150,
-        "etapes":[
+        "etapes": [
             {
-                "titre": "Arrivée et préparations",
-                "duree":"1 jour",
-                "lieu":"Palau",
-                "option":[
+                "titre": "Arriv\u00e9e et pr\u00e9parations",
+                "duree": "1 jour",
+                "lieu": "Palau",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
-                "titre": "Début de la descente",
-                "duree":"2 jours",
-                "lieu":"-30m",
-                "option":[
+                "titre": "D\u00e9but de la descente",
+                "duree": "2 jours",
+                "lieu": "-30m",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
-                "titre": "Découverte d'espèces inconnues",
-                "duree":"3 jours",
-                "lieu":"-200m",
-                "option":[
+                "titre": "D\u00e9couverte d'esp\u00e8ces inconnues",
+                "duree": "3 jours",
+                "lieu": "-200m",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
                 "titre": "Implosion du navire",
-                "duree":"1 jour",
-                "lieu":"-500m",
-                "option":[
+                "duree": "1 jour",
+                "lieu": "-500m",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             }
         ]
     },
-
     {
         "titre": "100% vertical",
-        "id":5,
+        "id": 5,
+        "nb_personnes": 0,
         "depart": "2026-05-01",
         "fin": "2026-05-10",
-        "duree":"9 jours",
-        "mots_cles":"montagne escalade",
-        "image": "../images/voyages/voy6.jpg",
-        "description":"Grimpez, grimpez et grimpez encore et encore. Votre ascension jusqu'à l'aventure sera l'ascension de la montagne.",
-        "lieu":"Antilles",
+        "duree": "9 jours",
+        "mots_cles": "montagne escalade",
+        "image": "..\/images\/voyages\/voy6.jpg",
+        "description": "Grimpez, grimpez et grimpez encore et encore. Votre ascension jusqu'\u00e0 l'aventure sera l'ascension de la montagne.",
+        "lieu": "Antilles",
         "prix": 125,
-        "etapes":[
+        "etapes": [
             {
                 "titre": "Petit piton",
-                "duree":"3 jours",
-                "lieu":"Alpes",
-                "option":[
+                "duree": "3 jours",
+                "lieu": "Alpes",
+                "option": [
                     {
-                        "titre":"Corde",
-                        "prix":40
+                        "titre": "Corde",
+                        "prix": 40
                     },
                     {
-                        "titre":"Chaussures d'escalade",
-                        "prix":30
+                        "titre": "Chaussures d'escalade",
+                        "prix": 30
                     }
                 ]
             },
             {
-                "titre": "Dent du géant",
-                "duree":"3 jours",
-                "lieu":"Alpes",
-                "option":[
+                "titre": "Dent du g\u00e9ant",
+                "duree": "3 jours",
+                "lieu": "Alpes",
+                "option": [
                     {
-                        "titre":"Corde",
-                        "prix":40
+                        "titre": "Corde",
+                        "prix": 40
                     },
                     {
-                        "titre":"Chaussures d'escalade",
-                        "prix":30
+                        "titre": "Chaussures d'escalade",
+                        "prix": 30
                     }
                 ]
             },
             {
                 "titre": "Mont blanc",
-                "duree":"3 jours",
-                "lieu":"Alpes",
-                "option":[
+                "duree": "3 jours",
+                "lieu": "Alpes",
+                "option": [
                     {
-                        "titre":"Corde",
-                        "prix":40
+                        "titre": "Corde",
+                        "prix": 40
                     },
                     {
-                        "titre":"Chaussures d'escalade",
-                        "prix":30
+                        "titre": "Chaussures d'escalade",
+                        "prix": 30
                     }
                 ]
             }
         ]
     },
-
     {
         "titre": "Les aventuriers du rail",
-        "id":6,
+        "id": 6,
+        "nb_personnes": 0,
         "depart": "2026-08-14",
         "fin": "2026-08-17",
-        "duree":"3 jours",
-        "mots_cles":"sncf trains gares TGV",
-        "image": "../images/voyages/voy7.jpg",
-        "description":"Partez à la découverte de la SNCF à vitesse grand V",
-        "lieu":"Paris-Marseille-Paris",
+        "duree": "3 jours",
+        "mots_cles": "sncf trains gares TGV",
+        "image": "..\/images\/voyages\/voy7.jpg",
+        "description": "Partez \u00e0 la d\u00e9couverte de la SNCF \u00e0 vitesse grand V",
+        "lieu": "Paris-Marseille-Paris",
         "prix": 90,
-        "etapes":[
+        "etapes": [
             {
-                "titre": "Arrivée à la gare",
-                "duree":"1 jour",
-                "lieu":"Paris Marne la Vallée Chessy",
-                "option":[
+                "titre": "Arriv\u00e9e \u00e0 la gare",
+                "duree": "1 jour",
+                "lieu": "Paris Marne la Vall\u00e9e Chessy",
+                "option": [
                     {
-                        "titre":"Déjeuner inclus",
-                        "prix":5
+                        "titre": "D\u00e9jeuner inclus",
+                        "prix": 5
                     }
                 ]
             },
             {
                 "titre": "Paris-Marseille",
-                "duree":"1 jour",
-                "lieu":"TGV N°786137",
-                "option":[
+                "duree": "1 jour",
+                "lieu": "TGV N\u00b0786137",
+                "option": [
                     {
-                        "titre":"Déjeuner inclus",
-                        "prix":5
+                        "titre": "D\u00e9jeuner inclus",
+                        "prix": 5
                     }
                 ]
             },
             {
                 "titre": "Marseille-Paris",
-                "duree":"1 jour",
-                "lieu":"TGV N°525358",
-                "option":[
+                "duree": "1 jour",
+                "lieu": "TGV N\u00b0525358",
+                "option": [
                     {
-                        "titre":"Déjeuner inclus",
-                        "prix":5
+                        "titre": "D\u00e9jeuner inclus",
+                        "prix": 5
                     }
                 ]
             }
         ]
     },
-
     {
         "titre": "Cosmic Yonder",
-        "id":7,
+        "id": 7,
+        "nb_personnes": 0,
         "depart": "2873-01-03",
         "fin": "2881-06-14",
-        "duree":"8 ans",
-        "mots_cles":"espace voyage temporel",
-        "image": "../images/voyages/voy8.jpg",
-        "description":"Vous passerez 8 ans de votre vie en ayant l'impression de n'avoir vécu qu'une heure.",
-        "lieu":"l'espace planète M195",
+        "duree": "8 ans",
+        "mots_cles": "espace voyage temporel",
+        "image": "..\/images\/voyages\/voy8.jpg",
+        "description": "Vous passerez 8 ans de votre vie en ayant l'impression de n'avoir v\u00e9cu qu'une heure.",
+        "lieu": "l'espace plan\u00e8te M195",
         "prix": 1999,
-        "etapes":[
+        "etapes": [
             {
-                "titre": "Acclimatation à la planète",
-                "duree":"4 ans",
-                "lieu":"planète M195",
-                "option":[
+                "titre": "Acclimatation \u00e0 la plan\u00e8te",
+                "duree": "4 ans",
+                "lieu": "plan\u00e8te M195",
+                "option": [
                     {
-                        "titre":"Combinaison spatiale",
-                        "prix":50
-                    }                    
+                        "titre": "Combinaison spatiale",
+                        "prix": 50
+                    }
                 ]
             },
             {
                 "titre": "Echange avec les scientifiques",
-                "duree":"4 ans",
-                "lieu":"Centre de données",
-                "option":[
+                "duree": "4 ans",
+                "lieu": "Centre de donn\u00e9es",
+                "option": [
                     {
-                        "titre":"Schémas du vaisseau",
-                        "prix":15
-                    }                    
+                        "titre": "Sch\u00e9mas du vaisseau",
+                        "prix": 15
+                    }
                 ]
             },
             {
-                "titre": "Retour dans le passé",
-                "duree":"-8 ans",
-                "lieu":"L'espace temps",
-                "option":[
+                "titre": "Retour dans le pass\u00e9",
+                "duree": "-8 ans",
+                "lieu": "L'espace temps",
+                "option": [
                     {
-                        "titre":"Déjeuner inclus",
-                        "prix":5
+                        "titre": "D\u00e9jeuner inclus",
+                        "prix": 5
                     }
                 ]
             }
         ]
     },
-
     {
-        "titre": "Conquête de l'Antarctique",
-        "id":8,
+        "titre": "Conqu\u00eate de l'Antarctique",
+        "id": 8,
+        "nb_personnes": 0,
         "depart": "2026-07-25",
         "fin": "2026-08-08",
-        "duree":"2 semaines",
-        "mots_cles":"glace froid",
-        "image": "../images/voyages/voy9.jpg",
-        "description":"Si vous n'avez pas froid aux yeux découvrez l'Antartique",
-        "lieu":"Antarctique",
+        "duree": "2 semaines",
+        "mots_cles": "glace froid",
+        "image": "..\/images\/voyages\/voy9.jpg",
+        "description": "Si vous n'avez pas froid aux yeux d\u00e9couvrez l'Antartique",
+        "lieu": "Antarctique",
         "prix": 68.9,
-        "etapes":[
+        "etapes": [
             {
-                "titre": "Durée de l'été dans l'Antartique",
-                "duree":"7 jours",
-                "lieu":"Centre de recherche",
-                "option":[
+                "titre": "Dur\u00e9e de l'\u00e9t\u00e9 dans l'Antartique",
+                "duree": "7 jours",
+                "lieu": "Centre de recherche",
+                "option": [
                     {
-                        "titre":"Chauffage",
-                        "prix":30
-                    }                    
+                        "titre": "Chauffage",
+                        "prix": 30
+                    }
                 ]
             },
             {
                 "titre": "Bataille contre un ours polaire",
-                "duree":"2 jours",
-                "lieu":"Sur la banquise",
-                "option":[
+                "duree": "2 jours",
+                "lieu": "Sur la banquise",
+                "option": [
                     {
-                        "titre":"Arme",
-                        "prix":60
-                    }                      
-                ]
-            },
-            {
-                "titre": "Visite du tueur du Titanic",
-                "duree":"2 jours",
-                "lieu":"Sur la banquise",
-                "option":[
-                    {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Arme",
+                        "prix": 60
                     }
                 ]
             },
             {
-                "titre": "Découverte d'une maladie vieille d'un million d'années",
-                "duree":"3 jours",
-                "lieu":"Dans une grotte de glace",
-                "option":[
+                "titre": "Visite du tueur du Titanic",
+                "duree": "2 jours",
+                "lieu": "Sur la banquise",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
+                    }
+                ]
+            },
+            {
+                "titre": "D\u00e9couverte d'une maladie vieille d'un million d'ann\u00e9es",
+                "duree": "3 jours",
+                "lieu": "Dans une grotte de glace",
+                "option": [
+                    {
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             }
         ]
     },
-
     {
         "titre": "Crab wave",
-        "id":9,
+        "id": 9,
+        "nb_personnes": 0,
         "depart": "2026-02-17",
         "fin": "2026-02-19",
-        "duree":"2 jours",
-        "mots_cles":"îles crabe",
-        "image": "../images/voyages/voy10.jpg",
-        "description":"Entrez sur le territoire des crabes, le zénith de l'évolution",
-        "lieu":"Crab Island aux îles maurice",
+        "duree": "2 jours",
+        "mots_cles": "\u00eeles crabe",
+        "image": "..\/images\/voyages\/voy10.jpg",
+        "description": "Entrez sur le territoire des crabes, le z\u00e9nith de l'\u00e9volution",
+        "lieu": "Crab Island aux \u00eeles maurice",
         "prix": 260,
-        "etapes":[
+        "etapes": [
             {
                 "titre": "Migration des crabes",
-                "duree":"1 jour",
-                "lieu":"Crab Island capital",
-                "option":[
+                "duree": "1 jour",
+                "lieu": "Crab Island capital",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
                 "titre": "crabification",
-                "duree":"1 jour",
-                "lieu":"Crab Island sur la plage",
-                "option":[
+                "duree": "1 jour",
+                "lieu": "Crab Island sur la plage",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             }
         ]
     },
-
     {
-        "titre": "Aurores boréales et ciels nocturnes",
-        "id":10,
+        "titre": "Aurores bor\u00e9ales et ciels nocturnes",
+        "id": 10,
+        "nb_personnes": 0,
         "depart": "2026-08-25",
         "fin": "2026-08-30",
-        "duree":"5 jours",
-        "mots_cles":"aurores boréales pêche pays nordiques",
-        "image": "../images/voyages/voy11.jpg",
-        "description":"Admirez les aurores boréales des pays nordiques",
-        "lieu":"Norvège",
+        "duree": "5 jours",
+        "mots_cles": "aurores bor\u00e9ales p\u00eache pays nordiques",
+        "image": "..\/images\/voyages\/voy11.jpg",
+        "description": "Admirez les aurores bor\u00e9ales des pays nordiques",
+        "lieu": "Norv\u00e8ge",
         "prix": 480,
-        "etapes":[
+        "etapes": [
             {
-                "titre": "Pêche de la truite",
-                "duree":"3 jours",
-                "lieu":"Côtes de Norvège",
-                "option":[
+                "titre": "P\u00eache de la truite",
+                "duree": "3 jours",
+                "lieu": "C\u00f4tes de Norv\u00e8ge",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
-                "titre": "Observation des aurores boréales",
-                "duree":"2 jours",
-                "lieu":"Campagne sans lumière",
-                "option":[
+                "titre": "Observation des aurores bor\u00e9ales",
+                "duree": "2 jours",
+                "lieu": "Campagne sans lumi\u00e8re",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             }
         ]
     },
-
     {
-        "titre": "Timidité des cimes",
-        "id":11,
+        "titre": "Timidit\u00e9 des cimes",
+        "id": 11,
+        "nb_personnes": 0,
         "depart": "2026-03-24",
         "fin": "2026-04-31",
-        "duree":"1 semaine",
-        "mots_cles":"forêts accrobranche arbres",
-        "image": "../images/voyages/voy12.jpg",
-        "description":"Dormez entre les feuilles des arbres après avoir",
-        "lieu":"Aurillac",
+        "duree": "1 semaine",
+        "mots_cles": "for\u00eats accrobranche arbres",
+        "image": "..\/images\/voyages\/voy12.jpg",
+        "description": "Dormez entre les feuilles des arbres apr\u00e8s avoir",
+        "lieu": "Aurillac",
         "prix": 30,
-        "etapes":[
+        "etapes": [
             {
                 "titre": "Accrobranche haut dans les arbres",
-                "duree":"2 jours",
-                "lieu":"Aurillac",
-                "option":[
+                "duree": "2 jours",
+                "lieu": "Aurillac",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
-                "titre": "Perdu dans la forêt",
-                "duree":"4 jours",
-                "lieu":"???",
-                "option":[
+                "titre": "Perdu dans la for\u00eat",
+                "duree": "4 jours",
+                "lieu": "???",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
                 "titre": "Rencontre avec Slender man",
-                "duree":"1 jour",
-                "lieu":"??????",
-                "option":[
+                "duree": "1 jour",
+                "lieu": "??????",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             }
         ]
     },
-
     {
-        "titre": "Urbex dans un hôpital abandonné",
-        "id":12,
+        "titre": "Urbex dans un h\u00f4pital abandonn\u00e9",
+        "id": 12,
+        "nb_personnes": 0,
         "depart": "2026-09-13",
         "fin": "2026-09-16",
-        "duree":"1 semaines",
-        "mots_cles":"urbex hôpital tétanos ",
-        "image": "../images/voyages/voy13.jpg",
-        "description":"Dans toute la légalité, visitez un hôpital qui a été évacué avec tout le matériel laissé en plan. Attention au tétanos",
+        "duree": "1 semaines",
+        "mots_cles": "urbex h\u00f4pital t\u00e9tanos ",
+        "image": "..\/images\/voyages\/voy13.jpg",
+        "description": "Dans toute la l\u00e9galit\u00e9, visitez un h\u00f4pital qui a \u00e9t\u00e9 \u00e9vacu\u00e9 avec tout le mat\u00e9riel laiss\u00e9 en plan. Attention au t\u00e9tanos",
         "lieu": "",
         "prix": 99,
-        "etapes":[
+        "etapes": [
             {
-                "titre": "Entrée dans l'hôpital",
-                "duree":"2 jours",
-                "lieu":"Entrée",
-                "option":[
+                "titre": "Entr\u00e9e dans l'h\u00f4pital",
+                "duree": "2 jours",
+                "lieu": "Entr\u00e9e",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
-                "titre": "Découverte de substance chère",
-                "duree":"4 jours",
-                "lieu":"Fond du laboratoire",
-                "option":[
+                "titre": "D\u00e9couverte de substance ch\u00e8re",
+                "duree": "4 jours",
+                "lieu": "Fond du laboratoire",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
-                "titre": "Arrivée de la police",
-                "duree":"1 jour",
-                "lieu":"Commissariat de police",
-                "option":[
+                "titre": "Arriv\u00e9e de la police",
+                "duree": "1 jour",
+                "lieu": "Commissariat de police",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             }
         ]
     },
-
     {
-        "titre": "Une forêt mortelle",
-        "id":13,
+        "titre": "Une for\u00eat mortelle",
+        "id": 13,
+        "nb_personnes": 0,
         "depart": "2026-10-09",
         "fin": "2026-10-14",
-        "duree":"5 jours",
-        "mots_cles":"forêts japon tokyo",
-        "image": "../images/voyages/voy14.jpg",
-        "description":"Vous allez pendre au cou de la culture",
-        "lieu":"Forêt d'Aokigahara au Japon",
+        "duree": "5 jours",
+        "mots_cles": "for\u00eats japon tokyo",
+        "image": "..\/images\/voyages\/voy14.jpg",
+        "description": "Vous allez pendre au cou de la culture",
+        "lieu": "For\u00eat d'Aokigahara au Japon",
         "prix": 320,
-        "etapes":[
+        "etapes": [
             {
-                "titre": "Camping à Tokyo",
-                "duree":"2 jours",
-                "lieu":"Tokyo",
-                "option":[
+                "titre": "Camping \u00e0 Tokyo",
+                "duree": "2 jours",
+                "lieu": "Tokyo",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
-                "titre": "Balades en forêt",
-                "duree":"2 jours",
-                "lieu":"Forêt d'Aokigahara",
-                "option":[
+                "titre": "Balades en for\u00eat",
+                "duree": "2 jours",
+                "lieu": "For\u00eat d'Aokigahara",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
                 "titre": "Fin du voyage",
-                "duree":"1 jour",
-                "lieu":"paradis",
-                "option":[
+                "duree": "1 jour",
+                "lieu": "paradis",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             }
         ]
     },
-
     {
         "titre": "Les dunes Sahara",
-        "id":14,
+        "id": 14,
+        "nb_personnes": 0,
         "depart": "2026-01-22",
         "fin": "2026-01-27",
-        "duree":"5 jours",
-        "mots_cles":"déserts sahara",
-        "image": "../images/voyages/voy15.jpg",
-        "description":"N'ayez pas peur d'avoir du sable dans vos bottes et commencez à marcher.",
-        "lieu":"Au Nord de l'Afrique",
+        "duree": "5 jours",
+        "mots_cles": "d\u00e9serts sahara",
+        "image": "..\/images\/voyages\/voy15.jpg",
+        "description": "N'ayez pas peur d'avoir du sable dans vos bottes et commencez \u00e0 marcher.",
+        "lieu": "Au Nord de l'Afrique",
         "prix": 87,
-        "etapes":[
+        "etapes": [
             {
-                "titre": "Balade à dos de dromadaire",
-                "duree":"2 jours",
-                "lieu":"sur la dune n°52",
-                "option":[
+                "titre": "Balade \u00e0 dos de dromadaire",
+                "duree": "2 jours",
+                "lieu": "sur la dune n\u00b052",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
-                "titre": "Découverte d'une oasis",
-                "duree":"1 jour",
-                "lieu":"Oasis (et pas fanta ahahahaha)",
-                "option":[
+                "titre": "D\u00e9couverte d'une oasis",
+                "duree": "1 jour",
+                "lieu": "Oasis (et pas fanta ahahahaha)",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
-                "titre": "Visite des pyramides de Kéops",
-                "duree":"2 jours",
-                "lieu":"Egypte",
-                "option":[
+                "titre": "Visite des pyramides de K\u00e9ops",
+                "duree": "2 jours",
+                "lieu": "Egypte",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             }
         ]
     },
-
     {
         "titre": "Twisters",
-        "id":15,
+        "id": 15,
+        "nb_personnes": 0,
         "depart": "2026-12-03",
         "fin": "2026-12-10",
-        "duree":"1 semaine",
-        "mots_cles":"tempêtes amérique cyclones",
-        "image": "../images/voyages/voy16.jpg",
-        "description":"Allez dans l'oeil de la tempête",
-        "lieu":"Etats Unis de l'est",
+        "duree": "1 semaine",
+        "mots_cles": "temp\u00eates am\u00e9rique cyclones",
+        "image": "..\/images\/voyages\/voy16.jpg",
+        "description": "Allez dans l'oeil de la temp\u00eate",
+        "lieu": "Etats Unis de l'est",
         "prix": 12.5,
-        "etapes":[
+        "etapes": [
             {
                 "titre": "Formation d'un cyclone",
-                "duree":"3 jours",
-                "lieu":"Wow, ça se forme vachement près de nous non ?",
-                "option":[
+                "duree": "3 jours",
+                "lieu": "Wow, \u00e7a se forme vachement pr\u00e8s de nous non ?",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
-                "titre": "L'oeil de la tempête",
-                "duree":"3 jours",
-                "lieu":"Au milieu d'un cyclone",
-                "option":[
+                "titre": "L'oeil de la temp\u00eate",
+                "duree": "3 jours",
+                "lieu": "Au milieu d'un cyclone",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
                 "titre": "Envol",
-                "duree":"1 jour",
-                "lieu":"Dans les airs",
-                "option":[
+                "duree": "1 jour",
+                "lieu": "Dans les airs",
+                "option": [
                     {
-                        "titre":"Acclimatation",
-                        "prix":10
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             }
