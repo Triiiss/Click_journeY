@@ -42,7 +42,16 @@
             <fieldset class="recherche">
                 <div class="filtre">
                     <label for="budget">Budget</label>
-                    <input class="recherche" type="range" name="budget" min="10" max="10000" value="1000">
+                    <?php
+                        if(isset($_POST["budget"])){
+                            echo '<input class="recherche" type="range" name="budget" min="10" max="5000" value="'.$_POST["budget"].'" oninput="majBudget(this.value)">
+                            <span id="valBudget">'.$_POST["budget"].' €</span>';
+                        }
+                        else{
+                           echo '<input class="recherche" type="range" name="budget" min="10" max="5000" value="1000" oninput="majBudget(this.value)">
+                           <span id="valBudget">1000 €</span>';
+                        }
+                    ?>
                 </div>   
                 <div class="filtre">
                     <label for="nbpersonnes">Nombre de personnes</label>
@@ -105,6 +114,12 @@
                 else{
                     $recherche="";
                 }
+                if(isset($_POST["budget"])){
+                    $budget=$_POST["budget"];
+                }
+                else{
+                    $budget=1000;
+                }
                 $page=1;
                 if(isset($_GET["page"])){
                     $page=$_GET["page"];
@@ -113,6 +128,7 @@
             <script>
                 let voyages = <?php echo json_encode($voyages); ?>;
                 let recherche = <?php echo json_encode($recherche); ?>;
+                let budget = parseFloat(<?php echo json_encode($budget); ?>);
                 let page = parseInt(<?php echo json_encode($page); ?>);
                 
                 function afficherVoyages(voyages, recherche, page) {
@@ -128,10 +144,11 @@
                         const mots_cles = voyage.mots_cles.toLowerCase();
                         const titre = voyage.titre.toLowerCase();
                         const lieu = voyage.lieu.toLowerCase();
+                        const prix = parseFloat(voyage.prix);
 
                         if (
                             (mots_cles.includes(recherche) || titre.includes(recherche) || lieu.includes(recherche)) &&
-                            recherche !== "" &&
+                            recherche !== "" && prix <= budget &&
                             count < 9 * page
                         ) {
                             if (count >= 9 * (page - 1)) {
@@ -272,6 +289,7 @@
         </div>
 
         <script src="../javascript/chg_theme.js"></script>
+        <script src="../javascript/recherche.js"></script>
     </body>
 </php>
 
