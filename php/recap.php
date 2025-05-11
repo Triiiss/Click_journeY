@@ -80,10 +80,10 @@
                 echo '<div class=recap>';
                     echo '<div>'.$voyages[$id]["titre"].'</div>';
                     echo '<div>'.$voyages[$id]["description"].'</div>';
-                    echo '<div>Prix de base: '.$voyages[$id]["prix"].'euros'.'</div>';
-                    echo '<div>Prix total: '.$total.'euros'.'</div>';
+                    echo '<div>Prix de base: '.$voyages[$id]["prix"].' euros'.'</div>';
+                    echo '<div>Prix total: '.$total.' euros'.'</div>';
                     echo '<div>Départ le '.$voyages[$id]["depart"].'</div>';
-                    echo '<div>Durée : '.$voyages[$id]["duree"].'</div>'; 
+                    echo '<div>Durée : '.$voyages[$id]["duree"].' jours</div>'; 
                     
                     echo '<div>Options : </div>';
 

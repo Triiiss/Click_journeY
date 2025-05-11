@@ -170,7 +170,7 @@
                             <th>Titre</th>
                             <th>Lieu</th>
                             <th>Date de début</th>
-                            <th>Date de durée</th>
+                            <th>Durée</th>
                             <th>Prix</th>
                         </tr>';
                         if (count($user["voyages_achete"]) < 5 || isset($_POST["plus_achat"])){
@@ -185,7 +185,7 @@
 
                                     <td>'.$voyages[$achat["id"]]["lieu"].'</td>
                                     <td>'.$voyages[$achat["id"]]["depart"].'</td>
-                                    <td>'.$voyages[$achat["id"]]["duree"].'</td>
+                                    <td>'.$voyages[$achat["id"]]["duree"].' jours</td>
                                     <td>'.$achat["total"].'€</td>
                                 </tr>';
                             }
@@ -209,7 +209,7 @@
 
                                     <td>'.$voyages[$user["voyages_achete"][$i]["id"]]["lieu"].'</td>
                                     <td>'.$voyages[$user["voyages_achete"][$i]["id"]]["depart"].'</td>
-                                    <td>'.$voyages[$user["voyages_achete"][$i]["id"]]["duree"].'</td>
+                                    <td>'.$voyages[$user["voyages_achete"][$i]["id"]]["duree"].' jours</td>
                                     <td>'.$user["voyages_achete"][$i]["total"].'€</td>
                                 </tr>';
                             }

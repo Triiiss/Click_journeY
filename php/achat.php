@@ -72,8 +72,8 @@
                                         echo '<a href="voyage.php?id='.$panier["id"].'"><img src="'.$voyages[$panier["id"]]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>
                                         <p><b>'.$voyages[$panier["id"]]["titre"].'</b>
                                         <br><br><br>de '.$voyages[$panier["id"]]["depart"].' à '.$voyages[$panier["id"]]["fin"].
-                                        '<br>Durée : '.$voyages[$panier["id"]]["duree"].
-                                        '<br><br>Description : '.$voyages[$panier["id"]]["description"].
+                                        '<br>Durée : '.$voyages[$panier["id"]]["duree"].' jours
+                                        <br><br>Description : '.$voyages[$panier["id"]]["description"].
                                         '<br><br>Prix de base : '.$voyages[$panier["id"]]["prix"].' €
                                         <br><br>Prix total : '.$panier["total"].' €
                                         </p>';

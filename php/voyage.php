@@ -37,9 +37,9 @@
                 echo '<div class=recap>';
                     echo '<div>'.$voyages[$id]["titre"].'</div>';
                     echo '<div>'.$voyages[$id]["description"].'</div>';
-                    echo '<div>'.'Prix : <span id="prix">'.$voyages[$id]["prix"].'</span>euros'.'</div>';
+                    echo '<div>'.'Prix : <span id="prix">'.$voyages[$id]["prix"].'</span> euros'.'</div>';
                     echo '<div>'.'Départ le '.$voyages[$id]["depart"].'</div>';
-                    echo '<div>'.'Durée : '.$voyages[$id]["duree"].'</div>'; 
+                    echo '<div>'.'Durée : '.$voyages[$id]["duree"].' jours</div>'; 
                 echo '</div>';
             echo '</div>';
         ?>
