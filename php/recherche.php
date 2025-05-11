@@ -150,6 +150,13 @@
                     $duree_max=9999;
                 }
 
+                if(isset($_GET["lieu"])){
+                    $lieu=$_GET["lieu"];
+                }
+                else{
+                    $lieu="";
+                }
+
                 $page=1;
                 if(isset($_GET["page"])){
                     $page=$_GET["page"];
@@ -157,23 +164,24 @@
             ?>
             <script>
                 let voyages = <?php echo json_encode($voyages); ?>;
-                const recherche = <?php echo json_encode($recherche); ?>;
+                const recherche = <?php echo json_encode($recherche); ?>.toLowerCase();
                 const budget = parseFloat(<?php echo json_encode($budget); ?>);               
                 const depart_min = new Date(<?php echo json_encode($depart_min); ?>);
                 const depart_max = new Date(<?php echo json_encode($depart_max); ?>);
                 const duree_min = parseInt(<?php echo json_encode($duree_min); ?>);
                 const duree_max = parseInt(<?php echo json_encode($duree_max); ?>);
+                const rechercheLieu = <?php echo json_encode($lieu); ?>.toLowerCase();
                 let page = parseInt(<?php echo json_encode($page); ?>);
                 let pageDiv = null;
-
+                
                 function afficherVoyages(voyages, recherche, page) {
                     let count = 0;
                     const resultats = document.getElementById("resultats");
-                    recherche = recherche.toLowerCase();
 
                     resultats.innerHTML = "";
 
-                    //on compare la recherche avec les mots clés, le titre et le lieu de chaque voyage
+                    /*on compare la recherche avec les mots clés, le titre et le lieu de chaque voyage
+                    on vérifie aussi pour chaque voyage que la durée et la date de départ sont comprises entre le min et max sélectionnés par l'utilisateur*/
                     for (let k in voyages) {
                         const voyage = voyages[k];
                         const mots_cles = voyage.mots_cles.toLowerCase();
@@ -185,7 +193,9 @@
 
                         if (
                             (mots_cles.includes(recherche) || titre.includes(recherche) || lieu.includes(recherche)) &&
-                            recherche !== "" && prix <= budget &&
+                            lieu.includes(rechercheLieu) &&
+                            (recherche !== "" || rechercheLieu !== "") && 
+                            prix <= budget &&
                             !isNaN(duree) &&
                             (duree >= duree_min || isNaN(duree_min)) && 
                             (duree <= duree_max || isNaN(duree_max)) &&
