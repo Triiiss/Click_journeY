@@ -27,15 +27,20 @@
                 <legend>Filtres</legend>
                 <div class="filtre">
                     <label for="lieu">Lieu</label>
-                    <input class="recherche" type="text" name="lieu"> 
+                    <input class="recherche" type="text" id="lieu" name="lieu"> 
                 </div>
                 <div class="filtre">
-                    <label for="depart">Date de départ</label>
-                    <input class="recherche" type="Date" name="depart"> 
+                    <label for="depart_min">Date de départ entre</label>
+                    <input class="recherche" type="Date" id="depart_min" name="depart_min"> 
+                    <label for="depart_max">et</label>
+                    <input class="recherche" type="Date" id="depart_max" name="depart_max"> 
                 </div>
                 <div class="filtre">
-                    <label for="duree">Durée (jours)</label>
-                    <input class="recherche" type="number" name="duree" maxlength="3" min="1">  
+                    <label for="duree_min">Durée (jours) entre</label>
+                    <input class="recherche" type="number" id="duree_min" name="duree_min" maxlength="4" min="1">  
+                    <label for="duree_max">et</label>
+                    <input class="recherche" type="number" id="duree_max" name="duree_max" maxlength="4" min="1">  
+
                 </div>                
             </fieldset>
 
@@ -44,12 +49,12 @@
                     <label for="budget">Budget</label>
                     <?php
                         if(isset($_GET["budget"])){
-                            echo '<input class="recherche" type="range" name="budget" min="10" max="5000" value="'.$_GET["budget"].'" oninput="majBudget(this.value)">
+                            echo '<input class="recherche" type="range" id="budget" name="budget" min="10" max="5000" value="'.$_GET["budget"].'" oninput="majBudget(this.value)">
                             <span id="valBudget">'.$_GET["budget"].' €</span>';
                         }
                         else{
-                           echo '<input class="recherche" type="range" name="budget" min="10" max="5000" value="1000" oninput="majBudget(this.value)">
-                           <span id="valBudget">1000 €</span>';
+                           echo '<input class="recherche" type="range" id="budget" name="budget" min="10" max="5000" value="5000" oninput="majBudget(this.value)">
+                           <span id="valBudget">5000 €</span>';
                         }
                     ?>
                 </div>   
@@ -97,7 +102,7 @@
                 </select>
 
                 <label for="search">Recherche :</label>
-                <input class="recherche" type="text" name="search">
+                <input class="recherche" type="text" id="search" name="search">
             </fieldset>
 
             <div class="voyages" id="resultats">
@@ -111,12 +116,40 @@
                 else{
                     $recherche="";
                 }
+
                 if(isset($_GET["budget"])){
                     $budget=$_GET["budget"];
                 }
                 else{
                     $budget=1000;
                 }
+
+                if(isset($_GET["depart_min"])){
+                    $depart_min=$_GET["depart_min"];
+                }
+                else{
+                    $depart_min="";
+                }
+                if(isset($_GET["depart_max"])){
+                    $depart_max=$_GET["depart_max"];
+                }
+                else{
+                    $depart_max="";
+                }
+
+                if(isset($_GET["duree_min"])){
+                    $duree_min=$_GET["duree_min"];
+                }
+                else{
+                    $duree_min=1;
+                }
+                if(isset($_GET["duree_max"])){
+                    $duree_max=$_GET["duree_max"];
+                }
+                else{
+                    $duree_max=9999;
+                }
+
                 $page=1;
                 if(isset($_GET["page"])){
                     $page=$_GET["page"];
@@ -124,10 +157,14 @@
             ?>
             <script>
                 let voyages = <?php echo json_encode($voyages); ?>;
-                let recherche = <?php echo json_encode($recherche); ?>;
-                let budget = parseFloat(<?php echo json_encode($budget); ?>);
+                const recherche = <?php echo json_encode($recherche); ?>;
+                const budget = parseFloat(<?php echo json_encode($budget); ?>);               
+                const depart_min = new Date(<?php echo json_encode($depart_min); ?>);
+                const depart_max = new Date(<?php echo json_encode($depart_max); ?>);
+                const duree_min = parseInt(<?php echo json_encode($duree_min); ?>);
+                const duree_max = parseInt(<?php echo json_encode($duree_max); ?>);
                 let page = parseInt(<?php echo json_encode($page); ?>);
-                
+
                 function afficherVoyages(voyages, recherche, page) {
                     let count = 0;
                     const resultats = document.getElementById("resultats");
@@ -142,10 +179,18 @@
                         const titre = voyage.titre.toLowerCase();
                         const lieu = voyage.lieu.toLowerCase();
                         const prix = parseFloat(voyage.prix);
+                        const duree = parseInt(voyage.duree);
+                        const depart = new Date(voyage.depart);
 
                         if (
                             (mots_cles.includes(recherche) || titre.includes(recherche) || lieu.includes(recherche)) &&
                             recherche !== "" && prix <= budget &&
+                            !isNaN(duree) &&
+                            (duree >= duree_min || isNaN(duree_min)) && 
+                            (duree <= duree_max || isNaN(duree_max)) &&
+                            !isNaN(depart) &&
+                            (depart >= depart_min || isNaN(depart_min)) &&
+                            (depart <= depart_max || isNaN(depart_max)) &&
                             count < 9 * page
                         ) {
                             if (count >= 9 * (page - 1)) {
@@ -212,13 +257,6 @@
                     page++;
                     afficherVoyages(voyages, recherche, page);
                 }
-
-                function calcDureeVoyage(v) {
-                    const depart = new Date(v.depart);
-                    const fin = new Date(v.fin);
-                    const duree = fin - depart;
-                    return duree;
-                }
                 
                 const tri = document.getElementById('tri');
 
@@ -242,8 +280,8 @@
                         return 0;
                     }
                     else if(tri.value == "duree"){
-                        const dureeA = calcDureeVoyage(a);
-                        const dureeB = calcDureeVoyage(b);
+                        const dureeA = a.duree;
+                        const dureeB = b.duree;
                         if (dureeA < dureeB){
                         return -1;
                         }
