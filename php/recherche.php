@@ -164,6 +164,7 @@
                 const duree_min = parseInt(<?php echo json_encode($duree_min); ?>);
                 const duree_max = parseInt(<?php echo json_encode($duree_max); ?>);
                 let page = parseInt(<?php echo json_encode($page); ?>);
+                let pageDiv = null;
 
                 function afficherVoyages(voyages, recherche, page) {
                     let count = 0;
@@ -188,14 +189,14 @@
                             !isNaN(duree) &&
                             (duree >= duree_min || isNaN(duree_min)) && 
                             (duree <= duree_max || isNaN(duree_max)) &&
-                            !isNaN(depart) &&
-                            (depart >= depart_min || isNaN(depart_min)) &&
-                            (depart <= depart_max || isNaN(depart_max)) &&
+                            !isNaN(depart.getTime()) &&
+                            (depart >= depart_min || isNaN(depart_min.getTime())) &&
+                            (depart <= depart_max || isNaN(depart_max.getTime())) &&
                             count < 9 * page
                         ) {
                             if (count >= 9 * (page - 1)) {
                                 if (count % 3 === 0) {
-                                    var pageDiv = document.createElement("div");
+                                    pageDiv = document.createElement("div");
                                     pageDiv.className = "grpV";
                                     resultats.appendChild(pageDiv);
                                 }
