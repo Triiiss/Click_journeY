@@ -66,7 +66,7 @@
                     echo '</div>
                 </fieldset>';
             }
-            echo '<div>'.'Total : <span id="total">'.$voyages[$id]["prix"].'</span>euros'.'</div>';
+            echo '<div class="prix_tot">'.'Total : <span id="total">'.$voyages[$id]["prix"].'</span>euros'.'</div>';
 
             ?>
             <input type="hidden" name="id" value="<?php echo "".$id."" ?>"></input>

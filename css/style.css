@@ -491,3 +491,8 @@ div.all{
 .sombre select{
     color: black;
 }
+
+.prix_tot{
+    font-size: 1.5vw;
+    margin-left: 2vw;
+}
