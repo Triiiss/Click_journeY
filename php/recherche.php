@@ -130,6 +130,7 @@
                 else{
                     $depart_min="";
                 }
+
                 if(isset($_GET["depart_max"])){
                     $depart_max=$_GET["depart_max"];
                 }
@@ -143,6 +144,7 @@
                 else{
                     $duree_min=1;
                 }
+                
                 if(isset($_GET["duree_max"])){
                     $duree_max=$_GET["duree_max"];
                 }
