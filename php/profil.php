@@ -312,7 +312,7 @@
                         /*Afficher les informations */
                         echo '<p>Identifiant :</p>';
                         echo '
-                        <p><span class="login_info_">'.$user['login'].' </span>
+                        <p><span class="login_info_" id="login">'.$user['login'].' </span>
                         <span class="hidden login_edit_"><input class="modifier" type="text" name="new_login_value" placeholder="'.$user['login'].'"/></span></p>
 
                         <p><span class="login_info_"><button type="button" class="edit_icon" onclick="edit_infos(\'\',\'login\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
@@ -413,7 +413,7 @@
                         <p><span class="adresse_info_"><button type="button" class="edit_icon" onclick="edit_infos(\'\',\'adresse\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
                         <span class="hidden adresse_edit_"><input class="admin" type="submit" name="new_adresse" value="Valider" onclick="waiting_time(event,\'form_profil\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit(\'\',\'adresse\')"/></span></p>';
                     ?>
-                        
+
                     <p class="empty"> .</p>
                     <p></p>
                     <p></p>
@@ -438,6 +438,16 @@
                                 fileNameDisplay.style.display = "none";
                             }
                         });
+
+                        function modifProfil(){
+                            event.preventDefault();
+
+                            const login = document.getElementById("login").value;
+
+                            
+                        }
+
+                        document.getElementById("form_profil").addEventListener("submit",modifProfil);
                     </script>
                     
                     <p>Date d'inscription :</p>
