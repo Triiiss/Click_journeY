@@ -31,30 +31,30 @@
                 </div>
                 <div class="filtre">
                     <label for="depart_min">Date de départ entre</label>
-                    <input class="recherche" type="Date" id="depart_min" name="depart_min"> 
-                    <label for="depart_max">et</label>
+                    <input class="recherche" type="Date" id="depart_min" name="depart_min">
+                    <div class="center"><label for="depart_max">et</label></div>
                     <input class="recherche" type="Date" id="depart_max" name="depart_max"> 
                 </div>
                 <div class="filtre">
                     <label for="duree_min">Durée (jours) entre</label>
-                    <input class="recherche" type="number" id="duree_min" name="duree_min" maxlength="4" min="1">  
-                    <label for="duree_max">et</label>
+                    <input class="recherche" type="number" id="duree_min" name="duree_min" maxlength="4" min="1">
+                    <div class="center"><label for="duree_max">et</label></div>
                     <input class="recherche" type="number" id="duree_max" name="duree_max" maxlength="4" min="1">  
 
                 </div>                
             </fieldset>
 
-            <fieldset class="recherche">
+            <fieldset class="recherche budget">
                 <div class="filtre">
                     <label for="budget">Budget</label>
                     <?php
                         if(isset($_GET["budget"])){
                             echo '<input class="recherche" type="range" id="budget" name="budget" min="10" max="5000" value="'.$_GET["budget"].'" oninput="majBudget(this.value)">
-                            <span id="valBudget">'.$_GET["budget"].' €</span>';
+                            <br><span id="valBudget">'.$_GET["budget"].' €</span>';
                         }
                         else{
-                           echo '<input class="recherche" type="range" id="budget" name="budget" min="10" max="5000" value="5000" oninput="majBudget(this.value)">
-                           <span id="valBudget">5000 €</span>';
+                           echo '<input class="recherche" type="range" id="budget" name="budget" min="10" max="5000" value="2500" oninput="majBudget(this.value)">
+                           <br><span id="valBudget">2500 €</span>';
                         }
                     ?>
                 </div>   
@@ -70,37 +70,37 @@
             <fieldset class="recherche">
                 <div class="filtre">
                     <label for="vacances">Type de vacances</label>
-                    <div>
-                        Plage<input class="recherche" type="checkbox" name="vacances" value="plage">
-                        Montagne<input class="recherche" type="checkbox" name="vacances" value="montagne">
-                        Ville <input class="recherche" type="checkbox" name="vacances" value="ville">
-                        Forêt<input class="recherche" type="checkbox" name="vacances" value="forêt">
+                    <div class="filtre">
+                        <div><input class="recherche" type="checkbox" name="vacances" value="plage">Plage</div>
+                        <div><input class="recherche" type="checkbox" name="vacances" value="montagne">Montagne</div>
+                        <div><input class="recherche" type="checkbox" name="vacances" value="ville">Ville </div>
+                        <div><input class="recherche" type="checkbox" name="vacances" value="forêt">Forêt</div>
                     </div>
                 </div>   
                 <div class="filtre">
                     <label for="randonnée">Randonnée</label>
                     <div>
-                        Oui<input class="recherche" type="radio" name="randonnée" value="oui">
-                        Non<input class="recherche" type="radio" name="randonnée" value="non">
+                        <div><input class="recherche" type="radio" name="randonnée" value="oui">Oui</div>
+                        <div><input class="recherche" type="radio" name="randonnée" value="non">Non</div>
                     </div>
                 </div>   
                 <div class="filtre">
                     <label for="douches">Douches</label>
                     <div>
-                        Oui<input class="recherche" type="radio" name="douches" value="oui">
-                        Non<input class="recherche" type="radio" name="douches" value="non">
+                        <div><input class="recherche" type="radio" name="douches" value="oui">Oui</div>
+                        <div><input class="recherche" type="radio" name="douches" value="non">Non</div>
                     </div>
                 </div>              
             </fieldset>
 
-            <fieldset class="recherche">
+            <fieldset class="recherche rechercher">
                 <label for="tri">Trier par :</label>
                 <select id="tri" name="tri">
                     <option value="ajout" selected>Date d'ajout</option>
                     <option value="duree">Durée</option>
                     <option value="prix">Prix</option>                   
                 </select>
-
+                <p></p>
                 <label for="search">Recherche :</label>
                 <input class="recherche" type="text" id="search" name="search">
             </fieldset>
@@ -319,9 +319,9 @@
 
             </div>
 
-            <fieldset class="recherche">
-                <button class="recherche" type="reset" name="reset">Supprimer les filtres</button>
-                <button class="recherche" type="submit" name="submit">Rechercher</button>
+            <fieldset class="recherche budget">
+                <div class="center"><button class="recherche" type="reset" name="reset">Supprimer les filtres</button></div>
+                <div class="center"><button class="recherche" type="submit" name="submit">Rechercher</button></div>
             </fieldset>
         </form>
    
