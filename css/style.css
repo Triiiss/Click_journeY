@@ -268,6 +268,10 @@ button.chg_theme{
     border-radius: 100%;
     background-color: rgb(28, 59, 36);
 }
+img.mode_sombre{
+    width: 3vw;
+    height: 3vw;
+}
 
 
 /*PAGE PRESENTATION*/
@@ -433,21 +437,48 @@ nav.admin_defil{
 }
 
 /*PAGE DE RECHERCHE*/
+input.recherche, select#tri{
+    font-size: 1vw;
+    margin: 0.5vw;
+    border-radius: 5px;
+    border: rgb(40, 77, 40) solid 0.2vw;
+}
+input.recherche[type="checkbox"],input.recherche[type="radio"]{
+    width: 1vw;
+}
+input.recherche:hover, select#tri:hover{
+    border: rgb(27, 58, 27) solid 0.2vw;
+    background-color: rgb(212, 212, 212);
+}
+button.recherche{
+    width: 50%;
+}
+div.left{
+    text-align: right;
+}
+span#valBudget{
+    font-size: 1vw;
+}
+div.center{
+    text-align: center;
+}
+input.recherche[type="range"]{
+    accent-color: rgb(40, 77, 40);
+}
 fieldset.recherche{
     border: rgb(28, 59, 28) solid 3px;
     background-color: rgba(174, 189, 147,0.6);
-    display: flex;
-    flex-direction: row;
     margin-bottom: 0.5%;
     margin-right: 20%;
     margin-left: 20%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
 }
-.sombre fieldset.recherche{
-    background-color: rgba(40, 77, 40,0.6);
+fieldset.budget{
+    grid-template-columns: 50% 50%;
 }
-.filtre{
-    display: flex;
-    flex-direction: column;
+fieldset.rechercher{
+    grid-template-columns: 20% 20% 5% 25% 30%;
 }
 input.recherche, .recherche div>div{
     font-size: 1.2vw;
@@ -463,6 +494,13 @@ input.recherche, .recherche div>div{
     padding: 1%;
     text-align: center;
 }
+.sombre fieldset.recherche{
+    background-color: rgba(40, 77, 40,0.6);
+}
+
+
+
+
 .sombre .voyages{
     background-color: rgba(40, 77, 40,0.6);
 }
