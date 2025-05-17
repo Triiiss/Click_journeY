@@ -182,7 +182,7 @@
                                     <span class="hidden login_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_login_value" placeholder="'.$user['login'].'"/></span></td>
 
                                     <td><span class="login_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'login\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
-                                    <span class="hidden login_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_login" value="Valider" onclick="waiting_time(event,\'form_admin\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'login\')"/></span></td>';
+                                    <span class="hidden login_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_login" value="Valider" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'login\')"/></span></td>';
 
                                     /*Mot de passe */
                                     echo '
@@ -190,7 +190,7 @@
                                     <span class="hidden mdp_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_mdp_value" placeholder="'.$user['mdp'].'"/></span></td>
 
                                     <td><span class="mdp_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'mdp\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
-                                    <span class="hidden mdp_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_mdp" value="Valider" onclick="waiting_time(event,\'form_admin\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'mdp\')"/></span></td>';
+                                    <span class="hidden mdp_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_mdp" value="Valider" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'mdp\')"/></span></td>';
                                     
         
                                     /*Email */
@@ -199,7 +199,7 @@
                                     <span class="hidden email_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_email_value" placeholder="'.$user['email'].'"/></span></td>
 
                                     <td><span class="email_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'email\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
-                                    <span class="hidden email_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_email" value="Valider" onclick="waiting_time(event,\'form_admin\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'email\')"/></span></td>';
+                                    <span class="hidden email_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_email" value="Valider" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'email\')"/></span></td>';
 
 
                                     /*Nom */
@@ -208,7 +208,7 @@
                                     <span class="hidden nom_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_nom_value" placeholder="'.$user['profil']['nom'].'"/></span></td>
 
                                     <td><span class="nom_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'nom\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
-                                    <span class="hidden nom_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_nom" value="Valider" onclick="waiting_time(event,\'form_admin\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'nom\')"/></span></td>';
+                                    <span class="hidden nom_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_nom" value="Valider" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'nom\')"/></span></td>';
 
         
                                     /*Prenom */
@@ -217,7 +217,7 @@
                                     <span class="hidden prenom_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_prenom_value" placeholder="'.$user['profil']['prenom'].'"/></span></td>
 
                                     <td><span class="prenom_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'prenom\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
-                                    <span class="hidden prenom_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_prenom" value="Valider" onclick="waiting_time(event,\'form_admin\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'prenom\')"/></span></td>';
+                                    <span class="hidden prenom_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_prenom" value="Valider" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'prenom\')"/></span></td>';
 
         
                                     echo '<td colspan="2">'.$user['date d\'inscription'].'</td>';
@@ -244,12 +244,12 @@
                                     echo '</span></td>
 
                                     <td><span class="role_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'role\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
-                                    <span class="hidden role_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_role" value="Valider" onclick="waiting_time(event,\'form_admin\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'role\')"/></span></td>';
+                                    <span class="hidden role_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_role" value="Valider" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'role\')"/></span></td>';
 
         
                                     /*Affiche le "voir plus" */
                                     if(isset($_SESSION["display"][$k]) && $_SESSION["display"][$k] == 1){
-                                        echo '<td><input type="submit" class="admin" name="moins_'.$user['login'].'" value="Réduire"><input type="submit" class="admin" name="supprimer_'.$user['login'].'" value="Supprimer" onclick="waiting_time(event,\'form_admin\')"></td></tr>
+                                        echo '<td><input type="submit" class="admin" name="moins_'.$user['login'].'" value="Réduire"><input type="submit" class="admin" name="supprimer_'.$user['login'].'" value="Supprimer" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"></td></tr>
                                         
                                         <tr>
                                             <td class="empty" colspan="2"></td>';
@@ -268,7 +268,7 @@
                                             <span class="hidden adresse_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_adresse_value" placeholder="'.$user['profil']['adresse'].'"/></span></td>
         
                                             <td><span class="adresse_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'adresse\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
-                                            <span class="hidden adresse_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_adresse" value="Valider" onclick="waiting_time(event,\'form_admin\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'adresse\')"/></span></td>';
+                                            <span class="hidden adresse_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_adresse" value="Valider" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'adresse\')"/></span></td>';
 
                                             /*Numéro de téléphone */
                                             echo '
@@ -276,7 +276,7 @@
                                             <span class="hidden telephone_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_tel_value" placeholder="'.$user['profil']['tel'].'"/></span></td>
         
                                             <td><span class="telephone_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'telephone\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
-                                            <span class="hidden telephone_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_tel" value="Valider" onclick="waiting_time(event,\'form_admin\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'telephone\')"/></span></td>';
+                                            <span class="hidden telephone_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_tel" value="Valider" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'telephone\')"/></span></td>';
 
 
                                             /*Date de naissance (dob = Date of birth) */
@@ -285,7 +285,7 @@
                                             <span class="hidden dob_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_dob_value" placeholder="'.$user['profil']['dob'].'"/></span></td>
         
                                             <td><span class="dob_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'dob\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
-                                            <span class="hidden dob_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_dob" value="Valider" onclick="waiting_time(event,\'form_admin\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'dob\')"/></span></td>';
+                                            <span class="hidden dob_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_dob" value="Valider" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'dob\')"/></span></td>';
 
                                             
                                             /*Genre */
@@ -316,7 +316,7 @@
                                             echo '</span></td>
         
                                             <td><span class="genre_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'genre\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
-                                            <span class="hidden genre_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_genre" value="Valider" onclick="waiting_time(event,\'form_admin\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'genre\')"/></span></td>';
+                                            <span class="hidden genre_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_genre" value="Valider" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'genre\')"/></span></td>';
 
                                             echo '</tr>';
 
@@ -379,7 +379,7 @@
                                             }
                                     }
                                     else{
-                                        echo '<td><input type="submit" class="admin" name="plus_'.$user['login'].'" value="Voir +"><input type="submit" class="admin" name="supprimer_'.$user['login'].'" value="Supprimer" onclick="waiting_time(event,\'form_admin\')"></td></tr>';
+                                        echo '<td><input type="submit" class="admin" name="plus_'.$user['login'].'" value="Voir +"><input type="submit" class="admin" name="supprimer_'.$user['login'].'" value="Supprimer" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"></td></tr>';
                                     }
                                 }
                             }

@@ -2,14 +2,20 @@
 
 session_start();
 $users = json_decode(file_get_contents('../json/utilisateurs.json'), true);
-$index = $_SESSION['user_index'] - 1;
+
+if(isset($_POST['index_user'])){
+    $index = $_POST['index_user'];
+}
+else{
+    $index = $_SESSION['user_index'] - 1;
+}
 
 if (!isset($users[$index])) {
     echo json_encode(['success' => false, 'message' => 'Utilisateur non trouvé']);
     exit;
 }
 
-$user = &$users[$index];
+$user = $users[$index];
 
 if(isset($_POST['champ']) && $_POST['value']){
     $champ = $_POST['champ'];
