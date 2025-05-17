@@ -45,7 +45,7 @@
             echo '</div>';
         ?>
 
-        <form action="recap.php" method="post">
+        <form id="formVoyage" action="recap.php" method="post">
             <?php
             $etapes = $voyages[$id]["etapes"];
             foreach($etapes as $k=> $etape){
@@ -66,7 +66,7 @@
                     echo '</div>
                 </fieldset>';
             }
-            echo '<div class="prix_tot">'.'Total : <span id="total">'.$voyages[$id]["prix"].'</span>euros'.'</div>';
+            echo '<div class="prix_tot">'.'Total : <span id="total">'.$voyages[$id]["prix"].'</span> euros'.'</div>';
 
             ?>
             <input type="hidden" name="id" value="<?php echo "".$id."" ?>"></input>
@@ -82,18 +82,37 @@
             const ptot = document.getElementById('total');
             const options = document.getElementsByClassName('options');
 
-            function updateTotalPrice() {
-              let total = prix;
-              for (var i in options) {
-                  if (options[i].checked) {
-                    total += parseFloat(options[i].value.split(';')[1]);
-                  }
-              }
-              ptot.textContent = total;
+            async function calcTotal(){
+                const ptot = document.getElementById('total');
+                const form = document.getElementById('formVoyage');
+                const donneesForm = new FormData(form);
+
+                try {
+                    const reponse = await fetch('calcTotal.php', {
+                        method: 'POST',
+                        body: donneesForm
+                    });
+                    if(!reponse.ok){
+                        console.error('La requete n’a pas abouti ${reponse.status} ${reponse.statusText}');
+                        return ;
+                    }
+                    const obj = await reponse.json();
+
+                    if (obj.success) {
+                        ptot.textContent = obj.total + ' ';
+                    }
+                    else{
+                        ptot.textContent = 'Erreur de calcul';
+                    }
+
+                } catch (e) {
+                    console.error('Erreur avec fetch : ', e);
+                    ptot.textContent = 'Erreur de serveur';
+                }
             }
 
             for (var i in options) {
-                  options[i].addEventListener('change', updateTotalPrice);
+                  options[i].addEventListener('change', calcTotal);
             }
       </script>
 
