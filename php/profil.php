@@ -226,7 +226,7 @@
 
             <br>
 
-
+            <!--AFFICHAGE INFOS UTILISATEUR-->
             <form id="form_profil" action="profil.php" method="POST" enctype="multipart/form-data">
                 <fieldset class="formulaire profil">
                 <?php
@@ -243,7 +243,7 @@
                 <?php
 
                         /*Changer les informations */
-                        if(isset($_POST["supp"])){
+                        if(isset($_POST["supp"])){ //Supression compte
                             unset($users[$_SESSION["user_index"]-1]);
                             $users=array_values($users);
                             session_destroy();
@@ -312,7 +312,7 @@
                         /*Afficher les informations */
                         echo '<p>Identifiant :</p>';
                         echo '
-                        <p><span class="login_info_" id="login">'.$user['login'].' </span>
+                        <p><span class="login_info_">'.$user['login'].' </span>
                         <span class="hidden login_edit_"><input class="modifier" type="text" name="new_login_value" placeholder="'.$user['login'].'"/></span></p>
 
                         <p><span class="login_info_"><button type="button" class="edit_icon" onclick="edit_infos(\'\',\'login\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
@@ -439,15 +439,6 @@
                             }
                         });
 
-                        function modifProfil(){
-                            event.preventDefault();
-
-                            const login = document.getElementById("login").value;
-
-                            
-                        }
-
-                        document.getElementById("form_profil").addEventListener("submit",modifProfil);
                     </script>
                     
                     <p>Date d'inscription :</p>
