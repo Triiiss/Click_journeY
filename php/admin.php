@@ -248,14 +248,14 @@
 
                                             /*Numéro de téléphone */
                                             echo '
-                                            <td><span class="telephone_info_'.$k.'"><b>Tel: </b>'.$user['profil']['tel'].' </span>
+                                            <td><span class="tel_info_'.$k.'"><b>Tel: </b>'.$user['profil']['tel'].' </span>
                                             <span id="new'.$user['login'].'_tel_loader" class="hidden">
                                             <img class="loadImg" src="../images/spinner.gif" alt="Chargement..." />
                                             </span> 
-                                            <span class="hidden telephone_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_tel_value" placeholder="'.$user['profil']['tel'].'"/></span></td>
+                                            <span class="hidden tel_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_tel_value" placeholder="'.$user['profil']['tel'].'"/></span></td>
         
-                                            <td><span class="telephone_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'telephone\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
-                                            <span class="hidden telephone_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_tel" value="Valider" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'telephone\')"/></span></td>';
+                                            <td><span class="tel_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'tel\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
+                                            <span class="hidden tel_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_tel" value="Valider" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'telephone\')"/></span></td>';
 
 
                                             /*Date de naissance (dob = Date of birth) */
