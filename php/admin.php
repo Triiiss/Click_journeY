@@ -179,6 +179,9 @@
                                     /*Login */
                                     echo '
                                     <td><span class="login_info_'.$k.'">'.$user['login'].' </span>
+                                    <span id="new'.$user['login'].'_login_loader" class="hidden">
+                                    <img class="loadImg" src="../images/spinner.gif" alt="Chargement..." />
+                                    </span> 
                                     <span class="hidden login_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_login_value" placeholder="'.$user['login'].'"/></span></td>
 
                                     <td><span class="login_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'login\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
@@ -187,6 +190,9 @@
                                     /*Mot de passe */
                                     echo '
                                     <td><span class="mdp_info_'.$k.'">'.$user['mdp'].' </span>
+                                    <span id=""new'.$user['login'].'_mdp_loader" class="hidden">
+                                    <img class="loadImg" src="../images/spinner.gif" alt="Chargement..." />
+                                    </span> 
                                     <span class="hidden mdp_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_mdp_value" placeholder="'.$user['mdp'].'"/></span></td>
 
                                     <td><span class="mdp_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'mdp\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
@@ -196,6 +202,9 @@
                                     /*Email */
                                     echo '
                                     <td><span class="email_info_'.$k.'">'.$user['email'].' </span>
+                                    <span id="new'.$user['login'].'_email_loader" class="hidden">
+                                    <img class="loadImg" src="../images/spinner.gif" alt="Chargement..." />
+                                    </span> 
                                     <span class="hidden email_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_email_value" placeholder="'.$user['email'].'"/></span></td>
 
                                     <td><span class="email_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'email\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
@@ -205,6 +214,9 @@
                                     /*Nom */
                                     echo '
                                     <td><span class="nom_info_'.$k.'">'.$user['profil']['nom'].' </span>
+                                    <span id="new'.$user['login'].'_nom_loader" class="hidden">
+                                    <img class="loadImg" src="../images/spinner.gif" alt="Chargement..." />
+                                    </span> 
                                     <span class="hidden nom_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_nom_value" placeholder="'.$user['profil']['nom'].'"/></span></td>
 
                                     <td><span class="nom_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'nom\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
@@ -214,6 +226,9 @@
                                     /*Prenom */
                                     echo '
                                     <td><span class="prenom_info_'.$k.'">'.$user['profil']['prenom'].' </span>
+                                    <span id="new'.$user['login'].'_prenom_loader" class="hidden">
+                                    <img class="loadImg" src="../images/spinner.gif" alt="Chargement..." />
+                                    </span> 
                                     <span class="hidden prenom_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_prenom_value" placeholder="'.$user['profil']['prenom'].'"/></span></td>
 
                                     <td><span class="prenom_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'prenom\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
@@ -224,6 +239,9 @@
                                     /*Role */
                                     echo '
                                     <td><span class="role_info_'.$k.'">'.$user['role'].' </span>
+                                    <span id="new'.$user['login'].'_role_loader" class="hidden">
+                                    <img class="loadImg" src="../images/spinner.gif" alt="Chargement..." />
+                                    </span> 
                                     <span class="hidden role_edit_'.$k.'">';
                                     
                                         if($user['role'] == "admin"){
@@ -264,6 +282,9 @@
                                             /*Adresse */
                                             echo '
                                             <td><span class="adresse_info_'.$k.'"><b>Adresse: </b>'.$user['profil']['adresse'].' </span>
+                                            <span id="new'.$user['login'].'_adresse_loader" class="hidden">
+                                            <img class="loadImg" src="../images/spinner.gif" alt="Chargement..." />
+                                            </span> 
                                             <span class="hidden adresse_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_adresse_value" placeholder="'.$user['profil']['adresse'].'"/></span></td>
         
                                             <td><span class="adresse_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'adresse\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
@@ -272,6 +293,9 @@
                                             /*Numéro de téléphone */
                                             echo '
                                             <td><span class="telephone_info_'.$k.'"><b>Tel: </b>'.$user['profil']['tel'].' </span>
+                                            <span id="new'.$user['login'].'_tel_loader" class="hidden">
+                                            <img class="loadImg" src="../images/spinner.gif" alt="Chargement..." />
+                                            </span> 
                                             <span class="hidden telephone_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_tel_value" placeholder="'.$user['profil']['tel'].'"/></span></td>
         
                                             <td><span class="telephone_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'telephone\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
@@ -280,6 +304,9 @@
 
                                             /*Date de naissance (dob = Date of birth) */
                                             echo '<td><span class="dob_info_'.$k.'"><b>Annif: </b>'.date("d/m/Y", strtotime($user['profil']['dob'])).' </span>
+                                            <span id="new'.$user['login'].'_dob_loader" class="hidden">
+                                            <img class="loadImg" src="../images/spinner.gif" alt="Chargement..." />
+                                            </span> 
                                             <span class="hidden dob_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_dob_value" placeholder="'.date("d/m/Y", strtotime($user['profil']['dob'])).'"/></span></td>
         
                                             <td><span class="dob_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'dob\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
@@ -289,6 +316,9 @@
                                             /*Genre */
                                             echo '
                                             <td><span class="genre_info_'.$k.'"><b>Genre: </b>'.$user['profil']['genre'].' </span>
+                                            <span id="new'.$user['login'].'_genre_loader" class="hidden">
+                                            <img class="loadImg" src="../images/spinner.gif" alt="Chargement..." />
+                                            </span> 
                                             <span class="hidden genre_edit_'.$k.'">';
                                             if($user['profil']['genre'] == "mme"){
                                                     echo '<select class="modif_role" name="new'.$user['login'].'_genre_value">
