@@ -5,8 +5,6 @@ body{/*Fond et police des pages*/
     background-color: rgb(202, 212, 183); 
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-    cursor: url("../images/tree.ico"),  auto;/*Curseur arbre*/
 }
 body.presentation{/*Fond de la présentation plus uniforme*/
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, rgb(202, 212, 183) 90%), url("../images/background.webp") no-repeat center 65% / contain;
