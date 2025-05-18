@@ -1,176 +1,67 @@
 [
     {
-        "titre": "Le sommet du monde",
+        "titre": "Twisters",
         "id": 0,
-        "nb_personnes": 1,
-        "depart": "2026-12-21",
+        "nb_personnes": 0,
+        "depart": "2026-12-03",
         "duree": 7,
-        "mots_cles": "montagnes randonn\u00e9es alpinisme everest",
-        "image": "..\/images\/voyages\/voy1.jpg",
-        "description": "Allez au septi\u00e8me ciel, ou au plus proche possible. En haut de l'Everest le monde semble si petit.",
-        "lieu": "N\u00e9pal",
-        "prix": 215,
+        "mots_cles": "temp\u00eates am\u00e9rique cyclones",
+        "image": "..\/images\/voyages\/voy16.jpg",
+        "description": "Allez dans l'oeil de la temp\u00eate",
+        "lieu": "Etats Unis de l'est",
+        "prix": 12.5,
         "etapes": [
             {
-                "titre": "Camp de base",
-                "duree": "2 jours",
-                "lieu": "5 364 m",
+                "titre": "Formation d'un cyclone",
+                "duree": "3 jours",
+                "lieu": "Wow, \u00e7a se forme vachement pr\u00e8s de nous non ?",
                 "option": [
                     {
                         "titre": "Acclimatation",
                         "prix": 10
-                    },
-                    {
-                        "titre": "location de sac de couchage",
-                        "prix": 5
                     }
                 ]
             },
             {
-                "titre": "Camp 2",
+                "titre": "L'oeil de la temp\u00eate",
+                "duree": "3 jours",
+                "lieu": "Au milieu d'un cyclone",
+                "option": [
+                    {
+                        "titre": "Acclimatation",
+                        "prix": 10
+                    }
+                ]
+            },
+            {
+                "titre": "Envol",
                 "duree": "1 jour",
-                "lieu": "6 065 m",
+                "lieu": "Dans les airs",
                 "option": [
                     {
                         "titre": "Acclimatation",
                         "prix": 10
-                    },
-                    {
-                        "titre": "D\u00e9jeuner inclus",
-                        "prix": 5
-                    },
-                    {
-                        "titre": "location de sac de couchage",
-                        "prix": 5
-                    }
-                ]
-            },
-            {
-                "titre": "Camp 3",
-                "duree": "1 jour",
-                "lieu": "6 400 m",
-                "option": [
-                    {
-                        "titre": "Acclimatation",
-                        "prix": 10
-                    },
-                    {
-                        "titre": "location de sac de couchage",
-                        "prix": 5
-                    }
-                ]
-            },
-            {
-                "titre": "Camp 4",
-                "duree": "1 jour",
-                "lieu": "6 400 m",
-                "option": [
-                    {
-                        "titre": "Acclimatation",
-                        "prix": 10
-                    },
-                    {
-                        "titre": "Diner inclus",
-                        "prix": 5
-                    },
-                    {
-                        "titre": "location de sac de couchage",
-                        "prix": 5
-                    }
-                ]
-            },
-            {
-                "titre": "Zone de la mort",
-                "duree": "2 jours",
-                "lieu": "7 900 m",
-                "option": [
-                    {
-                        "titre": "Acclimatation",
-                        "prix": 10
-                    },
-                    {
-                        "titre": "location de sac de couchage",
-                        "prix": 5
-                    },
-                    {
-                        "titre": "location de skis",
-                        "prix": 20
                     }
                 ]
             }
         ]
     },
     {
-        "titre": "For\u00eat au sang froid",
+        "titre": "Une for\u00eat mortelle",
         "id": 1,
         "nb_personnes": 0,
-        "depart": "2026-11-29",
-        "duree": 2,
-        "mots_cles": "for\u00eats vampires transilvanie",
-        "image": "..\/images\/voyages\/voy2.jpg",
-        "description": "Visitez la culture de la transilvanie, rencontrez les c\u00e9l\u00e9brit\u00e9s locales... \u00e0 vos risques et p\u00e9rils",
-        "lieu": "Roumanie",
-        "prix": 180,
+        "depart": "2026-10-09",
+        "duree": 5,
+        "mots_cles": "for\u00eats japon tokyo",
+        "image": "..\/images\/voyages\/voy14.jpg",
+        "description": "Vous allez pendre au cou de la culture",
+        "lieu": "For\u00eat d'Aokigahara au Japon",
+        "prix": 320,
         "etapes": [
             {
-                "titre": "Chateau de Dracula",
-                "duree": "1 jour",
-                "lieu": "Bra\u0219ov",
-                "option": [
-                    {
-                        "titre": "Ail",
-                        "prix": 5
-                    }
-                ]
-            },
-            {
-                "titre": "Cimeti\u00e8re",
-                "duree": "1 jour",
-                "lieu": "6 pieds sous terre",
-                "option": [
-                    {
-                        "titre": "Ail",
-                        "prix": 5
-                    },
-                    {
-                        "titre": "D\u00e9tecteur de fant\u00f4mes",
-                        "prix": 20
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "titre": "Une retraite exotique br\u00fblante",
-        "id": 2,
-        "nb_personnes": 0,
-        "depart": "2026-06-12",
-        "duree": 14,
-        "mots_cles": "\u00eeles volcans plages montagnes lave",
-        "image": "..\/images\/voyages\/voy3.jpg",
-        "description": "Relaxez vous sur une \u00eele tout confort avant d'explorer et \u00e9tancher votre soif de curiosit\u00e9 br\u00fblante.",
-        "lieu": "Hawaii",
-        "prix": 500,
-        "etapes": [
-            {
-                "titre": "Retraite hawaiienne",
-                "duree": "7 jours",
-                "lieu": "Plages de Hawaii",
-                "option": [
-                    {
-                        "titre": "Activit\u00e9 surf",
-                        "prix": 20
-                    },
-                    {
-                        "titre": "Activit\u00e9 ski nautique",
-                        "prix": 35
-                    }
-                ]
-            },
-            {
-                "titre": "Ascension d'une montagne",
-                "duree": "6 jours",
-                "lieu": "K\u012blauea",
+                "titre": "Camping \u00e0 Tokyo",
+                "duree": "2 jours",
+                "lieu": "Tokyo",
                 "option": [
                     {
                         "titre": "Acclimatation",
@@ -179,12 +70,70 @@
                 ]
             },
             {
-                "titre": "Chute dans un volcan",
-                "duree": "1 jour",
-                "lieu": "Dans la lave",
+                "titre": "Balades en for\u00eat",
+                "duree": "2 jours",
+                "lieu": "For\u00eat d'Aokigahara",
                 "option": [
                     {
-                        "titre": "Parasol",
+                        "titre": "Acclimatation",
+                        "prix": 10
+                    }
+                ]
+            },
+            {
+                "titre": "Fin du voyage",
+                "duree": "1 jour",
+                "lieu": "paradis",
+                "option": [
+                    {
+                        "titre": "Acclimatation",
+                        "prix": 10
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "titre": "Les dunes Sahara",
+        "id": 2,
+        "nb_personnes": 0,
+        "depart": "2026-01-22",
+        "duree": 5,
+        "mots_cles": "d\u00e9serts sahara",
+        "image": "..\/images\/voyages\/voy15.jpg",
+        "description": "N'ayez pas peur d'avoir du sable dans vos bottes et commencez \u00e0 marcher.",
+        "lieu": "Au Nord de l'Afrique",
+        "prix": 87,
+        "etapes": [
+            {
+                "titre": "Balade \u00e0 dos de dromadaire",
+                "duree": "2 jours",
+                "lieu": "sur la dune n\u00b052",
+                "option": [
+                    {
+                        "titre": "Acclimatation",
+                        "prix": 10
+                    }
+                ]
+            },
+            {
+                "titre": "D\u00e9couverte d'une oasis",
+                "duree": "1 jour",
+                "lieu": "Oasis (et pas fanta ahahahaha)",
+                "option": [
+                    {
+                        "titre": "Acclimatation",
+                        "prix": 10
+                    }
+                ]
+            },
+            {
+                "titre": "Visite des pyramides de K\u00e9ops",
+                "duree": "2 jours",
+                "lieu": "Egypte",
+                "option": [
+                    {
+                        "titre": "Acclimatation",
                         "prix": 10
                     }
                 ]
@@ -403,47 +352,36 @@
         ]
     },
     {
-        "titre": "Cosmic Yonder",
+        "titre": "Aurores bor\u00e9ales et ciels nocturnes",
         "id": 7,
         "nb_personnes": 0,
-        "depart": "2873-01-03",
-        "duree": 2920,
-        "mots_cles": "espace voyage temporel",
-        "image": "..\/images\/voyages\/voy8.jpg",
-        "description": "Vous passerez 8 ans de votre vie en ayant l'impression de n'avoir v\u00e9cu qu'une heure.",
-        "lieu": "l'espace plan\u00e8te M195",
-        "prix": 1999,
+        "depart": "2026-08-25",
+        "duree": 5,
+        "mots_cles": "aurores bor\u00e9ales p\u00eache pays nordiques",
+        "image": "..\/images\/voyages\/voy11.jpg",
+        "description": "Admirez les aurores bor\u00e9ales des pays nordiques",
+        "lieu": "Norv\u00e8ge",
+        "prix": 480,
         "etapes": [
             {
-                "titre": "Acclimatation \u00e0 la plan\u00e8te",
-                "duree": "4 ans",
-                "lieu": "plan\u00e8te M195",
+                "titre": "P\u00eache de la truite",
+                "duree": "3 jours",
+                "lieu": "C\u00f4tes de Norv\u00e8ge",
                 "option": [
                     {
-                        "titre": "Combinaison spatiale",
-                        "prix": 50
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             },
             {
-                "titre": "Echange avec les scientifiques",
-                "duree": "4 ans",
-                "lieu": "Centre de donn\u00e9es",
+                "titre": "Observation des aurores bor\u00e9ales",
+                "duree": "2 jours",
+                "lieu": "Campagne sans lumi\u00e8re",
                 "option": [
                     {
-                        "titre": "Sch\u00e9mas du vaisseau",
-                        "prix": 15
-                    }
-                ]
-            },
-            {
-                "titre": "Retour dans le pass\u00e9",
-                "duree": "-8 ans",
-                "lieu": "L'espace temps",
-                "option": [
-                    {
-                        "titre": "D\u00e9jeuner inclus",
-                        "prix": 5
+                        "titre": "Acclimatation",
+                        "prix": 10
                     }
                 ]
             }
@@ -544,36 +482,47 @@
         ]
     },
     {
-        "titre": "Aurores bor\u00e9ales et ciels nocturnes",
+        "titre": "Cosmic Yonder",
         "id": 10,
         "nb_personnes": 0,
-        "depart": "2026-08-25",
-        "duree": 5,
-        "mots_cles": "aurores bor\u00e9ales p\u00eache pays nordiques",
-        "image": "..\/images\/voyages\/voy11.jpg",
-        "description": "Admirez les aurores bor\u00e9ales des pays nordiques",
-        "lieu": "Norv\u00e8ge",
-        "prix": 480,
+        "depart": "2873-01-03",
+        "duree": 2920,
+        "mots_cles": "espace voyage temporel",
+        "image": "..\/images\/voyages\/voy8.jpg",
+        "description": "Vous passerez 8 ans de votre vie en ayant l'impression de n'avoir v\u00e9cu qu'une heure.",
+        "lieu": "l'espace plan\u00e8te M195",
+        "prix": 1999,
         "etapes": [
             {
-                "titre": "P\u00eache de la truite",
-                "duree": "3 jours",
-                "lieu": "C\u00f4tes de Norv\u00e8ge",
+                "titre": "Acclimatation \u00e0 la plan\u00e8te",
+                "duree": "4 ans",
+                "lieu": "plan\u00e8te M195",
                 "option": [
                     {
-                        "titre": "Acclimatation",
-                        "prix": 10
+                        "titre": "Combinaison spatiale",
+                        "prix": 50
                     }
                 ]
             },
             {
-                "titre": "Observation des aurores bor\u00e9ales",
-                "duree": "2 jours",
-                "lieu": "Campagne sans lumi\u00e8re",
+                "titre": "Echange avec les scientifiques",
+                "duree": "4 ans",
+                "lieu": "Centre de donn\u00e9es",
                 "option": [
                     {
-                        "titre": "Acclimatation",
-                        "prix": 10
+                        "titre": "Sch\u00e9mas du vaisseau",
+                        "prix": 15
+                    }
+                ]
+            },
+            {
+                "titre": "Retour dans le pass\u00e9",
+                "duree": "-8 ans",
+                "lieu": "L'espace temps",
+                "option": [
+                    {
+                        "titre": "D\u00e9jeuner inclus",
+                        "prix": 5
                     }
                 ]
             }
@@ -644,8 +593,16 @@
                 "lieu": "Entr\u00e9e",
                 "option": [
                     {
-                        "titre": "Acclimatation",
+                        "titre": "Lampe de poche",
                         "prix": 10
+                    },
+                    {
+                        "titre": "Visite guidée",
+                        "prix": 40
+                    },
+                    {
+                        "titre": "Carte de l'hôpital",
+                        "prix": 5
                     }
                 ]
             },
@@ -655,8 +612,8 @@
                 "lieu": "Fond du laboratoire",
                 "option": [
                     {
-                        "titre": "Acclimatation",
-                        "prix": 10
+                        "titre": "Combinaison de protection",
+                        "prix": 20
                     }
                 ]
             },
@@ -674,141 +631,209 @@
         ]
     },
     {
-        "titre": "Une for\u00eat mortelle",
+        "titre": "For\u00eat au sang froid",
         "id": 13,
         "nb_personnes": 0,
-        "depart": "2026-10-09",
-        "duree": 5,
-        "mots_cles": "for\u00eats japon tokyo",
-        "image": "..\/images\/voyages\/voy14.jpg",
-        "description": "Vous allez pendre au cou de la culture",
-        "lieu": "For\u00eat d'Aokigahara au Japon",
-        "prix": 320,
+        "depart": "2026-11-29",
+        "duree": 2,
+        "mots_cles": "for\u00eats vampires transilvanie",
+        "image": "..\/images\/voyages\/voy2.jpg",
+        "description": "Visitez la culture de la transilvanie, rencontrez les c\u00e9l\u00e9brit\u00e9s locales... \u00e0 vos risques et p\u00e9rils",
+        "lieu": "Roumanie",
+        "prix": 180,
         "etapes": [
             {
-                "titre": "Camping \u00e0 Tokyo",
-                "duree": "2 jours",
-                "lieu": "Tokyo",
-                "option": [
-                    {
-                        "titre": "Acclimatation",
-                        "prix": 10
-                    }
-                ]
-            },
-            {
-                "titre": "Balades en for\u00eat",
-                "duree": "2 jours",
-                "lieu": "For\u00eat d'Aokigahara",
-                "option": [
-                    {
-                        "titre": "Acclimatation",
-                        "prix": 10
-                    }
-                ]
-            },
-            {
-                "titre": "Fin du voyage",
+                "titre": "Chateau de Dracula",
                 "duree": "1 jour",
-                "lieu": "paradis",
+                "lieu": "Bra\u0219ov",
                 "option": [
                     {
-                        "titre": "Acclimatation",
-                        "prix": 10
+                        "titre": "Ail",
+                        "prix": 5
+                    },
+                    {
+                        "titre": "Crucifix",
+                        "prix": 15
+                    },
+                    {
+                        "titre": "Eau Bénite",
+                        "prix": 5
+                    }
+                    
+                ]
+            },
+            {
+                "titre": "Cimeti\u00e8re",
+                "duree": "1 jour",
+                "lieu": "6 pieds sous terre",
+                "option": [
+                    {
+                        "titre": "Ail",
+                        "prix": 5
+                    },
+                    {
+                        "titre": "D\u00e9tecteur de fant\u00f4mes",
+                        "prix": 20
                     }
                 ]
             }
         ]
     },
     {
-        "titre": "Les dunes Sahara",
+        "titre": "Une retraite exotique br\u00fblante",
         "id": 14,
         "nb_personnes": 0,
-        "depart": "2026-01-22",
-        "duree": 5,
-        "mots_cles": "d\u00e9serts sahara",
-        "image": "..\/images\/voyages\/voy15.jpg",
-        "description": "N'ayez pas peur d'avoir du sable dans vos bottes et commencez \u00e0 marcher.",
-        "lieu": "Au Nord de l'Afrique",
-        "prix": 87,
+        "depart": "2026-06-12",
+        "duree": 14,
+        "mots_cles": "\u00eeles volcans plages montagnes lave",
+        "image": "..\/images\/voyages\/voy3.jpg",
+        "description": "Relaxez vous sur une \u00eele tout confort avant d'explorer et \u00e9tancher votre soif de curiosit\u00e9 br\u00fblante.",
+        "lieu": "Hawaii",
+        "prix": 500,
         "etapes": [
             {
-                "titre": "Balade \u00e0 dos de dromadaire",
-                "duree": "2 jours",
-                "lieu": "sur la dune n\u00b052",
+                "titre": "Retraite hawaiienne",
+                "duree": "7 jours",
+                "lieu": "Plages de Hawaii",
                 "option": [
                     {
-                        "titre": "Acclimatation",
-                        "prix": 10
+                        "titre": "Activit\u00e9 surf",
+                        "prix": 20
+                    },
+                    {
+                        "titre": "Activit\u00e9 ski nautique",
+                        "prix": 35
                     }
                 ]
             },
             {
-                "titre": "D\u00e9couverte d'une oasis",
+                "titre": "Ascension d'une montagne",
+                "duree": "6 jours",
+                "lieu": "K\u012blauea",
+                "option": [
+                    {
+                        "titre": "Acclimatation",
+                        "prix": 10
+                    },
+                    {
+                        "titre": "Location d'équipement",
+                        "prix": 15
+                    }
+                ]
+            },
+            {
+                "titre": "Chute dans un volcan",
                 "duree": "1 jour",
-                "lieu": "Oasis (et pas fanta ahahahaha)",
+                "lieu": "Dans la lave",
                 "option": [
                     {
-                        "titre": "Acclimatation",
+                        "titre": "Parasol",
                         "prix": 10
-                    }
-                ]
-            },
-            {
-                "titre": "Visite des pyramides de K\u00e9ops",
-                "duree": "2 jours",
-                "lieu": "Egypte",
-                "option": [
+                    },
                     {
-                        "titre": "Acclimatation",
-                        "prix": 10
+                        "titre" : "Boisson rafraîchissante",
+                        "prix": 5
                     }
                 ]
             }
         ]
     },
     {
-        "titre": "Twisters",
+        "titre": "Le sommet du monde",
         "id": 15,
-        "nb_personnes": 0,
-        "depart": "2026-12-03",
+        "nb_personnes": 1,
+        "depart": "2026-12-21",
         "duree": 7,
-        "mots_cles": "temp\u00eates am\u00e9rique cyclones",
-        "image": "..\/images\/voyages\/voy16.jpg",
-        "description": "Allez dans l'oeil de la temp\u00eate",
-        "lieu": "Etats Unis de l'est",
-        "prix": 12.5,
+        "mots_cles": "montagnes randonn\u00e9es alpinisme everest",
+        "image": "..\/images\/voyages\/voy1.jpg",
+        "description": "Allez au septi\u00e8me ciel, ou au plus proche possible. En haut de l'Everest le monde semble si petit.",
+        "lieu": "N\u00e9pal",
+        "prix": 215,
         "etapes": [
             {
-                "titre": "Formation d'un cyclone",
-                "duree": "3 jours",
-                "lieu": "Wow, \u00e7a se forme vachement pr\u00e8s de nous non ?",
+                "titre": "Camp de base",
+                "duree": "2 jours",
+                "lieu": "5 364 m",
                 "option": [
                     {
                         "titre": "Acclimatation",
                         "prix": 10
-                    }
-                ]
-            },
-            {
-                "titre": "L'oeil de la temp\u00eate",
-                "duree": "3 jours",
-                "lieu": "Au milieu d'un cyclone",
-                "option": [
+                    },
                     {
-                        "titre": "Acclimatation",
-                        "prix": 10
+                        "titre": "location de sac de couchage",
+                        "prix": 5
                     }
                 ]
             },
             {
-                "titre": "Envol",
+                "titre": "Camp 2",
                 "duree": "1 jour",
-                "lieu": "Dans les airs",
+                "lieu": "6 065 m",
                 "option": [
                     {
                         "titre": "Acclimatation",
                         "prix": 10
+                    },
+                    {
+                        "titre": "D\u00e9jeuner inclus",
+                        "prix": 5
+                    },
+                    {
+                        "titre": "location de sac de couchage",
+                        "prix": 5
+                    }
+                ]
+            },
+            {
+                "titre": "Camp 3",
+                "duree": "1 jour",
+                "lieu": "6 400 m",
+                "option": [
+                    {
+                        "titre": "Acclimatation",
+                        "prix": 10
+                    },
+                    {
+                        "titre": "location de sac de couchage",
+                        "prix": 5
+                    }
+                ]
+            },
+            {
+                "titre": "Camp 4",
+                "duree": "1 jour",
+                "lieu": "6 400 m",
+                "option": [
+                    {
+                        "titre": "Acclimatation",
+                        "prix": 10
+                    },
+                    {
+                        "titre": "Diner inclus",
+                        "prix": 5
+                    },
+                    {
+                        "titre": "location de sac de couchage",
+                        "prix": 5
+                    }
+                ]
+            },
+            {
+                "titre": "Zone de la mort",
+                "duree": "2 jours",
+                "lieu": "7 900 m",
+                "option": [
+                    {
+                        "titre": "Acclimatation",
+                        "prix": 10
+                    },
+                    {
+                        "titre": "location de sac de couchage",
+                        "prix": 5
+                    },
+                    {
+                        "titre": "location de skis",
+                        "prix": 20
                     }
                 ]
             }
