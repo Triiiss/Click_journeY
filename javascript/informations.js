@@ -18,11 +18,11 @@ function cancel_edit(number, data){
         }
 }
 
-async function waiting_time(event, formId, id="", page=-1) {
+async function waiting_time(event, formId, id=-1, page=-1) {
         event.preventDefault();
 
         if(formId=="form_admin"){
-                if(id==""){
+                if(id==-1){
                         console.error("id non fourni");
                         return ;
                 }
