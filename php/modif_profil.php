@@ -15,7 +15,7 @@ if (!isset($users[$index])) {
     exit;
 }
 
-$user = $users[$index];
+$user = &$users[$index];
 
 if(isset($_POST['champ']) && $_POST['value']){
     $champ = $_POST['champ'];
