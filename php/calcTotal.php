@@ -3,7 +3,6 @@
 $json_voyages=file_get_contents("../json/voyages.json");
 $voyages=json_decode($json_voyages, true);
 
-//rajouter verifs parametres
 
 $id=$_POST["id"];
 $total=$voyages[$id]["prix"];
