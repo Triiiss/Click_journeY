@@ -59,6 +59,9 @@ switch ($champ) {
     case 'genre':
         $user['profil']['genre'] = $value;
         break;
+    case 'role':
+        $user['role'] = $value;
+        break;
     default:
         echo json_encode(['success' => false, 'message' => 'Champ non reconnu']);
         exit;
