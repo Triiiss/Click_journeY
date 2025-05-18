@@ -69,7 +69,7 @@
                     echo '<div class="all">';
 
                     //afichage panier
-                    echo '<p>----------------------------</p><p>---------Panier : --------</p> <p>----<button class="admin"><a class="acheter" href="achat.php">Payer le panier</a></button>----</p>
+                    echo '<p>----------------------------</p><p>---------Panier : --------</p> <p>-<button class="admin"><a class="acheter" href="achat.php">Payer le panier</a></button>-</p>
                     <p class="empty">d</p><p></p><p></p>';
                     if(empty($user["voyages_panier"])){
                         echo '<p></p><p>Vous n\'avez pas de voyages dans votre panier</p>';
@@ -365,9 +365,8 @@
                         
 
                         echo '<p>Date de naissance :</p>';
-                        echo '
-                        <p><span class="dob_info_">'.$user['profil']['dob'].' </span>
-                        <span class="hidden dob_edit_"><input class="modifier" type="text" name="new_dob_value" placeholder="'.$user['profil']['dob'].'"/></span></p>
+                        echo '<p><span class="dob_info_">'.date("d/m/Y", strtotime($user['profil']['dob'])).' </span>
+                        <span class="hidden dob_edit_"><input class="modifier" type="text" name="new_dob_value" placeholder="'.date("d/m/Y", strtotime($user['profil']['dob'])).'"/></span></p>
 
                         <p><span class="dob_info_"><button type="button" class="edit_icon" onclick="edit_infos(\'\',\'dob\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
                         <span class="hidden dob_edit_"><input class="admin" type="submit" name="new_dob" value="Valider" onclick="waiting_time(event,\'form_profil\')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit(\'\',\'dob\')"/></span></p>';
@@ -442,7 +441,7 @@
                     </script>
                     
                     <p>Date d'inscription :</p>
-                    <p><?php echo $user['date d\'inscription']?></p>
+                    <p><?php echo date("d/m/Y", strtotime($user['date d\'inscription']));?></p>
                     <p></p>
                     
                     <?php file_put_contents('../json/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));?>

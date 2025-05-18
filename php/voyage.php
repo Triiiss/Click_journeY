@@ -35,12 +35,12 @@
             echo '<div class=voyages>';
                 echo '<img src="'.$voyages[$id]["image"].'" class="imgDetail" alt="photo_voyage""/>';
                 echo '<div class=recap>';
-                    echo '<div>'.$voyages[$id]["titre"].'</div>';
-                    echo '<div>Lieu : '.$voyages[$id]["lieu"].'</div>';
-                    echo '<div>'.$voyages[$id]["description"].'</div>';
-                    echo '<div>'.'Prix : <span id="prix">'.$voyages[$id]["prix"].'</span> euros'.'</div>';
-                    echo '<div>'.'Départ le '.$voyages[$id]["depart"].'</div>';
-                    echo '<div>'.'Durée : '.$voyages[$id]["duree"].' jours</div>'; 
+                    echo '<div><b>'.$voyages[$id]["titre"].'</b></div>';
+                    echo '<div>'.$voyages[$id]["description"].'</div><br>';
+                    echo '<div><b>Lieu :</b> '.$voyages[$id]["lieu"].'</div>';
+                    echo '<div>'.'<b>Prix :</b> <span id="prix">'.$voyages[$id]["prix"].'</span> euros'.'</div>';
+                    echo '<div>'.'<b>Départ :</b> '.$voyages[$id]["depart"].'</div>';
+                    echo '<div>'.'<b>Durée :</b> '.$voyages[$id]["duree"].' jours</div>'; 
                 echo '</div>';
             echo '</div>';
         ?>
@@ -54,24 +54,21 @@
                         echo '<legend>Options</legend>';
                     }
                     echo'<h3>Etape '.($k+1).' : '.$etape["titre"].'</h3>
-                    <div>Lieu : '.$etape["lieu"].'</div>
-                    <div>Durée : '.$etape["duree"].'</div>
+                    <div><i>Lieu :</i> '.$etape["lieu"].'</div>
+                    <div><i>Durée :</i> '.$etape["duree"].'</div><br>
 
                     <label for="option'.$k.'">Options :</label>
                     <div>';
                         foreach($etape["option"] as $i=>$option){
-                            echo $option["titre"].'('.$option["prix"].'€)'.'<input class="options" type="checkbox" name="option'.$k.$i.'" value="'.
-                            $option["titre"].';'.$option["prix"].'">';
+                            echo '<input class="options" type="checkbox" name="option'.$k.$i.'" value="'.$option["titre"].';'.$option["prix"].'"> '.$option["titre"].'('.$option["prix"].'€)';
                         }
                     echo '</div>
                 </fieldset>';
-            }
-            echo '<div class="prix_tot">'.'Total : <span id="total">'.$voyages[$id]["prix"].'</span> euros'.'</div>';
-
-            ?>
+            }?>
             <input type="hidden" name="id" value="<?php echo "".$id."" ?>"></input>
 
             <fieldset class="options">
+                <span class="prix_tot">Total : <span id="total"><?php echo $voyages[$id]["prix"];?></span> €</span>
                 <button class="options" type="reset" name="reset">Réinitialiser</button>
                 <button class="options" type="submit" name="submit">Récapitulatif</button>
             </fieldset>

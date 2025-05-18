@@ -78,26 +78,26 @@
             echo '<div class=voyages>';
                 echo '<img src="'.$voyages[$id]["image"].'" class="imgDetail" alt="photo_voyage""/>';
                 echo '<div class=recap>';
-                    echo '<div>'.$voyages[$id]["titre"].'</div>';
-                    echo '<div>'.$voyages[$id]["description"].'</div>';
-                    echo '<div>Prix de base: '.$voyages[$id]["prix"].' euros'.'</div>';
-                    echo '<div>Prix total: '.$total.' euros'.'</div>';
-                    echo '<div>Départ le '.$voyages[$id]["depart"].'</div>';
-                    echo '<div>Durée : '.$voyages[$id]["duree"].' jours</div>'; 
+                    echo '<div><b>'.$voyages[$id]["titre"].'</b></div><br>';
+                    echo '<div>'.$voyages[$id]["description"].'</div><br>';
+                    echo '<div><b>Prix de base:</b> '.$voyages[$id]["prix"].' €'.'</div>';
+                    echo '<div><b>Prix total:</b> '.$total.' €'.'</div>';
+                    echo '<div><b>Départ :</b> '.$voyages[$id]["depart"].'</div>';
+                    echo '<div><b>Durée :</b> '.$voyages[$id]["duree"].' jours</div>'; 
                     
-                    echo '<div>Options : </div>';
+                    echo '<br><div><b>Options :</b></div>';
 
                     foreach($voyages[$id]["etapes"] as $k => $etape){
-                        echo '<div>'.$etape["titre"].'</div>';
+                        echo '<div>'.$etape["titre"].' : ';
                         $optExiste=0;
                         foreach($etape["option"] as $i=>$option){
                             if($options[$k][$i]!=""){
-                                echo '<div>'.$options[$k][$i].'</div>';
+                                echo $options[$k][$i].'</div>';
                                 $optExiste=1;
                             }
                         }
                         if($optExiste==0){
-                            echo '<div>Aucune option<div>';
+                            echo 'Aucune option</div>';
                         }
                     }
 
@@ -122,8 +122,6 @@
                         }
                         echo '</form>';
                     }
-                    
-
                 echo '</div>';
             echo '</div>';
 

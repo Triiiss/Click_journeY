@@ -219,8 +219,7 @@
                                     <td><span class="prenom_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'prenom\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
                                     <span class="hidden prenom_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_prenom" value="Valider" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'prenom\')"/></span></td>';
 
-        
-                                    echo '<td colspan="2">'.$user['date d\'inscription'].'</td>';
+                                    echo '<td colspan="2">'.date("d/m/Y", strtotime($user['date d\'inscription'])).'</td>';
         
                                     /*Role */
                                     echo '
@@ -280,9 +279,8 @@
 
 
                                             /*Date de naissance (dob = Date of birth) */
-                                            echo '
-                                            <td><span class="dob_info_'.$k.'"><b>Annif: </b>'.$user['profil']['dob'].' </span>
-                                            <span class="hidden dob_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_dob_value" placeholder="'.$user['profil']['dob'].'"/></span></td>
+                                            echo '<td><span class="dob_info_'.$k.'"><b>Annif: </b>'.date("d/m/Y", strtotime($user['profil']['dob'])).' </span>
+                                            <span class="hidden dob_edit_'.$k.'"><input class="modifier" type="text" name="new'.$user['login'].'_dob_value" placeholder="'.date("d/m/Y", strtotime($user['profil']['dob'])).'"/></span></td>
         
                                             <td><span class="dob_info_'.$k.'"><button type="button" class="edit_icon" onclick="edit_infos('.$k.',\'dob\')"><img class="edit_icon" src="../images/edit_icon.png"/></button></span>
                                             <span class="hidden dob_edit_'.$k.'"><input class="admin" type="submit" name="new'.$user['login'].'_dob" value="Valider" onclick="waiting_time(event,\'form_admin\','.$k.','.$_SESSION["npage"].')"/><input class="edit_icon" type="button" value="X" onclick="cancel_edit('.$k.',\'dob\')"/></span></td>';

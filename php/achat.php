@@ -39,7 +39,7 @@
                 //Après paiement
                 if(isset($_GET["transaction"]) && $_GET["transaction"]=="154632ABCD"){
                         echo '
-                        <fieldset class="formulaire connexion">';
+                        <fieldset class="formulaire voyages">';
                         if (isset($_GET["status"]) && $_GET["status"]=="accepted"){
                                 //on rajoute les voyages du panier dans les voyages achetés
                                 $users[$_SESSION["user_index"]-1]["voyages_achete"]=array_merge($users[$_SESSION["user_index"]-1]["voyages_achete"],$users[$_SESSION["user_index"]-1]["voyages_panier"]);
@@ -50,16 +50,16 @@
                                 //on supprime les voyages du panier                            
                                 $users[$_SESSION["user_index"]-1]["voyages_panier"] = [];
 
-                                echo 'Votre panier a été acheté';
+                                echo '<div class="panier">Votre panier a été acheté</div>';
                         }
                         else{
-                                echo 'L\'achat de votre panier a échoué';
+                                echo '<div class="panier">L\'achat de votre panier a échoué</div>';
                         }
                         echo '</fieldset>';
                 }
                 else{
                         echo '
-                        <fieldset class="formulaire">
+                        <fieldset class="formulaire achat">
                         <legend>Panier :</legend>';
                         $sum=0;
                         if(empty($user["voyages_panier"])){
@@ -69,23 +69,26 @@
                         else{
                                 //affichage des informations de chaque voyage du panier
                                 foreach($user["voyages_panier"] as $k=> $panier){
-                                        echo '<a href="voyage.php?id='.$panier["id"].'"><img src="'.$voyages[$panier["id"]]["image"].'" class="imgVoyage" alt="photo_voyage""/></a>
-                                        <p><b>'.$voyages[$panier["id"]]["titre"].'</b>
-                                        <br><br><br>de '.$voyages[$panier["id"]]["depart"].' à '.$voyages[$panier["id"]]["fin"].
-                                        '<br>Durée : '.$voyages[$panier["id"]]["duree"].' jours
-                                        <br><br>Description : '.$voyages[$panier["id"]]["description"].
-                                        '<br><br>Prix de base : '.$voyages[$panier["id"]]["prix"].' €
-                                        <br><br>Prix total : '.$panier["total"].' €
-                                        </p>';
+                                        $date_start = date("d/m/Y", strtotime($voyages[$panier["id"]]["depart"]));
+                                        $date_end = date("d/m/Y", strtotime($voyages[$panier["id"]]["fin"]));
+                                        echo '<a href="voyage.php?id='.$panier["id"].'"><img src="'.$voyages[$panier["id"]]["image"].'" class="imgVoyage_achat" alt="photo_voyage""/></a>
+                                        <div class="achat"><b>'.$voyages[$panier["id"]]["titre"].'</b>
+                                        <br><br><br><b>Description :</b> '.$voyages[$panier["id"]]["description"].'<br><br>
+
+                                        <b>De</b> '.$date_start.' <b>à</b> '.$date_end.
+                                        '<br><b>Durée :</b> '.$voyages[$panier["id"]]["duree"].' jours
+                                        <br><br><b>Prix de base :</b> '.$voyages[$panier["id"]]["prix"].' €
+                                        <br><b>Prix total :</b> '.$panier["total"].' €
+                                        </div><br><p></p>';
                                         //ajout du prix du voyage au prix total du panier
                                         $sum+=$panier["total"];
                                 }
 
-                                echo '<p class="empty">a</p><p></p>
-                                <p></p> <p><b>Total :</b> '.$sum.'€</p>';
+                                echo '</fieldset>';
                         }
                         //formulaire de paiement
-                        echo '<p></p>
+                        echo '<fieldset class="formulaire">
+                        <p class="prix_total"><b>Total :</b> '.$sum.'€</p>
                         <form action="https://www.plateforme-smc.fr/cybank/index.php" method="POST">
                                 <input type="hidden" name="transaction" value="154632ABCD">
                                 <input type="hidden" name="montant" value="'.$sum.'">
@@ -93,14 +96,21 @@
                                 <input type="hidden" name="retour" value="http://localhost:8080/php/achat.php?session=s">
                                 <input type="hidden" name="control" value="'.md5(getAPIKey("MI-4_J") . "#" . "154632ABCD" . "#" . $sum . "#" . "MI-4_J" . "#" . "http://localhost:8080/php/achat.php?session=s" . "#").'">
                                 
-                                <input type="submit" value="Valider et payer">
+                                <input class="payer" type="submit" value="Valider et payer">
                         </form>
-                        </fieldset> ';
+                        </fieldset>';
                 }
                 file_put_contents('../json/utilisateurs.json', json_encode($users, JSON_PRETTY_PRINT));
                 file_put_contents('../json/voyages.json', json_encode($voyages, JSON_PRETTY_PRINT));
         ?>
 
+
+        <br><br>
+        <div class="afterimage">
+                <span class="first-afterimage">Nous contacter :</span>
+                <p>Email : contact@campingextreme.com<br/>Téléphone : 01 23 45 67 89</p>
+                <br/>
+        </div>
         <script src="../javascript/chg_theme.js"></script>
     </body>
 </php>
