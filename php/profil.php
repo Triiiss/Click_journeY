@@ -398,7 +398,7 @@
                     <p>Photo de profil</p>
                     <p>
                     <label for="profil_picture_value" id="pp_button">Choisir un fichier</label>
-                    <input type="file" class="button_file" accept="image/*" id="profil_picture_value"/><span id="file_name"></span></p>
+                    <input type="file" class="button_file" accept="image/*" id="profil_picture_value" name="profil_picture_value"/><span id="file_name"></span></p>
                     <td><input class="admin" type="submit" name="profil_picture" value="Valider"/></td>
 
                     <script>
