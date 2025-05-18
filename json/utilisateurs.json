@@ -1,7 +1,7 @@
 [
     {
         "login": "Tris",
-        "mdp": "test",
+        "mdp": "Test_123",
         "email": "themis.trantuthien@gmail.com",
         "role": "admin",
         "profil": {
@@ -73,7 +73,7 @@
     },
     {
         "login": "LeTaitre",
-        "mdp": "floriann",
+        "mdp": "Florian_123",
         "email": "florian.bruyant@gmail.com",
         "role": "admin",
         "profil": {
@@ -166,7 +166,7 @@
     },
     {
         "login": "AlexisG115",
-        "mdp": "alexis",
+        "mdp": "Alexis_123",
         "email": "alexis.guimbard@gmail.com",
         "role": "admin",
         "profil": {

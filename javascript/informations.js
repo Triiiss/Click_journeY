@@ -50,6 +50,7 @@ async function waiting_time(event, formId, id=-1, page=-1) {
         let champ,affichageInfo,index_user;
 
         if(formId=="form_profil"){
+                id="";
                 champ = name.replace("new_", ""); //champ a modifier
                 affichageInfo = document.querySelector('.'+champ+'_info_'); //span ou l'ancienne valeur est affichée
                 index_user="";
@@ -89,9 +90,6 @@ async function waiting_time(event, formId, id=-1, page=-1) {
                         affichageInfo.textContent = ancienneVal;
                 }
 
-                if(formId=="form_profil"){
-                        id="";
-                }
                 cancel_edit(id, champ); // Cache les champs de modification
         } catch (e) {
                 affichageInfo.textContent = ancienneVal;
