@@ -52,6 +52,9 @@ h1.titre-accueil{/*Le titre de la page d'accueil en gros*/
     margin-top: 10vw;
     -webkit-text-stroke: 5px rgb(202, 212, 183);
 }
+h3{
+    margin-top: 0.1vw;
+}
 span.etoile{
     color: rgb(195, 4, 4);
 }
@@ -109,6 +112,11 @@ img.edit_icon{/*Petit crayon ou croix*/
     height: 15vw;
     border-radius: 10px;
 }
+.imgVoyage_achat{/*images de voyages*/
+    width: 25vw;
+    height: 20vw;
+    border-radius: 10px;
+}
 .imgVoyage:hover{/*Agrandir si on passe par dessus*/
     transform: scale(1.03);
 }
@@ -163,9 +171,6 @@ legend{
     background-color: rgb(40, 77, 40);
     border-radius: 1vw;
 }
-form{
-    margin-top: 2vw;
-}
 fieldset.formulaire{/*Fond et mise en page en grille*/
     border: rgb(28, 59, 28) solid 3px;
     background-color: rgba(174, 189, 147,0.6);
@@ -175,6 +180,10 @@ fieldset.formulaire{/*Fond et mise en page en grille*/
 }
 fieldset.connexion, fieldset.inscription{
     grid-template-columns: 50% 50%;
+}
+fieldset.achat{
+    margin-bottom: 1vw;
+    grid-template-columns:45% 55%;
 }
 label,input,div.inscription,button.inscription{/*A gauche*/
     font-size: 1.5vw;
@@ -192,6 +201,9 @@ input,div.inscription,button.inscription{/*A droite*/
 div.inscription{/*Elements radius sur la même ligne*/   
     display: flex;
 }
+div.achat{
+    font-size: 1.2vw;
+}
 input[type="radio"]{/*Espacement de la même ligne*/
     margin-right: 5vw;
 }
@@ -205,14 +217,16 @@ input[name=mdp],input[name=mdpcfrm]{
 
 
 /*BOUTONS*/
-button,input[name="deco"],input[name="supp"],#pp_button{/*Boutons oranges*/
+button,input[name="deco"],input[name="supp"],#pp_button, input.payer{/*Boutons oranges*/
     color: white;
     cursor: pointer;
-    font-size: 1vw;
     margin: 0vw 0.5vw 0vw 0.5vw;
     border-radius: 7px;
     background-color: rgb(255, 106, 19);
     border: solid 1px rgb(153, 60, 6);
+}
+button,input[name="deco"],input[name="supp"],#pp_button{
+    font-size: 1vw;
 }
 input[name="deco"],input[name="supp"]{/*Les boutons avec plus de textes prennent plus de place*/
     padding: 0vw 2.5vw 0vw 2.5vw;
@@ -335,6 +349,11 @@ fieldset.profil{/*Fond et mise en page en grille*/
 }
 fieldset.voyages{/*Fond et mise en page en grille*/
     grid-template-columns: 100%;
+}
+fieldset.options{
+    text-align: left;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
 }
 span.voyages{/*Fond et mise en page en grille*/
     grid-template-columns: 33% 33% 33%;
@@ -484,7 +503,7 @@ input.recherche, .recherche div>div{
     font-size: 1.2vw;
     width: 15vw;
 }
-.voyages{
+.voyages, fieldset.options{
     border: rgb(28, 59, 28) solid 3px;
     background-color: rgba(174, 189, 147,0.6);
     font-size: 1.2vw;
@@ -492,6 +511,8 @@ input.recherche, .recherche div>div{
     margin-right: 20%;
     margin-left: 20%;
     padding: 1%;
+}
+.voyages{
     text-align: center;
 }
 .sombre fieldset.recherche{
@@ -530,7 +551,15 @@ div.all{
     color: black;
 }
 
-.prix_tot{
+.prix_tot, .prix_total{
     font-size: 1.5vw;
     margin-left: 2vw;
+}
+.prix_total{
+    margin-top: 0.5vw;
+    font-size: 2vw;
+}
+div.panier{
+    text-align: center;
+    font-size: 1.5vw;
 }
