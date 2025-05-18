@@ -15,10 +15,10 @@ function recupCookie(nom) {
 
 function changerTheme(){
     if(document.body.classList.toggle('sombre')==true){
-        document.cookie = 'mode=sombre; max-age=3600; path=/';
+        document.cookie = 'mode=sombre; max-age=86400; path=/';
     }
     else{
-        document.cookie = 'mode=clair; max-age=3600; path=/';
+        document.cookie = 'mode=clair; max-age=86400; path=/';
     }  
 }
 
