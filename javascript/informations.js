@@ -4,7 +4,7 @@ function edit_infos(number, data){
 
         for (let i=0; i<info_list.length; i++){
                 info_list[i].style.display = "none";
-                edit_list[i].style.display = "block";
+                edit_list[i].style.display = "inline-flex";
         }
 }
 
@@ -13,7 +13,7 @@ function cancel_edit(number, data){
         var edit_list = document.getElementsByClassName(data + "_edit_" + number);
 
         for (let i=0; i<info_list.length; i++){
-                info_list[i].style.display = "block";
+                info_list[i].style.display = "inline-flex";
                 edit_list[i].style.display = "none";
         }
 }
@@ -28,6 +28,9 @@ async function waiting_time(event, formId, id=-1, page=-1) {
                 const name = btnSubmit.name;
                 btnSubmit.disabled = true; // Désactive le bouton pour éviter plusieurs clics
                 const champModif = form.querySelector('[name="'+name+'_value"]'); //input ou l'utilisateur entre du texte
+
+                const loader = document.getElementById(name+"_loader");
+                loader.style.display = "inline-flex"; // Affiche le loader
 
                 if (!champModif) {
                         console.error("Champ de valeur introuvable pour :", name);
@@ -73,6 +76,8 @@ async function waiting_time(event, formId, id=-1, page=-1) {
                 }
 
                 btnSubmit.disabled = false; // Réactive le bouton
+
+                loader.style.display = "none"; // Cache le loader une fois terminé
         }
 
         else if(formId=="form_admin"){
@@ -94,6 +99,9 @@ async function waiting_time(event, formId, id=-1, page=-1) {
                 const username = name.replace("new","").split('_')[0];
                 btnSubmit.disabled = true; // Désactive le bouton pour éviter plusieurs clics
                 const champModif = form.querySelector('[name="'+name+'_value"]'); //input ou l'utilisateur entre du texte
+
+                const loader = document.getElementById(name+"_loader");
+                loader.style.display = "inline-flex"; // Affiche le loader
 
                 if (!champModif) {
                         console.error("Champ de valeur introuvable pour :", name);
@@ -139,5 +147,7 @@ async function waiting_time(event, formId, id=-1, page=-1) {
                 }
 
                 btnSubmit.disabled = false; // Réactive le bouton
+
+                loader.style.display = "none"; // Cache le loader une fois terminé
         }
 }

@@ -381,6 +381,9 @@ input[type="file"] {
 .hidden{
     display: none;
 }
+.loadImg{
+    width: 1.5vw;
+}
 
 /*PAGE ADMIN*/
 caption.admin{
