@@ -3,7 +3,7 @@
 session_start();
 $users = json_decode(file_get_contents('../json/utilisateurs.json'), true);
 
-if(isset($_POST['index_user'])){
+if(isset($_POST['index_user']) && $_POST['index_user']!=""){
     $index = $_POST['index_user'];
 }
 else{
