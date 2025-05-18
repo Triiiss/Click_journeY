@@ -98,6 +98,7 @@ img.logo{/*Logo en haut de la page*/
 }
 img.profil_picture{/*Photo de profil sur la bannière et dans le profil est ronde*/
     width: 2vw;
+    height: 2vw;
     border-radius: 50%;
 }
 img.edit_icon{/*Petit crayon ou croix*/
