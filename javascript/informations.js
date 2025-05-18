@@ -89,6 +89,9 @@ async function waiting_time(event, formId, id=-1, page=-1) {
                         affichageInfo.textContent = ancienneVal;
                 }
 
+                if(formId=="form_profil"){
+                        id="";
+                }
                 cancel_edit(id, champ); // Cache les champs de modification
         } catch (e) {
                 affichageInfo.textContent = ancienneVal;
